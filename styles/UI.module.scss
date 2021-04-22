@@ -1,0 +1,105 @@
+@import './colors';
+
+.button {
+  padding: 0.8rem 1rem;
+  border-radius: 10px;
+  background-color: $button-yellow;
+  transition: 200ms ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: darken($color: $button-yellow, $amount: 15);
+  }
+}
+
+.card {
+  background: #ffffff;
+  box-shadow: 4px 4px 20px rgba(16, 80, 82, 0.2);
+  border-radius: 20px;
+}
+
+.calcCurrency {
+  background-color: $base-green;
+  color: #fff;
+  padding: 1.45rem 1rem;
+  border-radius: 10px 0 0 10px;
+  flex: 0.2;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.calcInput {
+  position: relative;
+  flex: 0.8;
+
+  label {
+    position: absolute;
+    font-size: 0.85rem;
+    top: 0.4rem;
+    right: 1.1rem;
+  }
+
+  input {
+    width: 100%;
+    background-color: $light-gray;
+    padding: 1.1rem 1.1rem 0.8rem 3rem;
+    border-radius: 0 10px 10px 0;
+    color: $base-green;
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: right;
+  }
+
+  span {
+    position: absolute;
+    top: 0.85rem;
+    left: 1rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+}
+
+.swipe {
+  background-color: $button-yellow;
+  border-radius: 50%;
+  padding: 0.5rem;
+  border: 5px solid #fff;
+  position: absolute;
+  left: 1.5rem;
+  top: 4.6rem;
+  transition: 300ms ease-in-out;
+  transform: rotate(0);
+
+  &:focus {
+    outline: 0;
+  }
+
+  img {
+    width: 1.6rem;
+  }
+}
+
+.swipeRotate {
+  transform: rotate(180deg);
+}
+
+.formGroup {
+  margin: 10px 0;
+
+  input,
+  textarea {
+    border: 1px solid #b9b9b9;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+
+    &.error {
+      border-color: #ff4b55;
+    }
+  }
+
+  textarea {
+    resize: none;
+  }
+}

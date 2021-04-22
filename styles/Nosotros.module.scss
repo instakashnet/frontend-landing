@@ -1,0 +1,39 @@
+@import './colors';
+
+.About {
+  background-image: url('/images/bg/shapes-top.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left -5%;
+}
+
+.WhyUs {
+  background-image: url('/images/bg/why-us.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
+
+  h2 {
+    font-size: 3rem;
+  }
+
+  li {
+    margin: 15px 0;
+    background: url('/images/icons/check.svg') no-repeat 7px 7px;
+    padding: 7px 0px 0px 44px;
+    font-size: 1.05rem;
+  }
+
+  img {
+    max-width: 18rem;
+  }
+}
+
+.StartButton {
+  margin: 40px 0;
+  background-color: $button-yellow;
+  padding: 15px;
+  width: 100%;
+  max-width: 18rem;
+  border-radius: 10px;
+}

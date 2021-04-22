@@ -1,16 +1,89 @@
-html,
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+  color: #676767;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
-* {
-  box-sizing: border-box;
+.base-green {
+  color: #0d8284;
+}
+
+.container {
+  width: 95%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+b {
+  color: #0d8284;
+  font-weight: bold;
+}
+
+.section-wrapper {
+  margin-top: 2rem;
+}
+
+.section-wrapper h1,
+.section-wrapper h2 {
+  color: #0d8284;
+  font-weight: 700;
+  font-size: 2.6rem;
+}
+
+.section-wrapper h1 {
+  font-size: 3rem;
+}
+
+.section-wrapper h3 {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.section-wrapper hr {
+  border-color: #0d8284;
+  max-width: 50%;
+}
+
+.link {
+  color: #0d8284;
+}
+
+.sent-msg {
+  color: #0d8284;
+  margin-top: 7px;
+  font-size: 0.9rem;
+}
+
+.error-msg {
+  color: #ff4b55;
+  font-size: 0.9rem;
+  margin-top: 7px;
+}
+
+/* ACCORDION */
+
+.accordion__button {
+  color: #0d8284;
+  border-bottom: 1px solid #0d8284;
+  display: inline-block;
+  margin: 5px 0 7px;
+}
+
+.accordion__panel {
+  padding: 5px 0 10px;
+  border-bottom: 2px solid #0d8284;
+  margin-bottom: 15px;
 }

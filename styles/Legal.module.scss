@@ -1,0 +1,31 @@
+@import './colors';
+
+.legal {
+  h2,
+  h3 {
+    color: $base-green;
+  }
+
+  h3 {
+    margin: 15px 0 5px;
+  }
+
+  p {
+    margin: 12px 0;
+  }
+
+  a {
+    color: $base-green;
+    text-decoration: underline;
+  }
+}
+
+.legalList {
+  margin: 15px 0;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 15px 0 5px;
+  }
+}

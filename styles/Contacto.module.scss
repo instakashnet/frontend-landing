@@ -1,0 +1,29 @@
+@import './colors';
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.infoIcon {
+  color: $base-green;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  padding: 15px;
+  border: 1px solid $base-green;
+  border-radius: 50%;
+}
+
+.contactForm {
+  max-width: 33rem;
+  margin: 15px auto 0;
+
+  button {
+    width: 100%;
+    max-width: 20rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
