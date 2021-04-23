@@ -1,5 +1,19 @@
 @import './colors';
 
+.questions {
+  background: url('/images/bg/faq.svg');
+  background-size: 350px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  padding-bottom: 20rem;
+
+  @media (min-width: 996px) {
+    padding-bottom: 0;
+    background-size: 500px;
+    background-position: 90% bottom;
+  }
+}
+
 .questionWrapper {
   margin: 15px;
 

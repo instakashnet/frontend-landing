@@ -2,6 +2,7 @@ import Image from 'next/image';
 import axios from 'axios';
 import Card from '../components/UI/Card';
 import Calculator from '../components/calculator';
+import Button from '../components/UI/Button';
 
 import styles from '../styles/Home.module.scss';
 
@@ -10,21 +11,21 @@ const Home = ({ rates }) => {
     <>
       <section className={styles.calculatorSection}>
         <div className='container'>
-          <div className='grid md:grid-cols-2 mt-12'>
+          <div className='grid md:grid-cols-2 mt-4 md:mt-12'>
             <header className={styles.sectionTitle}>
-              <h1>Gana cambiando con Instakash</h1>
-              <h2>¡Dale a tu dinero el valor que merece!</h2>
+              <h1>¡Gana cambiando con Instakash!</h1>
+              <h2 className='mb-3 md:mb-0'>Dale a tu dinero el valor que merece</h2>
               <img src='/images/welcome.svg' alt='Gana con instakash' />
             </header>
             <section className={styles.calculatorWrapper}>
-              <Card className='flex items-center justify-between p-6'>
-                <h4>Transferencias inmediatas:</h4>
+              <Card className='flex items-center flex-col md:flex-row w-full justify-between p-6  mt-5 mb-8 md:mt-0 md:mb-0 order-2 md:order-1'>
+                <h4 className='mb-2 md:mb-0'>Transferencias inmediatas:</h4>
                 <div className={styles.banks}>
                   <img src='/images/banks/interbank.svg' alt='banco' />
                   <img src='/images/banks/bcp.svg' alt='banco' />
                 </div>
               </Card>
-              <Card className='py-8 mt-8'>
+              <Card className='py-8 order-1 mt-2 mb-5 md:mt-8 md:mb-0 w-full md:order-2'>
                 <div className={styles.rates}>
                   <div className='px-3'>
                     <h5>Compramos</h5>
@@ -41,6 +42,7 @@ const Home = ({ rates }) => {
                 </div>
                 <Calculator rates={rates} />
               </Card>
+              <img src='/images/welcome.svg' alt='Gana con instakash' className='md:hidden order-3' />
             </section>
           </div>
         </div>
@@ -80,7 +82,7 @@ const Home = ({ rates }) => {
         </div>
       </Card>
       <section className='container section-wrapper' id='steps'>
-        <h2 className='text-center mb-2'>¿Cómo funciona?</h2>
+        <h2 className='text-center my-3'>¿Cómo funciona?</h2>
         <h3 className='text-center'>Instakash es una Fintech que te permitirá hacer tus cambios desde donde estés, solo debes seguir estos sencillos pasos:</h3>
         <div className='flex items-center justify-center flex-wrap mt-12'>
           <div className={styles.step}>
@@ -110,9 +112,9 @@ const Home = ({ rates }) => {
         <div className='container'>
           <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
           <h3 className='text-center'>por eso premiamos tu fidelidad. Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-12'>
-            <Image src='/images/affiliates.svg' width={400} height={400} />
-            <ol>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+            <img src='/images/affiliates.svg' className='order-2 md:order-1 mt-4 md:mt-12' />
+            <ol className='order-1 md:order-2'>
               <li>
                 <span className={styles.affiliatesStep}>01</span>
                 <span>Comparte</span> tu código de afiliado con tus amigos.
@@ -121,9 +123,16 @@ const Home = ({ rates }) => {
                 <span className={styles.affiliatesStep}>02</span>
                 Al realizar su primera operación tus <span>amigos ganarán</span> una tasa preferencial.
               </li>
-              <li>
-                <span className={styles.affiliatesStep}>03</span>
-                Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <p>1 KASH = 1 US$</p>
+              <li className='mt-2 md:mt-0'>
+                <Card className={styles.kashCard}>
+                  <span className={styles.affiliatesStep}>03</span>
+                  <div className='ml-0 md:ml-3'>
+                    Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <span>1 KASH = 1 US$</span>
+                    <Button type='button' className='block w-full md:w-auto mt-4 text-base px-8'>
+                      Ingresar ahora
+                    </Button>
+                  </div>
+                </Card>
               </li>
             </ol>
           </div>
@@ -131,9 +140,9 @@ const Home = ({ rates }) => {
       </section>
       <section className={`section-wrapper ${styles.benefits}`} id='benefits'>
         <div className='container'>
-          <div className='grid md:grid-cols-2 gap-5'>
-            <Image src='/images/benefits.svg' width={400} height={400} />
-            <div className='flex flex-col justify-center pl-6'>
+          <div className='grid md:grid-cols-2 gap-4'>
+            <img src='/images/benefits.svg' width={400} height={400} className='order-2 md:order-1' />
+            <div className='flex flex-col justify-center pl-6 order-1 md:order-2'>
               <h2 className='mb-2'>Conoce nuestros benefícios</h2>
               <ul>
                 <li>

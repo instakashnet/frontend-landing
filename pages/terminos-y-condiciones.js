@@ -3,8 +3,8 @@ import styles from '../styles/Legal.module.scss';
 const TerminosCondiciones = () => {
   return (
     <section className={styles.legal}>
-      <div className='section-wrapper container'>
-        <h1 className='text-center mt-36'>Términos y condiciones</h1>
+      <div className='section-wrapper container px-3'>
+        <h1 className='text-center mt-16 md:mt-36'>Términos y condiciones</h1>
         <hr className='mx-auto' />
 
         <p className='mt-12'>
@@ -190,7 +190,7 @@ const TerminosCondiciones = () => {
               cobros de comisiones o del impuesto a las transacciones financieras (ITF) por parte las entidades financieras involucradas en la operación.
             </p>
             <p>Para registrar una operación, el USUARIO lo debe hacer usando su cuenta:</p>
-            <ul class='list-disc pl-6'>
+            <ul className='list-disc pl-6'>
               <li>El USUARIO indicará el monto a transferir y el tipo de operación (compra o venta).</li>
               <li>
                 El USUARIO está obligado a indicar el origen de los fondos en base a la normativa vigente de prevención de lavado de activos y financiamiento de terrorismo, y esta

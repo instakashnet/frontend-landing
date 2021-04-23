@@ -37,11 +37,11 @@ const contacto = () => {
   return (
     <>
       <section className='container section-wrapper'>
-        <div className='grid grid-cols-1 md:grid-cols-2'>
-          <article className='md:mr-16'>
-            <h1>Contáctanos</h1>
-            <h3 className='mb-6'>Estamos para apoyarte</h3>
-            <hr className='max-w-full' />
+        <h1 className='text-center md:text-left'>Contáctanos</h1>
+        <h3 className='mb-6 text-center md:text-left'>Estamos para apoyarte</h3>
+        <hr className='max-w-xs md:max-w-2xl mx-auto md:mx-0' />
+        <div className='grid grid-cols-1 md:grid-cols-2 p-3'>
+          <article className='md:mr-16 order-2 md:order-1'>
             <div className='flex items-center justify-between mt-3'>
               <h3>Síguenos en redes:</h3>
               <div className={styles.social}>
@@ -90,7 +90,7 @@ const contacto = () => {
               </section>
             </div>
           </article>
-          <form onSubmit={formik.handleSubmit} className={styles.contactForm}>
+          <form onSubmit={formik.handleSubmit} className={`${styles.contactForm} mb-16 md:mb-0 order-1 md:order-2`}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
               <Input
                 name='firstName'

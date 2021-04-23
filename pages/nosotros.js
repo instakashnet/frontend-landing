@@ -49,12 +49,12 @@ const Nosotros = () => {
         </div>
       </section>
       <section className={styles.WhyUs}>
-        <div className='container section-wrapper pt-16 md:pb-56'>
+        <div className='container section-wrapper md:pt-16 pb-12 md:pb-56'>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>
             <article>
               <h2 className='mt-10'>¿Por qué elegírnos?</h2>
               <h3>Estas son las razones que consideramos más importantes</h3>
-              <ul className='mt-10'>
+              <ul className='mt-4 md:mt-10'>
                 <li>Porque entendemos la importancia que tiene cada usuario por valorar su dinero.</li>
                 <li>Porque estamos conscientes de que mereces lo mejor, por eso nuestra plataforma es 100% amigable, sencilla y de confianza.</li>
                 <li>Porque nos importa que mejores tus finanzas, por eso desarrollamos diversos servicios accesibles y de calidad.</li>

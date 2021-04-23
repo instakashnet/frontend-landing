@@ -2,14 +2,13 @@ import React from 'react';
 import Mailchimp from 'react-mailchimp-form';
 
 import Card from '../UI/Card';
-import Button from '../UI/Button';
 import styles from '../../styles/layout/Layout.module.scss';
 
 const Subscribe = () => {
   return (
     <Card className={styles.subscriptionCard}>
-      <div className='flex items-center justify-between w-full'>
-        <div className='w-2/3'>
+      <div className='flex flex-col md:flex-row items-center justify-between w-full'>
+        <div className='w-full md:w-2/3 mb-4'>
           <h2>
             Suscríbete para obtener <br /> ofertas especiales
           </h2>

@@ -8,13 +8,13 @@
 }
 
 .WhyUs {
-  background-image: url('/images/bg/why-us.svg');
+  background-image: url('/images/bg/affiliates-mobile.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
 
   h2 {
-    font-size: 3rem;
+    font-size: 2.2rem;
   }
 
   li {
@@ -26,6 +26,14 @@
 
   img {
     max-width: 18rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    background-image: url('/images/bg/why-us.svg');
+
+    h2 {
+      font-size: 3rem;
+    }
   }
 }
 

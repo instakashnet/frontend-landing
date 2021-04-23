@@ -7,8 +7,13 @@
   background-repeat: no-repeat;
   background-size: 100%, 100%, 100%, 80%;
   overflow: hidden;
-  background-position: 25% 115%, 30% 120%, 40% 110%, center top;
+  background-position: center bottom;
   position: relative;
+  height: 100%;
+
+  @media screen and (min-width: 996px) {
+    background-position: 25% 115%, 30% 120%, 40% 110%, center top;
+  }
 }
 
 .banks {
@@ -26,6 +31,11 @@
   width: 100%;
   margin: 0 auto;
   color: $base-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: column;
+  flex-wrap: wrap;
 
   h4 {
     color: $base-green;
@@ -69,21 +79,38 @@
 }
 
 .sectionTitle {
-  padding-top: 2rem;
+  padding-top: 1rem;
 
   h1 {
     color: $base-green;
     font-weight: 900;
-    font-size: 3rem;
+    font-size: 2rem;
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 1.3rem;
   }
 
   img {
     position: absolute;
     bottom: 80px;
+    display: none;
+  }
+
+  @media screen and (min-width: 996px) {
+    padding-top: 2rem;
+
+    h1 {
+      font-size: 3rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    img {
+      display: block;
+    }
   }
 }
 
@@ -91,12 +118,16 @@
   position: relative;
   top: -6rem;
   max-width: 1440px;
-  display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 3rem 2rem;
   margin: 0 auto;
+  display: none;
+
+  @media screen and (min-width: 996px) {
+    display: flex;
+  }
 }
 
 .infoBox {
@@ -123,7 +154,7 @@
   background-color: #f0f8f5;
   border-radius: 20px;
   padding: 2rem;
-  margin: 0 0.8rem;
+  margin: 1rem 0.8rem;
   text-align: center;
   width: 25rem;
   height: 25rem;
@@ -134,25 +165,39 @@
     color: $base-green;
     margin: 1rem 0 0.5rem;
   }
+
+  @media screen and (min-width: 996px) {
+    margin: 0 0.8rem;
+  }
 }
 
 .affiliates {
   margin-top: 6rem;
   min-height: 100vh;
-  background: url('/images/bg/affiliates.svg');
+  background: url('/images/bg/affiliates-mobile.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
   align-items: center;
+  padding: 50px 15px;
+
+  img {
+    width: 400px;
+  }
 
   li {
     font-size: 1.15rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 20px 0;
   }
 
   span {
     color: $base-green;
     font-weight: bold;
+    margin: 0 5px;
   }
 
   p {
@@ -163,9 +208,52 @@
   }
 
   .affiliatesStep {
-    font-size: 3.5rem;
+    font-size: 3.2rem;
     font-weight: bold;
-    margin-right: 1rem;
+  }
+
+  .kashCard {
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 35rem;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 996px) {
+    background: url('/images/bg/affiliates.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+
+    .affiliatesStep {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-right: 1rem;
+    }
+
+    li {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    .kashCard {
+      padding: 40px 25px;
+      position: relative;
+      left: -25px;
+      top: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      max-width: 35rem;
+      text-align: left;
+    }
+
+    img {
+      width: 500px;
+    }
   }
 }
 

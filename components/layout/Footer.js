@@ -5,8 +5,8 @@ import styles from '../../styles/layout/Layout.module.scss';
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className='container grid grid-cols-4 p-8'>
-        <section className='col-span-1'>
+      <div className='container grid grid-cols-1 md:grid-cols-4 md:py-8 px-8'>
+        <section className='col-span-1 my-2'>
           <img src='/images/logo-white.svg' />
           <p className='text-sm'>Somos la startup financiera que revoluciona la forma de administrar el dinero a través de una plataforma 100% digital.</p>
           <div className='flex tems-center mt-5'>
@@ -21,7 +21,7 @@ const Footer = () => {
             </a>
           </div>
         </section>
-        <section className='col-span-3 ml-20 flex items-start justify-between'>
+        <section className='col-span-3 md:ml-20 flex flex-col md:flex-row items-start justify-between'>
           <div className={styles.footerMenu}>
             <h4>Menú</h4>
             <ul>
@@ -86,7 +86,7 @@ const Footer = () => {
         </section>
       </div>
       <div className={styles.copy}>
-        <div className='container flex items-center justify-between'>
+        <div className='container flex flex-col p-2 md:flex-row items-start md:items-center justify-between'>
           <p>
             2021 &copy; Todos los derechos reservados. <b>Instakash</b>
           </p>

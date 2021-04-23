@@ -3,8 +3,8 @@ import styles from '../styles/Legal.module.scss';
 const PoliticasPrivacidad = () => {
   return (
     <section className={styles.legal}>
-      <div className='section-wrapper container'>
-        <h1 className='text-center mt-36'>Políticas de privacidad</h1>
+      <div className='section-wrapper container px-3'>
+        <h1 className='text-center mt-16 md:mt-36'>Políticas de privacidad</h1>
         <hr className='mx-auto' />
         <p className='mt-12'>Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH S.A.C, (“La Empresa” o “nosotros”).</p>
         <p>

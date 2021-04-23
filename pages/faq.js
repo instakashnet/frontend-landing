@@ -7,9 +7,9 @@ import styles from '../styles/FAQ.module.scss';
 const Faq = () => {
   return (
     <>
-      <section className='container section-wrapper'>
+      <section className={`container section-wrapper ${styles.questions}`}>
         <h1 className='text-center mb-12'>¿Cómo podemos ayudarte?</h1>
-        <article className='max-w-2xl mx-auto'>
+        <article className='max-w-4xl mx-auto'>
           <div className={styles.questionWrapper}>
             <h3>Sobre mi cuenta y mi perfil</h3>
             <Accordion allowZeroExpanded>
