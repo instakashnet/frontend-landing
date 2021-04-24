@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import axios from 'axios';
 import Card from '../components/UI/Card';
 import Calculator from '../components/calculator';
@@ -49,7 +48,7 @@ const Home = ({ rates }) => {
       </section>
       <Card className={styles.infoCard}>
         <div className='flex items-center justify-start'>
-          <Image src='/images/icons/badge.svg' width={50} height={50} />
+          <img src='/images/icons/badge.svg' width={50} height={50} />
           <div className={styles.infoBox}>
             <p>
               Registrados y autorizados por la <br />{' '}
@@ -60,21 +59,21 @@ const Home = ({ rates }) => {
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <Image src='/images/icons/laptop.svg' width={80} height={80} />
+          <img src='/images/icons/laptop.svg' width={80} height={80} />
           <div className={styles.infoBox}>
             <h5>22 Mil</h5>
             <p>Operaciones Registradas</p>
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <Image src='/images/icons/soles.svg' width={50} height={50} />
+          <img src='/images/icons/soles.svg' width={50} height={50} />
           <div className={styles.infoBox}>
             <h5>100 Millones</h5>
             <p>Soles Transferidos</p>
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <Image src='/images/icons/users.svg' width={50} height={50} />
+          <img src='/images/icons/users.svg' width={50} height={50} />
           <div className={styles.infoBox}>
             <h5>5 Mil</h5>
             <p>Usuarios Activos</p>
@@ -86,21 +85,21 @@ const Home = ({ rates }) => {
         <h3 className='text-center'>Instakash es una Fintech que te permitirá hacer tus cambios desde donde estés, solo debes seguir estos sencillos pasos:</h3>
         <div className='flex items-center justify-center flex-wrap mt-12'>
           <div className={styles.step}>
-            <Image src='/images/steps/step-1.svg' width={200} height={200} />
+            <img src='/images/steps/step-1.svg' width={200} height={200} />
             <h4>Paso 1</h4>
             <p>
               <b>Regístrate y cotiza tu cambio.</b> <br /> Coloca el monto a enviar o recibir y obtén la mejor tasa.
             </p>
           </div>
           <div className={styles.step}>
-            <Image src='/images/steps/step-2.svg' width={200} height={200} />
+            <img src='/images/steps/step-2.svg' width={200} height={200} />
             <h4>Paso 2</h4>
             <p>
               <b>Transfiere los fondos a Instakash.</b> <br /> Realiza la transferencia desde tu banco a la cuenta indicada.
             </p>
           </div>
           <div className={styles.step}>
-            <Image src='/images/steps/step-3.svg' width={200} height={200} />
+            <img src='/images/steps/step-3.svg' width={200} height={200} />
             <h4>Paso 3</h4>
             <p>
               <b>Recibe tu cambio.</b> <br /> Verifica el abono en tu cuenta y sigue ahorrando con Instakash.
