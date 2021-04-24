@@ -10,10 +10,10 @@ const Home = ({ rates }) => {
     <>
       <section className={styles.calculatorSection}>
         <div className='container'>
-          <div className='grid md:grid-cols-2 mt-4 md:mt-12'>
+          <div className='grid md:grid-cols-2 md:mt-12'>
             <header className={styles.sectionTitle}>
-              <h1>¡Gana cambiando con Instakash!</h1>
-              <h2 className='mb-3 md:mb-0'>Dale a tu dinero el valor que merece</h2>
+              <h1 className='pl-3 md:pl-0'>¡Gana cambiando con Instakash!</h1>
+              <h2 className='mb-3 md:mb-0 pl-3 md:pl-0'>Dale a tu dinero el valor que merece</h2>
               <img src='/images/welcome.svg' alt='Gana con instakash' />
             </header>
             <section className={styles.calculatorWrapper}>
@@ -24,7 +24,7 @@ const Home = ({ rates }) => {
                   <img src='/images/banks/bcp.svg' alt='banco' />
                 </div>
               </Card>
-              <Card className='py-4 md:py-8 order-1 mt-2 md:mt-8 w-full md:order-2'>
+              <Card className='py-4 md:py-8 order-1 md:mt-8 w-full md:order-2'>
                 <div className={styles.rates}>
                   <div className='px-3'>
                     <h5>Compramos</h5>

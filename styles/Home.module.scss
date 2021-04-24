@@ -76,6 +76,10 @@
       font-size: 1rem;
     }
   }
+
+  > div:first-of-type {
+    border-right: 2px solid $base-green;
+  }
 }
 
 .sectionTitle {
