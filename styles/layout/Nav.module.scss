@@ -55,17 +55,23 @@
 }
 
 .stickyNav {
-  height: 5.5rem;
+  height: 4.5rem;
 
   background-color: #fff;
   box-shadow: 4px 4px 20px rgba(16, 80, 82, 0.2);
 
   img {
-    width: 11rem;
+    width: 9rem;
   }
 
   a {
     font-size: 0.95rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    img {
+      width: 11rem;
+    }
   }
 }
 
