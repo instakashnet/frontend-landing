@@ -21,7 +21,7 @@ button:disabled {
 
 .container {
   width: 100%;
-  max-width: 1440px;
+  max-width: 1560px;
   margin: 0 auto;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -29,7 +29,6 @@ button:disabled {
 
 @media screen and (min-width: 1140px) {
   .container {
-    width: 95%;
     padding-left: 1rem;
     padding-right: 1rem;
   }
@@ -49,6 +48,7 @@ b {
   color: #0d8284;
   font-weight: 700;
   font-size: 1.8rem;
+  line-height: 1.2;
 }
 
 .section-wrapper h1 {
@@ -82,6 +82,11 @@ b {
 .section-wrapper hr {
   border-color: #0d8284;
   max-width: 50%;
+}
+
+.section-wrapper b {
+  color: #0d8284;
+  font-weight: bold;
 }
 
 .link {

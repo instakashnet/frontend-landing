@@ -68,7 +68,11 @@ const Footer = () => {
                   <a>Políticas de privacidad</a>
                 </Link>
               </li>
-              <li>Libro de reclamaciones</li>
+              <li>
+                <Link href='/libro-de-reclamaciones'>
+                  <a>Libro de reclamaciones</a>
+                </Link>
+              </li>
             </ul>
           </div>
           <div className={styles.footerMenu}>

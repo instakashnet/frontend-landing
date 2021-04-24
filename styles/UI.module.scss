@@ -90,8 +90,18 @@
 .formGroup {
   margin: 10px 0;
 
+  select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('/images/icons/arrow.svg');
+    background-repeat: no-repeat;
+    background-position: 97%;
+  }
+
   input,
-  textarea {
+  textarea,
+  select {
     border: 1px solid #b9b9b9;
     background-color: #f4f4f4;
     border-radius: 10px;

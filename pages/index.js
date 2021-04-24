@@ -83,7 +83,7 @@ const Home = ({ rates }) => {
       <section className='container section-wrapper' id='steps'>
         <h2 className='text-center my-3'>¿Cómo funciona?</h2>
         <h3 className='text-center'>Instakash es una Fintech que te permitirá hacer tus cambios desde donde estés, solo debes seguir estos sencillos pasos:</h3>
-        <div className='flex items-center justify-center flex-wrap mt-12'>
+        <div className='flex items-center justify-center flex-col md:flex-row mt-12'>
           <div className={styles.step}>
             <img src='/images/steps/step-1.svg' width={200} height={200} />
             <h4>Paso 1</h4>
