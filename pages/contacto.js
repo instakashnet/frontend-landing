@@ -37,25 +37,11 @@ const contacto = () => {
   return (
     <>
       <section className='container section-wrapper'>
-        <h1 className='text-center md:text-left'>Contáctanos</h1>
-        <h3 className='mb-6 text-center md:text-left'>Estamos para apoyarte</h3>
-        <hr className='max-w-xs md:max-w-2xl mx-auto md:mx-0' />
-        <div className='grid grid-cols-1 md:grid-cols-2 p-3'>
+        <h1 className='text-center'>Contáctanos</h1>
+        <h3 className='mb-6 text-center'>Estamos para apoyarte</h3>
+        <hr className='max-w-xs md:max-w-lg mx-auto md:mt-6' />
+        <div className='grid grid-cols-1 md:grid-cols-2 p-3 md:ml-12'>
           <article className='md:mr-16 order-2 md:order-1'>
-            <div className='flex items-center justify-between mt-3'>
-              <h3>Síguenos en redes:</h3>
-              <div className={styles.social}>
-                <a href='!#' target='_blank' rel='noopener noreferrer'>
-                  <img src='/images/social/instagram-green.svg' className='mx-3 w-6' />
-                </a>
-                <a href='!#' target='_blank' rel='noopener noreferrer'>
-                  <img src='/images/social/facebook-green.svg' className='mx-3 w-6' />
-                </a>
-                <a href='!#' target='_blank' rel='noopener noreferrer'>
-                  <img src='/images/social/linkedin-green.svg' className='mx-3 w-6' />
-                </a>
-              </div>
-            </div>
             <div className='flex items-center my-8'>
               <MapPin className={styles.infoIcon} />
               <section>
@@ -89,6 +75,21 @@ const contacto = () => {
                 </a>
               </section>
             </div>
+            <div className='flex items-center justify-between md:justify-start mt-3'>
+              <h3 className='mr-6'>Síguenos en redes:</h3>
+              <div className={styles.social}>
+                <a href='!#' target='_blank' rel='noopener noreferrer'>
+                  <img src='/images/social/instagram-green.svg' className='mx-3 w-6 md:w-8' />
+                </a>
+                <a href='!#' target='_blank' rel='noopener noreferrer'>
+                  <img src='/images/social/facebook-green.svg' className='mx-3 w-6 md:w-8' />
+                </a>
+                <a href='!#' target='_blank' rel='noopener noreferrer'>
+                  <img src='/images/social/linkedin-green.svg' className='mx-3 w-6 md:w-8' />
+                </a>
+              </div>
+            </div>
+            <img src='/images/contact.svg' alt='contacto' className={styles.contactImg} />
           </article>
           <form onSubmit={formik.handleSubmit} className={`${styles.contactForm} mb-16 md:mb-0 order-1 md:order-2`}>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>

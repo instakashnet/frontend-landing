@@ -6,6 +6,17 @@
   justify-content: center;
 }
 
+.contactImg {
+  width: 20rem;
+  position: relative;
+  top: 40px;
+
+  @media screen and (min-width: 996px) {
+    width: 30rem;
+    top: 100px;
+  }
+}
+
 .infoIcon {
   color: $base-green;
   margin-right: 20px;
