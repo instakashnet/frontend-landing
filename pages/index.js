@@ -17,14 +17,14 @@ const Home = ({ rates }) => {
               <img src='/images/welcome.svg' alt='Gana con instakash' />
             </header>
             <section className={styles.calculatorWrapper}>
-              <Card className='flex items-center flex-col md:flex-row w-full justify-between p-6  mt-5 mb-8 md:mt-0 md:mb-0 order-2 md:order-1'>
+              <Card className='flex items-center flex-col md:flex-row w-full justify-between p-6 mt-0 mb-4 md:mb-0 order-2 md:order-1'>
                 <h4 className='mb-2 md:mb-0'>Transferencias inmediatas:</h4>
                 <div className={styles.banks}>
                   <img src='/images/banks/interbank.svg' alt='banco' />
                   <img src='/images/banks/bcp.svg' alt='banco' />
                 </div>
               </Card>
-              <Card className='py-8 order-1 mt-2 mb-5 md:mt-8 md:mb-0 w-full md:order-2'>
+              <Card className='py-4 md:py-8 order-1 mt-2 md:mt-8 w-full md:order-2'>
                 <div className={styles.rates}>
                   <div className='px-3'>
                     <h5>Compramos</h5>
