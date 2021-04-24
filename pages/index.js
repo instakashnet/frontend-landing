@@ -41,7 +41,7 @@ const Home = ({ rates }) => {
                 </div>
                 <Calculator rates={rates} />
               </Card>
-              <img src='/images/welcome.svg' alt='Gana con instakash' className='md:hidden order-3' />
+              <img src='/images/welcome.svg' alt='Gana con instakash' className='md:hidden mr-3 w-80 order-3' />
             </section>
           </div>
         </div>
@@ -112,7 +112,7 @@ const Home = ({ rates }) => {
           <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
           <h3 className='text-center'>por eso premiamos tu fidelidad. Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.</h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <img src='/images/affiliates.svg' className='order-2 md:order-1 mt-4 md:mt-12' />
+            <img src='/images/affiliates.svg' className='order-2 w-80 md:w-auto md:order-1 mt-4 md:mt-12' />
             <ol className='order-1 md:order-2'>
               <li>
                 <span className={styles.affiliatesStep}>01</span>
@@ -126,7 +126,7 @@ const Home = ({ rates }) => {
                 <Card className={styles.kashCard}>
                   <span className={styles.affiliatesStep}>03</span>
                   <div className='ml-0 md:ml-3'>
-                    Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <span>1 KASH = 1 US$</span>
+                    Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
                     <Button type='button' className='block w-full md:w-auto mt-4 text-base px-8'>
                       Ingresar ahora
                     </Button>

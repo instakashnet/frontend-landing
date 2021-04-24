@@ -156,6 +156,10 @@
   padding: 2rem;
   margin: 1rem 0.8rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 25rem;
   height: 25rem;
 
@@ -180,7 +184,7 @@
   background-position: center;
   display: flex;
   align-items: center;
-  padding: 50px 15px;
+  padding: 50px 15px 25px;
 
   img {
     width: 400px;
@@ -261,7 +265,7 @@
 }
 
 .benefits {
-  margin-top: 6rem;
+  margin-top: 4rem;
   margin-bottom: 2rem;
 
   ul {
