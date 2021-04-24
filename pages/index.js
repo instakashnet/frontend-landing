@@ -112,7 +112,7 @@ const Home = ({ rates }) => {
           <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
           <h3 className='text-center'>por eso premiamos tu fidelidad. Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.</h3>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <img src='/images/affiliates.svg' className='order-2 w-80 md:w-auto md:order-1 mt-4 md:mt-12' />
+            <img src='/images/affiliates.svg' className='order-2 w-80 ml-3 md:ml-0 md:w-auto md:order-1 mt-4 md:mt-12' />
             <ol className='order-1 md:order-2'>
               <li>
                 <span className={styles.affiliatesStep}>01</span>
