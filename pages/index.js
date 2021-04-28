@@ -108,32 +108,45 @@ const Home = ({ rates }) => {
         </div>
       </section>
       <section className={`section-wrapper ${styles.affiliates}`} id='affiliates'>
-        <div className='container'>
-          <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
-          <h3 className='text-center'>por eso premiamos tu fidelidad. Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.</h3>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
-            <img src='/images/affiliates.svg' className='order-2 ml-3 md:ml-0 md:order-1 mt-4 md:mt-12' />
-            <ol className='order-1 md:order-2'>
-              <li>
-                <span className={styles.affiliatesStep}>01</span>
-                <span>Comparte</span> tu código de afiliado con tus amigos.
-              </li>
-              <li>
-                <span className={styles.affiliatesStep}>02</span>
-                Al realizar su primera operación tus <span>amigos ganarán</span> una tasa preferencial.
-              </li>
-              <li className='mt-2 md:mt-0'>
-                <Card className={styles.kashCard}>
-                  <span className={styles.affiliatesStep}>03</span>
-                  <div className='ml-0 md:ml-3'>
-                    Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
-                    <Button type='button' className='block w-full md:w-auto mt-4 text-base px-8'>
-                      Ingresar ahora
-                    </Button>
-                  </div>
-                </Card>
-              </li>
-            </ol>
+        <div className={styles.affiliatesBg}>
+          <div className='container md:mt-12'>
+            <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
+            <h3 className='text-center'>
+              por eso premiamos tu fidelidad. <br />
+              Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.
+            </h3>
+            <div className='flex items-center justify-center flex-col md:flex-row'>
+              <img src='/images/affiliates-1.svg' alt='Gana con tus referidos' />
+              <ol>
+                <li>
+                  <span className={styles.affiliatesStep}>01</span>
+                  <p>
+                    <span>Comparte</span> tu código de afiliado con tus amigos.
+                  </p>
+                </li>
+                <li>
+                  <span className={styles.affiliatesStep}>02</span>
+                  <p>
+                    Al realizar su primera operación tus <span>amigos ganarán</span> una tasa preferencial.
+                  </p>
+                </li>
+                <li className='mt-2 md:mt-0 relative'>
+                  <img src='/images/dollar-bill.svg' alt='dollar bill' className='w-20' />
+                  <Card className={styles.kashCard}>
+                    <span className={styles.affiliatesStep}>03</span>
+                    <div className='ml-0 md:ml-3'>
+                      <p>
+                        Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
+                      </p>
+                      <Button type='button' className='block w-full md:w-auto mt-4 text-base px-8'>
+                        Ingresar ahora
+                      </Button>
+                    </div>
+                  </Card>
+                </li>
+              </ol>
+              <img src='/images/affiliates-2.svg' alt='Gana con tus referidos' />
+            </div>
           </div>
         </div>
       </section>

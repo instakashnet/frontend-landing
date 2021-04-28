@@ -183,17 +183,30 @@
 
 .affiliates {
   margin-top: 6rem;
-  min-height: 100vh;
-  background: url('/images/bg/affiliates-mobile.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 50px 15px 25px;
+  padding-bottom: 370px;
+  position: relative;
+
+  .affiliatesBg {
+    background: url('/images/bg/affiliates-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 15px 25px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+  }
 
   img {
-    width: 320px;
+    width: 300px;
+
+    &:last-of-type {
+      width: 250px;
+      position: absolute;
+      bottom: 0;
+    }
   }
 
   li {
@@ -202,6 +215,18 @@
     align-items: center;
     flex-direction: column;
     margin: 20px 0;
+
+    img {
+      display: none;
+    }
+
+    p {
+      color: #676767;
+      font-weight: normal;
+      margin: 0;
+      font-size: 1.2rem;
+      text-align: center;
+    }
   }
 
   span {
@@ -235,14 +260,36 @@
   }
 
   @media screen and (min-width: 996px) {
-    background: url('/images/bg/affiliates.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
+    padding: 0;
+    display: block;
+
+    .affiliatesBg {
+      background: url('/images/bg/affiliates.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      padding: 20px;
+      min-height: 95vh;
+    }
+
+    ol {
+      max-width: 40rem;
+      margin: 15px 15px 0;
+    }
+
+    img {
+      width: 350px;
+
+      &:last-of-type {
+        position: relative;
+        left: 80px;
+        bottom: 100px;
+        width: 320px;
+      }
+    }
 
     .affiliatesStep {
-      font-size: 3.5rem;
+      font-size: 4rem;
       font-weight: bold;
       margin-right: 1rem;
     }
@@ -250,6 +297,18 @@
     li {
       flex-direction: row;
       margin: 0;
+
+      img {
+        display: inline-block;
+        position: absolute !important;
+        left: -80px !important;
+        top: 0;
+        z-index: 1;
+      }
+
+      p {
+        text-align: left;
+      }
     }
 
     .kashCard {
@@ -260,12 +319,8 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      max-width: 35rem;
+      max-width: 100%;
       text-align: left;
-    }
-
-    img {
-      width: 480px;
     }
   }
 }
