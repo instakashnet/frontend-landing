@@ -1,7 +1,6 @@
 import axios from 'axios';
 import Card from '../components/UI/Card';
 import Calculator from '../components/calculator';
-import Button from '../components/UI/Button';
 
 import styles from '../styles/Home.module.scss';
 
@@ -18,6 +17,12 @@ const Home = ({ rates }) => {
             </header>
             <section className={styles.calculatorWrapper}>
               <Card className='flex items-center flex-col md:flex-row w-full justify-between p-6 mt-0 mb-4 md:mb-0 order-2 md:order-1'>
+                <div className='flex items-center md:hidden mb-7'>
+                  <img src='/images/icons/badge.svg' width={55} height={55} />
+                  <p>
+                    Estamos registrados y autorizados <br /> por la <b>SBS</b>.
+                  </p>
+                </div>
                 <h4 className='mb-2 md:mb-0'>Transferencias inmediatas:</h4>
                 <div className={styles.banks}>
                   <img src='/images/banks/interbank.svg' alt='banco' />
@@ -48,32 +53,32 @@ const Home = ({ rates }) => {
       </section>
       <Card className={styles.infoCard}>
         <div className='flex items-center justify-start'>
-          <img src='/images/icons/badge.svg' width={50} height={50} />
+          <img src='/images/icons/badge.svg' width={55} height={55} />
           <div className={styles.infoBox}>
             <p>
               Registrados y autorizados por la <br />{' '}
-              <span>
-                Superintendencia de Banca, <br /> Seguros y AFP
-              </span>
             </p>
+            <h5>
+              Superintendencia de Banca, <br /> Seguros y AFP
+            </h5>
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <img src='/images/icons/laptop.svg' width={80} height={80} />
+          <img src='/images/icons/laptop.svg' width={85} height={85} />
           <div className={styles.infoBox}>
             <h5>22 Mil</h5>
             <p>Operaciones Registradas</p>
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <img src='/images/icons/soles.svg' width={50} height={50} />
+          <img src='/images/icons/soles.svg' width={55} height={55} />
           <div className={styles.infoBox}>
             <h5>100 Millones</h5>
             <p>Soles Transferidos</p>
           </div>
         </div>
         <div className='flex items-center justify-start'>
-          <img src='/images/icons/users.svg' width={50} height={50} />
+          <img src='/images/icons/users.svg' width={55} height={55} />
           <div className={styles.infoBox}>
             <h5>5 Mil</h5>
             <p>Usuarios Activos</p>
@@ -110,7 +115,7 @@ const Home = ({ rates }) => {
       <section className={`section-wrapper ${styles.affiliates}`} id='affiliates'>
         <div className={styles.affiliatesBg}>
           <div className='container md:mt-12'>
-            <h2 className='text-center mb-2'>¡Estamos felices de tenerte con nosotros!</h2>
+            <h2 className='text-center mb-2'>¡Recomienda y gana!</h2>
             <h3 className='text-center'>
               por eso premiamos tu fidelidad. <br />
               Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.
@@ -138,9 +143,9 @@ const Home = ({ rates }) => {
                       <p>
                         Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
                       </p>
-                      <Button type='button' className='block w-full md:w-auto mt-4 text-base px-8'>
+                      <a href='https://app.instakash.net' className='block w-full md:w-52 mt-4 px-8'>
                         Ingresar ahora
-                      </Button>
+                      </a>
                     </div>
                   </Card>
                 </li>
@@ -153,7 +158,7 @@ const Home = ({ rates }) => {
       <section className={`section-wrapper ${styles.benefits}`} id='benefits'>
         <div className='container'>
           <div className='grid md:grid-cols-2 gap-4'>
-            <img src='/images/benefits.svg' width={400} height={400} className='order-2 md:order-1' />
+            <img src='/images/benefits.svg' className='order-2 md:order-1 text-base md:text-auto place-self-center' />
             <div className='flex flex-col justify-center pl-6 order-1 md:order-2'>
               <h2 className='mb-2'>Conoce nuestros benefícios</h2>
               <ul>
