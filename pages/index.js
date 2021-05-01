@@ -117,8 +117,7 @@ const Home = ({ rates }) => {
           <div className='container md:mt-12'>
             <h2 className='text-center mb-2'>¡Recomienda y gana!</h2>
             <h3 className='text-center'>
-              por eso premiamos tu fidelidad. <br />
-              Con el nuevo sistema de afiliados obtendrás mayores beneficios, comienza a usarlo al toque.
+              Con el nuevo sistema de afiliados obtendrás siempre los mejores y mayores beneficios. <br /> Comienza a usarlo al toque.
             </h3>
             <div className='flex items-center justify-center flex-col md:flex-row'>
               <img src='/images/affiliates-1.svg' alt='Gana con tus referidos' />
@@ -138,15 +137,15 @@ const Home = ({ rates }) => {
                 <li className='mt-2 md:mt-0 relative'>
                   <img src='/images/dollar-bill.svg' alt='dollar bill' className='w-20' />
                   <Card className={styles.kashCard}>
-                    <span className={styles.affiliatesStep}>03</span>
-                    <div className='ml-0 md:ml-3'>
+                    <div className='flex flex-col md:flex-row items-center justify-start'>
+                      <span className={styles.affiliatesStep}>03</span>
                       <p>
                         Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
                       </p>
-                      <a href='https://app.instakash.net' className='block w-full md:w-52 mt-4 px-8'>
-                        Ingresar ahora
-                      </a>
                     </div>
+                    <a href='https://app.instakash.net' className='block w-full md:w-60 mt-4 mx-auto px-8'>
+                      Ingresar ahora
+                    </a>
                   </Card>
                 </li>
               </ol>
