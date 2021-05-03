@@ -140,7 +140,7 @@ const Home = ({ rates }) => {
                     <div className='flex flex-col md:flex-row items-center justify-start'>
                       <span className={styles.affiliatesStep}>03</span>
                       <p>
-                        Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = 1 US$</span>
+                        Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = $1 USD</span>
                       </p>
                     </div>
                     <a href='https://app.instakash.net' className='block w-full md:w-60 mt-4 mx-auto px-8'>
@@ -183,7 +183,7 @@ const Home = ({ rates }) => {
 };
 
 export const getServerSideProps = async () => {
-  const res = await axios.get('https://exchange-affiliate.herokuapp.com/api/v1/rates');
+  const res = await axios.get('https://api-exchange.instakash.net/api/v1/rates');
 
   try {
     return {

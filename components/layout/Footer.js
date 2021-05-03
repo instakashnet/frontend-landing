@@ -12,13 +12,13 @@ const Footer = () => {
           <img src='/images/logo-white.svg' />
           <p className='text-sm'>Somos la startup financiera que revoluciona la forma de administrar el dinero a través de una plataforma 100% digital.</p>
           <div className='flex tems-center mt-5'>
-            <a href='!#' target='_blank' rel='noopener noreferrer' className='mr-6'>
+            <a href='https://www.facebook.com/Instakash-103956227716506' target='_blank' rel='noopener noreferrer' className='mr-6'>
               <Facebook size={35} />
             </a>
-            <a href='!#' target='_blank' rel='noopener noreferrer' className='mr-6'>
+            <a href='https://www.instagram.com/instakashnet/' target='_blank' rel='noopener noreferrer' className='mr-6'>
               <Instagram size={35} />
             </a>
-            <a href='!#' target='_blank' rel='noopener noreferrer'>
+            <a href='https://www.linkedin.com/company/71140162' target='_blank' rel='noopener noreferrer'>
               <Linkedin size={35} />
             </a>
           </div>

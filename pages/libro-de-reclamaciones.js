@@ -1,4 +1,6 @@
+import { useState } from 'react';
 import { useFormik } from 'formik';
+import emailjs from 'emailjs-com';
 import { reclamacionesValidation } from '../helpers/validations';
 
 import Input from '../components/UI/form/Input';
@@ -7,6 +9,9 @@ import Textarea from '../components/UI/form/Textarea';
 import Button from '../components/UI/Button';
 
 const LibroReclamaciones = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [sent, setSent] = useState(false);
+
   const documentOptions = [
     { value: 'DNI', label: 'DNI' },
     { value: 'PTP', label: 'PTP' },
@@ -18,21 +23,21 @@ const LibroReclamaciones = () => {
     { value: 'Cambios de divisas (venta)', label: 'Cambios de divisas (venta)' },
   ];
 
-  // const onSubmit = async (values) => {
-  //   setIsLoading(true);
+  const onSubmit = async (values) => {
+    setIsLoading(true);
 
-  //   try {
-  //     const res = await emailjs.send('instakash_service', 'inquiry_template', values, 'user_HpWIiQWPXIgpMaV2NuEIB');
-  //     if (res.status === 200) {
-  //       setSent(true);
-  //     }
-  //   } catch (error) {
-  //     console.log(error);
-  //     setError(true);
-  //   } finally {
-  //     setIsLoading(false);
-  //   }
-  // };
+    try {
+      const res = await emailjs.send('instakash_service', 'inquiry_template', values, 'user_HpWIiQWPXIgpMaV2NuEIB');
+      if (res.status === 200) {
+        setSent(true);
+      }
+    } catch (error) {
+      console.log(error);
+      setError(true);
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -49,7 +54,7 @@ const LibroReclamaciones = () => {
       description: '',
       formType: '',
     },
-    onSubmit: (values) => console.log(values),
+    onSubmit,
     validationSchema: reclamacionesValidation,
   });
 
@@ -193,10 +198,13 @@ const LibroReclamaciones = () => {
               onBlur={formik.handleBlur}
             />
             <div className='flex items-center justify-center'>
-              <Button type='submit' className='block w-56 md:w-80'>
-                Enviar mensaje
+              <Button type='submit' disabled={isLoading || sent} className='block w-56 md:w-80'>
+                {!isLoading && !sent && 'Enviar mensaje'}
+                {isLoading && !sent && 'Enviando...'}
+                {!isLoading && sent && 'Mensaje enviado'}
               </Button>
             </div>
+            {sent && <p className='sent-msg text-center mt-3'>Su mensaje ha sido recibido, pronto estaremos en contacto.</p>}
           </form>
         </div>
       </section>
