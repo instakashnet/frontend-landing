@@ -1,5 +1,7 @@
 import Link from 'next/link';
 import { Facebook, Instagram, Linkedin } from 'react-feather';
+import Anchor from 'react-anchor-link-smooth-scroll';
+
 import styles from '../../styles/layout/Layout.module.scss';
 
 const Footer = () => {
@@ -41,7 +43,7 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <a href='' className='flex items-center'>
+                <a href='https://wa.link/05keps' target='_blank' rel='noopener noreferrer' className='flex items-center'>
                   <img src='/images/icons/whatsapp.svg' className='mr-2 w-4 mb-0' /> Atención al usuario
                 </a>
               </li>
@@ -50,9 +52,15 @@ const Footer = () => {
           <div className={`${styles.footerMenu} lg:block hidden`}>
             <h4>Links rápidos</h4>
             <ul>
-              <li>¿Como funciona?</li>
-              <li>¡Gana con tus referidos!</li>
-              <li>¿Por qué Instakash?</li>
+              <li>
+                <Anchor href='#steps'>¿Como funciona?</Anchor>
+              </li>
+              <li>
+                <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
+              </li>
+              <li>
+                <Anchor href='#benefits'>¿Por qué Instakash?</Anchor>
+              </li>
             </ul>
           </div>
           <div className={styles.footerMenu}>
@@ -78,7 +86,9 @@ const Footer = () => {
           <div className={styles.footerMenu}>
             <h4>Datos de contacto</h4>
             <ul>
-              <li>contacto@instakash.net</li>
+              <li>
+                <a href='mailto:contacto@instakash.net'>contacto@instakash.net</a>
+              </li>
               <li>
                 Lunes a Viernes <br /> 9 a.m - 7 p.m
               </li>
