@@ -7,7 +7,10 @@ import Button from '../UI/Button';
 import Swipe from './Swipe';
 
 const Calculator = ({ rates }) => {
-  const formik = useFormik({ initialValues: { type: 'sell', currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 } });
+  const formik = useFormik({
+    initialValues: { type: 'sell', currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 },
+    onSubmit: () => (window.location.href = 'https://app.instakash.net'),
+  });
   const { setFieldValue } = formik;
 
   useEffect(() => {
@@ -42,7 +45,7 @@ const Calculator = ({ rates }) => {
       </div>
       <p className='text-sm mt-2 flex items-center justify-between pl-2'>
         <Info className='mr-3' size={40} />
-        Para montos mayores a $5,000 solicita tipo de cambio preferenciala en nuestro chat de whatsapp.
+        Para montos mayores a $5,000 solicita un tipo de cambio preferencial en nuestro chat de whatsapp.
       </p>
       <Button type='submit' className='w-full mt-6' disabled={formik.values.amount_sent === 0}>
         Comenzar cambio

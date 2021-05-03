@@ -52,10 +52,10 @@ const Nav = () => {
           </ul>
 
           <div className={styles.navButtons}>
-            <a href='https://app.instakash.net' className='mr-4'>
+            <a href='https://app.instakash.net/signin' className='mr-4'>
               Iniciar sesión
             </a>
-            <a href='https://app.instakash.net'>Registrarse</a>
+            <a href='https://app.instakash.net/signup'>Registrarse</a>
           </div>
 
           <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
