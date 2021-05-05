@@ -2,7 +2,7 @@
 
 .calculatorSection {
   width: 100%;
-  min-height: 81vh;
+  min-height: 85vh;
   background: url('/images/bg/calculator-3.svg'), url('/images/bg/calculator-2.svg'), url('/images/bg/calculator-1.svg'), url('/images/bg/shapes-top.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%, 100%, 80%;
@@ -13,6 +13,14 @@
 
   @media screen and (min-width: 996px) {
     background-position: 25% 115%, 30% 120%, 40% 110%, center top;
+  }
+
+  @media screen and (min-width: 1140px) {
+    min-height: 100vh;
+  }
+
+  @media screen and (min-width: 1560px) {
+    min-height: 80vh;
   }
 }
 
@@ -105,6 +113,21 @@
     padding-top: 2rem;
 
     h1 {
+      font-size: 2.5rem;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+    }
+
+    img {
+      width: 30rem;
+      display: block;
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    h1 {
       font-size: 3.2rem;
     }
 
@@ -113,13 +136,7 @@
     }
 
     img {
-      display: block;
-    }
-  }
-
-  @media screen and (min-width: 1366px) {
-    img {
-      width: 40rem;
+      width: 37rem;
     }
   }
 }
