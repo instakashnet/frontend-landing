@@ -139,8 +139,8 @@ const TerminosCondiciones = () => {
             </p>
 
             <p>
-              INSTAKASH no será responsable de errores, gastos, comisiones o tiempos incurridos debidos a errores del USUARIO donde este transfiera a otra cuenta de la especificada
-              por INSTAKASH.
+              INSTAKASH no será responsable de errores, gastos, comisiones o tiempos incurridos debidos a errores del USUARIO o de los bancos donde este transfiera a otra cuenta de
+              la especificada por INSTAKASH.
             </p>
 
             <p>
@@ -179,7 +179,23 @@ const TerminosCondiciones = () => {
         <h3 className='mt-10 mb-6 text-2xl'>Servicios:</h3>
         <ol className={styles.legalList}>
           <li>
-            <h3>8.1 CAMBIO DE MONEDA EXTRANJERA:</h3>
+            <h3>8.1 MONEDA KASH:</h3>
+            <p>
+              la moneda virtual KASH es un activo digital creado por INSTAKASH con una capitalización de mercado y por lo tanto siempre se compran y canjean 1 KASH por 1,00 dólar
+              estadounidense. Funciona como medio para agilizar diversas operaciones y servicios dentro de la plataforma de INSTAKASH.
+            </p>
+            <p>
+              Cada moneda KASH (1 KASH por 1,00 dólar estadounidense) está respaldada de forma real en las cuentas bancarias de INSTAKASH por dólares estadounidenses, y en
+              consecuencia, siempre está disponible en forma de reserva. Confirmando así que INSTAKASH no emite monedas KASH, sino que corresponden parte del patrimonio propio de
+              la empresa en función de ofrecer una estabilidad y seguridad real. La moneda Kash es inicialmente transable de forma exclusiva solo por y dentro de la plataforma de
+              INSTAKASH.
+            </p>
+            <p>
+              Usuarios que acumulen KASH podrán disponer, retirar o canjear monedas KASH libremente dentro de los servicios ofrecidos en INSTAKASH. Los retiros de KASH se harán
+              solo con los bancos afiliados con INSTAKASH y en la divisa dólares.
+            </p>
+            <p>Los usuarios pueden visualizar su cantidad de KASH acumulados en la sección de MIS CUENTAS, en la pantalla de ACTIVIDADES o en los detalles de MI PERFIL.</p>
+            <h3>8.2 CAMBIO DE MONEDA EXTRANJERA:</h3>
             <p>
               Para hacer uso de este servicio, el USUARIO debe contar con una cuenta bancaria propia en una entidad financiera supervisada por la SBS, es decir, debe aceptar
               realizar transferencias (en adelante, la “Cuenta de Cargo”) y, una cuenta bancaria propia o de un beneficiario para la recepción de fondos a través de entidades
@@ -190,8 +206,49 @@ const TerminosCondiciones = () => {
               cobros de comisiones o del impuesto a las transacciones financieras (ITF) por parte las entidades financieras involucradas en la operación.
             </p>
             <p>Para registrar una operación, el USUARIO lo debe hacer usando su cuenta:</p>
+            <h3>8.3 CUPONES DE DESCUENTO:</h3>
+            <p>
+              Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp, redes
+              sociales o promoción directa por parte de INSTAKASH a determinados usuarios.
+            </p>
+            <p>
+              INSTAKASH establece los límites, condiciones, y detalles puntuales para el uso de sus cupones. Ciertos cupones de descuento son válidos únicamente para una
+              determinada categoría, evento festivo, usuario frecuente, empresa, monto significativo, entre otros.
+            </p>
+            <p>
+              Usuarios podrán solicitar cupones de descuento o emplear alguno promocionado por las redes sociales de INSTAKASH mientras mantenga vigencia, para recibir descuentos
+              en sus operaciones cambiarias.
+            </p>
+            <h3>8.4 PROGRAMA DE AFILIADOS</h3>
+            <p>
+              El programa de afiliados de INSTAKASH es el mecanismo promocional de la plataforma para brindar mayores beneficios directos a sus usuarios. Los procesos y
+              modificaciones del programa de afiliados queda a discreción de la empresa. En INSTAKASH los usuarios pueden ganar dinero solo por promocionar a nuevos usuarios con
+              sus códigos de afiliados siguiendo las siguientes consideraciones.
+            </p>
+            <p>
+              <b>Afiliados</b> <br />
+              Cada Afiliado es un contratista independiente y no un empleado. INSTAKASH no se hace responsable por las formas en que las personas promuevan sus códigos de afiliado.
+            </p>
+            <p>
+              <b>Código de afiliado</b> <br />
+              El usuario puede ubicar su código de afiliado en los detalles de MI PERFIL y también podrá editar el texto y número de su código según disponibilidad ya que solo
+              puede haber un código único por usuario.
+            </p>
+            <p>
+              <b>Beneficio del Afiliador</b> <br />
+              Por cada nuevo usuario que utilice un código afiliado para registrarse y efectuar su primera operación de cambio dentro de INSTAKASH, hará que el usuario afiliador
+              gane automáticamente 1 KASH equivalente a 1,00 dólar estadounidense.
+            </p>
+            <p>
+              <b>Beneficio del nuevo afiliado</b> <br />
+              El nuevo usuario al usar un código afiliado de otro usuario, ganará un descuento en la tasa de su primera operación de cambio dentro de INSTAKASH.
+            </p>
             <ul className='list-disc pl-6'>
               <li>El USUARIO indicará el monto a transferir y el tipo de operación (compra o venta).</li>
+              <li>
+                El USUARIO puede solicitar el canje de sus monedas KASH acumuladas al procesar un registro de VENTA de dólares. Los Kash acumulados se verán reflejados en su
+                operación de cambio y serán anexados como parte de pago por INSTAKASH.
+              </li>
               <li>
                 El USUARIO está obligado a indicar el origen de los fondos en base a la normativa vigente de prevención de lavado de activos y financiamiento de terrorismo, y esta
                 indicación tendrá validez de una declaración jurada.
@@ -230,7 +287,7 @@ const TerminosCondiciones = () => {
               órdenes conforme a lo establecido en el presente Acuerdo.
             </p>
           </li>
-          <h3>Tiempos de ejecución para órdenes de compra:</h3>
+          <h3>9. TIEMPOS DE EJECUCIÓN:</h3>
           <li>
             <p>
               INSTAKASH no influye en las operaciones que los bancos realizan, por ende, no se hace responsable por la dilación en los tiempos del envío de los fondos por su
@@ -255,7 +312,7 @@ const TerminosCondiciones = () => {
             <p>
               Todas las órdenes de compra colocadas dentro del horario de atención, y en días útiles se procesarán a partir del momento en que se reciban los fondos. Una vez
               recibidos los mismos, el tiempo para que nosotros ejecutemos la orden no será mayor a 30 minutos, siempre y cuando no se hayan establecido tiempos diferentes entre
-              las partes.
+              las partes o exista alguna dilación con el banco de la operación correspondiente..
             </p>
           </li>
           <li>
@@ -296,7 +353,7 @@ const TerminosCondiciones = () => {
               procesará el lunes en la mañana o el siguiente día útil).
             </p>
           </li>
-          <h3>9. ANULACIÓN DE TRANSACCIONES</h3>
+          <h3>10. ANULACIÓN DE TRANSACCIONES</h3>
           <li>
             <p>
               Si el USUARIO se demora en realizar la transferencia y/o ésta exceda el Plazo de Recepción de Fondos, INSTAKASH no podrá mantener el tipo de cambio y la operación
@@ -325,7 +382,7 @@ const TerminosCondiciones = () => {
               por el USUARIO.
             </p>
           </li>
-          <h3>10. CANCELACIÓN DE TRANSACCIONES</h3>
+          <h3>11. CANCELACIÓN DE TRANSACCIONES</h3>
           <li>
             <p>
               El registro de la operación y transferencia de fondos por parte del USUARIO, la ejecución de proceso de cambio de divisas por parte de INSTAKASH es irreversible e
@@ -333,7 +390,7 @@ const TerminosCondiciones = () => {
               impuestos y otros) en que incurra INSTAKASH para tales efectos.
             </p>
           </li>
-          <h3>11. DEVOLUCIONES</h3>
+          <h3>12. DEVOLUCIONES</h3>
           <li>
             <p>INSTAKASH se reserva la discreción de aprobación de la solicitud de devolución, estando siempre atentos a la inquietud y consideraciones del USUARIO.</p>
             <p>
@@ -352,7 +409,7 @@ const TerminosCondiciones = () => {
             </p>
             <p>INSTAKASH no realiza devoluciones a través de efectivo físico ya que todas las operaciones se realizan vía transferencia bancaria.</p>
           </li>
-          <h3>12. BOLETAS Y FACTURAS ELECTRÓNICAS</h3>
+          <h3>13. BOLETAS Y FACTURAS ELECTRÓNICAS</h3>
           <li>
             <p>
               INSTAKASH emitirá boletas electrónicas a los usuarios que estén registrados como personas naturales y emitirá facturas a los usuarios registrados como personas
@@ -363,9 +420,12 @@ const TerminosCondiciones = () => {
               un cobro adicional por concepto de IGV.
             </p>
           </li>
-          <h3>13. QUEJAS Y RECLAMOS</h3>
+          <h3>14. QUEJAS Y RECLAMOS</h3>
           <li>
-            <p>Estamos comprometidos a proporcionarle los más altos estándares de servicio. Puede encontrar información sobre nuestro procedimiento de reclamaciones aquí.</p>
+            <p>
+              Sección de la página web de INSTAKASH donde el usuario puede documentar su reclamo de forma directa con la empresa. Estamos comprometidos a proporcionarle los más
+              altos estándares de servicio. Puede encontrar información sobre nuestro procedimiento de reclamaciones aquí.
+            </p>
           </li>
           <h3>DEFINICIONES</h3>
           <li>
@@ -385,7 +445,7 @@ const TerminosCondiciones = () => {
               Cuenta”, habiendo ingresado a su cuenta personal.
             </p>
           </li>
-          <h3>14. ACUERDO COMPLETO</h3>
+          <h3>15. ACUERDO COMPLETO</h3>
           <li>
             <p>
               Este contrato y cualquier documento expresamente mencionado en él, constituye el acuerdo entero entre EL USUARIO e INSTAKASH y sustituye cualquier discusión,
