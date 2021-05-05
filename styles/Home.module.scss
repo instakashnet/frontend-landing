@@ -20,7 +20,7 @@
   }
 
   @media screen and (min-width: 1560px) {
-    min-height: 80vh;
+    min-height: 85vh;
   }
 }
 
@@ -108,6 +108,7 @@
     bottom: 80px;
     display: none;
     width: 100%;
+    max-width: 25rem;
   }
 
   @media screen and (min-width: 996px) {
