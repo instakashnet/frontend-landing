@@ -107,6 +107,7 @@
     position: absolute;
     bottom: 80px;
     display: none;
+    width: 100%;
   }
 
   @media screen and (min-width: 996px) {
@@ -121,7 +122,7 @@
     }
 
     img {
-      width: 30rem;
+      min-width: 30rem;
       display: block;
     }
   }
@@ -136,7 +137,7 @@
     }
 
     img {
-      width: 37rem;
+      min-width: 37rem;
     }
   }
 }
