@@ -10,17 +10,17 @@ class MyDocument extends Document {
     return (
       <Html lang='es' className='notranslate' translate='no'>
         <Head>
-          <scrip async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS_ID}`} />
+          <scrip async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
           <script
-            dangerouslySetInnerHtml={{
+            dangerouslySetInnerHTML={{
               __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${process.env.GOOGLE_ANALYTICS_ID}', {
-              page_path: window.location.pathname,
-            });
-  `,
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', '${process.env.GA_TRACKING_ID}', {
+                page_path: window.location.pathname,
+              });
+          `,
             }}
           />
         </Head>
