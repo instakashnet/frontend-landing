@@ -11,7 +11,7 @@ const WahtsappBtn = () => {
   }, []);
 
   return (
-    <a href='!#' target='_blank' rel='noopener noreferrer' className={`${styles.whatsappBtn} ${scrollTop > 90 ? styles.whatsappShown : ''}`}>
+    <a href='https://wa.link/05keps' target='_blank' rel='noopener noreferrer' className={`${styles.whatsappBtn} ${scrollTop > 90 ? styles.whatsappShown : ''}`}>
       <img src='/images/icons/whatsapp.svg' alt='whatsapp' />
     </a>
   );
