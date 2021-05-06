@@ -2,7 +2,7 @@
 
 .calculatorSection {
   width: 100%;
-  min-height: 85vh;
+  min-height: 100vh;
   background: url('/images/bg/calculator-3.svg'), url('/images/bg/calculator-2.svg'), url('/images/bg/calculator-1.svg'), url('/images/bg/shapes-top.svg');
   background-repeat: no-repeat;
   background-size: 100%, 100%, 100%, 80%;
@@ -15,12 +15,8 @@
     background-position: 25% 115%, 30% 120%, 40% 110%, center top;
   }
 
-  @media screen and (min-width: 1140px) {
-    min-height: 100vh;
-  }
-
   @media screen and (min-width: 1560px) {
-    min-height: 85vh;
+    min-height: 80vh;
   }
 }
 
@@ -128,6 +124,12 @@
     }
   }
 
+  @media screen and (min-width: 996px) and (max-width: 1366px) {
+    img {
+      bottom: 5px;
+    }
+  }
+
   @media screen and (min-width: 1440px) {
     h1 {
       font-size: 3.2rem;
@@ -147,6 +149,7 @@
   position: relative;
   top: -6rem;
   max-width: 1440px;
+  width: 95%;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -156,6 +159,12 @@
 
   @media screen and (min-width: 996px) {
     display: flex;
+  }
+
+  @media screen and (min-width: 996px) and (max-width: 1366px) {
+    top: -2rem;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
   }
 }
 
@@ -314,14 +323,13 @@
 
       &:last-of-type {
         position: relative;
-        left: 80px;
+        left: 30px;
         bottom: 100px;
-        width: 320px;
+        width: 250px;
       }
     }
 
     .affiliatesStep {
-      font-size: 4rem;
       font-weight: bold;
       margin-right: 1rem;
     }
@@ -352,6 +360,16 @@
       flex-direction: row;
       max-width: 100%;
       text-align: left;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .affiliatesStep {
+      font-size: 4rem;
+    }
+
+    img:last-of-type {
+      left: 80px;
     }
   }
 }

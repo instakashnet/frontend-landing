@@ -17,7 +17,7 @@ const Home = ({ rates }) => {
       </Head>
       <section className={styles.calculatorSection}>
         <div className='container'>
-          <div className='grid md:grid-cols-2 md:mt-12'>
+          <div className='grid md:grid-cols-2 md:pt-12 md:pb-16'>
             <header className={styles.sectionTitle}>
               <h1 className='pl-3 md:pl-0'>¡Gana cambiando con Instakash!</h1>
               <h2 className='mb-3 md:mb-0 pl-3 md:pl-0'>Dale a tu dinero el valor que merece</h2>
