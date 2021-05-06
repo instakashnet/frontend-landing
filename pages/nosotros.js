@@ -1,8 +1,17 @@
+import Head from 'next/head';
+
 import styles from '../styles/Nosotros.module.scss';
 
 const Nosotros = () => {
   return (
     <>
+      <Head>
+        <title>Nosotros | Instakash</title>
+        <meta
+          name='description'
+          content='Somos una casa de cambio totalmente digital que se encarga de ofrecer siempre las mejores tasas del Perú, así como beneficios para ganar a través de referidos y mucho más. Experimenta con nosotros la revolución Fintech.'
+        />
+      </Head>
       <section className={styles.About}>
         <div className='container section-wrapper text-center mt-16 mb-24'>
           <h1>¿Qué es Instakash?</h1>

@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Head from 'next/head';
 import Card from '../components/UI/Card';
 import Calculator from '../components/calculator';
 
@@ -7,6 +8,13 @@ import styles from '../styles/Home.module.scss';
 const Home = ({ rates }) => {
   return (
     <>
+      <Head>
+        <title>Instakash | La casa de cambio del perú con mejores tasas</title>
+        <meta
+          name='description'
+          content='gana con Instakash y dale a tu dinero el valor que merece. Somos la casa de cambio con las mejores tasas del Perú. Estamos registrados y autorizados por la SBS. Transferencias inmediatas.'
+        />
+      </Head>
       <section className={styles.calculatorSection}>
         <div className='container'>
           <div className='grid md:grid-cols-2 md:mt-12'>

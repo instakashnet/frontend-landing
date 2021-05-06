@@ -10,7 +10,7 @@ class MyDocument extends Document {
     return (
       <Html lang='es' className='notranslate' translate='no'>
         <Head>
-          <scrip async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `

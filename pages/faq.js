@@ -1,5 +1,6 @@
 import { Accordion } from 'react-accessible-accordion';
 import Link from 'next/link';
+import Head from 'next/head';
 import QuestionItem from '../components/questions/QuestionItem';
 
 import styles from '../styles/FAQ.module.scss';
@@ -7,6 +8,9 @@ import styles from '../styles/FAQ.module.scss';
 const Faq = () => {
   return (
     <>
+      <Head>
+        <title>Preguntas frecuentes | Instakash</title>
+      </Head>
       <section className={`container section-wrapper ${styles.questions}`}>
         <h1 className='text-center mb-12'>¿Cómo podemos ayudarte?</h1>
         <article className='max-w-4xl mx-auto'>

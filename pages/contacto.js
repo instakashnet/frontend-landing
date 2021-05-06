@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useFormik } from 'formik';
 import Link from 'next/link';
+import Head from 'next/head';
 import { MapPin, Clock, Mail, Headphones } from 'react-feather';
 import emailjs from 'emailjs-com';
 import { contactValidation } from '../helpers/validations';
@@ -36,6 +37,10 @@ const contacto = () => {
   const formik = useFormik({ initialValues: { firstName: '', lastName: '', email: '', message: '', accept: false }, validationSchema: contactValidation, onSubmit });
   return (
     <>
+      <Head>
+        <title>Contacto | Instakash</title>
+        <meta name='description' content='Contáctanos para darte una mayor información sobre nuestras tasas de cambio de soles y dólares y servicios.' />
+      </Head>
       <section className='container section-wrapper'>
         <h1 className='text-center'>Contáctanos</h1>
         <h3 className='mb-6 text-center'>Estamos para apoyarte</h3>
