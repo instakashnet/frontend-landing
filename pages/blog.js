@@ -6,11 +6,10 @@ import BlogItem from '../components/UI/blog/BlogItem';
 
 import styles from '../styles/Blog.module.scss';
 
-const { CONTENT_API_KEY, API_URL } = process.env;
+const { CONTENT_API_KEY, BLOG_API_URL } = process.env;
 
 export const getStaticProps = async ({ params }) => {
-  const res = await axios.get(`${API_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&limit=5&fields=id,title,custom_excerpt,slug,published_at,feature_image`);
-  console.log(res.data);
+  const res = await axios.get(`${BLOG_API_URL}/ghost/api/v3/content/posts/?key=${CONTENT_API_KEY}&limit=5&fields=id,title,custom_excerpt,slug,published_at,feature_image`);
   return {
     props: { posts: res.data.posts, meta: res.data.meta },
   };

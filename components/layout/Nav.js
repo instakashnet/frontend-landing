@@ -49,11 +49,11 @@ const Nav = () => {
             <li>
               <Anchor href='#benefits'>Benefícios</Anchor>
             </li>
-            <li>
+            {/* <li>
               <Link href='/blog'>
                 <a>Blog</a>
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <div className={styles.navButtons}>
