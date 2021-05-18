@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import * as gtag from '../utils/gtag';
 import Layout from '../components/layout/Layout';
+import FacebookPixel from '../components/FacebookPixel';
 
 import '../styles/globals.css';
 
@@ -19,9 +20,11 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <FacebookPixel>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </FacebookPixel>
   );
 }
 

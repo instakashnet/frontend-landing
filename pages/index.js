@@ -190,8 +190,10 @@ const Home = ({ rates }) => {
   );
 };
 
+const { EXCHANGE_URL } = process.env;
+
 export const getServerSideProps = async () => {
-  const res = await axios.get('https://api-exchange.instakash.net/api/v1/rates');
+  const res = await axios.get(`${EXCHANGE_URL}/rates`);
 
   try {
     return {

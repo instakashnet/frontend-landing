@@ -47,7 +47,12 @@ const Nav = () => {
               <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
             </li>
             <li>
-              <Anchor href='#benefits'>¿Por qué Instakash?</Anchor>
+              <Anchor href='#benefits'>Benefícios</Anchor>
+            </li>
+            <li>
+              <Link href='/blog'>
+                <a>Blog</a>
+              </Link>
             </li>
           </ul>
 

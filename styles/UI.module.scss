@@ -149,3 +149,45 @@
 .whatsappShown {
   transform: translateY(0);
 }
+
+.blogItem {
+  padding: 0 10px;
+  margin: 50px 0;
+
+  a {
+    transition: 200ms ease-out;
+
+    &:hover,
+    &:focus {
+      color: $base-green;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+
+  h3 {
+    font-size: 1.55rem;
+    font-weight: bold;
+    margin: 15px 0 2px;
+    padding: 0 5px;
+  }
+
+  span {
+    color: #acacac;
+    font-size: 0.9rem;
+    padding: 0 5px;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 15px 0;
+    line-height: 1.4;
+    padding: 0 5px;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin: 10px 0;
+  }
+}
