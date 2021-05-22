@@ -12,7 +12,7 @@ const Home = ({ rates }) => {
         <title>Instakash | La casa de cambio del perú con mejores tasas</title>
         <meta
           name='description'
-          content='gana con Instakash y dale a tu dinero el valor que merece. Somos la casa de cambio con las mejores tasas del Perú. Estamos registrados y autorizados por la SBS. Transferencias inmediatas.'
+          content='gana con Instakash y dale a tu dinero el valor que merece. Somos la casa de cambio con las mejores tasas del Perú. Transferencias inmediatas.'
         />
       </Head>
       <section className={styles.calculatorSection}>
