@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Facebook, Instagram, Linkedin } from 'react-feather';
 import Anchor from 'react-anchor-link-smooth-scroll';
 
 import styles from '../../styles/layout/Layout.module.scss';
@@ -12,14 +11,14 @@ const Footer = () => {
           <img src='/images/logo-white.svg' />
           <p className='text-sm'>Somos la startup financiera que revoluciona la forma de administrar el dinero a través de una plataforma 100% digital.</p>
           <div className='flex tems-center mt-5'>
-            <a href='https://www.facebook.com/Instakash-103956227716506' target='_blank' rel='noopener noreferrer' className='mr-6'>
-              <Facebook size={35} />
-            </a>
             <a href='https://www.instagram.com/instakashnet/' target='_blank' rel='noopener noreferrer' className='mr-6'>
-              <Instagram size={35} />
+              <img src='/images/social/instagram.svg' className='w-6 md:w-8' />
+            </a>
+            <a href='https://www.facebook.com/Instakash-103956227716506' target='_blank' rel='noopener noreferrer' className='mr-6'>
+              <img src='/images/social/facebook.svg' className='w-6 md:w-8' />
             </a>
             <a href='https://www.linkedin.com/company/71140162' target='_blank' rel='noopener noreferrer'>
-              <Linkedin size={35} />
+              <img src='/images/social/linkedin.svg' className='w-6 md:w-8' />
             </a>
           </div>
         </section>
@@ -102,7 +101,7 @@ const Footer = () => {
       <div className={styles.copy}>
         <div className='container flex flex-col p-2 md:flex-row items-start md:items-center justify-between'>
           <p>
-            2021 &copy; Todos los derechos reservados. <b>Instakash</b>
+            2021 &copy; Todos los derechos reservados. <b className='text-white'>Instakash</b>
           </p>
           <p>Instakash S.A.C. RUC 20605285105 | Registro SBS: 05939-2019</p>
         </div>
