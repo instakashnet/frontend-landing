@@ -74,7 +74,7 @@ const Home = ({ rates, counters }) => {
         <div className="flex items-center justify-start">
           <img src="/images/icons/laptop.svg" width={85} height={85} />
           <div className={styles.infoBox}>
-            <h5>{counters.qtySuccessfullOrders ? `${String(counters.qtySuccessfullOrders).substring(0, 3)} Mil` : "20 Mil"}</h5>
+            <h5>{counters.qtySuccessfullOrders ? `${String(counters.qtySuccessfullOrders).substring(0, 2)} Mil` : "20 Mil"}</h5>
             <p>Operaciones Exitosas</p>
           </div>
         </div>
@@ -88,7 +88,7 @@ const Home = ({ rates, counters }) => {
         <div className="flex items-center justify-start">
           <img src="/images/icons/users.svg" width={55} height={55} />
           <div className={styles.infoBox}>
-            <h5>{counters.qtyUsers ? `${String(counters.qtyUsers).substring(0, 3)} Mil` : "20 Mil"}</h5>
+            <h5>{counters.qtyUsers ? `${String(counters.qtyUsers).substring(0, 1)} Mil` : "10 Mil"}</h5>
             <p>Usuarios Activos</p>
           </div>
         </div>
@@ -190,11 +190,11 @@ const Home = ({ rates, counters }) => {
   );
 };
 
-const { EXCHANGE_URL, TEST_EXCHANGE_URL, NODE_ENV } = process.env;
+const { EXCHANGE_URL } = process.env;
 
 export const getServerSideProps = async () => {
-  const ratesRes = await axios.get(`${NODE_ENV === "production" ? EXCHANGE_URL : TEST_EXCHANGE_URL}/rates`);
-  const countersRes = await axios.get(`${NODE_ENV === "production" ? EXCHANGE_URL : TEST_EXCHANGE_URL}/analytics/general`);
+  const ratesRes = await axios.get(`${EXCHANGE_URL}/rates`);
+  const countersRes = await axios.get(`${EXCHANGE_URL}/analytics/general`);
 
   try {
     return {
