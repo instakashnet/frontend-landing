@@ -2,7 +2,7 @@ import axios from "axios";
 import Head from "next/head";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
-import { BaseModal } from "../components/UI/Modal";
+/* import { BaseModal } from "../components/UI/Modal"; */
 
 import styles from "../styles/Home.module.scss";
 
@@ -187,14 +187,14 @@ const Home = ({ rates, counters }) => {
           </div>
         </div>
       </section>
-      <BaseModal>
+      {/*       <BaseModal>
         <h2>Estimado usuario:</h2>
         <p>
           Queremos comunicarle que <b>el dia 29 de Junio no realizaremos operaciones.</b> Podrá realizar sus cambios de divisas con normalidad{" "}
           <b>a partir del dia Miércoles 30 de Junio.</b> <br /> Horario de apertura regular <b>9AM a 7PM</b>
         </p>
         <p className="mt-3 font-bold">Esperamos que tengan un excelente día.</p>
-      </BaseModal>
+      </BaseModal> */}
     </>
   );
 };
