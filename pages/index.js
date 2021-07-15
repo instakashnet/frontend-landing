@@ -1,12 +1,48 @@
+import { useEffect, useState } from "react";
 import axios from "axios";
 import Head from "next/head";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
-/* import { BaseModal } from "../components/UI/Modal"; */
+import Loader from "react-loader-spinner";
 
 import styles from "../styles/Home.module.scss";
 
-const Home = ({ rates, counters }) => {
+const Home = () => {
+  const [isLoading, setIsLoading] = useState(false);
+  const [rates, setRates] = useState({ buy: 0, sell: 0 });
+  const [counters, setCounters] = useState({ orders: 0, total: 0, users: 0 });
+
+  const getRates = async () => {
+    setIsLoading(true);
+
+    try {
+      const res = await axios.get(`https://x8m7ozhng8.execute-api.us-east-2.amazonaws.com/invoke/exchange-service/api/v1/client/rates`);
+      if (res.data) setRates({ buy: res.data[0].buy, sell: res.data[0].sell });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const getCounters = async () => {
+    setIsLoading(true);
+
+    try {
+      const res = await axios.get(`https://x8m7ozhng8.execute-api.us-east-2.amazonaws.com/invoke/exchange-service/api/v1/client/analytics/general`);
+      if (res.data) setCounters({ orders: res.data.qtySuccessfullOrders, total: res.data.totalProcessed, users: res.data.qtyUsers });
+    } catch (error) {
+      console.log(error);
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    getRates();
+    getCounters();
+  }, []);
+
   return (
     <>
       <Head>
@@ -39,20 +75,26 @@ const Home = ({ rates, counters }) => {
                 </div>
               </Card>
               <Card className="py-4 md:py-8 order-1 md:mt-8 w-full md:order-2">
-                <div className={styles.rates}>
-                  <div className="px-3">
-                    <h5>Compramos</h5>
-                    <p>
-                      <span>S/.</span> {rates.buy}
-                    </p>
+                {isLoading ? (
+                  <div className="flex justify-center">
+                    <Loader type="Rings" color="#0d8284" height={50} width={50} />
                   </div>
-                  <div className="px-3">
-                    <h5>Vendemos</h5>
-                    <p>
-                      <span>S/.</span> {rates.sell}
-                    </p>
+                ) : (
+                  <div className={styles.rates}>
+                    <div className="px-3">
+                      <h5>Compramos</h5>
+                      <p>
+                        <span>S/.</span> {rates.buy}
+                      </p>
+                    </div>
+                    <div className="px-3">
+                      <h5>Vendemos</h5>
+                      <p>
+                        <span>S/.</span> {rates.sell}
+                      </p>
+                    </div>
                   </div>
-                </div>
+                )}
                 <Calculator rates={rates} />
               </Card>
               <img src="/images/welcome.svg" alt="Gana con instakash" className="md:hidden mr-3 w-80 order-3" />
@@ -75,21 +117,21 @@ const Home = ({ rates, counters }) => {
         <div className="flex items-center justify-start">
           <img src="/images/icons/laptop.svg" width={85} height={85} />
           <div className={styles.infoBox}>
-            <h5>{counters.qtySuccessfullOrders ? `${String(counters.qtySuccessfullOrders).substring(0, 2)} Mil` : "20 Mil"}</h5>
+            <h5>{counters.orders ? `${String(counters.orders).substring(0, 2)} Mil` : "20 Mil"}</h5>
             <p>Operaciones Exitosas</p>
           </div>
         </div>
         <div className="flex items-center justify-start">
           <img src="/images/icons/soles.svg" width={55} height={55} />
           <div className={styles.infoBox}>
-            <h5>{counters.totalProcessed ? `${String(counters.totalProcessed).substring(0, 3)} Millones` : "100 Millones"}</h5>
+            <h5>{counters.total ? `${String(counters.total).substring(0, 3)} Millones` : "100 Millones"}</h5>
             <p>Soles Transferidos</p>
           </div>
         </div>
         <div className="flex items-center justify-start">
           <img src="/images/icons/users.svg" width={55} height={55} />
           <div className={styles.infoBox}>
-            <h5>{counters.qtyUsers ? `${String(counters.qtyUsers).substring(0, 2)} Mil` : "10 Mil"}</h5>
+            <h5>{counters.users ? `${String(counters.users).substring(0, 2)} Mil` : "10 Mil"}</h5>
             <p>Usuarios Activos</p>
           </div>
         </div>
@@ -197,25 +239,6 @@ const Home = ({ rates, counters }) => {
       </BaseModal> */}
     </>
   );
-};
-
-const { EXCHANGE_URL } = process.env;
-
-export const getStaticProps = async () => {
-  try {
-    const ratesRes = await axios.get(`${EXCHANGE_URL}/rates`);
-    const countersRes = await axios.get(`${EXCHANGE_URL}/analytics/general`);
-
-    if (!ratesRes.data && !countersRes.data) return { notFound: true };
-    return {
-      props: {
-        rates: ratesRes.data[0],
-        counters: countersRes.data,
-      },
-    };
-  } catch (error) {
-    return { notFound: true };
-  }
 };
 
 export default Home;
