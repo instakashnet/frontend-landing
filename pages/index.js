@@ -82,7 +82,7 @@ const Home = ({ rates, counters }) => {
         <div className="flex items-center justify-start">
           <img src="/images/icons/soles.svg" width={55} height={55} />
           <div className={styles.infoBox}>
-            <h5>{+counters.totalProcessed ? `${String(counters.totalProcessed).substring(0, 3)} Millones` : "100 Millones"}</h5>
+            <h5>{counters.totalProcessed ? `${String(counters.totalProcessed).substring(0, 3)} Millones` : "100 Millones"}</h5>
             <p>Soles Transferidos</p>
           </div>
         </div>
@@ -201,11 +201,12 @@ const Home = ({ rates, counters }) => {
 
 const { EXCHANGE_URL } = process.env;
 
-export const getServerSideProps = async () => {
-  const ratesRes = await axios.get(`${EXCHANGE_URL}/rates`);
-  const countersRes = await axios.get(`${EXCHANGE_URL}/analytics/general`);
-
+export const getStaticProps = async () => {
   try {
+    const ratesRes = await axios.get(`${EXCHANGE_URL}/rates`);
+    const countersRes = await axios.get(`${EXCHANGE_URL}/analytics/general`);
+
+    if (!ratesRes.data && !countersRes.data) return { notFound: true };
     return {
       props: {
         rates: ratesRes.data[0],
@@ -213,12 +214,7 @@ export const getServerSideProps = async () => {
       },
     };
   } catch (error) {
-    return {
-      props: {
-        rates: { buy: 0, sell: 0 },
-        counters: {},
-      },
-    };
+    return { notFound: true };
   }
 };
 
