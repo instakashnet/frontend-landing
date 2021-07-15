@@ -89,7 +89,7 @@ const Home = ({ rates, counters }) => {
         <div className="flex items-center justify-start">
           <img src="/images/icons/users.svg" width={55} height={55} />
           <div className={styles.infoBox}>
-            <h5>{counters.qtyUsers ? `${String(counters.qtyUsers).substring(0, 1)} Mil` : "10 Mil"}</h5>
+            <h5>{counters.qtyUsers ? `${String(counters.qtyUsers).substring(0, 2)} Mil` : "10 Mil"}</h5>
             <p>Usuarios Activos</p>
           </div>
         </div>
