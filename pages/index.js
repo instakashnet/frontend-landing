@@ -77,7 +77,7 @@ const Home = () => {
               <Card className="py-4 md:py-8 order-1 md:mt-8 w-full md:order-2">
                 {isLoading ? (
                   <div className="flex justify-center">
-                    <Loader type="Rings" color="#0d8284" height={50} width={50} />
+                    <Loader type="Rings" color="#0d8284" height={55} width={55} />
                   </div>
                 ) : (
                   <div className={styles.rates}>
