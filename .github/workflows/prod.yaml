@@ -13,10 +13,10 @@ jobs:
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
-
+      AWS_REGION: us-east-2
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [15.x]
     steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version }}
@@ -27,3 +27,21 @@ jobs:
         run: yarn install --frozen-lockfile
       - name: Build de application
         run: yarn build
+      - uses: jakejarvis/s3-sync-action@master
+        name: Upload the app to S3 bucket
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ env.AWS_REGION }}
+          SOURCE_DIR: "out"
+      # - name: Create Cloudfront cache invalidation
+      #   uses: chetan/invalidate-cloudfront-action@master
+      #   env:
+      #     DISTRIBUTION: ${{ env.AWS_CF_DISTRIBUTION_ID }}
+      #     PATHS: "/*"
+      #     AWS_REGION: ${{ env.AWS_REGION }}
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
