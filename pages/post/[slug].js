@@ -1,12 +1,12 @@
-import axios from 'axios';
-import Head from 'next/head';
-import moment from 'moment';
-import { useRouter } from 'next/router';
+import axios from "axios";
+import Head from "next/head";
+import moment from "moment";
+import { useRouter } from "next/router";
 
-import styles from '../../styles/Blog.module.scss';
+import styles from "../../styles/Blog.module.scss";
 
 const { CONTENT_API_KEY, API_URL } = process.env;
-moment.locale('es');
+moment.locale("es");
 
 export const getStaticProps = async ({ params }) => {
   let data = null;
@@ -29,7 +29,7 @@ export const getStaticProps = async ({ params }) => {
 
 export const getStaticPaths = () => ({
   paths: [],
-  fallback: true,
+  fallback: false,
 });
 
 const Post = ({ post }) => {
@@ -46,9 +46,9 @@ const Post = ({ post }) => {
       <Head>
         <title>{post.title} | Instakash</title>
       </Head>
-      <div className='container'>
+      <div className="container">
         <h1>{post.title}</h1>
-        <p className={styles.date}>{moment(post.published_at).format('DD MMM [del] YYYY')}</p>
+        <p className={styles.date}>{moment(post.published_at).format("DD MMM [del] YYYY")}</p>
         <div className={styles.postImage}>
           <img src={post.feature_image} alt={post.slug} />
           <div className={styles.postInfo}>
