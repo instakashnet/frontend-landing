@@ -54,7 +54,7 @@ const Blog = ({ posts, meta }) => {
       </div>
       <div className={styles.blogNav}>
         <Link href="/#steps">
-          <a>¿Cómo funciona?!</a>
+          <a>¿Cómo funciona?</a>
         </Link>
         <Link href="/nosotros">
           <a>Nosotros</a>
