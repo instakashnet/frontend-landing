@@ -4,6 +4,7 @@ import Head from "next/head";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
 import Loader from "react-loader-spinner";
+import { BaseModal } from "../components/UI/Modal";
 
 import styles from "../styles/Home.module.scss";
 
@@ -229,14 +230,16 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/*       <BaseModal>
-        <h2>Estimado usuario:</h2>
-        <p>
-          Queremos comunicarle que <b>el dia 29 de Junio no realizaremos operaciones.</b> Podrá realizar sus cambios de divisas con normalidad{" "}
-          <b>a partir del dia Miércoles 30 de Junio.</b> <br /> Horario de apertura regular <b>9AM a 7PM</b>
-        </p>
-        <p className="mt-3 font-bold">Esperamos que tengan un excelente día.</p>
-      </BaseModal> */}
+      <BaseModal>
+        <div className="md:max-w-sm ml-auto md:text-right md:mt-6">
+          <h2>¡Felices Fiestas Patrias!</h2>
+          <p>
+            Estimado usuario, los días <b>28 y 29 de Julio</b> no habrá atención. A partir del 30 de Julio regresaremos con nuestro horario de atención normal.
+            <br />
+            Todo pedido registrado en estos días será atendido el día <b>30 de Julio.</b>
+          </p>
+        </div>
+      </BaseModal>
     </>
   );
 };
