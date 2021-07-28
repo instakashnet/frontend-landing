@@ -15,7 +15,7 @@ export const BaseModal = ({ children }) => {
   const closeModal = () => setIsOpen(false);
 
   return (
-    <Modal isOpen={isOpen} onRequestClose={closeModal} className="custom-modal">
+    <Modal isOpen={isOpen} onRequestClose={closeModal} className="custom-modal modal-background">
       <div className="modal-content">
         <button onClick={closeModal} className="close-modal">
           <XCircle size={30} />
