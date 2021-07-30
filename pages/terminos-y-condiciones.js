@@ -1,5 +1,5 @@
-import Head from 'next/head';
-import styles from '../styles/Legal.module.scss';
+import Head from "next/head";
+import styles from "../styles/Legal.module.scss";
 
 const TerminosCondiciones = () => {
   return (
@@ -8,19 +8,19 @@ const TerminosCondiciones = () => {
         <title> Términos y condiciones | Instakash</title>
       </Head>
       <section className={styles.legal}>
-        <div className='section-wrapper container px-3'>
-          <h1 className='text-center mt-16 md:mt-36'>Términos y condiciones</h1>
-          <hr className='mx-auto' />
+        <div className="section-wrapper container px-3">
+          <h1 className="text-center mt-16 md:mt-36">Términos y condiciones</h1>
+          <hr className="mx-auto" />
 
-          <p className='mt-12'>
+          <p className="mt-12">
             El presente Acuerdo es un contrato entre usted e INSTAKASH S.A.C. (en adelante, “INSTAKASH”, o “la Empresa”) a efectos de hacer uso de los servicios brindados por
             nuestra empresa. Al registrarse, usted acepta todos los términos y condiciones establecidos en el presente contrato, lo que le permitirá utilizar los servicios de
             “INSTAKASH”. Por favor, lea este contrato detalladamente y asegúrese de entenderlo en su totalidad antes de utilizar los servicios. Tenga en cuenta que el utilizar los
             servicios prestados por INSTAKASH implica una aceptación de los términos de este Acuerdo. INSTAKASH no se hace responsable por la omisión o falta de lectura total o
             parcial de los Términos y Condiciones del uso de la plataforma.
           </p>
-          <p className='my-3'>Al aceptar este contrato, aceptas que podamos comunicarnos por: teléfono, correo electrónico, whatsapp o publicando avisos en LA PLATAFORMA.</p>
-          <p className='my-3'>
+          <p className="my-3">Al aceptar este contrato, aceptas que podamos comunicarnos por: teléfono, correo electrónico, whatsapp o publicando avisos en LA PLATAFORMA.</p>
+          <p className="my-3">
             INSTAKASH se reserva el derecho a modificar el presente Acuerdo de forma unilateral y sin previo aviso mediante la publicación de una nueva versión en el sitio web de
             la Empresa.
           </p>
@@ -86,7 +86,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className='mt-10 mb-6 text-2xl'>Registros:</h3>
+          <h3 className="mt-10 mb-6 text-2xl">Registros:</h3>
           <ol className={styles.legalList}>
             <li>
               <h3>6.1 Registro de Usuario:</h3>
@@ -130,7 +130,7 @@ const TerminosCondiciones = () => {
 
               <p>EL USUARIO podrá registrar datos de la cuenta bancaria, tanto en soles como en moneda extranjera.</p>
               <p>En INSTAKASH aceptamos cuentas de las siguientes entidades financieras:</p>
-              <ul className='list-disc pl-6'>
+              <ul className="list-disc pl-6">
                 <li>BCP, generados a nivel nacional.</li>
                 <li>Interbank, generados en el departamento de Lima – Perú.</li>
               </ul>
@@ -162,7 +162,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className='mt-10 mb-6 text-2xl'>Verificación:</h3>
+          <h3 className="mt-10 mb-6 text-2xl">Verificación:</h3>
           <ol className={styles.legalList}>
             <li>
               <p>
@@ -184,7 +184,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className='mt-10 mb-6 text-2xl'>Servicios:</h3>
+          <h3 className="mt-10 mb-6 text-2xl">Servicios:</h3>
           <ol className={styles.legalList}>
             <li>
               <h3>8.1 MONEDA KASH:</h3>
@@ -252,7 +252,7 @@ const TerminosCondiciones = () => {
                 <b>Beneficio del nuevo afiliado</b> <br />
                 El nuevo usuario al usar un código afiliado de otro usuario, ganará un descuento en la tasa de su primera operación de cambio dentro de INSTAKASH.
               </p>
-              <ul className='list-disc pl-6'>
+              <ul className="list-disc pl-6">
                 <li>El USUARIO indicará el monto a transferir y el tipo de operación (compra o venta).</li>
                 <li>
                   El USUARIO puede solicitar el canje de sus monedas KASH acumuladas al procesar un registro de VENTA de dólares. Los Kash acumulados se verán reflejados en su
@@ -333,32 +333,42 @@ const TerminosCondiciones = () => {
                 orden de compra.
               </p>
             </li>
-            <h3>Transferencias interbancarias:</h3>
+            <h3>Transferencias interbancarias / Interplaza:</h3>
             <li>
               <p>
-                INSTAKASH tiene cuentas bancarias en soles y dólares en el Banco de Crédito del Perú (BCP) e Interbank (Banco Internacional del Perú). Las transferencias que se
-                realicen a otros bancos- entre ellos Scotiabank, BBVA Continental, Banco Financiero, Banbif, Banco de la Nación, entre otros, serán consideradas transferencias
-                interbancarias.
+                INSTAKASH tiene cuentas bancarias en soles y dólares en el Banco de Crédito del Perú (BCP - Lima) e Interbank (Banco Internacional del Perú - Lima). Las
+                transferencias que se realicen a otros bancos- entre ellos Scotiabank, BBVA Continental, Banco Financiero, Banbif, Banco de la Nación, entre otros, serán
+                consideradas transferencias interbancarias.
+              </p>
+              <p>
+                Para evitar cualquier tipo de comisión bancaria interplaza, se recomienda utilizar los aplicativos moviles o páginas web de los bancos para efectuar las
+                transferencias. Operaciones desde ventanilla (BCP o Interbank) o desde cuentas Interbank que no sean de Lima, podrían acarrear comisión.
               </p>
             </li>
             <li>
               <p>INSTAKASH trasladará al usuario cualquier comisión generada por la entidad bancaria en cualquiera de los siguientes casos:</p>
-              <ul className='list-disc ml-6'>
-                <li>Use cuentas bancarias de plazas distintas a Lima y esto incurra en comisiones interplaza (Especialmente Interbank y bancos que no sean BCP).</li>
+              <ul className="list-disc ml-6">
+                <li>Use cuentas bancarias de plazas distintas a Lima y esto incurra en comisiones interplaza.</li>
                 <li>Realice una transferencia en la agencia de su entidad bancaria y esta se encuentre en una plaza distinta a Lima.</li>
-                <li>Realice operaciones de transferencia bancarias desde provincias, de otros bancos distintos a: BCP, Interbank, Banbif y Pichincha.</li>
+                <li>Realice operaciones de transferencia bancarias desde provincias, de otros bancos distintos a: BCP (solo banca por internet), Interbank.</li>
               </ul>
               <p>
-                <b>Comisiones interplaza para compra de dólares: 3.50 $ (comision fija) + 0.005 x (Monto a transferir)</b>
+                <b>Comisiones de Interbank interplaza para compra de dólares: 3.50 $ (comision fija) + 0.005 x (Monto a transferir)</b>
               </p>
               <p>
-                <b>Comisiones interplaza para venta de dólares: 3.50 S/. (comision fija) + 0.005 x (Monto a transferir)</b>
+                <b>Comisiones de Interbank interplaza para venta de dólares: 3.50 S/. (comision fija) + 0.005 x (Monto a transferir)</b>
+              </p>
+              <p>
+                <b>
+                  Comisiones interplaza desde ventanilla BCP será la que refleje el banco al llegar la transacción a cuentas de INSTAKASH. El usuario asume la totalidad de la
+                  comisión.
+                </b>
               </p>
               <p>Estas comsiones son referenciales y pueden variar sin previa notificación.</p>
               <p>
                 Al utilizar los servicios de INSTAKASH según el presente Acuerdo, el usuario declara que entiende y acepta que la disponibilidad del dinero objeto de transferencias
                 interbancarias está sujeta a horarios y puede demorar hasta 24 horas o un (1) día útil. El tiempo de la transferencia dependerá del banco emisor y de la Cámara de
-                Compensación Electrónica (CCE). En ese sentido, el usuario asume la responsabilidad en caso de demora cuando la operación no sea realizada de lunes a viernes dentro
+                Compensación Electrónica (CCE). En ese sentido, el usuario asume la responsabilidad en caso de demora cuando la operación no sea realizada de Lunes a Sábado dentro
                 del horario de atención, puesto que las operaciones sólo se procesan los días útiles (por ejemplo: si la transferencia se realiza en la tarde del sábado, ésta se
                 procesará el lunes en la mañana o el siguiente día útil).
               </p>
@@ -376,7 +386,7 @@ const TerminosCondiciones = () => {
                 En el supuesto de que el USUARIO, pasado el Plazo de Recepción de Fondos, haya realizado la transferencia del monto acordado en el registro de la operación o el
                 monto acordado haya ingresado a la cuenta bancaria de INSTAKASH, el USUARIO podrá:
               </p>
-              <ul className='list-disc ml-6 mt-3'>
+              <ul className="list-disc ml-6 mt-3">
                 <li>
                   Aceptar el nuevo tipo de cambio en base a la fecha y hora en que fueron recibidos los fondos por parte de INSTAKASH. Esta fecha y hora será aquella que señale la
                   banca en línea de la entidad financiera que recibe el fondo.
