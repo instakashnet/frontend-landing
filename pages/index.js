@@ -4,7 +4,7 @@ import Head from "next/head";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
 import Loader from "react-loader-spinner";
-import { BaseModal } from "../components/UI/Modal";
+// import { BaseModal } from "../components/UI/Modal";
 
 import styles from "../styles/Home.module.scss";
 
@@ -230,7 +230,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <BaseModal>
+      {/* <BaseModal>
         <div className="md:max-w-sm ml-auto md:text-right md:mt-6">
           <h2>¡Felices Fiestas Patrias!</h2>
           <p>
@@ -239,7 +239,7 @@ const Home = () => {
             Todo pedido registrado en estos días será atendido el día <b>30 de Julio.</b>
           </p>
         </div>
-      </BaseModal>
+      </BaseModal> */}
     </>
   );
 };
