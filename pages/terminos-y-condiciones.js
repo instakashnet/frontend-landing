@@ -188,21 +188,26 @@ const TerminosCondiciones = () => {
           <ol className={styles.legalList}>
             <li>
               <h3>8.1 MONEDA KASH:</h3>
+
               <p>
-                la moneda virtual KASH es un activo digital creado por INSTAKASH con una capitalización de mercado y por lo tanto siempre se compran y canjean 1 KASH por 1,00 dólar
-                estadounidense. Funciona como medio para agilizar diversas operaciones y servicios dentro de la plataforma de INSTAKASH.
+                La moneda virtual KASH es un activo digital, emitido en asociación de KASHCORP SAC que custodia las transacciones vinculadas al KASH. Cada KASH que disponga el
+                usuario corresponde a 1 dólar estadounidense en la cuenta bancaria para garantizar que siempre pueda comprar y canjear el activo con dólares estadounidenses
+                vinculados 1:1.
               </p>
               <p>
-                Cada moneda KASH (1 KASH por 1,00 dólar estadounidense) está respaldada de forma real en las cuentas bancarias de INSTAKASH por dólares estadounidenses, y en
-                consecuencia, siempre está disponible en forma de reserva. Confirmando así que INSTAKASH no emite monedas KASH, sino que corresponden parte del patrimonio propio de
-                la empresa en función de ofrecer una estabilidad y seguridad real. La moneda Kash es inicialmente transable de forma exclusiva solo por y dentro de la plataforma de
-                INSTAKASH.
+                La moneda KASH es inmutable y transable de forma exclusiva dentro de la plataforma, ratificando así que no se puede emitir a discreción y tampoco destinar a fines
+                ajenos a ésta. Constituye un patrimonio concreto en función de ofrecer estabilidad, comodidad, sencillez y sobre todo seguridad, ya que cada KASH tiene respaldo
+                real (en dólares estadounidenses). En consecuencia, cada moneda KASH siempre estará disponible en forma de reserva.
               </p>
               <p>
-                Usuarios que acumulen KASH podrán disponer, retirar o canjear monedas KASH libremente dentro de los servicios ofrecidos en INSTAKASH. Los retiros de KASH se harán
-                solo con los bancos afiliados con INSTAKASH y en la divisa dólares.
+                Usuarios que acumulen KASH podrán disponer, retirar o canjear monedas KASH libremente dentro de los servicios ofrecidos en la plataforma que le permitirán ahorrar o
+                agilizar en sus transacciones.
               </p>
-              <p>Los usuarios pueden visualizar su cantidad de KASH acumulados en la sección de MIS CUENTAS, en la pantalla de ACTIVIDADES o en los detalles de MI PERFIL.</p>
+              <p>
+                Los retiros de KASH (transables en dólares estadounidenses) se harán solo con bancos afiliados dentro de las facultades y horarios habituales de la plataforma. Los
+                usuarios pueden visualizar su cantidad de KASH acumulados en la sección de MIS CUENTAS, y también ver el movimiento de sus transacciones en la pantalla de
+                ACTIVIDADES.
+              </p>
               <h3>8.2 CAMBIO DE MONEDA EXTRANJERA:</h3>
               <p>
                 Para hacer uso de este servicio, el USUARIO debe contar con una cuenta bancaria propia en una entidad financiera supervisada por la SBS, es decir, debe aceptar
