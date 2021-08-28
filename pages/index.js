@@ -69,7 +69,7 @@ const Home = () => {
                     Estamos registrados y autorizados <br /> por la <b>SBS</b>.
                   </p>
                 </div>
-                <h4 className="mb-2 md:mb-0">Transferencias inmediatas (5-25min):</h4>
+                <h4 className="mb-2 md:mb-0">Transferencias inmediatas (15-25min):</h4>
                 <div className={styles.banks}>
                   <img src="/images/banks/interbank.svg" alt="banco" />
                   <img src="/images/banks/bcp.svg" alt="banco" />
