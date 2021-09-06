@@ -225,18 +225,9 @@ const TerminosCondiciones = () => {
                 </li>
               </ul>
             </li>
+
             <li>
-              <h3>5.3 ACUERDO DE TIPO DE CAMBIO:</h3>
-              <p>
-                Queda establecido que el tipo de cambio entre EL USUARIO e INSTAKASH, cuando EL USUARIO haya registrado la operación a través de cualquiera de LAS APLICACIONES
-                tendrá una vigencia máxima de: Quince (15) minutos, para que EL USUARIO pueda realizar la transferencia desde su cuenta bancaria a la cuenta de INSTAKASH. Las
-                operaciones ejecutadas vía transferencias interbancarias tendrán que considerar que el tiempo máximo de espera para la llegada del fondo a la cuenta de INSTAKASH
-                será las 17:30 horas del día del registro de la operación. Por lo expuesto, el tiempo transcurrido desde el registro de la operación, transferencia en las cuentas
-                de INSTAKASH, será denominado “plazo de recepción de fondos”.
-              </p>
-            </li>
-            <li>
-              <h3>5.4 CUPONES DE DESCUENTO:</h3>
+              <h3>5.3 CUPONES DE DESCUENTO:</h3>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
                 redes sociales o promoción directa por parte de INSTAKASH a determinados usuarios.
@@ -251,7 +242,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className="mt-10 mb-6 text-2xl">AFILIADOS:</h3>
+          <h3 className="mt-10 mb-6 text-2xl">6 AFILIADOS:</h3>
           <ol className={styles.legalList}>
             <li>
               <h3>6.1 PROGRAMA DE AFILIADOS:</h3>
