@@ -40,6 +40,7 @@ const TerminosCondiciones = () => {
             <li>
               <h3>2. REGISTRO DE USUARIO</h3>
               <p>EL USUARIO declara y garantiza que el usuario creado en LA PLATAFORMA de INSTAKASH, es para su uso personal y/o a nombre de la empresa que representa.</p>
+              <p>Para el caso de que EL USUARIO sea una persona natural, declara que no está actuando en nombre de una tercera persona.</p>
               <p>
                 Para el caso de que EL USUARIO sea una persona jurídica, declara que los datos consignados son verídicos y vigentes respecto a: persona responsable de contacto para
                 el registró y operación, información del representante legal e información actualizada de la empresa.
@@ -122,7 +123,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className="mt-10 mb-6 text-2xl">REGISTROS:</h3>
+          <h3 className="mt-10 mb-6 text-2xl">5. REGISTROS:</h3>
           <ol className={styles.legalList}>
             <li>
               <h3>5.1 MONEDA KASH:</h3>
@@ -187,6 +188,19 @@ const TerminosCondiciones = () => {
                   contado a partir del momento del registro de la operación. Solo durante el período de tiempo señalado, se mantendrá el acuerdo de cambio de dólares.
                 </li>
                 <li>
+                  Para las operaciones interbancarias, INSTAKASH realizará la orden cuando los fondos lleguen a sus cuentas como saldo líquido. Así mismo, si el tipo de cambio
+                  varia drásticamente según criterio de INSTAKASH, se podrá anular la operación o realizarla a un nuevo tipo de cambio si el usuario así lo prefiriese.
+                </li>
+                <li>
+                  EL USUARIO deberá asumir el costo de la transferencia inmediata cobrada por su entidad financiera y ejecutar la transferencia dentro de los horarios establecidos
+                  para la operativa interbancaria; el cual establece que el tiempo para realizar este tipo de operaciones es de lunes a viernes de 8:30 am y 3:45 pm de días
+                  hábiles.
+                </li>
+                <li>
+                  Las operaciones ejecutadas vía transferencias interbancarias tendrán que considerar que el tiempo máximo de espera para la llegada del fondo a la cuenta de
+                  INSTAKASH será las 17:30 horas del día del registro de la operación.
+                </li>
+                <li>
                   El USUARIO deberá entregar la constancia de la transferencia de los fondos a la cuenta bancaria indicada por INSTAKASH, en el momento del registro de la operación
                   y por el monto acordado.
                 </li>
@@ -197,6 +211,17 @@ const TerminosCondiciones = () => {
                 <li>
                   Es facultad de INSTAKASH informar aquellas operaciones que cumplan con la calidad de “operaciones sospechosas” de acuerdo a la normativa que abarca únicamente la
                   materia de prevención de lavado de activos y del financiamiento del terrorismo, emitida por la SBS.
+                </li>
+                <li>
+                  Una vez recibidos los fondos, el tiempo para que INSTAKASH ejecute la orden será no mayor a 3 horas, siempre y cuando no se hayan establecido tiempos diferentes
+                  entre las partes o exista algún problema en el sistema del banco, INSTAKASH realizará la transferencia del monto acordado a la cuenta destino del USUARIO,
+                  previamente registrada. INSTAKASH no se hace responsable del tiempo de transferencia de fondos por parte de las entidades financieras.{" "}
+                </li>
+                <li>
+                  En caso EL USUARIO realice una transferencia a favor de un tercero lo hará a su propio riesgo. EL USUARIO acepta que INSTAKASH no formará parte de la relación
+                  jurídica con dicho tercero ni estará obligado a proporcionar información, documentos, aclaraciones, anulaciones o comunicaciones con dicho tercero. EL USUARIO
+                  libera de toda responsabilidad a INSTAKASH en relación con las transferencias que EL USUARIO ordene a favor de terceros. INSTAKASH descontará la comisión por
+                  operaciones con comisión interplaza al momento de transferir el cambio a la cuenta de destino.
                 </li>
               </ul>
             </li>
