@@ -296,6 +296,12 @@ const TerminosCondiciones = () => {
               <li>4. Las comisiones de transferencias interbancarias será la que el banco estipule al momento de hacer la transferencia a la cuenta destino.</li>
             </ol>
             <p>
+              <b>Comisiones para transferencias interbancarias: 3.50 $ (comision fija)</b>
+            </p>
+            <p>
+              <b>Comisiones para transferencias interbancarias: 3.50 S/. (comision fija)</b>
+            </p>
+            <p>
               <b>Comisiones de Interbank interplaza para compra de dólares: 3.50 $ (comision fija) + 0.005 x (Monto a transferir)</b>
             </p>
             <p>
