@@ -62,20 +62,28 @@ const Home = () => {
               <img src="/images/welcome.svg" alt="Gana con instakash" />
             </header>
             <section className={styles.calculatorWrapper}>
-              <Card className="flex items-center flex-col md:flex-row w-full justify-between p-6 mt-0 mb-4 md:mb-0 order-2 md:order-1">
-                <div className="flex items-center md:hidden mb-7">
+              <div className="flex flex-col md:flex-row items-center w-full justify-between p-4 md:p-5 order-2 md:order-1">
+                <div className="flex items-center md:hidden mb-5">
                   <img src="/images/icons/badge.svg" width={55} height={55} />
                   <p>
                     Estamos registrados y autorizados <br /> por la <b>SBS</b>.
                   </p>
                 </div>
-                <h4 className="mb-2 md:mb-0">Transferencias inmediatas (15-25min):</h4>
-                <div className={styles.banks}>
-                  <img src="/images/banks/interbank.svg" alt="banco" />
-                  <img src="/images/banks/bcp.svg" alt="banco" />
+                <div className="mb-4 md:mb-0">
+                  <h4>Bancos inmediatos (25min)</h4>
+                  <div className={styles.banks}>
+                    <img src="/images/banks/interbank.svg" alt="Interbank" />
+                    <img src="/images/banks/bcp.svg" alt="BCP" />
+                  </div>
                 </div>
-              </Card>
-              <Card className="py-4 md:py-8 order-1 md:mt-8 w-full md:order-2">
+                <div className="mb-4 md:mb-0">
+                  <h4>Bancos interbancarios</h4>
+                  <div className={styles.banks}>
+                    <img src="/images/banks/bbva.svg" alt="BBVA" />
+                  </div>
+                </div>
+              </div>
+              <Card className="py-4 md:py-8 order-1 md:mt-4 w-full md:order-2">
                 {isLoading ? (
                   <div className="flex justify-center">
                     <Loader type="Rings" color="#0d8284" height={55} width={55} />

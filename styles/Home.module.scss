@@ -1,9 +1,9 @@
-@import './colors';
+@import "./colors";
 
 .calculatorSection {
   width: 100%;
   min-height: 100vh;
-  background: url('/images/bg/calculator-3.svg'), url('/images/bg/calculator-2.svg'), url('/images/bg/calculator-1.svg'), url('/images/bg/shapes-top.svg');
+  background: url("/images/bg/calculator-3.svg"), url("/images/bg/calculator-2.svg"), url("/images/bg/calculator-1.svg"), url("/images/bg/shapes-top.svg");
   background-repeat: no-repeat;
   background-size: 100%, 100%, 100%, 80%;
   overflow: hidden;
@@ -26,8 +26,8 @@
   justify-content: center;
 
   img {
-    width: 90px;
-    margin-right: 1rem !important;
+    width: 80px;
+    margin: 0.5rem 1rem 0;
   }
 }
 
@@ -217,7 +217,7 @@
   position: relative;
 
   .affiliatesBg {
-    background: url('/images/bg/affiliates-mobile.svg');
+    background: url("/images/bg/affiliates-mobile.svg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -305,7 +305,7 @@
     display: block;
 
     .affiliatesBg {
-      background: url('/images/bg/affiliates.svg');
+      background: url("/images/bg/affiliates.svg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;
@@ -383,7 +383,7 @@
   }
 
   ul {
-    list-style-image: url('/images/icons/check.svg');
+    list-style-image: url("/images/icons/check.svg");
     padding-left: 2rem;
   }
 
