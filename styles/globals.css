@@ -152,7 +152,7 @@ b {
   outline: 0;
   overflow: auto;
   position: relative;
-  top: 30%;
+  top: 20%;
   overscroll-behavior: contain;
   display: grid;
   grid-template-rows: 1fr 4rem;
@@ -161,10 +161,10 @@ b {
 @media screen and (min-width: 768px) {
   .modal-background::before {
     content: "";
-    background-image: url(https://instakash-images.s3.us-east-2.amazonaws.com/fiestas-patrias.svg);
+    /* background-image: url(https://instakash-images.s3.us-east-2.amazonaws.com/fiestas-patrias.svg);
     background-size: 13rem;
     background-position: -2% 30%;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     position: absolute;
     top: 0px;
     right: 0px;
@@ -176,7 +176,7 @@ b {
 }
 
 .modal-content {
-  padding: 30px 30px 10px;
+  padding: 10px;
   position: relative;
   font-size: 1rem;
 }
@@ -192,28 +192,19 @@ b {
   color: #0d8284;
 }
 
-@media (min-width: 1280px) {
-  .modal-content {
-    padding: 35px;
-  }
-
-  .modal-content h2 {
-    font-size: 1.8rem;
-  }
-}
-
 .close-modal {
   position: absolute;
   right: 1rem;
   top: 1rem;
+  z-index: 100;
 }
 
 .close-modal svg {
-  color: #0d8284;
+  color: #fff;
 }
 
 .modal-footer {
-  padding: 15px;
+  padding: 5px 15px 10px;
   display: flex;
   justify-content: flex-end;
 }

@@ -4,7 +4,7 @@ import Head from "next/head";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
 import Loader from "react-loader-spinner";
-// import { BaseModal } from "../components/UI/Modal";
+import { BaseModal } from "../components/UI/Modal";
 
 import styles from "../styles/Home.module.scss";
 
@@ -238,16 +238,17 @@ const Home = () => {
           </div>
         </div>
       </section>
-      {/* <BaseModal>
-        <div className="md:max-w-sm ml-auto md:text-right md:mt-6">
+      <BaseModal>
+        {/* <div className="md:max-w-sm ml-auto md:text-right md:mt-6">
           <h2>¡Se Viene Feriado!</h2>
           <p>
             Estimado usuario, el dia <b>Viernes 8 de Octubre</b> no habrá atención. A partir del Sabádo 9 de Octubre regresaremos con nuestro horario de atención normal.
             <br />
             Todo pedido registrado en ese día será atendido el día <b>9 de Octubre.</b>
           </p>
-        </div>
-      </BaseModal> */}
+        </div> */}
+        <img src="/images/banners/Banner-square.png" alt="Cupón de descuento" width="100%" />
+      </BaseModal>
     </>
   );
 };
