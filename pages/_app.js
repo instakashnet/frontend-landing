@@ -21,9 +21,7 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <FacebookPixel>
-      <Layout>
         <Component {...pageProps} />
-      </Layout>
     </FacebookPixel>
   );
 }
