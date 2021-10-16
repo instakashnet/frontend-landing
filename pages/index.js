@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="flex items-center md:hidden mb-5">
                   <img src="/images/icons/badge.svg" width={55} height={55} />
                   <p>
-                    Estamos registrados y autorizados <br /> por la <b>SBS</b>.
+                    Estamos registrados y autorizados <br /> por la <b>SBS</b>
                   </p>
                 </div>
                 <div className="mb-4 md:mb-0">
