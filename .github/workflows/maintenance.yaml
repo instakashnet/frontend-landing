@@ -12,7 +12,7 @@ jobs:
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
-      AWS_REGION: us-east-2,
+      AWS_REGION: us-east-2
       AWS_CF_DISTRIBUTION_ID: E9VHXWAQWYXBQ
     strategy:
       matrix:
