@@ -77,7 +77,7 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="mb-4 md:mb-0">
-                  <h4>Bancos interbancarios</h4>
+                  <h4>Interbancarias</h4>
                   <div className={styles.banks}>
                     <img src="/images/banks/bbva.svg" alt="BBVA" />
                   </div>
