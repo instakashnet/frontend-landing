@@ -247,7 +247,7 @@ const Home = () => {
             Todo pedido registrado en ese día será atendido el día <b>9 de Octubre.</b>
           </p>
         </div> */}
-        <img src="/images/banners/Banner-square.png" alt="Cupón de descuento" width="100%" />
+        <img src="/images/banners/banner.jpg" alt="Scotiabank" width="100%" />
       </BaseModal>
     </>
   );
