@@ -212,7 +212,7 @@
 }
 
 .affiliates {
-  margin-top: 6rem;
+  margin-top: 0;
   padding-bottom: 370px;
   position: relative;
 
@@ -302,6 +302,7 @@
 
   @media screen and (min-width: 996px) {
     padding: 0;
+    margin-top: -180px;
     display: block;
 
     .affiliatesBg {
@@ -370,6 +371,38 @@
 
     img:last-of-type {
       left: 80px;
+    }
+  }
+}
+
+.partners {
+  width: 100%;
+  background-color: $base-green;
+  padding: 50px 0;
+  min-height: 10rem;
+  margin-top: 100px;
+
+  img {
+    margin: 35px 50px;
+    width: 125px;
+  }
+
+  h3 {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 30rem;
+    padding: 100px 0;
+
+    img {
+      margin: 0 50px;
+      width: 150px;
+    }
+
+    h3 {
+      font-size: 2.2rem;
     }
   }
 }

@@ -172,6 +172,17 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className={`section-wrapper ${styles.partners}`}>
+        <h3 className="text-center mb-2">Ellos respaldan nuestros servicios</h3>
+        <div className="container flex flex-col md:flex-row items-center justify-center mt-6">
+          <a href="https://www.adexperu.org.pe/" target="_blank" rel="noopener noreferrer">
+            <img alt="adex" src="/images/partners/adex.svg" width="100%" />
+          </a>
+          <a href="https://fintechperu.com" target="_blank" rel="noopener noreferrer">
+            <img alt="fintech-peru" src="/images/partners/fintech.svg" width="100%" />
+          </a>
+        </div>
+      </section>
       <section className={`section-wrapper ${styles.affiliates}`} id="affiliates">
         <div className={styles.affiliatesBg}>
           <div className="container md:mt-12">
