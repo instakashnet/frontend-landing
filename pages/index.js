@@ -80,6 +80,7 @@ const Home = () => {
                   <h4>Interbancarias</h4>
                   <div className={styles.banks}>
                     <img src="/images/banks/bbva.svg" alt="BBVA" />
+                    <img src="/images/banks/scotiabank.svg" alt="scotiabank" />
                   </div>
                 </div>
               </div>
