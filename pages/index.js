@@ -17,7 +17,7 @@ const Home = () => {
     setIsLoading(true);
 
     try {
-      const res = await axios.get(`https://x8m7ozhng8.execute-api.us-east-2.amazonaws.com/invoke/exchange-service/api/v1/client/rates`);
+      const res = await axios.get(`https://api.instakash.net/exchange-service/api/v1/client/rates`);
       if (res.data) setRates({ buy: res.data[0].buy, sell: res.data[0].sell });
     } catch (error) {
       console.log(error);
@@ -30,7 +30,7 @@ const Home = () => {
     setIsLoading(true);
 
     try {
-      const res = await axios.get(`https://x8m7ozhng8.execute-api.us-east-2.amazonaws.com/invoke/exchange-service/api/v1/client/analytics/general`);
+      const res = await axios.get(`https://api.instakash.net/exchange-service/api/v1/client/analytics/general`);
       if (res.data) setCounters({ orders: res.data.qtySuccessfullOrders, total: res.data.totalProcessed, users: res.data.qtyUsers });
     } catch (error) {
       console.log(error);
