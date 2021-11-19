@@ -14,6 +14,7 @@ jobs:
       CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
       AWS_REGION: us-east-2
+      AWS_CF_DISTRIBUTION_ID: E2X00COP83H8LV
     strategy:
       matrix:
         node-version: [15.x]
@@ -27,10 +28,21 @@ jobs:
         run: yarn install
       - name: Build de application
         run: yarn build
-      - name: Build admin om netlify
-        uses: jsmrcaga/action-netlify-deploy@v1.1.0
+      - uses: jakejarvis/s3-sync-action@master
+        name: Upload the app to S3 bucket
         with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_DEPLOY_TO_PROD: false
-          build_directory: "out"
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          AWS_S3_BUCKET: ${{ secrets.DEV_AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ env.AWS_REGION }}
+          SOURCE_DIR: "out"
+      - name: Create Cloudfront cache invalidation
+        uses: chetan/invalidate-cloudfront-action@master
+        env:
+          DISTRIBUTION: ${{ env.AWS_CF_DISTRIBUTION_ID }}
+          PATHS: "/*"
+          AWS_REGION: ${{ env.AWS_REGION }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
