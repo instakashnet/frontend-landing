@@ -173,7 +173,27 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className={`section-wrapper ${styles.partners}`}>
+      <section className={`section-wrapper ${styles.appSection}`}>
+        <div className="container flex flex-col md:flex-row items-center justify-center px-12">
+          <img src="/images/mobile-app.svg" alt="mobile-app" className="order-2 md:order-1" />
+          <div className={`${styles.appInfo} order-1 md:order-2`}>
+            <h2 className="mb-0">Próximamente</h2>
+            <h3 className="my-10">
+              Instakash, la casa de cambio más segura y con las mejores tasas del Perú, pronto estará disponible para Android y IOS. Pronto podrás descargar nuestra app y hacer tus
+              cambios desde la comodidad de tu teléfono móvil.
+            </h3>
+            <div className="flex items-center">
+              <a href="!#">
+                <img src="/images/app-store.svg" alt="app-store" width="160px" />
+              </a>
+              <a href="!#">
+                <img src="/images/play-store.svg" alt="play-store" width="200px" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className={`section-wrapper ${styles.partners} mt-0`}>
         <h3 className="text-center mb-2">Ellos respaldan nuestros servicios</h3>
         <div className="container flex flex-col md:flex-row items-center justify-center mt-6">
           <a href="https://www.adexperu.org.pe/" target="_blank" rel="noopener noreferrer">
