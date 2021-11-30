@@ -13,7 +13,7 @@ jobs:
       CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
       AWS_REGION: us-east-2
-      AWS_CF_DISTRIBUTION_ID: E9VHXWAQWYXBQ
+      AWS_CF_DISTRIBUTION_ID: ETZGT44SXS6PU
     strategy:
       matrix:
         node-version: [15.x]
