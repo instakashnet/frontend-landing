@@ -14,5 +14,5 @@ module.exports = {
     ];
   },
   // Causes next.js to add trailing slashes to end of URLs.
-  trailingSlash: true,
+  // trailingSlash: true,
 };
