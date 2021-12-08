@@ -279,7 +279,7 @@ const Home = () => {
             Todo pedido registrado en ese día será atendido el día <b>9 de Octubre.</b>
           </p>
         </div> */}
-        <img src="/images/banners/banner.jpg" alt="felicesfiestas" width="100%" />
+        <img src="/images/banners/notice.jpg" alt="feriado" width="100%" />
       </BaseModal>
     </>
   );
