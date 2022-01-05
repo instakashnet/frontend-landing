@@ -2,7 +2,9 @@ name: prodCI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "main"
+      - "mainteinance"
 
 jobs:
   build:
