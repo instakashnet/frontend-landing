@@ -177,16 +177,16 @@ const Home = () => {
         <div className="container flex flex-col md:flex-row items-center justify-center px-12">
           <img src="/images/mobile-app.svg" alt="mobile-app" className="order-2 md:order-1" />
           <div className={`${styles.appInfo} order-1 md:order-2`}>
-            <h2 className="mb-0">Próximamente</h2>
+            <h2 className="mb-0">Ya disponible</h2>
             <h3 className="my-10">
-              Instakash, la casa de cambio más segura y con las mejores tasas del Perú, pronto estará disponible para Android y IOS. Pronto podrás descargar nuestra app y hacer tus
-              cambios desde la comodidad de tu teléfono móvil.
+              Instakash, la casa de cambio más segura y con las mejores tasas del Perú, ya está disponible para Android y IOS. Puedes descargar nuestra app y hacer tus cambios
+              desde la comodidad de tu teléfono móvil.
             </h3>
             <div className="flex items-center">
-              <a href="!#">
+              <a href="https://apps.apple.com/pe/app/instakash/id1601561803">
                 <img src="/images/app-store.svg" alt="app-store" width="160px" />
               </a>
-              <a href="!#">
+              <a href="https://play.google.com/store/apps/details?id=net.instakash.app">
                 <img src="/images/play-store.svg" alt="play-store" width="200px" />
               </a>
             </div>
