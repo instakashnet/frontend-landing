@@ -1,4 +1,4 @@
-@import '../colors';
+@import "../colors";
 
 .nav {
   width: 100%;
@@ -155,11 +155,11 @@
       margin: 10px 0;
 
       &:first-of-type {
-        background-color: $button-yellow;
+        background-color: transparent;
       }
 
       &:last-of-type {
-        background-color: transparent;
+        background-color: $button-yellow;
       }
 
       &:hover,

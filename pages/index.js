@@ -6,6 +6,7 @@ import Calculator from "../components/calculator";
 import Loader from "react-loader-spinner";
 import { BaseModal } from "../components/UI/Modal";
 
+// CLASSES
 import styles from "../styles/Home.module.scss";
 
 const Home = () => {

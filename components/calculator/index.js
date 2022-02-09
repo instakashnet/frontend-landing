@@ -48,7 +48,7 @@ const Calculator = ({ rates }) => {
         Para montos mayores a $5,000 solicita un tipo de cambio preferencial en nuestro chat de whatsapp.
       </p>
       <Button type="submit" className="w-full mt-6" disabled={formik.values.amount_sent === 0}>
-        Comenzar cambio
+        Registrate y Cambia
       </Button>
     </form>
   );
