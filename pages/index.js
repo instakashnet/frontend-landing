@@ -10,9 +10,10 @@ import { BaseModal } from "../components/UI/Modal";
 import styles from "../styles/Home.module.scss";
 
 const Home = () => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [rates, setRates] = useState({ buy: 0, sell: 0 });
-  const [counters, setCounters] = useState({ orders: 0, total: 0, users: 0 });
+  const [isLoading, setIsLoading] = useState(false),
+    [rates, setRates] = useState({ buy: 0, sell: 0 }),
+    [modalOpen, setModalOpen] = useState(false),
+    [counters, setCounters] = useState({ orders: 0, total: 0, users: 0 });
 
   const getRates = async () => {
     setIsLoading(true);
@@ -39,6 +40,12 @@ const Home = () => {
       setIsLoading(false);
     }
   };
+
+  // EFFECTS
+  useEffect(() => {
+    const timeout = setTimeout(() => setModalOpen(true), 500);
+    return () => clearTimeout(timeout);
+  }, []);
 
   useEffect(() => {
     getRates();
@@ -85,7 +92,7 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-              <Card className="py-4 md:py-8 order-1 md:mt-4 w-full md:order-2">
+              <Card className={`${styles.homeCard} py-4 md:py-8 order-1 md:mt-4 w-full md:order-2`}>
                 {isLoading ? (
                   <div className="flex justify-center">
                     <Loader type="Rings" color="#0d8284" height={55} width={55} />
@@ -271,15 +278,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <BaseModal>
-        {/* <div className="md:max-w-sm ml-auto md:text-right md:mt-6">
-          <h2>¡Se Viene Feriado!</h2>
-          <p>
-            Estimado usuario, el dia <b>Viernes 8 de Octubre</b> no habrá atención. A partir del Sabádo 9 de Octubre regresaremos con nuestro horario de atención normal.
-            <br />
-            Todo pedido registrado en ese día será atendido el día <b>9 de Octubre.</b>
-          </p>
-        </div> */}
+      <BaseModal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
         <img src="/images/banners/banner.jpg" alt="notice" width="100%" />
       </BaseModal>
     </>
