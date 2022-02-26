@@ -115,7 +115,7 @@ const Promociones = () => {
       </section>
       <BaseModal isOpen={isModalOpen} onClose={closeModalHandler}>
         {/* <FileViewer fileType="pdf" filePath="https://instakash-docs.s3.us-east-2.amazonaws.com/Te%CC%81rminos+y+condiciones+concursos+INSTAKASH.docx.pdf" /> */}
-        <MultiPages pdf="https://s3.us-east-2.amazonaws.com/instakash.net/documents/terms-conditions-peruvsuruguay.docx.pdf" />
+        <MultiPages pdf="https://instakash-media.s3.us-east-2.amazonaws.com/terms-conditions-peruvsuruguay.docx.pdf" />
       </BaseModal>
     </>
   );
