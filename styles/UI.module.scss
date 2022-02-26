@@ -1,4 +1,4 @@
-@import './colors';
+@import "./colors";
 
 .button {
   padding: 0.8rem 1rem;
@@ -13,13 +13,10 @@
 }
 
 .card {
-  padding: auto;
-
-  @media screen and (min-width: 996px) {
-    background: #ffffff;
-    box-shadow: 4px 4px 20px rgba(16, 80, 82, 0.2);
-    border-radius: 20px;
-  }
+  background: #ffffff;
+  padding: 15px;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 
 .calcCurrency {
@@ -94,7 +91,7 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url('/images/icons/arrow.svg');
+    background: url("/images/icons/arrow.svg");
     background-repeat: no-repeat;
     background-position: 97%;
   }

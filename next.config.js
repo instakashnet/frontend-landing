@@ -1,6 +1,11 @@
 const BLOG_URL = "http://instakash-landing.s3-website.us-east-2.amazonaws.com";
+const withImages = require("next-images");
 
 module.exports = {
+  ...withImages(),
+  future: {
+    webpack5: true,
+  },
   async rewrites() {
     return [
       {

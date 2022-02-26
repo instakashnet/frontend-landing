@@ -1,23 +1,43 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Anchor from 'react-anchor-link-smooth-scroll';
-import { useRouter } from 'next/router';
+import { useEffect, useState } from "react";
+import Link from "next/link";
+import Anchor from "react-anchor-link-smooth-scroll";
+import { useRouter } from "next/router";
 
-import styles from '../../styles/layout/Nav.module.scss';
+import styles from "../../styles/layout/Nav.module.scss";
 
 const Nav = () => {
-  const [stickyNav, setStickyNav] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
-  const router = useRouter();
+  const [scrollDirection, setScrollDirection] = useState("default"),
+    [mobileNav, setMobileNav] = useState(false),
+    router = useRouter();
 
   useEffect(() => {
-    const stickNavHandler = () => {
-      window.scrollY >= 80 ? setStickyNav(true) : setStickyNav(false);
+    let lastScroll = 0,
+      direction = "default";
+
+    const setNavbarEffect = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll <= 0) {
+        direction = "default";
+        setScrollDirection("default");
+      }
+
+      if (currentScroll > lastScroll && direction !== "down") {
+        direction = "down";
+        setScrollDirection("down");
+      }
+
+      if (currentScroll < lastScroll && direction === "down") {
+        direction = "up";
+        setScrollDirection("up");
+      }
+
+      lastScroll = currentScroll;
     };
 
-    window.addEventListener('scroll', stickNavHandler);
+    window.addEventListener("scroll", setNavbarEffect);
 
-    return () => window.removeEventListener('scroll', stickNavHandler);
+    return () => window.removeEventListener("scroll", setNavbarEffect);
   }, []);
 
   useEffect(() => {
@@ -31,23 +51,23 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${stickyNav ? styles.stickyNav : ''}`}>
-        <div className='container flex items-center justify-between'>
-          <Link href='/'>
+      <nav className={`${styles.nav} ${scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : ""}`}>
+        <div className="container flex items-center justify-between">
+          <Link href="/">
             <a>
-              <img src='/images/logo.svg' alt='Instakash' />
+              <img src="/images/logo.svg" alt="Instakash" />
             </a>
           </Link>
 
-          <ul className='ml-auto mr-3'>
+          <ul className="ml-auto mr-3">
             <li>
-              <Anchor href='#steps'>¿Como funciona?</Anchor>
+              <Anchor href="#steps">¿Como funciona?</Anchor>
             </li>
             <li>
-              <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
+              <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
             </li>
             <li>
-              <Anchor href='#benefits'>Benefícios</Anchor>
+              <Anchor href="#benefits">Benefícios</Anchor>
             </li>
             {/* <li>
               <Link href='/blog'>
@@ -57,35 +77,35 @@ const Nav = () => {
           </ul>
 
           <div className={styles.navButtons}>
-            <a href='https://app.instakash.net/signin' className='mr-4'>
+            <a href="https://app.instakash.net/signin" className="mr-4">
               Iniciar sesión
             </a>
-            <a href='https://app.instakash.net/signup'>Registrarse</a>
+            <a href="https://app.instakash.net/signup">Registrarse</a>
           </div>
 
-          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
+          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ""}`} onClick={toggleNav}>
             <span />
             <span />
             <span />
           </button>
         </div>
       </nav>
-      <div className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ''}`} onClick={closeNav}>
+      <div className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
         <ul>
           <h3>Menú</h3>
           <li>
-            <Anchor href='#steps'>¿Como funciona?</Anchor>
+            <Anchor href="#steps">¿Como funciona?</Anchor>
           </li>
           <li>
-            <Link href='/nosotros'>
+            <Link href="/nosotros">
               <a>Nosotros</a>
             </Link>
           </li>
           <li>
-            <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
+            <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
           </li>
           <li>
-            <Anchor offset='150' href='#benefits'>
+            <Anchor offset="150" href="#benefits">
               ¿Por qué Instakash?
             </Anchor>
           </li>
@@ -97,8 +117,8 @@ const Nav = () => {
         </div>
 
         <div className={styles.navButtons}>
-          <a href='https://app.instakash.net'>Iniciar sesión</a>
-          <a href='https://app.instakash.net'>Registrarse</a>
+          <a href="https://app.instakash.net">Iniciar sesión</a>
+          <a href="https://app.instakash.net">Registrarse</a>
         </div>
       </div>
     </>

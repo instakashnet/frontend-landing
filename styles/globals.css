@@ -200,7 +200,7 @@ b {
 }
 
 .close-modal svg {
-  color: #fff;
+  color: rgba(200, 200, 200, 0.5);
 }
 
 .modal-footer {
