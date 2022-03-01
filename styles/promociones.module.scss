@@ -5,15 +5,11 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-
-  h2 {
-    font-size: 2.3rem;
-  }
 }
 
 .PromotionCard {
   width: 380px;
-  min-height: 525px;
+  min-height: 600px;
   padding: 0;
   text-align: left;
   display: flex;
@@ -24,17 +20,30 @@
   margin: 1.3rem;
 
   .Cover {
-    height: 200px;
+    height: 175px;
     position: relative;
     width: 100%;
   }
 
   .Info {
-    padding: 2rem 1.5rem;
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+
+    h2 {
+      font-size: 2rem;
+    }
+
+    .Actions {
+      display: grid;
+      justify-items: center;
+      margin: auto;
+    }
   }
 
   .Date {
-    margin: 0.5rem 0;
+    margin: 0 0 0.3rem;
     color: $base-green;
     font-size: 0.95rem;
   }
@@ -59,5 +68,11 @@
     margin-top: 1rem;
     color: $base-green;
     text-decoration: underline;
+  }
+
+  @media screen and (min-width: 996px) {
+    .Cover {
+      height: 200px;
+    }
   }
 }

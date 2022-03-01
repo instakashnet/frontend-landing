@@ -147,12 +147,12 @@ b {
   box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.1);
   width: 95%;
   max-width: 45rem;
-  max-height: 100vh;
+  max-height: 70vh;
   margin: 0 auto;
   outline: 0;
   overflow: auto;
   position: relative;
-  top: 20%;
+  top: 15%;
   overscroll-behavior: contain;
   display: grid;
   grid-template-rows: 1fr 4rem;
@@ -201,6 +201,39 @@ b {
 
 .close-modal svg {
   color: rgba(200, 200, 200, 0.5);
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-body h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-body h4 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal-body p,
+.modal-body li {
+  margin: 0.5rem 0;
+}
+
+.modal-body ol,
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+.modal-body a {
+  font-weight: bold;
+  color: #0d8284;
+  text-decoration: underline;
 }
 
 .modal-footer {
