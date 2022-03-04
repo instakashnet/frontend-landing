@@ -65,7 +65,9 @@ const Home = () => {
         <div className="container">
           <div className="grid md:grid-cols-2 md:pt-12 md:pb-16">
             <header className={styles.sectionTitle}>
-              <h1 className="pl-3 md:pl-0">¡Gana cambiando con Instakash!</h1>
+              <h1 className="pl-3 md:pl-0">
+                Ahorra cambiando con <br /> la mejor tasa del Perú
+              </h1>
               <h2 className="mb-3 md:mb-0 pl-3 md:pl-0">Dale a tu dinero el valor que merece</h2>
               <img src="/images/welcome.svg" alt="Gana con instakash" />
             </header>
@@ -78,9 +80,12 @@ const Home = () => {
                   </p>
                 </div>
                 <div className="mb-4 md:mb-0">
-                  <h4>Bancos inmediatos (25min)</h4>
+                  <h4>Transferencias directas</h4>
                   <div className={styles.banks}>
-                    <img src="/images/banks/interbank.svg" alt="Interbank" />
+                    <div className="flex flex-col items-center justify-center">
+                      <img src="/images/banks/interbank.svg" alt="Interbank" />
+                      <small className="mt-2">(solo Lima)</small>
+                    </div>
                     <img src="/images/banks/bcp.svg" alt="BCP" />
                   </div>
                 </div>
@@ -88,7 +93,7 @@ const Home = () => {
                   <h4>Interbancarias</h4>
                   <div className={styles.banks}>
                     <img src="/images/banks/bbva.svg" alt="BBVA" />
-                    <img src="/images/banks/scotiabank.svg" alt="scotiabank" />
+                    <img src="/images/banks/scotiabank.svg" alt="scotiabank" className="mt-0" />
                   </div>
                 </div>
               </div>

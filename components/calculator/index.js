@@ -43,13 +43,13 @@ const Calculator = ({ rates }) => {
         <Swipe onClick={swipeHandler} type={formik.values.type} />
         <Input name="amount_received" label="Recibes" currency={formik.values.currency_received} value={formik.values.amount_received} onChange={amountChangeHandler} />
       </div>
-      <p className="text-sm mt-2 flex items-center justify-between pl-2">
+      <Button type="submit" className="w-full" disabled={formik.values.amount_sent === 0}>
+        Registrate y Cambia
+      </Button>
+      <p className="text-sm mt-4 flex items-center justify-between pl-2">
         <Info className="mr-3" size={40} />
         Para montos mayores a $5,000 solicita un tipo de cambio preferencial en nuestro chat de whatsapp.
       </p>
-      <Button type="submit" className="w-full mt-6" disabled={formik.values.amount_sent === 0}>
-        Registrate y Cambia
-      </Button>
     </form>
   );
 };
