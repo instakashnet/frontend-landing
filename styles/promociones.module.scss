@@ -4,12 +4,16 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  @media screen and (min-width: 996px) {
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+  }
 }
 
 .PromotionCard {
-  width: 400px;
-  min-height: 600px;
+  width: 330px;
+  min-height: 560px;
   padding: 0;
   text-align: left;
   display: flex;
@@ -76,6 +80,9 @@
   }
 
   @media screen and (min-width: 996px) {
+    width: 400px;
+    min-height: 600px;
+
     .Cover {
       height: 220px;
     }

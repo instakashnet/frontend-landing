@@ -40,12 +40,12 @@ const Promociones = () => {
   return (
     <>
       <Head>
-        <title>Promociones | Instakash</title>
-        <meta name="description" content="Promociones disponibles para tus cambios de divisas." />
+        <title>Beneficios | Instakash</title>
+        <meta name="description" content="Beneficios disponibles para tus cambios de divisas." />
       </Head>
       <section>
         <div className="container section-wrapper text-center mt-16 mb-24">
-          <h1>Promociones</h1>
+          <h1>Beneficios</h1>
           <hr className="mx-auto w-1/3 my-6" />
           <h3 className="mb-12">
             Todos los meses tenemos diferentes formas de ayudarte a conseguir las mejores tasas <br /> y que puedas sacar el mayor provecho a tu dinero.
