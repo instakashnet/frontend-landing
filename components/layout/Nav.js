@@ -67,7 +67,7 @@ const Nav = () => {
               <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
             </li>
             <li>
-              <Anchor href="#benefits">Benefícios</Anchor>
+              <Link href="/promociones">Beneficios</Link>
             </li>
             {/* <li>
               <Link href='/blog'>

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 // import dynamic from "next/dynamic";
 
 // COMPONENTS
@@ -9,7 +10,9 @@ import { BaseModal } from "../components/UI/Modal";
 import { MultiPages } from "../components/pdf/multi-pages";
 
 import styles from "../styles/promociones.module.scss";
-import SanValentin from "../assets/images/sanvalentin.png";
+import VamosPeru from "../assets/images/vamosperu.jpg";
+import MesDeLaMujer from "../assets/images/mesdelamujer.jpg";
+import SuperMontos from "../assets/images/super.jpg";
 import Kash from "../assets/images/kash.png";
 import Peru from "../assets/images/peru.png";
 
@@ -51,15 +54,15 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={SanValentin} alt="Cupón SANVALENTIN" layout="fill" objectFit="contain" />
+                <Image src={VamosPeru} alt="Cupón VAMOSPERU" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>SANVALENTIN</h2>
+                <h2>VAMOSPERU</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-02-2022">01/02</time> al <time dateTime="28-02-2022">28/02</time> del 2022
+                  <time dateTime="01-03-2022">01/03</time> al <time dateTime="31-03-2022">31/03</time> del 2022
                 </p>
-                <p>Este mes del amor y la amistad, nuestro cupón es SANVALENTIN. Úsalo y obten la mejor tasa del mercado.</p>
+                <p>Ahorra con Instakash y apoya a la selección, recibe 20 puntos de descuento al comprar o vender tus dólares, úsalo hasta 2 veces.</p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
@@ -89,6 +92,7 @@ const Promociones = () => {
                 </div>
               </div>
             </Card>
+
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
                 <Image src={Peru} alt="Gana con Perú" layout="fill" objectFit="contain" />
@@ -110,12 +114,55 @@ const Promociones = () => {
                 </div>
               </div>
             </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src={MesDeLaMujer} alt="Cupón MESDELAMUJER" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Cupón del mes</h3>
+                <h2>MESDELAMUJER</h2>
+                <p className={styles.Date}>
+                  <time dateTime="01-03-2022">01/03</time> al <time dateTime="31-03-2022">31/03</time> del 2022
+                </p>
+                <p>Ahorra con Instakash en este mes de la mujer, recibe 20 puntos de descuento al comprar o vender tus dólares, úsalo hasta 2 veces.</p>
+                <div className={styles.Actions}>
+                  <a href="https://app.instakash.net/signin" className="mr-4">
+                    Acceder y usar cupón
+                  </a>
+                  <button type="button" onClick={() => openModalHandler("coupons")}>
+                    ¿Como usar los cupones?
+                  </button>
+                </div>
+              </div>
+            </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src={SuperMontos} alt="Cupones SuperMontos" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Cupopnes activos</h3>
+                <h2>SUPERMONTOS</h2>
+                <p>Usa tus cupones supermontos para ahorrar en la comisión de tus cambios desde 5000 USD.</p>
+                <div className={styles.Actions}>
+                  <a href="https://app.instakash.net/signin" className="mr-4">
+                    Acceder y usar cupón
+                  </a>
+                  <button type="button" onClick={() => openModalHandler("supercoupons")}>
+                    ¿Cuales son los cupones?
+                  </button>
+                </div>
+              </div>
+            </Card>
           </article>
         </div>
       </section>
       <BaseModal isOpen={isModalOpen} onClose={closeModalHandler}>
         {modalType === "promo" ? (
           <PromoModal />
+        ) : modalType === "supercoupons" ? (
+          <SuperCouponsModal />
         ) : (
           <video controls loop muted style={{ width: "100%" }}>
             <source src={modalType === "usercode" ? "/videos/refer_a_friend.mp4" : "/videos/coupon_usage.mp4"} />
@@ -125,6 +172,29 @@ const Promociones = () => {
     </>
   );
 };
+
+const SuperCouponsModal = () => (
+  <div className="modal-body">
+    <h3>Ahorra con nuestros Super montos</h3>
+    <p>
+      Cuando desees cambiar montos desde 5000 USD en adelante, te ofrecemos hasta 3 cupones para que ahorres y obtengas una de las mejores tasas del mercado y sin límite de uso.
+    </p>
+    <ul>
+      <li>
+        Para montos desde 5MIL USD usa nuestro cupón <b>DESDE5000</b>
+      </li>
+      <li>
+        Para montos desde 10MIL USD usa nuestro cupón <b>DESDE10000</b>
+      </li>
+      <li>
+        Para montos desde 20MIL USD usa nuestro cupón <b>DESDE20000</b>
+      </li>
+    </ul>
+    <Link className="mx-auto mt-6 block" href="/terminos-y-condiciones#cupones">
+      Conoce más sobre el uso de nuestros cupones aquí
+    </Link>
+  </div>
+);
 
 const PromoModal = () => (
   <div className="modal-body">
