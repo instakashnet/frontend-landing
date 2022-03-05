@@ -226,7 +226,7 @@ const TerminosCondiciones = () => {
               </ul>
             </li>
 
-            <li>
+            <li id="#cupones">
               <h3>5.3 CUPONES DE DESCUENTO:</h3>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
@@ -239,6 +239,15 @@ const TerminosCondiciones = () => {
               <p>
                 Usuarios podrán solicitar cupones de descuento o emplear alguno promocionado por las redes sociales de INSTAKASH mientras mantenga vigencia, para recibir descuentos
                 en sus operaciones cambiarias.
+              </p>
+              <p>
+                El tipo de cambio ofrecido por cada cupón solo tiene vigencia durante el tiempo que se registra la operación hasta que se ejecute o se cancele dentro del plazo que
+                tiene el usuario para transferir y completar sus datos de operación. INSTAKASH no se compromete en congelar mantener un tipo de cambio con cupón si la operación
+                termina cancelándose por superar el límite de tiempo para completarse.
+              </p>
+              <p>
+                INSTAKASH se reserva la discreción sobre casos puntuales o extraordinarios de los beneficios que otorga con los cupones dependiendo de la situación y el caso
+                presentado a nuestro equipo de atención al usuario.
               </p>
             </li>
           </ol>
