@@ -90,16 +90,14 @@ const Nav = () => {
           </button>
         </div>
       </nav>
-      <div className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
+      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
         <ul>
           <h3>Menú</h3>
           <li>
             <Anchor href="#steps">¿Como funciona?</Anchor>
           </li>
           <li>
-            <Link href="/nosotros">
-              <a>Nosotros</a>
-            </Link>
+            <Link href="/promociones">Beneficios</Link>
           </li>
           <li>
             <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
@@ -120,7 +118,7 @@ const Nav = () => {
           <a href="https://app.instakash.net">Iniciar sesión</a>
           <a href="https://app.instakash.net">Registrarse</a>
         </div>
-      </div>
+      </nav>
     </>
   );
 };
