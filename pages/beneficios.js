@@ -76,47 +76,6 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={Kash} alt="Gana KASH" layout="fill" objectFit="contain" />
-              </div>
-              <div className={styles.Info}>
-                <h3>Refiere y</h3>
-                <h2>GÁNA KASH</h2>
-                <p>Invita a tus amigos a Instakash y con su primer cambio te ganas 1 KASH y tu referido un descuento en la tasa.</p>
-                <div className={styles.Actions}>
-                  <a href="https://app.instakash.net/signin" className="mr-4">
-                    Acceder y referir
-                  </a>
-                  <button type="button" onClick={() => openModalHandler("usercode")}>
-                    ¿Como usar tu código?
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src={Peru} alt="Gana con Perú" layout="fill" objectFit="contain" />
-              </div>
-              <div className={styles.Info}>
-                <h3>Sorteo</h3>
-                <h2>PERÚ VS URUGUAY</h2>
-                <p className={styles.Date}>
-                  <time dateTime="01-02-2022">26/02</time> al <time dateTime="28-02-2022">20/03</time> del 2022
-                </p>
-                <p>Disfruta el partido Perú - Uruguay en uno de los mejores hoteles de Lima junto a tres amigos.</p>
-                <div className={styles.Actions}>
-                  <a href="https://www.instagram.com/p/Cacd9jKr6M5/?utm_source=ig_web_copy_link" className="mr-4">
-                    Ir a instagram
-                  </a>
-                  <button type="button" onClick={() => openModalHandler("promo")}>
-                    Términos y condiciones
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
                 <Image src={MesDeLaMujer} alt="Cupón MESDELAMUJER" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
@@ -151,6 +110,47 @@ const Promociones = () => {
                   </a>
                   <button type="button" onClick={() => openModalHandler("supercoupons")}>
                     ¿Cuales son los cupones?
+                  </button>
+                </div>
+              </div>
+            </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src={Peru} alt="Gana con Perú" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Sorteo</h3>
+                <h2>PERÚ VS URUGUAY</h2>
+                <p className={styles.Date}>
+                  <time dateTime="01-02-2022">26/02</time> al <time dateTime="28-02-2022">20/03</time> del 2022
+                </p>
+                <p>Disfruta el partido Perú - Uruguay en uno de los mejores hoteles de Lima junto a tres amigos.</p>
+                <div className={styles.Actions}>
+                  <a href="https://www.instagram.com/p/Cacd9jKr6M5/?utm_source=ig_web_copy_link" className="mr-4">
+                    Ir a instagram
+                  </a>
+                  <button type="button" onClick={() => openModalHandler("promo")}>
+                    Términos y condiciones
+                  </button>
+                </div>
+              </div>
+            </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src={Kash} alt="Gana KASH" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Refiere y</h3>
+                <h2>GÁNA KASH</h2>
+                <p>Invita a tus amigos a Instakash y con su primer cambio te ganas 1 KASH y tu referido un descuento en la tasa.</p>
+                <div className={styles.Actions}>
+                  <a href="https://app.instakash.net/signin" className="mr-4">
+                    Acceder y referir
+                  </a>
+                  <button type="button" onClick={() => openModalHandler("usercode")}>
+                    ¿Como usar tu código?
                   </button>
                 </div>
               </div>
