@@ -3,8 +3,8 @@ const withImages = require("next-images");
 
 module.exports = {
   ...withImages(),
-  future: {
-    webpack5: true,
+  images: {
+    disableStaticImages: true,
   },
   async rewrites() {
     return [
@@ -17,10 +17,6 @@ module.exports = {
         destination: `${BLOG_URL}/:slug*`,
       },
     ];
-  },
-  images: {
-    loader: "akamai",
-    path: "",
   },
   // Causes next.js to add trailing slashes to end of URLs.
   // trailingSlash: true,

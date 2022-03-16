@@ -2,12 +2,10 @@ import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-// import dynamic from "next/dynamic";
 
 // COMPONENTS
 import Card from "../components/UI/Card";
 import { BaseModal } from "../components/UI/Modal";
-import { MultiPages } from "../components/pdf/multi-pages";
 
 import styles from "../styles/promociones.module.scss";
 import VamosPeru from "../assets/images/vamosperu.jpg";
@@ -15,10 +13,6 @@ import MesDeLaMujer from "../assets/images/mesdelamujer.jpg";
 import SuperMontos from "../assets/images/super.jpg";
 import Kash from "../assets/images/kash.png";
 import Peru from "../assets/images/peru.png";
-
-// const FileViewer = dynamic(() => import("react-file-viewer"), {
-//   ssr: false,
-// });
 
 const Promociones = () => {
   const [modalType, setModalType] = useState(""),
@@ -28,8 +22,6 @@ const Promociones = () => {
   const openModalHandler = (type) => {
     setModalType(type);
     setIsModalOpen(true);
-
-    console.log(modalType);
   };
 
   const closeModalHandler = () => {
