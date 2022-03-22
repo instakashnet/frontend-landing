@@ -59,9 +59,7 @@ const contacto = () => {
               <Clock className={styles.infoIcon} />
               <section>
                 <h3>Nuestro horario</h3>
-                <p className="text-sm">
-                  Lunes a Viernes: 9AM a 7PM <br /> Sábados y Feriados: 9AM a 2:30PM
-                </p>
+                <p className="text-sm">Lunes a Domingo: 9AM a 9PM</p>
               </section>
             </div>
             <div className="flex items-center my-8">
