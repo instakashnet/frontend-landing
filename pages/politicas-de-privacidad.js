@@ -186,7 +186,14 @@ const PoliticasPrivacidad = () => {
             </li>
             <li>
               <p>Sus derechos</p>
-              <p>Usted tiene el derecho de solicitarnos no procesar su información para fines de marketing contactándonos a contacto@instakash.net</p>
+              <p>
+                Usted puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, de impedir el suministro de sus datos personales, de oposición al tratamiento o
+                de tratamiento objetivo de los datos, en los términos recogidos en la legislación peruana vigente.
+              </p>
+              <p>
+                Para poder ejercer estos derechos los usuarios deberán dirigir la solicitud a la dirección de correo electrónico: contacto@instakash.net con el asunto “Datos
+                Personales”, consignando sus datos, acreditando su identidad y los motivos de su solicitud.
+              </p>
               <p>Nuestra página web podría contener links a otras páginas web de empresas aliadas, afiliadas o publicitarias.</p>
               <p>
                 En ese sentido, debe tener en cuenta que si usted sigue un link hacia cualquiera de estas páginas las mismas disponen de sus propias políticas de privacidad, de las
