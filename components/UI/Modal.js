@@ -13,9 +13,6 @@ export const BaseModal = ({ children, onClose, isOpen }) => {
         </button>
         {children}
       </div>
-      <div className="modal-footer">
-        <img src="/images/logo.svg" alt="Instakash" />
-      </div>
     </Modal>
   );
 };

@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import Head from "next/head";
+import Image from "next/image";
 import Card from "../components/UI/Card";
 import Calculator from "../components/calculator";
 import Loader from "react-loader-spinner";
@@ -284,7 +285,7 @@ const Home = () => {
         </div>
       </section>
       <BaseModal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        <img src="/images/banners/banner-march.jpg" alt="notice" width="100%" />
+        <Image src="/images/banners/banner-hour.jpg" alt="notice" layout="fill" objectFit="contain" />
       </BaseModal>
     </>
   );
