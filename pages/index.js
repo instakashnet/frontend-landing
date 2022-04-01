@@ -285,7 +285,7 @@ const Home = () => {
         </div>
       </section>
       <BaseModal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        <Image src="/images/banners/banner-hour.jpg" alt="notice" layout="fill" objectFit="contain" />
+        <Image src="/images/banners/banner-april.jpg" alt="cupón de abril" layout="fill" objectFit="contain" />
       </BaseModal>
     </>
   );

@@ -110,8 +110,7 @@ const Nav = () => {
         </ul>
         <div className={styles.schedule}>
           <h3>Horario</h3>
-          <p>Lunes a Viernes 9 am - 7 pm</p>
-          <p>Sábados y Feriados 9 am - 2:30 pm</p>
+          <p>Lunes a Domingo 9 am - 9 pm</p>
         </div>
 
         <div className={styles.navButtons}>
