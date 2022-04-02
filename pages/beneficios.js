@@ -8,11 +8,9 @@ import Card from "../components/UI/Card";
 import { BaseModal } from "../components/UI/Modal";
 
 import styles from "../styles/promociones.module.scss";
-import VamosPeru from "../assets/images/vamosperu.jpg";
 import MesDeLaMujer from "../assets/images/mesdelamujer.jpg";
 import SuperMontos from "../assets/images/super.jpg";
 import Kash from "../assets/images/kash.png";
-import Peru from "../assets/images/peru.png";
 
 const Promociones = () => {
   const [modalType, setModalType] = useState(""),
@@ -46,15 +44,15 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={VamosPeru} alt="Cupón VAMOSPERU" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/semanasanta.jpeg" alt="Cupón para cambio online SEMANASANTA" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>VAMOSPERU</h2>
+                <h2>SEMANASANTA</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-03-2022">01/03</time> al <time dateTime="31-03-2022">31/03</time> del 2022
+                  <time dateTime="01-04-2022">01/04</time> al <time dateTime="30-04-2022">30/04</time> del 2022
                 </p>
-                <p>Ahorra con Instakash y apoya a la selección, recibe 20 puntos de descuento al comprar o vender tus dólares, úsalo hasta 2 veces.</p>
+                <p>En abril haz tus cambios usando el cupón SEMANASANTA y obtén 20 PIPS a favor de tu cambio. Cupón válido durante el mes de abril. Válido para 4 cambios.</p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
@@ -68,15 +66,18 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={MesDeLaMujer} alt="Cupón MESDELAMUJER" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/utilidades.jpeg" alt="Cupón para cambio online MESDEUTILIDADES" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>MESDELAMUJER</h2>
+                <h2>MESDEUTILIDADES</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-03-2022">01/03</time> al <time dateTime="31-03-2022">31/03</time> del 2022
+                  <time dateTime="04-04-2022">04/04</time> al <time dateTime="15-04-2022">15/04</time> del 2022
                 </p>
-                <p>Ahorra con Instakash en este mes de la mujer, recibe 20 puntos de descuento al comprar o vender tus dólares, úsalo hasta 2 veces.</p>
+                <p>
+                  Desde el 4 de abril y hasta el 15 de abril cambia tus utilidades con nuestro cupón especial ABRILDEUTILIDADES, te dará 25 PIPS a favor de tu cambio. Válido para 1
+                  vez.
+                </p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
@@ -93,7 +94,7 @@ const Promociones = () => {
                 <Image src={SuperMontos} alt="Cupones SuperMontos" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
-                <h3>Cupopnes activos</h3>
+                <h3>Cupones activos</h3>
                 <h2>SUPERMONTOS</h2>
                 <p>Usa tus cupones supermontos para ahorrar en la comisión de tus cambios desde 5000 USD.</p>
                 <div className={styles.Actions}>
@@ -102,28 +103,6 @@ const Promociones = () => {
                   </a>
                   <button type="button" onClick={() => openModalHandler("supercoupons")}>
                     ¿Cuales son los cupones?
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src={Peru} alt="Gana con Perú" layout="fill" objectFit="contain" />
-              </div>
-              <div className={styles.Info}>
-                <h3>Sorteo</h3>
-                <h2>PERÚ VS URUGUAY</h2>
-                <p className={styles.Date}>
-                  <time dateTime="01-02-2022">26/02</time> al <time dateTime="28-02-2022">20/03</time> del 2022
-                </p>
-                <p>Disfruta el partido Perú - Uruguay en uno de los mejores hoteles de Lima junto a tres amigos.</p>
-                <div className={styles.Actions}>
-                  <a href="https://www.instagram.com/p/Cacd9jKr6M5/?utm_source=ig_web_copy_link" className="mr-4">
-                    Ir a instagram
-                  </a>
-                  <button type="button" onClick={() => openModalHandler("promo")}>
-                    Términos y condiciones
                   </button>
                 </div>
               </div>

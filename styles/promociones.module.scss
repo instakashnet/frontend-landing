@@ -27,6 +27,9 @@
     height: 180px;
     position: relative;
     width: 100%;
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 
   .Info {
@@ -84,7 +87,7 @@
     min-height: 600px;
 
     .Cover {
-      height: 220px;
+      height: 210px;
     }
   }
 }
