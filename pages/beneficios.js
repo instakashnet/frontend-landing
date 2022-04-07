@@ -26,17 +26,17 @@ const Promociones = () => {
   return (
     <>
       <Head>
-        <title>Beneficios de Cambiar Dólares a Soles en InstaKash</title>
-        <meta name="title" content="Beneficios de Cambiar en InstaKask Casa de Cambio Online" />
+        <title>Beneficios de Cambiar Dólares a Soles en Instakash</title>
+        <meta name="title" content="Beneficios de Cambiar en Instakash Casa de Cambio Online" />
         <meta name="description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles. ¡Enterate Aquí!" />
         <meta httpEquiv="content-language" content="es_PE" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://instakash.net/beneficios" />
-        <meta name="author" content="InstaKash" />
+        <meta name="author" content="Instakash" />
         <meta name="url" content="https://instakash.net/beneficios" />
 
-        <meta property="og:title" content="Beneficios de Cambiar Dólares a Soles en InstaKash" />
-        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:title" content="Beneficios de Cambiar Dólares a Soles en Instakash" />
+        <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/beneficios" />
         <meta property="og:description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles" />
         <meta property="og:type" content="website" />

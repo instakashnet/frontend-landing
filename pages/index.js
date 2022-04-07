@@ -39,10 +39,10 @@ const Home = ({ rates }) => {
     <>
       <Head>
         <title>Casa de Cambio Online | Cambiar Dólares a Soles | InstaKash</title>
-        <meta name="title" content="InstaKask Casa de Cambio Online | Cambia Dólares a Soles" />
+        <meta name="title" content="Instakash Casa de Cambio Online | Cambia Dólares a Soles" />
         <meta
           name="description"
-          content="Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. InstaKash es regulada por la SBS Cambia Seguro, Cambia aquí."
+          content="Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. Instakash es regulada por la SBS Cambia Seguro, Cambia aquí."
         />
         <meta httpEquiv="content-language" content="es_PE" />
         <meta name="robots" content="index, follow" />
@@ -51,9 +51,9 @@ const Home = ({ rates }) => {
         <meta name="url" content="https://instakash.net/" />
 
         <meta property="og:title" content="Casa de Cambio Online | Cambiar Dólares a Soles" />
-        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/" />
-        <meta property="og:description" content="InstaKask es la casa de cambio online con la elmejor tipo de cambio de dólares a soles." />
+        <meta property="og:description" content="Instakash es la casa de cambio online con la elmejor tipo de cambio de dólares a soles." />
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>

@@ -39,7 +39,7 @@ const contacto = () => {
     <>
       <Head>
         <title>Contacta con Instakash</title>
-        <meta name="title" content="Contacto | InstaKask Casa de Cambio Online" />
+        <meta name="title" content="Contacto | Instakash Casa de Cambio Online" />
         <meta
           name="description"
           content="Mantente contactado con Instakash para tener el tipo de cambio del día y sobre nuestros servicios, cupones y promociones que tenemos para tí. Registrate"
@@ -50,7 +50,7 @@ const contacto = () => {
         <meta name="author" content="InstaKash" />
         <meta name="url" content="https://instakash.net/contacto" />
 
-        <meta property="og:title" content="Contacto | InstaKask Casa de Cambio Online" />
+        <meta property="og:title" content="Contacto | Instakash Casa de Cambio Online" />
         <meta property="og:site_name" content="InstaKash" />
         <meta property="og:url" content="https://instakash.net/contacto" />
         <meta property="og:description" content="Mantente contactado con Instakash para tener el tipo de cambio del día y sobre nuestros servicios, cupones y promociones" />

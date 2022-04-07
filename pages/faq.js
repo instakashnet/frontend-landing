@@ -10,7 +10,7 @@ const Faq = () => {
       <Head>
         <title>Preguntas frecuentes Instakash</title>
         <meta name="title" content="Preguntas Instakash | Casa de Cambio Online" />
-        <meta name="description" content="Enterate de Tipo de Cambio Actual. Conoce la evolución del dólar en Perú en InstaKash Casa de cambio Online" />
+        <meta name="description" content="Enterate de Tipo de Cambio Actual. Conoce la evolución del dólar en Perú en Instakash Casa de cambio Online" />
         <meta httpEquiv="content-language" content="es_PE" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://instakash.net/faq" />
@@ -18,9 +18,9 @@ const Faq = () => {
         <meta name="url" content="https://instakash.net/faq" />
 
         <meta property="og:title" content="Preguntas Instakash | Casa de Cambio Online" />
-        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/faq" />
-        <meta property="og:description" content="Enterate de Tipo de Cambio Actual. Conoce la evolución del dólar en Perú en InstaKash Casa de cambio Online" />
+        <meta property="og:description" content="Enterate de Tipo de Cambio Actual. Conoce la evolución del dólar en Perú en Instakash Casa de cambio Online" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
       </Head>

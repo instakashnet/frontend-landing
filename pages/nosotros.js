@@ -9,18 +9,18 @@ const Nosotros = () => {
     <>
       <Head>
         <title>Conoce Instakash</title>
-        <meta name="title" content="Conoce InstaKask | Casa de Cambio Online" />
-        <meta name="description" content="Conoce la razones de por qué escoger a InstaKash para realizar tus cambio de dólares a soles" />
+        <meta name="title" content="Conoce Instakash | Casa de Cambio Online" />
+        <meta name="description" content="Conoce la razones de por qué escoger a Instakash para realizar tus cambio de dólares a soles" />
         <meta httpEquiv="content-language" content="es_PE" />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://instakash.net/nosotros" />
-        <meta name="author" content="InstaKash" />
+        <meta name="author" content="Instakash" />
         <meta name="url" content="https://instakash.net/nosotros" />
 
-        <meta property="og:title" content="Conoce InstaKask | Casa de Cambio Online" />
-        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:title" content="Conoce Instakash | Casa de Cambio Online" />
+        <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/nosotros" />
-        <meta property="og:description" content="Conoce la razones de por qué escoger a InstaKash para realizar tus cambio de dólares a soles" />
+        <meta property="og:description" content="Conoce la razones de por qué escoger a Instakash para realizar tus cambio de dólares a soles" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="" />
       </Head>
