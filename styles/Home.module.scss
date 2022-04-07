@@ -101,7 +101,7 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
   position: relative;
-  top: 60px;
+  top: 45px;
   z-index: 1;
 
   @include respond(tablet) {

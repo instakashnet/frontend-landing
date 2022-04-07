@@ -134,7 +134,9 @@ const Home = ({ rates }) => {
       </section>
       <section className="container my-6 md:my-12 lg:my-20">
         <div className="text-center">
-          <h2 className={styles.Title}>Beneficios</h2>
+          <h2 className={styles.Title}>
+            Beneficios de Instakash <br /> tu casa de cambio online
+          </h2>
           <p className={styles.Subtitle}>Mes a mes tenemos nuevos beneficios para que tengas siempre el mejor tipo de cambio del Perú.</p>
         </div>
         <BenefitsCarousel />
