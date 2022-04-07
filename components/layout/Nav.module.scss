@@ -16,8 +16,10 @@
   transition: 350ms ease-out;
   background-color: #fff;
 
-  img {
+  .Logo {
     width: 10rem;
+    height: 2rem;
+    position: Relative;
     transition: 350ms ease-out;
   }
 
@@ -63,7 +65,7 @@
   box-shadow: 4px 4px 15px rgba(16, 80, 82, 0.1);
   height: 4rem;
 
-  img {
+  .Logo {
     width: 9rem;
   }
 

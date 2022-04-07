@@ -223,7 +223,9 @@ const Home = ({ rates }) => {
             <Image src="/images/illustrations/app.svg" layout="fill" objectFit="contain" />
           </div>
           <div className={styles.AppInfoWrapper}>
-            <h2>Descarga nuestra App</h2>
+            <h2>
+              Descarga nuestra App <br /> casa de cambio online
+            </h2>
             <p>Con la mejor tasa comienza el cambio, fácil y seguro del Perú. Ya está disponible para android y IOS.</p>
             <ul>
               <li>

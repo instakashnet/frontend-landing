@@ -13,8 +13,8 @@
 .SwipeButton {
   background-color: $button-main;
   border-radius: 50%;
-  padding: 0.45rem;
   border: 6px solid $tertiary-green;
+  padding: 0.2rem;
   transition: 300ms ease-in-out;
   transform: rotate(0);
 
@@ -22,8 +22,10 @@
     outline: 0;
   }
 
-  img {
-    width: 1.5rem;
+  .SwipeIcon {
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 }
 

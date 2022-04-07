@@ -1,4 +1,5 @@
 import cls from "classnames";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -43,8 +44,8 @@ const Nav = () => {
       <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
         <div className="container flex items-center justify-between">
           <Link href="/">
-            <a>
-              <img src="/images/logo.svg" alt="Instakash" />
+            <a className={styles.Logo}>
+              <Image layout="fill" objectFit="contain" src="/images/logo.svg" alt="Instakash" />
             </a>
           </Link>
 
