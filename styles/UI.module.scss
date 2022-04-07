@@ -1,20 +1,6 @@
 @import "./colors";
 @import "./fontSizes";
 
-.button {
-  padding: 0.8rem 1rem;
-  border-radius: 10px;
-  background-color: $button-main;
-  transition: 200ms ease-out;
-  font-weight: 700;
-  font-size: $body;
-
-  &:hover,
-  &:focus {
-    background-color: darken($color: $button-main, $amount: 15);
-  }
-}
-
 .card {
   background: #ffffff;
   padding: 15px;

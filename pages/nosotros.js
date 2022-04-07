@@ -1,4 +1,6 @@
 import Head from "next/head";
+import Image from "next/image";
+import Script from "next/script";
 import { FaCheckCircle } from "react-icons/fa";
 import styles from "../styles/Nosotros.module.scss";
 
@@ -6,11 +8,21 @@ const Nosotros = () => {
   return (
     <>
       <Head>
-        <title>Nosotros | Instakash</title>
-        <meta
-          name="description"
-          content="Somos una casa de cambio totalmente digital que se encarga de ofrecer siempre las mejores tasas del Perú, así como beneficios para ganar a través de referidos y mucho más. Experimenta con nosotros la revolución Fintech."
-        />
+        <title>Conoce Instakash</title>
+        <meta name="title" content="Conoce InstaKask | Casa de Cambio Online" />
+        <meta name="description" content="Conoce la razones de por qué escoger a InstaKash para realizar tus cambio de dólares a soles" />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/nosotros" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/nosotros" />
+
+        <meta property="og:title" content="Conoce InstaKask | Casa de Cambio Online" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/nosotros" />
+        <meta property="og:description" content="Conoce la razones de por qué escoger a InstaKash para realizar tus cambio de dólares a soles" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section className={styles.About}>
         <div className="container section-wrapper text-center mt-6 mb-8">
@@ -36,14 +48,14 @@ const Nosotros = () => {
           </p>
           <h3>¡Síguenos!</h3>
           <div className="flex items-center justify-center mt-6">
-            <a href="!#" target="_blank" rel="noopener noreferrer">
-              <img src="/images/social/instagram-green.svg" className="mx-3" />
+            <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
+              <Image width={45} height={45} src="/images/social/instagram-green.svg" />
             </a>
-            <a href="!#" target="_blank" rel="noopener noreferrer">
-              <img src="/images/social/facebook-green.svg" className="mx-3" />
+            <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
+              <Image width={45} height={45} src="/images/social/facebook-green.svg" />
             </a>
-            <a href="!#" target="_blank" rel="noopener noreferrer">
-              <img src="/images/social/linkedin-green.svg" className="mx-3" />
+            <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
+              <Image width={45} height={45} src="/images/social/linkedin-green.svg" />
             </a>
           </div>
         </div>
@@ -80,7 +92,7 @@ const Nosotros = () => {
                 </li>
               </ul>
             </article>
-            <img className="self-center place-self-center" src="/images/illustrations/why-us.svg" alt="Casa de cambio del Perú" />
+            <Image className="self-center place-self-center" src="/images/illustrations/why-us.svg" width={300} height={300} alt="Casa de cambio del Perú" />
           </div>
         </div>
       </section>
@@ -97,6 +109,20 @@ const Nosotros = () => {
           Ingresar
         </a>
       </section>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "http://schema.org/", "@type": "WebSite",
+            "url": "https://instakash.net/nosotros", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instakash.net/nosotros{search_term_string}", "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

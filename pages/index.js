@@ -1,4 +1,6 @@
+import Head from "next/head";
 import Image from "next/image";
+import Script from "next/script";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
 import BenefitsCarousel from "../components/UI/benefits/carousel.component";
@@ -35,7 +37,27 @@ export async function getStaticProps() {
 const Home = ({ rates }) => {
   return (
     <>
-      <section className={styles.CalculatorSection}>
+      <Head>
+        <title>Casa de Cambio Online | Cambiar Dólares a Soles | InstaKash</title>
+        <meta name="title" content="InstaKask Casa de Cambio Online | Cambia Dólares a Soles" />
+        <meta
+          name="description"
+          content="Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. InstaKash es regulada por la SBS Cambia Seguro, Cambia aquí."
+        />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/" />
+
+        <meta property="og:title" content="Casa de Cambio Online | Cambiar Dólares a Soles" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/" />
+        <meta property="og:description" content="InstaKask es la casa de cambio online con la elmejor tipo de cambio de dólares a soles." />
+        <meta property="og:type" content="https://instakash.net/" />
+        <meta property="og:image" content="" />
+      </Head>
+      <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
             <div className={styles.TitleWrapper}>
@@ -46,7 +68,7 @@ const Home = ({ rates }) => {
                 Con la mejor tasa, <br /> comienza el cambio.
               </h2>
               <p className="flex">
-                <FaCheckCircle size={25} className="mr-2 mt-1" /> Entidad registrada en la SBS.
+                <FaCheckCircle size={25} className="mr-2 lg:mt-1" /> Entidad registrada en la SBS.
               </p>
             </div>
             <Card className={styles.CalculatorWrapper}>
@@ -117,7 +139,7 @@ const Home = ({ rates }) => {
               </div>
               <div>
                 <span className={styles.UserInfo}>+560 millones</span>
-                <p>soles transferidos</p>
+                <p>de soles transferidos</p>
               </div>
             </div>
             <div className={styles.UserInfoWrapper}>
@@ -137,7 +159,7 @@ const Home = ({ rates }) => {
           <h2 className={styles.Title}>
             Beneficios de Instakash <br /> tu casa de cambio online
           </h2>
-          <p className={styles.Subtitle}>Mes a mes tenemos nuevos beneficios para que tengas siempre el mejor tipo de cambio del Perú.</p>
+          <p className={styles.Subtitle}>Disfruta de los beneficios de cambiar con nosotros..</p>
         </div>
         <BenefitsCarousel />
       </section>
@@ -225,6 +247,22 @@ const Home = ({ rates }) => {
           </div>
         </div>
       </section>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "https://schema.org/", "@type": "WebSite",
+            "name": "InstaKash",
+            "url": "https://instakash.net/", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

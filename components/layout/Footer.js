@@ -1,7 +1,7 @@
 import Link from "next/link";
 import styles from "./Layout.module.scss";
 
-const Footer = () => {
+const Footer = ({ pathname }) => {
   return (
     <footer className={styles.footer}>
       <div className="container grid grid-cols-1 md:grid-cols-4 md:py-8 px-8">
@@ -25,18 +25,23 @@ const Footer = () => {
             <h4>Menú</h4>
             <ul>
               <li>
-                <Link href="/nosotros">
-                  <a>Nosotros</a>
+                <Link href={pathname === "/" ? "#calculator" : "/"}>
+                  <a>Tipo de cambio</a>
                 </Link>
               </li>
               <li>
-                <Link href="/contacto">
-                  <a>Contacto</a>
+                <Link href="/beneficios">
+                  <a>Beneficios</a>
                 </Link>
               </li>
               <li>
                 <Link href="/faq">
                   <a>Preguntas frecuentes</a>
+                </Link>
+              </li>
+              <li>
+                <Link href="/contacto">
+                  <a>Contacto</a>
                 </Link>
               </li>
               <li>

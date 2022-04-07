@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 import { useState } from "react";
 // COMPONENTS
 import Card from "../components/UI/Card";
@@ -25,8 +26,21 @@ const Promociones = () => {
   return (
     <>
       <Head>
-        <title>Beneficios | Instakash</title>
-        <meta name="description" content="Beneficios disponibles para tus cambios de divisas." />
+        <title>Beneficios de Cambiar Dólares a Soles en InstaKash</title>
+        <meta name="title" content="Beneficios de Cambiar en InstaKask Casa de Cambio Online" />
+        <meta name="description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles. ¡Enterate Aquí!" />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/beneficios" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/beneficios" />
+
+        <meta property="og:title" content="Beneficios de Cambiar Dólares a Soles en InstaKash" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/beneficios" />
+        <meta property="og:description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section>
         <div className="container section-wrapper text-center mt-16 mb-24">
@@ -157,6 +171,20 @@ const Promociones = () => {
           </video>
         )}
       </BaseModal>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "http://schema.org/", "@type": "WebSite",
+            "url": "https://instakash.net/beneficios", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instakash.net/beneficios{search_term_string}", "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

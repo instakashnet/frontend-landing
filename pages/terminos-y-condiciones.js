@@ -8,8 +8,8 @@ const TerminosCondiciones = () => {
         <title> Términos y condiciones | Instakash</title>
       </Head>
       <section className={styles.legal}>
-        <div className="section-wrapper container px-3">
-          <h1 className="text-center mt-16 md:mt-36">Términos y condiciones</h1>
+        <div className="section-wrapper container px-3 pt-12">
+          <h1 className={styles.Title}>Términos y condiciones</h1>
           <hr className="mx-auto" />
 
           <p className="mt-12">
@@ -311,16 +311,13 @@ const TerminosCondiciones = () => {
               <b>Comisiones para transferencias interbancarias: 3.50 S/. (comision fija)</b>
             </p>
             <p>
-              <b>Comisiones de Interbank interplaza para compra de dólares: 3.50 $ (comision fija) + 0.005 x (Monto a transferir)</b>
-            </p>
-            <p>
-              <b>Comisiones de Interbank interplaza para venta de dólares: 3.50 S/. (comision fija) + 0.005 x (Monto a transferir)</b>
-            </p>
-            <p>
               <b>
                 Comisiones interplaza desde ventanilla BCP será la que refleje el banco al llegar la transacción a cuentas de INSTAKASH. El usuario asume la totalidad de la
                 comisión.
               </b>
+            </p>
+            <p>
+              <b>No se realizan transferencias a cuentas Interbank que se encuentren fuera de provincia.</b>
             </p>
             <li>
               <p>Estas comisiones son referenciales y pueden variar sin previa notificación.</p>
