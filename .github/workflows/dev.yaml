@@ -3,7 +3,9 @@ name: prodCI
 on:
   push:
     # paths-ignore: [.github/**]
-    branches: [develop]
+    branches:
+      - "develop"
+      - "feat/**
 
 jobs:
   build:
