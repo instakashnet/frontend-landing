@@ -8,7 +8,7 @@ import Swipe from "./swipe.component";
 
 const Calculator = ({ rates }) => {
   const formik = useFormik({
-    initialValues: { type: "buy", currency_sent: 1, currency_received: 2, amount_sent: 0, amount_received: 0 },
+    initialValues: { type: "sell", currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 },
     onSubmit: () => (window.location.href = "https://app.instakash.net"),
   });
   const { setFieldValue } = formik;
@@ -16,7 +16,7 @@ const Calculator = ({ rates }) => {
   useEffect(() => {
     if (rates.buy > 0 && rates.sell > 0) {
       setFieldValue("amount_sent", (10000).toFixed(2));
-      setFieldValue("amount_received", rates.buy * 10000);
+      setFieldValue("amount_received", 10000 / rates.sell);
     }
   }, [rates, setFieldValue]);
 

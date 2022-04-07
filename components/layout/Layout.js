@@ -1,8 +1,7 @@
-import Nav from "./Nav";
+import WhatsappBtn from "../UI/whatsapp.component";
 import Footer from "./Footer";
-import WhatsappBtn from "../UI/WahtsappBtn";
-
 import styles from "./Layout.module.scss";
+import Nav from "./Nav";
 
 const Layout = ({ children }) => {
   return (

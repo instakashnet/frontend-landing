@@ -53,38 +53,6 @@
   }
 }
 
-.whatsappBtn {
-  padding: 10px;
-  background-color: $base-green;
-  border-radius: 50%;
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-  box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.3);
-  transform: translateY(150%);
-  transition: 350ms ease-in-out;
-
-  img {
-    width: 25px;
-  }
-
-  @media screen and (min-width: 996px) {
-    img {
-      width: 30px;
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    img {
-      width: 35px;
-    }
-  }
-}
-
-.whatsappShown {
-  transform: translateY(0);
-}
-
 .blogItem {
   padding: 0 10px;
   margin: 50px 0;

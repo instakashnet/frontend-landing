@@ -46,7 +46,7 @@ const Home = ({ rates }) => {
                 Con la mejor tasa, <br /> comienza el cambio.
               </h2>
               <p className="flex">
-                <FaCheckCircle size={25} className="mr-2 mt-1" /> Entidad registrada en la <br /> Superintendencia de banca, seguros y AFP.
+                <FaCheckCircle size={25} className="mr-2 mt-1" /> Entidad registrada en la SBS.
               </p>
             </div>
             <Card className={styles.CalculatorWrapper}>

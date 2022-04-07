@@ -19,8 +19,6 @@ const Nav = () => {
       if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
       if (currentScroll < lastScroll && direction === "down") direction = "up";
 
-      console.log(currentScroll, lastScroll);
-
       setScrollDirection(direction);
       lastScroll = currentScroll;
     };
