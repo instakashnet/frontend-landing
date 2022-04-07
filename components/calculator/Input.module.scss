@@ -1,0 +1,35 @@
+@use "sass:math";
+
+@import "../../styles/colors";
+@import "../../styles/fontSizes";
+
+.InputWrapper {
+  position: relative;
+
+  label {
+    position: absolute;
+    font-size: $caption;
+    top: 0.4rem;
+    left: 1.1rem;
+    color: $base-green;
+  }
+
+  input {
+    width: 100%;
+    background-color: #e9f6f6;
+    padding: 1.3rem 1.1rem 0.8rem 1.1rem;
+    border-radius: 10px;
+    color: $base-green;
+    font-size: $info-text;
+    font-weight: bold;
+  }
+
+  span {
+    position: absolute;
+    top: 0.85rem;
+    right: 1rem;
+    font-size: math.div($subtitle, 1.2);
+    font-weight: bold;
+    color: $text-title;
+  }
+}

@@ -11,10 +11,9 @@ jobs:
     env:
       BLOG_API_URL: https://instakash-blog.herokuapp.com
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
       AWS_REGION: us-east-2
-      AWS_CF_DISTRIBUTION_ID: E2X00COP83H8LV
+      AWS_CF_DISTRIBUTION_ID: E3LUJGCBHH6OTX
     strategy:
       matrix:
         node-version: [15.x]

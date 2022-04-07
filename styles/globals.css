@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "./variables.css";
 
 body {
   font-size: 16px;
-  font-family: "Lato", sans-serif;
-  color: #676767;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-body);
+  background-color: var(--light-color);
 }
 
 button:disabled {
@@ -16,15 +18,14 @@ button:disabled {
 }
 
 .base-green {
-  color: #0d8284;
+  color: var(--base-green);
 }
 
 .container {
   width: 100%;
-  max-width: 1560px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1140px) {
@@ -35,65 +36,8 @@ button:disabled {
 }
 
 b {
-  color: #0d8284;
+  color: var(--base-green);
   font-weight: bold;
-}
-
-.section-wrapper {
-  margin-top: 4rem;
-}
-
-.section-wrapper h1,
-.section-wrapper h2 {
-  color: #0d8284;
-  font-weight: 900;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-.section-wrapper h1 {
-  font-size: 2.4rem;
-}
-
-.section-wrapper h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.section-wrapper p {
-  font-size: 1.1rem;
-}
-
-@media screen and (min-width: 996px) {
-  .section-wrapper h1 {
-    font-size: 3rem;
-  }
-
-  .section-wrapper h2 {
-    font-size: 2.2rem;
-  }
-
-  .section-wrapper h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .section-wrapper {
-    margin-top: 2rem;
-  }
-
-  .section-wrapper h1 {
-    font-size: 4rem;
-  }
-
-  .section-wrapper h2 {
-    font-size: 3rem;
-  }
-
-  .section-wrapper h3 {
-    font-size: 1.3rem;
-  }
 }
 
 .section-wrapper hr {
@@ -102,16 +46,16 @@ b {
 }
 
 .section-wrapper b {
-  color: #0d8284;
+  color: var(--text-title);
   font-weight: bold;
 }
 
 .link {
-  color: #0d8284;
+  color: var(--text-title);
 }
 
 .sent-msg {
-  color: #0d8284;
+  color: var(--text-title);
   margin-top: 7px;
   font-size: 0.9rem;
 }
@@ -125,7 +69,7 @@ b {
 /* ACCORDION */
 
 .accordion__button {
-  color: #0d8284;
+  color: var(--text-title);
   border-bottom: 1px solid #0d8284;
   display: inline-block;
   margin: 5px 0 7px;
@@ -176,12 +120,12 @@ b {
 .modal-content h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #0d8284;
+  color: var(--text-title);
   margin-bottom: 1.1rem;
 }
 
 .modal-content b {
-  color: #0d8284;
+  color: var(--text-title);
 }
 
 .close-modal {
@@ -224,7 +168,7 @@ b {
 
 .modal-body a {
   font-weight: bold;
-  color: #0d8284;
+  color: var(--text-title);
   text-decoration: underline;
 }
 
@@ -234,4 +178,8 @@ b {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   transition: 300ms ease-in-out;
+}
+
+.slick-active button:before {
+  color: var(--base-green) !important;
 }

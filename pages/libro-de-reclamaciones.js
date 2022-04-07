@@ -118,14 +118,7 @@ const LibroReclamaciones = () => {
               />
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <Select
-                name="documentType"
-                placeholder="Documento de identidad"
-                options={documentOptions}
-                value={formik.values.documentType}
-                value={formik.values.documentType}
-                onChange={formik.handleChange}
-              />
+              <Select name="documentType" placeholder="Documento de identidad" options={documentOptions} value={formik.values.documentType} onChange={formik.handleChange} />
               <Input
                 type="text"
                 name="documentNo"

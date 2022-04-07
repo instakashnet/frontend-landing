@@ -1,9 +1,7 @@
-import { useEffect, useState } from "react";
 import Link from "next/link";
-import Anchor from "react-anchor-link-smooth-scroll";
 import { useRouter } from "next/router";
-
-import styles from "../../styles/layout/Nav.module.scss";
+import { useEffect, useState } from "react";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
   const [scrollDirection, setScrollDirection] = useState("default"),
@@ -61,19 +59,11 @@ const Nav = () => {
 
           <ul className="ml-auto mr-3">
             <li>
-              <Anchor href="#steps">¿Como funciona?</Anchor>
-            </li>
-            <li>
-              <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
+              <Link href="/nosotros">Nosotros</Link>
             </li>
             <li>
               <Link href="/beneficios">Beneficios</Link>
             </li>
-            {/* <li>
-              <Link href='/blog'>
-                <a>Blog</a>
-              </Link>
-            </li> */}
           </ul>
 
           <div className={styles.navButtons}>
@@ -94,18 +84,10 @@ const Nav = () => {
         <ul>
           <h3>Menú</h3>
           <li>
-            <Anchor href="#steps">¿Como funciona?</Anchor>
+            <Link href="/nosotros">Nosotros</Link>
           </li>
           <li>
             <Link href="/beneficios">Beneficios</Link>
-          </li>
-          <li>
-            <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
-          </li>
-          <li>
-            <Anchor offset="150" href="#benefits">
-              ¿Por qué Instakash?
-            </Anchor>
           </li>
         </ul>
         <div className={styles.schedule}>

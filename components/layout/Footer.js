@@ -1,7 +1,5 @@
 import Link from "next/link";
-import Anchor from "react-anchor-link-smooth-scroll";
-
-import styles from "../../styles/layout/Layout.module.scss";
+import styles from "./Layout.module.scss";
 
 const Footer = () => {
   return (
@@ -45,20 +43,6 @@ const Footer = () => {
                 <a href="https://wa.link/05keps" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <img src="/images/icons/whatsapp.svg" className="mr-2 w-4 mb-0" /> Atención al usuario
                 </a>
-              </li>
-            </ul>
-          </div>
-          <div className={`${styles.footerMenu} lg:block hidden`}>
-            <h4>Links rápidos</h4>
-            <ul>
-              <li>
-                <Anchor href="#steps">¿Como funciona?</Anchor>
-              </li>
-              <li>
-                <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
-              </li>
-              <li>
-                <Anchor href="#benefits">¿Por qué Instakash?</Anchor>
               </li>
             </ul>
           </div>
