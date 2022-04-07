@@ -36,7 +36,7 @@ const Home = ({ rates }) => {
   return (
     <>
       <section className={styles.CalculatorSection}>
-        <div className="container lg:mt-8">
+        <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
             <div className={styles.TitleWrapper}>
               <h1>
@@ -213,10 +213,10 @@ const Home = ({ rates }) => {
               </li>
             </ul>
             <div className="flex items-center justify-center md:justify-start mt-6">
-              <a href="#" className={styles.AppDownloadIcon}>
+              <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
                 <Image src="/images/illustrations/appstore.png" layout="fill" objectFit="contain" />
               </a>
-              <a href="#" className={styles.AppDownloadIcon}>
+              <a href="https://play.google.com/store/apps/details?id=net.instakash.app" className={styles.AppDownloadIcon}>
                 <Image src="/images/illustrations/playstore.png" layout="fill" objectFit="contain" />
               </a>
             </div>

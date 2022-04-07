@@ -9,27 +9,19 @@ const Nav = () => {
     router = useRouter();
 
   useEffect(() => {
-    let lastScroll = 0,
+    let lastScroll = 40,
       direction = "default";
 
     const setNavbarEffect = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll <= 0) {
-        direction = "default";
-        setScrollDirection("default");
-      }
+      if (currentScroll <= 40) direction = "default";
+      if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
+      if (currentScroll < lastScroll && direction === "down") direction = "up";
 
-      if (currentScroll > lastScroll && direction !== "down") {
-        direction = "down";
-        setScrollDirection("down");
-      }
+      console.log(currentScroll, lastScroll);
 
-      if (currentScroll < lastScroll && direction === "down") {
-        direction = "up";
-        setScrollDirection("up");
-      }
-
+      setScrollDirection(direction);
       lastScroll = currentScroll;
     };
 
