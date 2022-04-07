@@ -224,7 +224,7 @@ const Home = ({ rates }) => {
           </div>
           <div className={styles.AppInfoWrapper}>
             <h2>
-              Descarga nuestra App <br /> casa de cambio online
+              Descarga Instakash App <br /> casa de cambio online
             </h2>
             <p>Con la mejor tasa comienza el cambio, fácil y seguro del Perú. Ya está disponible para android y IOS.</p>
             <ul>
