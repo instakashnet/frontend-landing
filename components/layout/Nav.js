@@ -1,3 +1,4 @@
+import cls from "classnames";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
@@ -39,7 +40,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : ""}`}>
+      <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
         <div className="container flex items-center justify-between">
           <Link href="/">
             <a>

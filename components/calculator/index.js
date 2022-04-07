@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React, { useEffect } from "react";
 import Button from "../UI/Button";
+import styles from "./Calculator.module.scss";
 import Input from "./input.component";
 import Rates from "./rates.component";
 import Savings from "./savings.component";
@@ -46,7 +47,7 @@ const Calculator = ({ rates }) => {
           <Input name="amount_received" label="Recibes" currency={formik.values.currency_received} value={formik.values.amount_received} onChange={amountChangeHandler} />
         </div>
         <Savings type={formik.values.type} receiveAmount={formik.values.amount_received} />
-        <Button type="submit" className="w-full" disabled={formik.values.amount_sent === 0}>
+        <Button type="submit" className={styles.CalculatorButton} disabled={formik.values.amount_sent === 0}>
           Registrate y Cambia
         </Button>
       </form>

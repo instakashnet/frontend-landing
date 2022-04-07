@@ -40,7 +40,7 @@
     }
   }
 
-  @media screen and (min-width: 996px) {
+  @include respond(tablet) {
     height: 6rem;
 
     ul {
@@ -48,7 +48,7 @@
     }
   }
 
-  @media (min-width: 1140px) {
+  @include respond(desktop) {
     li {
       margin: 0 1rem;
     }
@@ -71,7 +71,7 @@
     font-size: 0.95rem;
   }
 
-  @media screen and (min-width: 996px) {
+  @include respond(tablet) {
     height: 5rem;
 
     img {
@@ -177,7 +177,7 @@
     }
   }
 
-  @media screen and (min-width: 996px) {
+  @include respond(tablet) {
     display: none;
   }
 }
@@ -222,7 +222,7 @@
     }
   }
 
-  @media screen and (min-width: 996px) {
+  @include respond(tablet) {
     display: none;
   }
 }
