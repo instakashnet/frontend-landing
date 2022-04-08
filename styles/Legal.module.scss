@@ -1,4 +1,24 @@
-@import './colors';
+@use "sass:math";
+@import "./colors";
+@import "./breakpoints";
+@import "./fontSizes";
+
+.Title {
+  color: $text-title;
+  font-size: math.div($title, 2);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: math.div($title, 1.5);
+  }
+
+  @include respond(desktop) {
+    font-size: math.div($title, 1.25);
+  }
+}
 
 .legal {
   h2,

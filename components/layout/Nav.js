@@ -1,23 +1,33 @@
-import { useEffect, useState } from 'react';
-import Link from 'next/link';
-import Anchor from 'react-anchor-link-smooth-scroll';
-import { useRouter } from 'next/router';
-
-import styles from '../../styles/layout/Nav.module.scss';
+import cls from "classnames";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
-  const [stickyNav, setStickyNav] = useState(false);
-  const [mobileNav, setMobileNav] = useState(false);
-  const router = useRouter();
+  const [scrollDirection, setScrollDirection] = useState("default"),
+    [mobileNav, setMobileNav] = useState(false),
+    router = useRouter();
 
   useEffect(() => {
-    const stickNavHandler = () => {
-      window.scrollY >= 80 ? setStickyNav(true) : setStickyNav(false);
+    let lastScroll = 40,
+      direction = "default";
+
+    const setNavbarEffect = () => {
+      const currentScroll = window.scrollY;
+
+      if (currentScroll <= 40) direction = "default";
+      if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
+      if (currentScroll < lastScroll && direction === "down") direction = "up";
+
+      setScrollDirection(direction);
+      lastScroll = currentScroll;
     };
 
-    window.addEventListener('scroll', stickNavHandler);
+    window.addEventListener("scroll", setNavbarEffect);
 
-    return () => window.removeEventListener('scroll', stickNavHandler);
+    return () => window.removeEventListener("scroll", setNavbarEffect);
   }, []);
 
   useEffect(() => {
@@ -31,76 +41,57 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${stickyNav ? styles.stickyNav : ''}`}>
-        <div className='container flex items-center justify-between'>
-          <Link href='/'>
-            <a>
-              <img src='/images/logo.svg' alt='Instakash' />
+      <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
+        <div className="container flex items-center justify-between">
+          <Link href="/">
+            <a className={styles.Logo}>
+              <Image layout="fill" objectFit="contain" src="/images/logo.svg" alt="Instakash" />
             </a>
           </Link>
 
-          <ul className='ml-auto mr-3'>
+          <ul className="ml-auto mr-3">
             <li>
-              <Anchor href='#steps'>¿Como funciona?</Anchor>
+              <Link href="/nosotros">Nosotros</Link>
             </li>
             <li>
-              <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
+              <Link href="/beneficios">Beneficios</Link>
             </li>
-            <li>
-              <Anchor href='#benefits'>Benefícios</Anchor>
-            </li>
-            {/* <li>
-              <Link href='/blog'>
-                <a>Blog</a>
-              </Link>
-            </li> */}
           </ul>
 
           <div className={styles.navButtons}>
-            <a href='https://app.instakash.net/signin' className='mr-4'>
+            <a href="https://app.instakash.net/signin" className="mr-4">
               Iniciar sesión
             </a>
-            <a href='https://app.instakash.net/signup'>Registrarse</a>
+            <a href="https://app.instakash.net/signup">Registrarse</a>
           </div>
 
-          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
+          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ""}`} onClick={toggleNav}>
             <span />
             <span />
             <span />
           </button>
         </div>
       </nav>
-      <div className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ''}`} onClick={closeNav}>
+      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
         <ul>
           <h3>Menú</h3>
           <li>
-            <Anchor href='#steps'>¿Como funciona?</Anchor>
+            <Link href="/nosotros">Nosotros</Link>
           </li>
           <li>
-            <Link href='/nosotros'>
-              <a>Nosotros</a>
-            </Link>
-          </li>
-          <li>
-            <Anchor href='#affiliates'>¡Gana con tus referidos!</Anchor>
-          </li>
-          <li>
-            <Anchor offset='150' href='#benefits'>
-              ¿Por qué Instakash?
-            </Anchor>
+            <Link href="/beneficios">Beneficios</Link>
           </li>
         </ul>
         <div className={styles.schedule}>
           <h3>Horario</h3>
-          <p>Lunes a Viernes 9 am - 7 pm</p>
-          <p>Sábados y Feriados 9 am - 2:30 pm</p>
+          <p>Lunes a Domingo 9 am - 9 pm</p>
         </div>
 
         <div className={styles.navButtons}>
-          <a href='https://app.instakash.net'>Iniciar sesión</a>
-          <a href='https://app.instakash.net'>Registrarse</a>
+          <a href="https://app.instakash.net">Iniciar sesión</a>
+          <a href="https://app.instakash.net">Registrarse</a>
         </div>
-      </div>
+      </nav>
     </>
   );
 };

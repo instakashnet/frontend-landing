@@ -2,18 +2,19 @@ name: prodCI
 
 on:
   push:
-    branches: [main]
+    branches:
+      - "main"
+      - "mainteinance"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      BLOG_API_URL: https://instakash-blog.herokuapp.com
       GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      CONTENT_API_KEY: ${{ secrets.CONTENT_API_KEY }}
       FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
+      AWS_S3_BUCKET: instakash.net
       AWS_REGION: us-east-2
-      AWS_CF_DISTRIBUTION_ID: E9VHXWAQWYXBQ
+      AWS_CF_DISTRIBUTION_ID: E99GVH4UFV2OJ
     strategy:
       matrix:
         node-version: [15.x]
@@ -32,7 +33,7 @@ jobs:
         with:
           args: --acl public-read --follow-symlinks --delete
         env:
-          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_S3_BUCKET: ${{ dev.AWS_S3_BUCKET }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ env.AWS_REGION }}

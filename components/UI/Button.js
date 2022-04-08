@@ -1,8 +1,9 @@
-import styles from '../../styles/UI.module.scss';
+import cls from "classnames";
+import styles from "./Button.module.scss";
 
 const Button = ({ type, className, children, ...rest }) => {
   return (
-    <button type={type} className={`${styles.button} ${className || ''}`} {...rest}>
+    <button type={type} className={cls(styles.Button, className || "")} {...rest}>
       {children}
     </button>
   );

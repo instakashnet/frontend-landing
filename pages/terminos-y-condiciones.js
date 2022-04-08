@@ -8,8 +8,8 @@ const TerminosCondiciones = () => {
         <title> Términos y condiciones | Instakash</title>
       </Head>
       <section className={styles.legal}>
-        <div className="section-wrapper container px-3">
-          <h1 className="text-center mt-16 md:mt-36">Términos y condiciones</h1>
+        <div className="section-wrapper container px-3 pt-12">
+          <h1 className={styles.Title}>Términos y condiciones</h1>
           <hr className="mx-auto" />
 
           <p className="mt-12">
@@ -226,7 +226,7 @@ const TerminosCondiciones = () => {
               </ul>
             </li>
 
-            <li>
+            <li id="#cupones">
               <h3>5.3 CUPONES DE DESCUENTO:</h3>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
@@ -239,6 +239,15 @@ const TerminosCondiciones = () => {
               <p>
                 Usuarios podrán solicitar cupones de descuento o emplear alguno promocionado por las redes sociales de INSTAKASH mientras mantenga vigencia, para recibir descuentos
                 en sus operaciones cambiarias.
+              </p>
+              <p>
+                El tipo de cambio ofrecido por cada cupón solo tiene vigencia durante el tiempo que se registra la operación hasta que se ejecute o se cancele dentro del plazo que
+                tiene el usuario para transferir y completar sus datos de operación. INSTAKASH no se compromete en congelar mantener un tipo de cambio con cupón si la operación
+                termina cancelándose por superar el límite de tiempo para completarse.
+              </p>
+              <p>
+                INSTAKASH se reserva la discreción sobre casos puntuales o extraordinarios de los beneficios que otorga con los cupones dependiendo de la situación y el caso
+                presentado a nuestro equipo de atención al usuario.
               </p>
             </li>
           </ol>
@@ -302,16 +311,13 @@ const TerminosCondiciones = () => {
               <b>Comisiones para transferencias interbancarias: 3.50 S/. (comision fija)</b>
             </p>
             <p>
-              <b>Comisiones de Interbank interplaza para compra de dólares: 3.50 $ (comision fija) + 0.005 x (Monto a transferir)</b>
-            </p>
-            <p>
-              <b>Comisiones de Interbank interplaza para venta de dólares: 3.50 S/. (comision fija) + 0.005 x (Monto a transferir)</b>
-            </p>
-            <p>
               <b>
                 Comisiones interplaza desde ventanilla BCP será la que refleje el banco al llegar la transacción a cuentas de INSTAKASH. El usuario asume la totalidad de la
                 comisión.
               </b>
+            </p>
+            <p>
+              <b>No se realizan transferencias a cuentas Interbank que se encuentren fuera de provincia.</b>
             </p>
             <li>
               <p>Estas comisiones son referenciales y pueden variar sin previa notificación.</p>

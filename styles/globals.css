@@ -2,12 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "./variables.css";
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-size: 16px;
-  font-family: "Lato", sans-serif;
-  color: #676767;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-body);
+  background-color: var(--light-color);
 }
 
 button:disabled {
@@ -16,15 +22,14 @@ button:disabled {
 }
 
 .base-green {
-  color: #0d8284;
+  color: var(--base-green);
 }
 
 .container {
   width: 100%;
-  max-width: 1560px;
+  max-width: 1360px;
   margin: 0 auto;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 1140px) {
@@ -35,65 +40,8 @@ button:disabled {
 }
 
 b {
-  color: #0d8284;
+  color: var(--base-green);
   font-weight: bold;
-}
-
-.section-wrapper {
-  margin-top: 4rem;
-}
-
-.section-wrapper h1,
-.section-wrapper h2 {
-  color: #0d8284;
-  font-weight: 900;
-  font-size: 1.8rem;
-  line-height: 1.2;
-}
-
-.section-wrapper h1 {
-  font-size: 2.4rem;
-}
-
-.section-wrapper h3 {
-  font-size: 1.15rem;
-  font-weight: 700;
-}
-
-.section-wrapper p {
-  font-size: 1.1rem;
-}
-
-@media screen and (min-width: 996px) {
-  .section-wrapper h1 {
-    font-size: 3rem;
-  }
-
-  .section-wrapper h2 {
-    font-size: 2.2rem;
-  }
-
-  .section-wrapper h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media screen and (min-width: 1440px) {
-  .section-wrapper {
-    margin-top: 2rem;
-  }
-
-  .section-wrapper h1 {
-    font-size: 4rem;
-  }
-
-  .section-wrapper h2 {
-    font-size: 3rem;
-  }
-
-  .section-wrapper h3 {
-    font-size: 1.3rem;
-  }
 }
 
 .section-wrapper hr {
@@ -102,16 +50,16 @@ b {
 }
 
 .section-wrapper b {
-  color: #0d8284;
+  color: var(--text-title);
   font-weight: bold;
 }
 
 .link {
-  color: #0d8284;
+  color: var(--text-title);
 }
 
 .sent-msg {
-  color: #0d8284;
+  color: var(--text-title);
   margin-top: 7px;
   font-size: 0.9rem;
 }
@@ -125,7 +73,7 @@ b {
 /* ACCORDION */
 
 .accordion__button {
-  color: #0d8284;
+  color: var(--text-title);
   border-bottom: 1px solid #0d8284;
   display: inline-block;
   margin: 5px 0 7px;
@@ -145,72 +93,87 @@ b {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  max-width: 45rem;
-  max-height: 100vh;
+  width: 90%;
+  max-width: 20rem;
+  height: 70%;
+  max-height: 22.95rem;
   margin: 0 auto;
   outline: 0;
   overflow: auto;
   position: relative;
-  top: 20%;
+  top: 15%;
   overscroll-behavior: contain;
-  display: grid;
-  grid-template-rows: 1fr 4rem;
 }
 
 @media screen and (min-width: 768px) {
-  .modal-background::before {
-    content: "";
-    /* background-image: url(https://instakash-images.s3.us-east-2.amazonaws.com/fiestas-patrias.svg);
-    background-size: 13rem;
-    background-position: -2% 30%;
-    background-repeat: no-repeat; */
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    opacity: 0.5;
-    z-index: 0;
+  .custom-modal {
+    width: auto;
+    max-width: 36.2rem;
+    top: 10%;
+    max-height: 50rem;
   }
 }
 
 .modal-content {
-  padding: 10px;
   position: relative;
   font-size: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .modal-content h2 {
   font-size: 1.5rem;
   font-weight: bold;
-  color: #0d8284;
+  color: var(--text-title);
   margin-bottom: 1.1rem;
 }
 
 .modal-content b {
-  color: #0d8284;
+  color: var(--text-title);
 }
 
 .close-modal {
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 0.75rem;
+  top: 0.75rem;
   z-index: 100;
 }
 
 .close-modal svg {
-  color: #fff;
+  color: #c1d6ce;
 }
 
-.modal-footer {
-  padding: 5px 15px 10px;
-  display: flex;
-  justify-content: flex-end;
+.modal-body {
+  padding: 2rem;
 }
 
-.modal-footer img {
-  max-width: 8rem;
+.modal-body h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-body h4 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal-body p,
+.modal-body li {
+  margin: 0.5rem 0;
+}
+
+.modal-body ol,
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+.modal-body a {
+  font-weight: bold;
+  color: var(--text-title);
+  text-decoration: underline;
 }
 
 .ReactModal__Overlay {
@@ -219,4 +182,8 @@ b {
   -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
   transition: 300ms ease-in-out;
+}
+
+.slick-active button:before {
+  color: var(--base-green) !important;
 }

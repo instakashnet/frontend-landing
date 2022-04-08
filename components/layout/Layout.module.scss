@@ -1,0 +1,135 @@
+@import "../../styles/colors";
+
+.app {
+  min-height: 100vh;
+  padding: 0;
+}
+
+.footer {
+  background-color: $base-green;
+  color: #fff;
+  min-height: 10rem;
+  padding-top: 2.5rem;
+
+  img {
+    width: 14rem;
+    margin-bottom: 1rem;
+  }
+
+  .copy {
+    padding: 1rem 0.5rem;
+    background-color: $base-green;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    padding-top: 5rem;
+    min-height: 9rem;
+
+    .copy {
+      padding: 0.7rem 0;
+    }
+  }
+}
+
+.footerMenu {
+  margin: 20px 0;
+
+  h4 {
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+  }
+
+  li,
+  a {
+    font-size: 0.9rem;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  @media screen and (min-width: 996px) {
+    margin: 0;
+
+    h4 {
+      font-weight: bold;
+      font-size: 1.1rem;
+      margin-bottom: 1.2rem;
+    }
+  }
+}
+
+.subscriptionCard {
+  position: relative;
+  max-width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  margin: 0 auto;
+  margin-top: 60px;
+
+  p {
+    font-size: 1.1rem;
+  }
+
+  button {
+    background-color: $base-green;
+    color: #fff;
+    font-size: 1.3rem;
+    box-shadow: 6px ​10px 15px rgba(103, 103, 103, 0.25);
+
+    &:hover,
+    &:focus {
+      background-color: darken($color: $base-green, $amount: 5);
+      box-shadow: 6px ​10px 8px rgba(103, 103, 103, 0.4);
+    }
+  }
+
+  h2 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: $base-green;
+  }
+
+  @media screen and (min-width: 996px) {
+    padding: 3rem 3rem 2rem;
+    top: 6rem;
+    margin-top: 0;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}
+
+.subscribeForm {
+  width: 100%;
+
+  input {
+    border: 1px solid #676767;
+    border-radius: 15px 0 0 15px;
+    padding: 15px 10px;
+    background-color: #f4f4f4;
+    border-right: none;
+  }
+
+  button {
+    padding: 16px 12px;
+    border-radius: 0 15px 15px 0;
+    font-size: 1rem;
+    transition: 200ms ease-out;
+  }
+
+  @media screen and (min-width: 996px) {
+    padding: 10px;
+    width: auto;
+  }
+}
