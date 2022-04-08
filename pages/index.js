@@ -38,7 +38,7 @@ const Home = ({ rates }) => {
   return (
     <>
       <Head>
-        <title>Casa de Cambio Online | Cambiar Dólares a Soles | InstaKash</title>
+        <title>Casa de Cambio Online | Cambiar Dólares a Soles | Instakash</title>
         <meta name="title" content="Instakash Casa de Cambio Online | Cambia Dólares a Soles" />
         <meta
           name="description"
@@ -83,6 +83,10 @@ const Home = ({ rates }) => {
           <div className={styles.SuperkashWrapper}>
             <Image src="/images/illustrations/superkash.svg" layout="fill" objectFit="contain" />
           </div>
+        </div>
+      </section>
+      <section className={styles.UsersSection}>
+        <div className="container">
           <div className={styles.BanksWrapper}>
             <Card className={styles.BankCard}>
               <div className="flex items-center">
@@ -119,10 +123,6 @@ const Home = ({ rates }) => {
               </div>
             </Card>
           </div>
-        </div>
-      </section>
-      <section className={styles.UsersSection}>
-        <div className="container">
           <div className={styles.UsersWrapper}>
             <div className={styles.UserInfoWrapper}>
               <div className="mr-6">
@@ -167,7 +167,7 @@ const Home = ({ rates }) => {
         <div className="container">
           <div className="text-center mt-5">
             <h2 className={styles.Title}>Cambia dólares online</h2>
-            <p className={styles.Subtitle}>Sigue estos 4 pasos y obtén el mejor tipo de cambio.</p>
+            <p className={styles.Subtitle}>Ingresa a nuestra casa de cambio online, sigue estos 4 pasos y obtén el mejor tipo de cambio.</p>
           </div>
           <div className={styles.StepsWrapper}>
             <Card className={styles.StepCard}>
@@ -226,7 +226,7 @@ const Home = ({ rates }) => {
             <h2>
               Descarga Instakash App <br /> casa de cambio online
             </h2>
-            <p>Con la mejor tasa comienza el cambio, fácil y seguro del Perú. Ya está disponible para android y IOS.</p>
+            <p>Con el mejor tipo de cambio comienza el cambio, fácil y seguro del Perú. Disponible para android y IOS.</p>
             <ul>
               <li>
                 <FaCheckCircle size={20} className="mr-2" /> Notificaciones en el mejor momento para cambiar.

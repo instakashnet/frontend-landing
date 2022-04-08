@@ -27,7 +27,7 @@ const Footer = ({ pathname }) => {
             <ul>
               <li>
                 <Link href={pathname === "/" ? "#calculator" : "/"}>
-                  <a>Tipo de cambio</a>
+                  <a>Tipo de cambio para hoy</a>
                 </Link>
               </li>
               <li>

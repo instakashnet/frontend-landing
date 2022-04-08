@@ -5,6 +5,52 @@
   max-width: 100%;
   margin: 2rem 0;
 
+  > button {
+    top: auto;
+    bottom: -34px;
+    z-index: 9;
+
+    &:first-of-type {
+      left: 15%;
+
+      &::before {
+        content: "\2039";
+        color: $base-green;
+        font-size: 3.3rem;
+      }
+    }
+
+    &:last-of-type {
+      right: 15%;
+
+      &::before {
+        content: "\203A";
+        color: $base-green;
+        font-size: 3.3rem;
+      }
+    }
+
+    @include respond(tablet) {
+      &:first-of-type {
+        left: 38%;
+      }
+
+      &:last-of-type {
+        right: 38%;
+      }
+    }
+
+    @include respond(ldesktop) {
+      &:first-of-type {
+        left: 40%;
+      }
+
+      &:last-of-type {
+        right: 40%;
+      }
+    }
+  }
+
   ul {
     bottom: -50px;
 

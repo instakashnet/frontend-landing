@@ -9,13 +9,17 @@
 
   @include respond(tablet) {
     background-image: url("/images/bg/city.svg");
-    background-size: 70%;
-    max-height: 75vh;
+    background-size: 80%;
     margin-top: 3rem;
+  }
+
+  @include respond(desktop) {
+    max-height: 80vh;
   }
 
   @media screen and (min-width: 1280px) and (max-height: 900px) {
     background-image: url("/images/bg/city.svg");
+    max-height: 100vh;
     background-size: 60%;
   }
 }
@@ -95,7 +99,7 @@
   @include respond(tablet) {
     width: 500px;
     height: 280px;
-    top: -120px;
+    top: -60px;
   }
 
   @include respond(desktop) {
@@ -109,24 +113,29 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-gap: 1rem;
-  position: relative;
-  top: 45px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  top: -280px;
   z-index: 1;
+  padding: 0 1rem;
 
   @include respond(tablet) {
-    top: -150px;
-  }
-
-  @include respond(desktop) {
-    top: -190px;
+    top: -100px;
   }
 }
 
 .BankCard {
-  margin-bottom: 1.3rem;
+  margin-bottom: 0.85rem;
   padding: 1rem 1.5rem;
+  width: 100%;
   max-width: 650px;
   min-height: 130px;
+  justify-self: flex-start;
+
+  &:first-of-type {
+    justify-self: flex-end;
+  }
 
   @include respond(tablet) {
     display: flex;
@@ -171,6 +180,12 @@
   align-items: center;
   justify-content: center;
   display: flex;
+  position: relative;
+  margin-top: 20rem;
+
+  @include respond(tablet) {
+    margin-top: 0;
+  }
 
   @include respond(desktop) {
     background: linear-gradient(90deg, rgba(32, 162, 165, 0.9) 0%, rgba(103, 190, 159, 0.9) 100%), url("/images/bg/texture.png") 30%;
