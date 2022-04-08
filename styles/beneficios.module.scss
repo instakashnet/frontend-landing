@@ -9,7 +9,7 @@
   justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 
-  @media screen and (min-width: 996px) {
+  @include respond(tablet) {
     grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
   }
 }
@@ -61,8 +61,8 @@
 
   .Date {
     margin: 0 0 0.3rem;
-    color: $base-green;
-    font-size: 0.95rem;
+    color: $base-green !important;
+    font-size: 0.95rem !important;
   }
 
   a {
