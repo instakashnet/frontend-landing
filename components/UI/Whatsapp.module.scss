@@ -17,7 +17,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: 300ms ease-in-out;
+  transition: 350ms ease-in-out;
   transform: translateY(0);
 
   p {
@@ -83,7 +83,7 @@
 }
 
 .Hide {
-  transition: 450ms ease-in-out;
+  transition: 550ms ease-in-out;
   animation: none;
   transform: translateY(200%);
 }

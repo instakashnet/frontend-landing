@@ -7,23 +7,19 @@ import BenefitsCarousel from "../components/UI/benefits/carousel.component";
 import Card from "../components/UI/Card";
 // CLASSES
 import styles from "../styles/Home.module.scss";
+import { getCounters, getRates } from "../utils/fetch-data";
 
 export async function getStaticProps() {
-  let rates = {
-    buy: 0,
-    sell: 0,
-  };
-
-  // https://api.instakash.net/exchange-service/api/v1/client/analytics/general
+  let rates = { buy: 0, sell: 0 },
+    counters = {
+      qtyUsers: 0,
+      qtySuccessfullOrders: 0,
+      totalProcessed: 0,
+    };
 
   try {
-    const res = await fetch("https://api.instakash.net/exchange-service/api/v1/client/rates");
-    const fetchedData = await res.json();
-
-    rates = {
-      buy: Number(fetchedData[0].buy),
-      sell: Number(fetchedData[0].sell),
-    };
+    rates = await getRates();
+    counters = await getCounters();
   } catch (error) {
     console.log(error);
   }
@@ -31,12 +27,13 @@ export async function getStaticProps() {
   return {
     props: {
       rates,
+      counters,
     },
     revalidate: 10,
   };
 }
 
-const Home = ({ rates }) => {
+const Home = ({ rates, counters }) => {
   return (
     <>
       <Head>
@@ -131,7 +128,7 @@ const Home = ({ rates }) => {
                 <Image src="/images/icons/laptop.svg" width={45} height={45} alt="" />
               </div>
               <div>
-                <span className={styles.UserInfo}>+22.600</span>
+                <span className={styles.UserInfo}>+{counters.qtySuccessfullOrders.toLocaleString("es-ES")}</span>
                 <p>cambios realizados</p>
               </div>
             </div>
@@ -140,7 +137,7 @@ const Home = ({ rates }) => {
                 <Image src="/images/icons/soles.svg" width={45} height={45} alt="" />
               </div>
               <div>
-                <span className={styles.UserInfo}>+560 millones</span>
+                <span className={styles.UserInfo}>+{counters.totalProcessed.substring(0, 3)} millones</span>
                 <p>de soles transferidos</p>
               </div>
             </div>
@@ -149,7 +146,7 @@ const Home = ({ rates }) => {
                 <Image src="/images/icons/users.svg" width={45} height={45} alt="" />
               </div>
               <div>
-                <span className={styles.UserInfo}>+10.000</span>
+                <span className={styles.UserInfo}>+{counters.qtyUsers.toLocaleString("es-ES")}</span>
                 <p>usuarios registrados</p>
               </div>
             </div>
