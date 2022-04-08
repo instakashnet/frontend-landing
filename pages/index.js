@@ -14,6 +14,8 @@ export async function getStaticProps() {
     sell: 0,
   };
 
+  // https://api.instakash.net/exchange-service/api/v1/client/analytics/general
+
   try {
     const res = await fetch("https://api.instakash.net/exchange-service/api/v1/client/rates");
     const fetchedData = await res.json();

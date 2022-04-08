@@ -16,8 +16,9 @@
   animation: jello-horizontal 5s ease-in-out 4s infinite alternate;
   display: flex;
   align-items: center;
-  transition: 250ms ease-in-out;
   justify-content: space-between;
+  transition: 300ms ease-in-out;
+  transform: translateY(0);
 
   p {
     font-size: $caption;
@@ -37,6 +38,7 @@
 
   &:hover,
   &:focus {
+    transition: 250ms ease-in-out;
     width: 120px;
     animation: none;
 
@@ -80,9 +82,11 @@
   }
 }
 
-// .Shown {
-//   transform: translateY(0);
-// }
+.Hide {
+  transition: 450ms ease-in-out;
+  animation: none;
+  transform: translateY(200%);
+}
 
 @-webkit-keyframes jello-horizontal {
   0% {

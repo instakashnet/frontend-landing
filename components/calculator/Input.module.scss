@@ -22,6 +22,10 @@
     color: $base-green;
     font-size: $info-text;
     font-weight: bold;
+
+    &:focus {
+      outline-color: $base-green;
+    }
   }
 
   span {

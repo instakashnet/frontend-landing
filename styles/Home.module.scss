@@ -105,7 +105,13 @@
   @include respond(desktop) {
     width: 545px;
     height: 330px;
-    top: -130px;
+    top: -120px;
+  }
+
+  @include respond(ldesktop) {
+    width: 545px;
+    height: 330px;
+    top: -90px;
   }
 }
 
