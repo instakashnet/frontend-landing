@@ -1,16 +1,16 @@
-import { useState } from "react";
-import { useFormik } from "formik";
-import Link from "next/link";
-import Head from "next/head";
-import { MapPin, Clock, Mail, Headphones } from "react-feather";
 import emailjs from "emailjs-com";
-import { contactValidation } from "../helpers/validations";
-
-import Input from "../components/UI/form/Input";
-import Checkbox from "../components/UI/form/Checkbox";
-import Textarea from "../components/UI/form/Textarea";
+import { useFormik } from "formik";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import Script from "next/script";
+import { useState } from "react";
+import { Clock, Headphones, Mail, MapPin } from "react-feather";
 import Button from "../components/UI/Button";
-
+import Checkbox from "../components/UI/form/Checkbox";
+import Input from "../components/UI/form/Input";
+import Textarea from "../components/UI/form/Textarea";
+import { contactValidation } from "../helpers/validations";
 import styles from "../styles/Contacto.module.scss";
 
 const contacto = () => {
@@ -38,13 +38,31 @@ const contacto = () => {
   return (
     <>
       <Head>
-        <title>Contacto | Instakash</title>
-        <meta name="description" content="Contáctanos para darte una mayor información sobre nuestras tasas de cambio de soles y dólares y servicios." />
+        <title>Contacta con Instakash</title>
+        <meta name="title" content="Contacto | Instakash Casa de Cambio Online" />
+        <meta
+          name="description"
+          content="Mantente contactado con Instakash para tener el tipo de cambio del día y sobre nuestros servicios, cupones y promociones que tenemos para tí. Registrate"
+        />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/contacto" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/contacto" />
+
+        <meta property="og:title" content="Contacto | Instakash Casa de Cambio Online" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/contacto" />
+        <meta property="og:description" content="Mantente contactado con Instakash para tener el tipo de cambio del día y sobre nuestros servicios, cupones y promociones" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section className="container section-wrapper">
-        <h1 className="text-center">Contáctanos</h1>
-        <h3 className="mb-6 text-center">Estamos para apoyarte</h3>
-        <hr className="max-w-xs md:max-w-lg mx-auto md:mt-6" />
+        <div className="text-center">
+          <h1 className={styles.Title}>Contáctanos</h1>
+          <h3 className={styles.Subtitle}>Estamos para apoyarte</h3>
+        </div>
+        <hr className="max-w-xs md:max-w-lg mx-auto" />
         <div className="grid grid-cols-1 md:grid-cols-2 p-3 md:ml-12">
           <article className="md:mr-16 order-2 md:order-1">
             <div className="flex items-center my-8">
@@ -92,7 +110,9 @@ const contacto = () => {
                 </a>
               </div>
             </div>
-            <img src="/images/contact.svg" alt="contacto" className={styles.contactImg} />
+            <div className={styles.contactImg}>
+              <Image src="/images/illustrations/contact.svg" alt="contacto" layout="fill" objectFit="contain" />
+            </div>
           </article>
           <form onSubmit={formik.handleSubmit} className={`${styles.contactForm} mb-16 md:mb-0 order-1 md:order-2`}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -151,6 +171,20 @@ const contacto = () => {
           </form>
         </div>
       </section>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "http://schema.org/", "@type": "WebSite",
+            "url": "https://instakash.net/contacto", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instakash.net/contacto{search_term_string}", "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

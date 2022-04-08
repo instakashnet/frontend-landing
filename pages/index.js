@@ -1,292 +1,269 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
 import Head from "next/head";
 import Image from "next/image";
-import Card from "../components/UI/Card";
+import Script from "next/script";
+import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-import Loader from "react-loader-spinner";
-import { BaseModal } from "../components/UI/Modal";
-
+import BenefitsCarousel from "../components/UI/benefits/carousel.component";
+import Card from "../components/UI/Card";
 // CLASSES
 import styles from "../styles/Home.module.scss";
+import { getCounters, getRates } from "../utils/fetch-data";
 
-const Home = () => {
-  const [isLoading, setIsLoading] = useState(false),
-    [rates, setRates] = useState({ buy: 0, sell: 0 }),
-    [modalOpen, setModalOpen] = useState(false),
-    [counters, setCounters] = useState({ orders: 0, total: 0, users: 0 });
+export async function getStaticProps() {
+  let rates = { buy: 0, sell: 0 },
+    counters = {
+      qtyUsers: 0,
+      qtySuccessfullOrders: 0,
+      totalProcessed: 0,
+    };
 
-  const getRates = async () => {
-    setIsLoading(true);
+  try {
+    rates = await getRates();
+    counters = await getCounters();
+  } catch (error) {
+    console.log(error);
+  }
 
-    try {
-      const res = await axios.get(`https://api.instakash.net/exchange-service/api/v1/client/rates`);
-      if (res.data) setRates({ buy: res.data[0].buy, sell: res.data[0].sell });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
+  return {
+    props: {
+      rates,
+      counters,
+    },
+    revalidate: 10,
   };
+}
 
-  const getCounters = async () => {
-    setIsLoading(true);
-
-    try {
-      const res = await axios.get(`https://api.instakash.net/exchange-service/api/v1/client/analytics/general`);
-      if (res.data) setCounters({ orders: res.data.qtySuccessfullOrders, total: res.data.totalProcessed, users: res.data.qtyUsers });
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  // EFFECTS
-  useEffect(() => {
-    const timeout = setTimeout(() => setModalOpen(true), 500);
-    return () => clearTimeout(timeout);
-  }, []);
-
-  useEffect(() => {
-    getRates();
-    getCounters();
-  }, []);
-
+const Home = ({ rates, counters }) => {
   return (
     <>
       <Head>
-        <title>Instakash | La casa de cambio del perú con mejores tasas</title>
+        <title>Casa de Cambio Online | Cambiar Dólares a Soles | Instakash</title>
+        <meta name="title" content="Instakash Casa de Cambio Online | Cambia Dólares a Soles" />
         <meta
           name="description"
-          content="gana con Instakash y dale a tu dinero el valor que merece. Somos la casa de cambio con las mejores tasas del Perú. Transferencias inmediatas."
+          content="Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. Instakash es regulada por la SBS Cambia Seguro, Cambia aquí."
         />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/" />
+
+        <meta property="og:title" content="Casa de Cambio Online | Cambiar Dólares a Soles" />
+        <meta property="og:site_name" content="Instakash" />
+        <meta property="og:url" content="https://instakash.net/" />
+        <meta property="og:description" content="Instakash es la casa de cambio online con la elmejor tipo de cambio de dólares a soles." />
+        <meta property="og:type" content="https://instakash.net/" />
+        <meta property="og:image" content="" />
       </Head>
-      <section className={styles.calculatorSection}>
+      <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
-          <div className="grid md:grid-cols-2 md:pt-12 md:pb-16">
-            <header className={styles.sectionTitle}>
-              <h1 className="pl-3 md:pl-0">
-                Ahorra cambiando con <br /> la mejor tasa del Perú
+          <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
+            <div className={styles.TitleWrapper}>
+              <h1>
+                <em>Casa de cambio online</em>
               </h1>
-              <h2 className="mb-3 md:mb-0 pl-3 md:pl-0">Dale a tu dinero el valor que merece</h2>
-              <img src="/images/welcome.svg" alt="Gana con instakash" />
-            </header>
-            <section className={styles.calculatorWrapper}>
-              <div className="flex flex-col md:flex-row items-center w-full justify-between p-4 md:p-5 order-2 md:order-1">
-                <div className="flex items-center md:hidden mb-5">
-                  <img src="/images/icons/badge.svg" width={55} height={55} />
-                  <p>
-                    Estamos registrados y autorizados <br /> por la <b>SBS</b>
-                  </p>
+              <h2>
+                Con la mejor tasa, <br /> comienza el cambio.
+              </h2>
+              <p className="flex">
+                <FaCheckCircle size={25} className="mr-2 lg:mt-1" /> Entidad registrada en la SBS.
+              </p>
+            </div>
+            <Card className={styles.CalculatorWrapper}>
+              <p>
+                <strong>
+                  Tipo de cambio <br /> para hoy en Instakash
+                </strong>
+              </p>
+              <Calculator rates={rates} />
+            </Card>
+          </div>
+          <div className={styles.SuperkashWrapper}>
+            <Image src="/images/illustrations/superkash.svg" layout="fill" objectFit="contain" />
+          </div>
+        </div>
+      </section>
+      <section className={styles.UsersSection}>
+        <div className="container">
+          <div className={styles.BanksWrapper}>
+            <Card className={styles.BankCard}>
+              <div className="flex items-center">
+                <div className={styles.BankInfoCircle}>
+                  <Image src="/images/icons/thunder.svg" width={30} height={30} alt="Cambia dólares online" className={styles.BankInfoIcon} />
                 </div>
-                <div className="mb-4 md:mb-0">
-                  <h4>Transferencias directas</h4>
-                  <div className={styles.banks}>
-                    <div className="flex flex-col items-center justify-center">
-                      <img src="/images/banks/interbank.svg" alt="Interbank" />
-                      <small className="mt-2">(solo Lima)</small>
-                    </div>
-                    <img src="/images/banks/bcp.svg" alt="BCP" />
-                  </div>
-                </div>
-                <div className="mb-4 md:mb-0">
-                  <h4>Interbancarias</h4>
-                  <div className={styles.banks}>
-                    <img src="/images/banks/bbva.svg" alt="BBVA" />
-                    <img src="/images/banks/scotiabank.svg" alt="scotiabank" className="mt-0" />
-                  </div>
+                <div>
+                  <h3 className={styles.BanksInfoTitle}>
+                    <strong>Cambia dólares online</strong>
+                  </h3>
+                  <p>Inmediato</p>
                 </div>
               </div>
-              <Card className={`${styles.homeCard} py-4 md:py-8 order-1 md:mt-4 w-full md:order-2`}>
-                {isLoading ? (
-                  <div className="flex justify-center">
-                    <Loader type="Rings" color="#0d8284" height={55} width={55} />
-                  </div>
-                ) : (
-                  <div className={styles.rates}>
-                    <div className="px-3">
-                      <h5>Compramos</h5>
-                      <p>
-                        <span>S/.</span> {rates.buy}
-                      </p>
-                    </div>
-                    <div className="px-3">
-                      <h5>Vendemos</h5>
-                      <p>
-                        <span>S/.</span> {rates.sell}
-                      </p>
-                    </div>
-                  </div>
-                )}
-                <Calculator rates={rates} />
-              </Card>
-              <img src="/images/welcome.svg" alt="Gana con instakash" className="md:hidden mr-3 w-80 order-3" />
-            </section>
+              <div className={styles.BanksInfoImageWrapper}>
+                <Image src="/images/banks/interbank.svg" alt="Banco Interbank" width={90} height={35} />
+                <Image src="/images/banks/bcp.svg" alt="Banco BCP" width={85} height={35} />
+              </div>
+            </Card>
+            <Card className={styles.BankCard}>
+              <div className="flex items-center">
+                <div className={styles.BankInfoCircle}>
+                  <Image src="/images/icons/horizontal-arrows.svg" width={30} height={30} alt="Cambia dólares online" className={styles.BankInfoIcon} />
+                </div>
+                <div>
+                  <h3 className={styles.BanksInfoTitle}>
+                    <strong>Cambia dólares online</strong>
+                  </h3>
+                  <p>Hasta 24 horas</p>
+                </div>
+              </div>
+              <div className={styles.BanksInfoImageWrapper}>
+                <Image src="/images/banks/scotiabank.svg" alt="Banco Scotiabank" width={100} height={50} />
+                <Image src="/images/banks/bbva.svg" alt="Banco BBVA" width={80} height={35} />
+              </div>
+            </Card>
           </div>
-        </div>
-      </section>
-      <Card className={styles.infoCard}>
-        <div className="flex items-center justify-start">
-          <img src="/images/icons/badge.svg" width={55} height={55} />
-          <div className={styles.infoBox}>
-            <p>
-              Registrados y autorizados por la <br />{" "}
-            </p>
-            <h5>
-              Superintendencia de Banca, <br /> Seguros y AFP
-            </h5>
-          </div>
-        </div>
-        <div className="flex items-center justify-start">
-          <img src="/images/icons/laptop.svg" width={85} height={85} />
-          <div className={styles.infoBox}>
-            <h5>{counters.orders ? `${String(counters.orders).substring(0, 2)} Mil` : "20 Mil"}</h5>
-            <p>Operaciones Exitosas</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-start">
-          <img src="/images/icons/soles.svg" width={55} height={55} />
-          <div className={styles.infoBox}>
-            <h5>{counters.total ? `${String(counters.total).substring(0, 3)} Millones` : "100 Millones"}</h5>
-            <p>Soles Transferidos</p>
-          </div>
-        </div>
-        <div className="flex items-center justify-start">
-          <img src="/images/icons/users.svg" width={55} height={55} />
-          <div className={styles.infoBox}>
-            <h5>{counters.users ? `${String(counters.users).substring(0, 2)} Mil` : "10 Mil"}</h5>
-            <p>Usuarios Activos</p>
-          </div>
-        </div>
-      </Card>
-      <section className="container section-wrapper" id="steps">
-        <h2 className="text-center my-3">¿Cómo funciona?</h2>
-        <h3 className="text-center">Instakash es una Fintech que te permitirá hacer tus cambios desde donde estés, solo debes seguir estos sencillos pasos:</h3>
-        <div className="flex items-center justify-center flex-col md:flex-row mt-12">
-          <div className={styles.step}>
-            <img src="/images/steps/step-1.svg" width={200} height={200} />
-            <h4>Paso 1</h4>
-            <p>
-              <b>Regístrate y cotiza tu cambio.</b> <br /> Coloca el monto a enviar o recibir y obtén la mejor tasa.
-            </p>
-          </div>
-          <div className={styles.step}>
-            <img src="/images/steps/step-2.svg" width={200} height={200} />
-            <h4>Paso 2</h4>
-            <p>
-              <b>Transfiere los fondos a Instakash.</b> <br /> Realiza la transferencia desde tu banco a la cuenta indicada.
-            </p>
-          </div>
-          <div className={styles.step}>
-            <img src="/images/steps/step-3.svg" width={200} height={200} />
-            <h4>Paso 3</h4>
-            <p>
-              <b>Recibe tu cambio.</b> <br /> Verifica el abono en tu cuenta y sigue ahorrando con Instakash.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className={`section-wrapper ${styles.appSection}`}>
-        <div className="container flex flex-col md:flex-row items-center justify-center px-12">
-          <img src="/images/mobile-app.svg" alt="mobile-app" className="order-2 md:order-1" />
-          <div className={`${styles.appInfo} order-1 md:order-2`}>
-            <h2 className="mb-0">Ya disponible</h2>
-            <h3 className="my-10">
-              Instakash, la casa de cambio más segura y con las mejores tasas del Perú, ya está disponible para Android y IOS. Puedes descargar nuestra app y hacer tus cambios
-              desde la comodidad de tu teléfono móvil.
-            </h3>
-            <div className="flex items-center">
-              <a href="https://apps.apple.com/pe/app/instakash/id1601561803">
-                <img src="/images/app-store.svg" alt="app-store" width="160px" />
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=net.instakash.app">
-                <img src="/images/play-store.svg" alt="play-store" width="200px" />
-              </a>
+          <div className={styles.UsersWrapper}>
+            <div className={styles.UserInfoWrapper}>
+              <div className="mr-6">
+                <Image src="/images/icons/laptop.svg" width={45} height={45} alt="" />
+              </div>
+              <div>
+                <span className={styles.UserInfo}>+{counters.qtySuccessfullOrders.toLocaleString("es-ES")}</span>
+                <p>cambios realizados</p>
+              </div>
+            </div>
+            <div className={styles.UserInfoWrapper}>
+              <div className="mr-6">
+                <Image src="/images/icons/soles.svg" width={45} height={45} alt="" />
+              </div>
+              <div>
+                <span className={styles.UserInfo}>+{counters.totalProcessed.substring(0, 3)} millones</span>
+                <p>de soles transferidos</p>
+              </div>
+            </div>
+            <div className={styles.UserInfoWrapper}>
+              <div className="mr-6">
+                <Image src="/images/icons/users.svg" width={45} height={45} alt="" />
+              </div>
+              <div>
+                <span className={styles.UserInfo}>+{counters.qtyUsers.toLocaleString("es-ES")}</span>
+                <p>usuarios registrados</p>
+              </div>
             </div>
           </div>
         </div>
       </section>
-      <section className={`section-wrapper ${styles.partners} mt-0`}>
-        <h3 className="text-center mb-2">Ellos respaldan nuestros servicios</h3>
-        <div className="container flex flex-col md:flex-row items-center justify-center mt-6">
-          <a href="https://www.adexperu.org.pe/" target="_blank" rel="noopener noreferrer">
-            <img alt="adex" src="/images/partners/adex.svg" width="100%" />
-          </a>
-          <a href="https://fintechperu.com" target="_blank" rel="noopener noreferrer">
-            <img alt="fintech-peru" src="/images/partners/fintech.svg" width="100%" />
-          </a>
+      <section className="container my-6 md:my-12 lg:my-20">
+        <div className="text-center">
+          <h2 className={styles.Title}>
+            Beneficios de Instakash <br /> tu casa de cambio online
+          </h2>
+          <p className={styles.Subtitle}>Disfruta de los beneficios de cambiar con nosotros..</p>
         </div>
+        <BenefitsCarousel />
       </section>
-      <section className={`section-wrapper ${styles.affiliates}`} id="affiliates">
-        <div className={styles.affiliatesBg}>
-          <div className="container md:mt-12">
-            <h2 className="text-center mb-2">¡Recomienda y gana!</h2>
-            <h3 className="text-center">
-              Con el nuevo sistema de afiliados obtendrás siempre los mejores y mayores beneficios. <br /> Comienza a usarlo al toque.
-            </h3>
-            <div className="flex items-center justify-center flex-col md:flex-row">
-              <img src="/images/affiliates-1.svg" alt="Gana con tus referidos" />
-              <ol>
-                <li>
-                  <span className={styles.affiliatesStep}>01</span>
-                  <p>
-                    <span>Comparte</span> tu código de afiliado con tus amigos.
-                  </p>
-                </li>
-                <li>
-                  <span className={styles.affiliatesStep}>02</span>
-                  <p>
-                    Al realizar su primera operación tus <span>amigos ganarán</span> una tasa preferencial.
-                  </p>
-                </li>
-                <li className="mt-2 md:mt-0 relative">
-                  <img src="/images/dollar-bill.svg" alt="dollar bill" className="w-20" />
-                  <Card className={styles.kashCard}>
-                    <div className="flex flex-col md:flex-row items-center justify-start">
-                      <span className={styles.affiliatesStep}>03</span>
-                      <p>
-                        Recibirás <span>1 KASH</span> por cada amigo que realice su primera operación. <br /> <span>1 KASH = $1 USD</span>
-                      </p>
-                    </div>
-                    <a href="https://app.instakash.net" className="block w-full md:w-60 mt-4 mx-auto px-8">
-                      Ingresar ahora
-                    </a>
-                  </Card>
-                </li>
-              </ol>
-              <img src="/images/affiliates-2.svg" alt="Gana con tus referidos" />
-            </div>
-          </div>
-        </div>
-      </section>
-      <section className={`section-wrapper ${styles.benefits}`} id="benefits">
+      <section className={styles.StepsSection}>
         <div className="container">
-          <div className="grid md:grid-cols-2 gap-4">
-            <img src="/images/benefits.svg" className="order-2 md:order-1 text-base md:text-auto place-self-center" />
-            <div className="flex flex-col justify-center pl-6 order-1 md:order-2">
-              <h2 className="mb-2">Conoce nuestros benefícios</h2>
-              <ul>
-                <li>
-                  Obtendrás <span>las mejores tasas</span> del Perú.
-                </li>
-                <li>
-                  <span>Ahorrarás</span> dinero en cada cambio.
-                </li>
-                <li>
-                  Recibirás tu cambio en <span>pocos minutos</span>.
-                </li>
-                <li>
-                  Ganarás <span>1 KASH</span> por cada recomendación.
-                </li>
-              </ul>
+          <div className="text-center mt-5">
+            <h2 className={styles.Title}>Cambia dólares online</h2>
+            <p className={styles.Subtitle}>Ingresa a nuestra casa de cambio online, sigue estos 4 pasos y obtén el mejor tipo de cambio.</p>
+          </div>
+          <div className={styles.StepsWrapper}>
+            <Card className={styles.StepCard}>
+              <span className={styles.Step}>Paso 1</span>
+              <div className={styles.StepImage}>
+                <Image src="/images/steps/step-1.svg" alt="Cotiza tu cambio de dólares" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.StepInfo}>
+                <span>Paso 1</span>
+                <h3>Cotiza tu cambio</h3>
+                <p>Ingresa el monto que vas a enviar y calcula cuánto vas a recibir. Comienza tu operación.</p>
+              </div>
+            </Card>
+            <Card className={styles.StepCard}>
+              <span className={styles.Step}>Paso 2</span>
+              <div className={styles.StepImage}>
+                <Image src="/images/steps/step-2.svg" alt="Cotiza tu cambio de dólares" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.StepInfo}>
+                <span>Paso 2</span>
+                <h3>Selecciona tus cuentas</h3>
+                <p>Selecciona el banco desde donde envías y la cuenta donde recibirás tu cambio.</p>
+              </div>
+            </Card>
+            <Card className={styles.StepCard}>
+              <span className={styles.Step}>Paso 3</span>
+              <div className={styles.StepImage}>
+                <Image src="/images/steps/step-3.svg" alt="Cotiza tu cambio de dólares" layout="fill" la objectFit="contain" />
+              </div>
+              <div className={styles.StepInfo}>
+                <span>Paso 3</span>
+                <h3>Transfiere</h3>
+                <p>Transfiere a Instakash desde la app de tu banco e ingresa el número de transferencia en nuestra app.</p>
+              </div>
+            </Card>
+            <Card className={styles.StepCard}>
+              <span className={styles.Step}>Paso 4</span>
+              <div className={styles.StepImage}>
+                <Image src="/images/steps/step-4.svg" alt="Cotiza tu cambio de dólares" layout="fill" objectFit="contain" />
+              </div>
+              <div className={styles.StepInfo}>
+                <span>Paso 4</span>
+                <h3>Recibe</h3>
+                <p>Recibe tu cambio en la cuenta que seleccionaste en el paso 2. Y sigue cambiando con Instakash.</p>
+              </div>
+            </Card>
+          </div>
+        </div>
+      </section>
+      <section className="container">
+        <div className={styles.AppWrapper}>
+          <div className={styles.AppImage}>
+            <Image src="/images/illustrations/app.svg" layout="fill" objectFit="contain" />
+          </div>
+          <div className={styles.AppInfoWrapper}>
+            <h2>
+              Descarga Instakash App <br /> casa de cambio online
+            </h2>
+            <p>Con el mejor tipo de cambio comienza el cambio, fácil y seguro del Perú. Disponible para android y IOS.</p>
+            <ul>
+              <li>
+                <FaCheckCircle size={20} className="mr-2" /> Notificaciones en el mejor momento para cambiar.
+              </li>
+              <li>
+                <FaCheckCircle size={20} className="mr-2" /> Beneficios exclusivos para nuestros usuarios.
+              </li>
+              <li>
+                <FaCheckCircle size={20} className="mr-2" /> Servicio al cliente personalizado cuando lo necesites.
+              </li>
+            </ul>
+            <div className="flex items-center justify-center md:justify-start mt-6">
+              <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
+                <Image src="/images/illustrations/appstore.png" layout="fill" objectFit="contain" />
+              </a>
+              <a href="https://play.google.com/store/apps/details?id=net.instakash.app" className={styles.AppDownloadIcon}>
+                <Image src="/images/illustrations/playstore.png" layout="fill" objectFit="contain" />
+              </a>
             </div>
           </div>
         </div>
       </section>
-      <BaseModal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-        <Image src="/images/banners/banner-april.jpg" alt="cupón de abril" layout="fill" objectFit="contain" />
-      </BaseModal>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "https://schema.org/", "@type": "WebSite",
+            "name": "InstaKash",
+            "url": "https://instakash.net/", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "{search_term_string}",
+            "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

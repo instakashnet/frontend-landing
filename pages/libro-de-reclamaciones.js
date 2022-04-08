@@ -1,13 +1,13 @@
-import { useState } from "react";
-import { useFormik } from "formik";
 import emailjs from "emailjs-com";
+import { useFormik } from "formik";
 import Head from "next/head";
-import { reclamacionesValidation } from "../helpers/validations";
-
+import { useState } from "react";
+import Button from "../components/UI/Button";
 import Input from "../components/UI/form/Input";
 import Select from "../components/UI/form/Select";
 import Textarea from "../components/UI/form/Textarea";
-import Button from "../components/UI/Button";
+import { reclamacionesValidation } from "../helpers/validations";
+import styles from "../styles/Reclamaciones.module.scss";
 
 const LibroReclamaciones = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -65,14 +65,16 @@ const LibroReclamaciones = () => {
         <title> Libro de reclamaciones | Instakash</title>
       </Head>
       <section>
-        <div className="section-wrapper container px-3">
-          <h1 className="text-center mt-16 md:mt-36 mb-4">Libro de reclamaciones</h1>
-          <p>
-            Gestionamos tus reclamos para poder procesarlos de forma inmediata. Sabemos lo importante que es tu tiempo y tu dinero por lo que atendemos cada caso según su prioridad
-            y a la breveddad. Cambiamos la forma de operar y te damos la garantía de seguridad más alta.
-          </p>
+        <div className="section-wrapper container px-3 py-12">
+          <div className="text-center">
+            <h1 className={styles.Title}>Libro de reclamaciones</h1>
+            <p className={styles.Subtitle}>
+              Gestionamos tus reclamos para poder procesarlos de forma inmediata. Sabemos lo importante que es tu tiempo y tu dinero por lo que atendemos cada caso según su
+              prioridad y a la breveddad. Cambiamos la forma de operar y te damos la garantía de seguridad más alta.
+            </p>
+          </div>
 
-          <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto mt-16">
+          <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto mt-8 lg:mt-16">
             <div className="grid md:grid-cols-2 gap-4">
               <Input
                 type="text"
@@ -118,14 +120,7 @@ const LibroReclamaciones = () => {
               />
             </div>
             <div className="grid md:grid-cols-2 gap-4">
-              <Select
-                name="documentType"
-                placeholder="Documento de identidad"
-                options={documentOptions}
-                value={formik.values.documentType}
-                value={formik.values.documentType}
-                onChange={formik.handleChange}
-              />
+              <Select name="documentType" placeholder="Documento de identidad" options={documentOptions} value={formik.values.documentType} onChange={formik.handleChange} />
               <Input
                 type="text"
                 name="documentNo"

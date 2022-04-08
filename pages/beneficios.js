@@ -1,16 +1,12 @@
-import { useState } from "react";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
-
+import Script from "next/script";
+import { useState } from "react";
 // COMPONENTS
 import Card from "../components/UI/Card";
 import { BaseModal } from "../components/UI/Modal";
-
-import styles from "../styles/promociones.module.scss";
-import MesDeLaMujer from "../assets/images/mesdelamujer.jpg";
-import SuperMontos from "../assets/images/super.jpg";
-import Kash from "../assets/images/kash.png";
+import styles from "../styles/beneficios.module.scss";
 
 const Promociones = () => {
   const [modalType, setModalType] = useState(""),
@@ -30,21 +26,34 @@ const Promociones = () => {
   return (
     <>
       <Head>
-        <title>Beneficios | Instakash</title>
-        <meta name="description" content="Beneficios disponibles para tus cambios de divisas." />
+        <title>Beneficios de Cambiar Dólares a Soles en Instakash</title>
+        <meta name="title" content="Beneficios de Cambiar en Instakash Casa de Cambio Online" />
+        <meta name="description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles. ¡Enterate Aquí!" />
+        <meta httpEquiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/beneficios" />
+        <meta name="author" content="Instakash" />
+        <meta name="url" content="https://instakash.net/beneficios" />
+
+        <meta property="og:title" content="Beneficios de Cambiar Dólares a Soles en Instakash" />
+        <meta property="og:site_name" content="Instakash" />
+        <meta property="og:url" content="https://instakash.net/beneficios" />
+        <meta property="og:description" content="Aprovecha los cupones, sorteos y más beneficios que te da Instakash por cambia dólares a Soles" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section>
         <div className="container section-wrapper text-center mt-16 mb-24">
-          <h1>Beneficios</h1>
+          <h1 className={styles.Title}>Beneficios</h1>
           <hr className="mx-auto w-1/3 my-6" />
-          <h3 className="mb-12">
+          <h3 className={styles.Subtitle}>
             Todos los meses tenemos diferentes formas de ayudarte a conseguir las mejores tasas <br /> y que puedas sacar el mayor provecho a tu dinero.
           </h3>
 
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/semanasanta.jpeg" alt="Cupón para cambio online SEMANASANTA" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/sorteo.png" alt="Gana unos audifonos Hauwei" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
@@ -66,7 +75,29 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/utilidades.jpeg" alt="Cupón para cambio online MESDEUTILIDADES" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/semanasanta.png" alt="Cupón para cambio online SEMANASANTA" layout="fill" objectFit="cover" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Cupón del mes</h3>
+                <h2>SEMANASANTA</h2>
+                <p className={styles.Date}>
+                  <time dateTime="01-04-2022">01/04</time> al <time dateTime="30-04-2022">30/04</time> del 2022
+                </p>
+                <p>En abril haz tus cambios usando el cupón SEMANASANTA y obtén 20 PIPS a favor de tu cambio. Cupón válido durante el mes de abril. Válido para 4 cambios.</p>
+                <div className={styles.Actions}>
+                  <a href="https://app.instakash.net/signin" className="mr-4">
+                    Acceder y usar cupón
+                  </a>
+                  <button type="button" onClick={() => openModalHandler("coupons")}>
+                    ¿Como usar los cupones?
+                  </button>
+                </div>
+              </div>
+            </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src="/images/beneficios/utilidades.png" alt="Cupón para cambio online MESDEUTILIDADES" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
@@ -91,7 +122,7 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={SuperMontos} alt="Cupones SuperMontos" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/supermontos.png" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupones activos</h3>
@@ -110,7 +141,7 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src={Kash} alt="Gana KASH" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/kash.png" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
                 <h3>Refiere y</h3>
@@ -140,6 +171,20 @@ const Promociones = () => {
           </video>
         )}
       </BaseModal>
+      <Script
+        strategy="afterInteractive"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+          {
+            "@context": "http://schema.org/", "@type": "WebSite",
+            "url": "https://instakash.net/beneficios", "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://instakash.net/beneficios{search_term_string}", "query-input": "required name=search_term_string"
+            } }
+          `,
+        }}
+      />
     </>
   );
 };

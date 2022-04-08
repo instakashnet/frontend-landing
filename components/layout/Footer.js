@@ -1,24 +1,23 @@
+import Image from "next/image";
 import Link from "next/link";
-import Anchor from "react-anchor-link-smooth-scroll";
+import styles from "./Layout.module.scss";
 
-import styles from "../../styles/layout/Layout.module.scss";
-
-const Footer = () => {
+const Footer = ({ pathname }) => {
   return (
     <footer className={styles.footer}>
       <div className="container grid grid-cols-1 md:grid-cols-4 md:py-8 px-8">
         <section className="col-span-1 my-2">
-          <img src="/images/logo-white.svg" />
-          <p className="text-sm">Somos la startup financiera que revoluciona la forma de administrar el dinero a través de una plataforma 100% digital.</p>
+          <Image src="/images/logo-white.svg" width={150} height={30} objectFit="contain" />
+          <p className="text-sm">Casa de cambio online. Con la mejor tasa de cambio comienza el cambio, fácil y seguro del Perú.</p>
           <div className="flex tems-center mt-5">
-            <a href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer" className="mr-6">
-              <img src="/images/social/instagram.svg" className="w-6 md:w-8" />
+            <a href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer" className="relative w-6 h-6 md:w-8 md:h-8 mr-6">
+              <Image layout="fill" objectFit="contain" alt="Sígue a Instakash en Instagram" src="/images/social/instagram.svg" />
             </a>
-            <a href="https://www.facebook.com/Instakash-103956227716506" target="_blank" rel="noopener noreferrer" className="mr-6">
-              <img src="/images/social/facebook.svg" className="w-6 md:w-8" />
+            <a href="https://www.facebook.com/Instakash-103956227716506" target="_blank" rel="noopener noreferrer" className="relative w-6 h-6 md:w-8 md:h-8 mr-6">
+              <Image layout="fill" objectFit="contain" alt="Sígue a Instakash en Facebook" src="/images/social/facebook.svg" />
             </a>
-            <a href="https://www.linkedin.com/company/71140162" target="_blank" rel="noopener noreferrer">
-              <img src="/images/social/linkedin.svg" className="w-6 md:w-8" />
+            <a href="https://www.linkedin.com/company/71140162" target="_blank" rel="noopener noreferrer" className="relative w-6 h-6 md:w-8 md:h-8">
+              <Image layout="fill" objectFit="contain" alt="Sígue a Instakash en Linkedin" src="/images/social/linkedin.svg" />
             </a>
           </div>
         </section>
@@ -27,13 +26,13 @@ const Footer = () => {
             <h4>Menú</h4>
             <ul>
               <li>
-                <Link href="/nosotros">
-                  <a>Nosotros</a>
+                <Link href={pathname === "/" ? "#calculator" : "/"}>
+                  <a>Tipo de cambio para hoy</a>
                 </Link>
               </li>
               <li>
-                <Link href="/contacto">
-                  <a>Contacto</a>
+                <Link href="/beneficios">
+                  <a>Beneficios</a>
                 </Link>
               </li>
               <li>
@@ -42,23 +41,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/contacto">
+                  <a>Contacto</a>
+                </Link>
+              </li>
+              <li>
                 <a href="https://wa.link/05keps" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                  <img src="/images/icons/whatsapp.svg" className="mr-2 w-4 mb-0" /> Atención al usuario
+                  <Image width={15} height={15} alt="Contactar a soporte de Instakash" src="/images/icons/whatsapp-white.svg" /> <span className="ml-2">Atención al usuario</span>
                 </a>
-              </li>
-            </ul>
-          </div>
-          <div className={`${styles.footerMenu} lg:block hidden`}>
-            <h4>Links rápidos</h4>
-            <ul>
-              <li>
-                <Anchor href="#steps">¿Como funciona?</Anchor>
-              </li>
-              <li>
-                <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
-              </li>
-              <li>
-                <Anchor href="#benefits">¿Por qué Instakash?</Anchor>
               </li>
             </ul>
           </div>

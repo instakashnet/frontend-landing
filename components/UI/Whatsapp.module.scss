@@ -1,0 +1,150 @@
+@import "../../styles/breakpoints";
+@import "../../styles/fontSizes";
+
+.WhatsappButton {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  background-color: #fff;
+  padding: 0.7rem;
+  border-radius: 27.5px;
+  z-index: 999;
+  bottom: 15px;
+  right: 15px;
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  animation: jello-horizontal 5s ease-in-out 4s infinite alternate;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 350ms ease-in-out;
+  transform: translateY(0);
+
+  p {
+    font-size: $caption;
+    font-weight: bold;
+    padding-left: 0;
+    width: 0;
+    text-align: left;
+    opacity: 0;
+    transition: 500ms ease-in-out;
+  }
+
+  .WhatsappImage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  &:hover,
+  &:focus {
+    transition: 250ms ease-in-out;
+    width: 120px;
+    animation: none;
+
+    .WhatsappImage {
+      width: 28%;
+    }
+
+    p {
+      width: 60px;
+      opacity: 1;
+    }
+  }
+
+  @include respond(tablet) {
+    width: 65px;
+    height: 65px;
+    border-radius: 32.5px;
+    padding: 0.8rem;
+
+    p {
+      font-size: $body;
+    }
+
+    &:hover,
+    &:focus {
+      width: 140px;
+
+      .WhatsappImage {
+        width: 34%;
+      }
+
+      p {
+        width: 63px;
+      }
+    }
+  }
+
+  @include respond(desktop) {
+    bottom: 25px;
+    right: 30px;
+  }
+}
+
+.Hide {
+  transition: 550ms ease-in-out;
+  animation: none;
+  transform: translateY(200%);
+}
+
+@-webkit-keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  10% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  15% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  20% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  //   100% {
+  //     -webkit-transform: scale3d(1, 1, 1);
+  //     transform: scale3d(1, 1, 1);
+  //   }
+}
+@keyframes jello-horizontal {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  5% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  10% {
+    -webkit-transform: scale3d(0.85, 1.15, 1);
+    transform: scale3d(0.85, 1.15, 1);
+  }
+  15% {
+    -webkit-transform: scale3d(1.15, 0.85, 1);
+    transform: scale3d(1.15, 0.85, 1);
+  }
+  20% {
+    -webkit-transform: scale3d(0.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
+  }
+  25% {
+    -webkit-transform: scale3d(1.05, 0.95, 1);
+    transform: scale3d(1.05, 0.95, 1);
+  }
+  //   100% {
+  //     -webkit-transform: scale3d(1, 1, 1);
+  //     transform: scale3d(1, 1, 1);
+  //   }
+}

@@ -1,4 +1,4 @@
-import Document, { Html, Head, Main, NextScript } from 'next/document';
+import Document, { Head, Html, Main, NextScript } from "next/document";
 
 const { GA_TRACKING_ID, FB_PIXEL_ID } = process.env;
 
@@ -10,8 +10,9 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang='es' className='notranslate' translate='no'>
+      <Html lang="es" className="notranslate" translate="no">
         <Head>
+          <link rel="icon" href="/favicon.ico" type="image/png" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
@@ -41,7 +42,7 @@ class MyDocument extends Document {
             }}
           />
           <noscript>
-            <img height='1' width='1' style={{ display: 'none' }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`} />
+            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`} />
           </noscript>
         </Head>
         <body>

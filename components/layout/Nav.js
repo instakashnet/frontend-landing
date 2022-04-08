@@ -1,9 +1,9 @@
-import { useEffect, useState } from "react";
+import cls from "classnames";
+import Image from "next/image";
 import Link from "next/link";
-import Anchor from "react-anchor-link-smooth-scroll";
 import { useRouter } from "next/router";
-
-import styles from "../../styles/layout/Nav.module.scss";
+import { useEffect, useState } from "react";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
   const [scrollDirection, setScrollDirection] = useState("default"),
@@ -11,27 +11,17 @@ const Nav = () => {
     router = useRouter();
 
   useEffect(() => {
-    let lastScroll = 0,
+    let lastScroll = 40,
       direction = "default";
 
     const setNavbarEffect = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll <= 0) {
-        direction = "default";
-        setScrollDirection("default");
-      }
+      if (currentScroll <= 40) direction = "default";
+      if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
+      if (currentScroll < lastScroll && direction === "down") direction = "up";
 
-      if (currentScroll > lastScroll && direction !== "down") {
-        direction = "down";
-        setScrollDirection("down");
-      }
-
-      if (currentScroll < lastScroll && direction === "down") {
-        direction = "up";
-        setScrollDirection("up");
-      }
-
+      setScrollDirection(direction);
       lastScroll = currentScroll;
     };
 
@@ -51,29 +41,21 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : ""}`}>
+      <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
         <div className="container flex items-center justify-between">
           <Link href="/">
-            <a>
-              <img src="/images/logo.svg" alt="Instakash" />
+            <a className={styles.Logo}>
+              <Image layout="fill" objectFit="contain" src="/images/logo.svg" alt="Instakash" />
             </a>
           </Link>
 
           <ul className="ml-auto mr-3">
             <li>
-              <Anchor href="#steps">¿Como funciona?</Anchor>
-            </li>
-            <li>
-              <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
+              <Link href="/nosotros">Nosotros</Link>
             </li>
             <li>
               <Link href="/beneficios">Beneficios</Link>
             </li>
-            {/* <li>
-              <Link href='/blog'>
-                <a>Blog</a>
-              </Link>
-            </li> */}
           </ul>
 
           <div className={styles.navButtons}>
@@ -94,18 +76,10 @@ const Nav = () => {
         <ul>
           <h3>Menú</h3>
           <li>
-            <Anchor href="#steps">¿Como funciona?</Anchor>
+            <Link href="/nosotros">Nosotros</Link>
           </li>
           <li>
             <Link href="/beneficios">Beneficios</Link>
-          </li>
-          <li>
-            <Anchor href="#affiliates">¡Gana con tus referidos!</Anchor>
-          </li>
-          <li>
-            <Anchor offset="150" href="#benefits">
-              ¿Por qué Instakash?
-            </Anchor>
           </li>
         </ul>
         <div className={styles.schedule}>
