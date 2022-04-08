@@ -51,7 +51,7 @@ const Promociones = () => {
           </h3>
 
           <article className={styles.PromotionsWrapper}>
-            <Card className={styles.PromotionCard}>
+            {/* <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
                 <Image src="/images/beneficios/sorteo.png" alt="Gana unos audifonos Hauwei" layout="fill" objectFit="cover" />
               </div>
@@ -71,7 +71,7 @@ const Promociones = () => {
                   </button>
                 </div>
               </div>
-            </Card>
+            </Card> */}
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
