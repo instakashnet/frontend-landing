@@ -351,14 +351,20 @@
   height: 350px;
   position: relative;
 
+  @include respond(tablet) {
+    width: 500px;
+    height: 500px;
+  }
+
   @include respond(desktop) {
-    width: 700px;
-    height: 700px;
+    width: 800px;
+    height: 800px;
   }
 }
 
 .AppInfoWrapper {
   font-size: $caption;
+  text-align: center;
 
   h2 {
     color: $text-title;
@@ -369,6 +375,7 @@
 
   ul {
     margin: 1rem 0;
+    text-align: left;
 
     li {
       display: flex;
@@ -382,6 +389,7 @@
   }
 
   @include respond(tablet) {
+    text-align: left;
     font-size: $body;
     padding: 0.5rem 4rem 0 1rem;
 
