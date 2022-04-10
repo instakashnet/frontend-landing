@@ -8,12 +8,12 @@ export default async function getRates(req, res) {
         "Content-Type": "application/json",
       },
     });
-    const data = response.json();
-
-    console.log({ data });
+    const data = await response.json();
+    rates = data[0];
 
     return res.status(200).json(rates);
   } catch (error) {
-    return res.status(500).message("Ha ocurrido un error obteniendo el tipo de cambio.");
+    console.error(error);
+    return res.status(500).send("Ha ocurrido un error obteniendo el tipo de cambio.");
   }
 }

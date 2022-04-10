@@ -7,18 +7,16 @@ import BenefitsCarousel from "../components/UI/benefits/carousel.component";
 import Card from "../components/UI/Card";
 // CLASSES
 import styles from "../styles/Home.module.scss";
-import { getCounters, getRates } from "../utils/fetch-data";
+import { getCounters } from "../utils/fetch-data";
 
 export async function getStaticProps() {
-  let rates = { buy: 0, sell: 0 },
-    counters = {
-      qtyUsers: 0,
-      qtySuccessfullOrders: 0,
-      totalProcessed: 0,
-    };
+  let counters = {
+    qtyUsers: 0,
+    qtySuccessfullOrders: 0,
+    totalProcessed: 0,
+  };
 
   try {
-    rates = await getRates();
     counters = await getCounters();
   } catch (error) {
     console.log(error);
@@ -26,14 +24,13 @@ export async function getStaticProps() {
 
   return {
     props: {
-      rates,
       counters,
     },
     revalidate: 10,
   };
 }
 
-const Home = ({ rates, counters }) => {
+const Home = ({ counters }) => {
   return (
     <>
       <Head>
@@ -76,7 +73,7 @@ const Home = ({ rates, counters }) => {
                   Tipo de cambio <br /> para hoy en Instakash
                 </strong>
               </p>
-              <Calculator rates={rates} />
+              <Calculator />
             </Card>
           </div>
           <div className={styles.SuperkashWrapper}>

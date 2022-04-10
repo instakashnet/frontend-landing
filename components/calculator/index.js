@@ -1,5 +1,6 @@
 import { useFormik } from "formik";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { PulseLoader } from "react-spinners";
 import Button from "../UI/Button";
 import styles from "./Calculator.module.scss";
 import Input from "./input.component";
@@ -7,12 +8,30 @@ import Rates from "./rates.component";
 import Savings from "./savings.component";
 import Swipe from "./swipe.component";
 
-const Calculator = ({ rates }) => {
+const Calculator = () => {
+  const [rates, setRates] = useState({ buy: 0, sell: 0 }),
+    [isLoading, setIsLoading] = useState(true);
+
   const formik = useFormik({
     initialValues: { type: "sell", currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 },
     onSubmit: () => (window.location.href = "https://app.instakash.net"),
   });
   const { setFieldValue } = formik;
+
+  useEffect(() => {
+    (async () => {
+      try {
+        const res = await fetch("/api/get-rates"),
+          data = await res.json();
+
+        setRates({ ...data, buy: +data.buy, sell: +data.sell });
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
+    })();
+  }, []);
 
   useEffect(() => {
     if (rates.buy > 0 && rates.sell > 0) {
@@ -39,7 +58,13 @@ const Calculator = ({ rates }) => {
 
   return (
     <>
-      <Rates rates={rates} type={formik.values.type} />
+      {isLoading ? (
+        <div className="mt-2">
+          <PulseLoader color="#0d8284" size={10} />
+        </div>
+      ) : (
+        <Rates rates={rates} type={formik.values.type} />
+      )}
       <form onSubmit={formik.handleSubmit} className="flex flex-col items-center justify-center">
         <div className="relative mb-3 w-full">
           <Input name="amount_sent" label="Envias" currency={formik.values.currency_sent} value={formik.values.amount_sent} onChange={amountChangeHandler} />
