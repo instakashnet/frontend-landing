@@ -21,10 +21,10 @@ const Calculator = () => {
   useEffect(() => {
     (async () => {
       try {
-        const res = await fetch("/api/get-rates"),
+        const res = await fetch("https://api.instakash.net/exchange-service/api/v1/client/rates"),
           data = await res.json();
 
-        setRates({ ...data, buy: +data.buy, sell: +data.sell });
+        setRates({ ...data[0], buy: +data[0].buy, sell: +data[0].sell });
       } catch (error) {
         console.log(error);
       } finally {
