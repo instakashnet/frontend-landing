@@ -62,16 +62,29 @@ const LibroReclamaciones = () => {
   return (
     <>
       <Head>
-        <title> Libro de reclamaciones | Instakash</title>
+        <title>Libro de Rclamaciones</title>
+        <meta name="title" content="Libro de Reclamaciones | Instakash" />
+        <meta name="description" content="Gestionamos tus reclamos para poder procesarlos de forma inmediata. Atendemos cada caso según su prioridad y a la breveddad. " />
+        <meta http-equiv="content-language" content="es_PE" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/libro-de-reclamaciones" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/libro-de-reclamaciones" />
+        <meta property="og:title" content="Políticas de Privacidad | Instakash" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/libro-de-reclamaciones" />
+        <meta property="og:description" content="Gestionamos tus reclamos para poder procesarlos de forma inmediata. Atendemos cada caso según su prioridad y a la breveddad." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section>
         <div className="section-wrapper container px-3 py-12">
           <div className="text-center">
             <h1 className={styles.Title}>Libro de reclamaciones</h1>
-            <p className={styles.Subtitle}>
+            <h2 className={styles.Subtitle}>
               Gestionamos tus reclamos para poder procesarlos de forma inmediata. Sabemos lo importante que es tu tiempo y tu dinero por lo que atendemos cada caso según su
               prioridad y a la breveddad. Cambiamos la forma de operar y te damos la garantía de seguridad más alta.
-            </p>
+            </h2>
           </div>
 
           <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto mt-8 lg:mt-16">

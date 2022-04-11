@@ -3,6 +3,22 @@
 @import "./breakpoints";
 @import "./fontSizes";
 
+.ContactSection {
+  padding: 1rem 0;
+
+  h2 {
+    font-size: math.div($info-text, 1.25);
+    font-weight: 700;
+    color: $text-title;
+  }
+
+  @include respond(desktop) {
+    h2 {
+      font-size: $info-text;
+    }
+  }
+}
+
 .social {
   display: flex;
   align-items: center;

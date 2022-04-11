@@ -5,7 +5,21 @@ const TerminosCondiciones = () => {
   return (
     <>
       <Head>
-        <title> Términos y condiciones | Instakash</title>
+        <title>Términos y Condiciones</title>
+        <meta name="title" content="Términos y Condiciones | Instakash" />
+        <meta name="description" content="Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí " />
+        <meta http-equiv="content-language" content="es_PE" />
+        <link rel="icon" href="imagenes/favicon.png" type="image/png" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/terminos-y-condiciones" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/terminos-y-condiciones" />
+        <meta property="og:title" content="Preguntas Instakash | Casa de Cambio Online" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/terminos-y-condiciones" />
+        <meta property="og:description" content="Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section className={styles.legal}>
         <div className="section-wrapper container px-3 pt-12">
@@ -26,7 +40,7 @@ const TerminosCondiciones = () => {
           </p>
           <ol className={styles.legalList}>
             <li>
-              <h3>1. EMPRESA</h3>
+              <h2>1. EMPRESA</h2>
               <p>
                 INSTAKASH: es una plataforma digital, siendo sus servicios operados por INSTAKASH S.A.C., debidamente registrado con RUC N° 20605285105 con domicilio fiscal en
                 Calle Martin de Murua, Nro. 150, Int. 907, Urb. Maranga, San Miguel, Lima.
@@ -38,7 +52,7 @@ const TerminosCondiciones = () => {
               <p>INSTAKASH ofrece sus servicios a través de medios digitales, donde cuenta con un portal en Internet instakash.net</p>
             </li>
             <li>
-              <h3>2. REGISTRO DE USUARIO</h3>
+              <h2>2. REGISTRO DE USUARIO</h2>
               <p>EL USUARIO declara y garantiza que el usuario creado en LA PLATAFORMA de INSTAKASH, es para su uso personal y/o a nombre de la empresa que representa.</p>
               <p>Para el caso de que EL USUARIO sea una persona natural, declara que no está actuando en nombre de una tercera persona.</p>
               <p>
@@ -68,7 +82,7 @@ const TerminosCondiciones = () => {
               <p>La cuenta registrada en INSTAKASH será de uso personal e intransferible.</p>
             </li>
             <li>
-              <h3>3. VERIFICACIÓN</h3>
+              <h2>3. VERIFICACIÓN</h2>
               <p>
                 INSTAKASH es una empresa que cumple con la normativa vigente de PLAFT otorgada por la Unidad de Inteligencia Financiera (UIF-SBS) y por lo tanto, INSTAKASH
                 realizará la verificación de los datos personales y, de ser necesario, establecerá contacto con EL USUARIO en cualquier momento que lo considere pertinente.
@@ -89,7 +103,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
             <li>
-              <h3>4. REGISTRO DE CUENTAS BANCARIAS</h3>
+              <h2>4. REGISTRO DE CUENTAS BANCARIAS</h2>
               <p>EL USUARIO podrá registrar datos de la cuenta bancaria, tanto en soles como en moneda extranjera.</p>
               <p>
                 En INSTAKASH aceptamos cuentas de las siguientes entidades financieras:
@@ -123,10 +137,10 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className="mt-10 mb-6 text-2xl">5. REGISTROS:</h3>
+          <h2 className="mt-10 mb-6 text-2xl">5. REGISTROS:</h2>
           <ol className={styles.legalList}>
             <li>
-              <h3>5.1 MONEDA KASH:</h3>
+              <h2>5.1 MONEDA KASH:</h2>
               <p>
                 La moneda virtual KASH es un activo digital, emitido en asociación de KASHCORP SAC que custodia las transacciones vinculadas al KASH. Cada KASH que disponga el
                 usuario corresponde a 1 dólar estadounidense en la cuenta bancaria para garantizar que siempre pueda comprar y canjear el activo con dólares estadounidenses
@@ -152,7 +166,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
             <li>
-              <h3>5.2 CAMBIO DE MONEDA EXTRANJERA:</h3>
+              <h2>5.2 CAMBIO DE MONEDA EXTRANJERA:</h2>
 
               <p>
                 Para hacer uso de este servicio, el USUARIO debe contar con una cuenta bancaria propia en una entidad financiera supervisada por la SBS, es decir, debe aceptar
@@ -227,7 +241,7 @@ const TerminosCondiciones = () => {
             </li>
 
             <li id="#cupones">
-              <h3>5.3 CUPONES DE DESCUENTO:</h3>
+              <h2>5.3 CUPONES DE DESCUENTO:</h2>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
                 redes sociales o promoción directa por parte de INSTAKASH a determinados usuarios.
@@ -251,37 +265,37 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h3 className="mt-10 mb-6 text-2xl">6 AFILIADOS:</h3>
+          <h2 className="mt-10 mb-6 text-2xl">6 AFILIADOS:</h2>
           <ol className={styles.legalList}>
             <li>
-              <h3>6.1 PROGRAMA DE AFILIADOS:</h3>
+              <h2>6.1 PROGRAMA DE AFILIADOS:</h2>
               <p>
                 Cada Afiliado es un contratista independiente y no un empleado. INSTAKASH no se hace responsable por las formas en que las personas promuevan sus códigos de
                 afiliado.
               </p>
             </li>
             <li>
-              <h3>6.2 CÓDIGO DE AFILIADO:</h3>
+              <h2>6.2 CÓDIGO DE AFILIADO:</h2>
               <p>
                 El usuario puede ubicar su código de afiliado en los detalles de MI PERFIL y también podrá editar el texto y número de su código según disponibilidad ya que solo
                 puede haber un código único por usuario.
               </p>
             </li>
             <li>
-              <h3>6.3 BENEFICIO DEL AFILIADOR:</h3>
+              <h2>6.3 BENEFICIO DEL AFILIADOR:</h2>
               <p>
                 Por cada nuevo usuario que utilice un código afiliado para registrarse y efectuar su primera operación de cambio dentro de INSTAKASH, hará que el usuario afiliador
                 gane automáticamente 1 KASH equivalente a 1,00 dólar estadounidense.
               </p>
             </li>
             <li>
-              <h3>6.4 BENEFICIO DEL NUEVO AFILIADO:</h3>
+              <h2>6.4 BENEFICIO DEL NUEVO AFILIADO:</h2>
               <p>El nuevo usuario al usar un código afiliado de otro usuario, ganará un descuento en la tasa de su primera operación de cambio dentro de INSTAKASH.</p>
             </li>
           </ol>
 
           <ol className={styles.legalList}>
-            <h3>7. TRANSFERENCIAS INTERBANCARIAS/INTERPLAZA:</h3>
+            <h2>7. TRANSFERENCIAS INTERBANCARIAS/INTERPLAZA:</h2>
             <li>
               <p>
                 INSTAKASH tiene cuentas bancarias en soles y dólares en el Banco de Crédito del Perú (BCP - Lima) e Interbank (Banco Internacional del Perú - Lima). Las
@@ -322,7 +336,7 @@ const TerminosCondiciones = () => {
             <li>
               <p>Estas comisiones son referenciales y pueden variar sin previa notificación.</p>
             </li>
-            <h3>8. TIEMPOS DE EJECUCIÓN:</h3>
+            <h2>8. TIEMPOS DE EJECUCIÓN:</h2>
             <li>
               <p>
                 INSTAKASH no influye en las operaciones que los bancos realizan, por ende, no se hace responsable por la dilación en los tiempos del envío de los fondos por su
@@ -351,7 +365,7 @@ const TerminosCondiciones = () => {
                 orden de compra.
               </p>
             </li>
-            <h3>9. ANULACIÓN DE TRANSACCIONES</h3>
+            <h2>9. ANULACIÓN DE TRANSACCIONES</h2>
             <li>
               <p>
                 Si el USUARIO se demora en realizar la transferencia y/o ésta exceda el Plazo de Recepción de Fondos, INSTAKASH no podrá mantener el tipo de cambio y la operación
@@ -388,7 +402,7 @@ const TerminosCondiciones = () => {
                 mediante transferencia a favor de la cuenta bancaria que indique INSTAKASH, el saldo transferido en exceso en un plazo no mayor a dos (2) días hábiles.
               </p>
             </li>
-            <h3>10. DEVOLUCIONES</h3>
+            <h2>10. DEVOLUCIONES</h2>
             <li>
               <p>INSTAKASH se reserva la discreción de aprobación de la solicitud de devolución, estando siempre atentos a la inquietud y consideraciones del USUARIO.</p>
               <p>
@@ -407,7 +421,7 @@ const TerminosCondiciones = () => {
               </p>
               <p>INSTAKASH no realiza devoluciones a través de efectivo físico ya que todas las operaciones se realizan vía transferencia bancaria.</p>
             </li>
-            <h3>11. BOLETAS Y FACTURAS ELECTRÓNICAS:</h3>
+            <h2>11. BOLETAS Y FACTURAS ELECTRÓNICAS:</h2>
             <li>
               <p>
                 INSTAKASH emitirá boletas electrónicas a los usuarios que estén registrados como personas naturales y emitirá facturas a los usuarios registrados como personas
@@ -418,7 +432,7 @@ const TerminosCondiciones = () => {
                 un cobro adicional por concepto de IGV.
               </p>
             </li>
-            <h3>12. HORARIO DE ATENCIÓN:</h3>
+            <h2>12. HORARIO DE ATENCIÓN:</h2>
             <li>
               <p>
                 El horario de atención de INSTAKASH es de lunes a viernes de 9 am a 7 pm y sábados de 9 am a 2:30 pm, siempre y cuando sean días hábiles, es decir excluyendo
@@ -430,7 +444,7 @@ const TerminosCondiciones = () => {
                 finalizada en el horario de apertura del siguiente dia útil, todo bajo las condiciones que INSTAKASH considere pertinentes.
               </p>
             </li>
-            <h3>13. SEGURIDAD:</h3>
+            <h2>13. SEGURIDAD:</h2>
             <li>
               <p>
                 Proteger su privacidad es muy importante para INSTAKASH. El acceso a los servicios se realiza a través de una contraseña que EL USUARIO ha asignado en el momento
@@ -446,7 +460,7 @@ const TerminosCondiciones = () => {
                 navegador reconozca y valide el certificado de www.instakash.net.
               </p>
             </li>
-            <h3>14. PROPIEDAD INTELECTUAL:</h3>
+            <h2>14. PROPIEDAD INTELECTUAL:</h2>
             <li>
               <p>
                 INSTAKASH está protegido por los derechos de propiedad de autor. Todos los derechos involucrados como por ejemplo el contenido, el diseño visual, logos y eslogan
@@ -458,14 +472,14 @@ const TerminosCondiciones = () => {
                 licencia para utilizar los servicios y contenidos con fines distintos a los mencionados en el presente contrato.
               </p>
             </li>
-            <h3>15. QUEJAS Y RECLAMOS:</h3>
+            <h2>15. QUEJAS Y RECLAMOS:</h2>
             <li>
               <p>
                 Sección de la página web de INSTAKASH donde el usuario puede documentar su reclamo de forma directa con la empresa. Estamos comprometidos a proporcionarle los más
                 altos estándares de servicio.
               </p>
             </li>
-            <h3>16. DEFINICIONES</h3>
+            <h2>16. DEFINICIONES</h2>
             <li>
               <p>VISITANTE: Cualquier persona que en cualquier momento visite o haya visitado la Plataforma.</p>
               <p>
@@ -492,7 +506,7 @@ const TerminosCondiciones = () => {
                 comisión por dicho servicio que EL USUARIO tendrá que asumir
               </p>
             </li>
-            <h3>17. ACUERDO COMPLETO</h3>
+            <h2>17. ACUERDO COMPLETO</h2>
             <li>
               <p>
                 Este contrato y cualquier documento expresamente mencionado en él, constituye el acuerdo entero entre EL USUARIO e INSTAKASH y sustituye cualquier discusión,

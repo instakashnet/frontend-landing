@@ -28,7 +28,7 @@ const Faq = () => {
         <h1 className={styles.Title}>¿Cómo podemos ayudarte?</h1>
         <article className="max-w-4xl mx-auto">
           <div className={styles.questionWrapper}>
-            <h3>Sobre mi cuenta y mi perfil</h3>
+            <h2>Sobre mi cuenta y mi perfil</h2>
             <Accordion allowZeroExpanded>
               <QuestionItem header="¿Cómo edito los datos de mi perfil?">
                 <p>
@@ -61,7 +61,7 @@ const Faq = () => {
           </div>
 
           <div className={styles.questionWrapper}>
-            <h3>Sobre los cambios de divisa</h3>
+            <h2>Sobre los cambios de divisa</h2>
             <Accordion allowZeroExpanded>
               <QuestionItem header="¿Hay un monto máximo por operación?">
                 <p>

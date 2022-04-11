@@ -5,7 +5,21 @@ const PoliticasPrivacidad = () => {
   return (
     <>
       <Head>
-        <title> Políticas de privacidad | Instakash</title>
+        <title>Políticas de Privacidad</title>
+        <meta name="title" content="Políticas de Privacidad | Instakash" />
+        <meta name="description" content="Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí " />
+        <meta http-equiv="content-language" content="es_PE" />
+        <link rel="icon" href="imagenes/favicon.png" type="image/png" />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://instakash.net/politicas-de-privacidad" />
+        <meta name="author" content="InstaKash" />
+        <meta name="url" content="https://instakash.net/politicas-de-privacidad" />
+        <meta property="og:title" content="Políticas de Privacidad | Instakash" />
+        <meta property="og:site_name" content="InstaKash" />
+        <meta property="og:url" content="https://instakash.net/politicas-de-privacidad" />{" "}
+        <meta property="og:description" content="Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí." />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="" />
       </Head>
       <section className={styles.legal}>
         <div className="section-wrapper container px-3 py-12">
@@ -30,7 +44,7 @@ const PoliticasPrivacidad = () => {
             para identificar a una persona.
           </p>
           <p>Esta Política de Privacidad abarca cómo recolectamos, utilizamos y los casos en los que compartimos su información personal.</p>
-          <h3>Información que podríamos obtener sobre usted:</h3>
+          <h2>Información que podríamos obtener sobre usted:</h2>
           <p>Podríamos recolectar y procesar los siguientes datos sobre usted:</p>
           <ol className="list-decimal pl-6">
             <li>
@@ -43,7 +57,7 @@ const PoliticasPrivacidad = () => {
               fotografía, copias de documentos de identidad, y entre otros.
             </li>
           </ol>
-          <h3>Información que recolectamos sobre usted:</h3>
+          <h2>Información que recolectamos sobre usted:</h2>
           <p>Con respecto a cada visita que realiza a nuestra página web, podríamos recolectar automáticamente la siguiente información:</p>
           <ol className="list-decimal pl-6">
             <li>Detalles de las transferencias de dinero y pagos realizados a través de la página web, incluyendo la ubicación geográfica desde la cual se genera.</li>
@@ -63,14 +77,14 @@ const PoliticasPrivacidad = () => {
               publicidad, negocios aliados, entre otros) y podríamos recibir información de ellos.
             </li>
           </ol>
-          <h3>Usos de la información recolectada:</h3>
+          <h2>Usos de la información recolectada:</h2>
           <p>
             La recolección y tratamiento de los Datos Personales, así como los eventuales encargos, transferencias y flujos transfronterizos que se realicen sobre estos a empresas
             vinculadas o proveedores de Instakash, tiene las siguientes finalidades:
           </p>
           <ol className="list-decimal pl-6">
             <li>
-              <p>Información proporcionada por usted:</p>
+              <h3>Información proporcionada por usted:</h3>
               <ul className="list-disc pl-6">
                 <li>
                   Para cumplir con nuestras obligaciones adquiridas en el marco de cualquier contrato entre usted y nosotros (incluyendo, pero sin limitarse a los Términos y
@@ -90,7 +104,7 @@ const PoliticasPrivacidad = () => {
               </ul>
             </li>
             <li>
-              <p>Información que recolectamos sobre usted:</p>
+              <h3>Información que recolectamos sobre usted:</h3>
               <ul className="list-disc pl-6">
                 <li>
                   Para administrar nuestra página web y para operaciones internas como solución de problemas operativos, análisis de datos, pruebas, así como fines estadísticos y
@@ -105,7 +119,7 @@ const PoliticasPrivacidad = () => {
               </ul>
             </li>
             <li>
-              <p>Información que recibimos de otras fuentes:</p>
+              <h3>Información que recibimos de otras fuentes:</h3>
               <p>
                 Nosotros podríamos combinar la información brindada por usted con información recolectada de otras fuentes con la finalidad de actualizar datos que se encuentren
                 incompletos o sustituirlos, en base a consultas de fuentes de acceso público. Esta información, y la información combinada, podría ser usada para cualquiera de los
@@ -113,11 +127,11 @@ const PoliticasPrivacidad = () => {
               </p>
             </li>
             <li>
-              <p>Revelación de su información:</p>
+              <h3>Revelación de su información:</h3>
               <p>Nosotros podríamos compartir su información personal con cualquier otro miembro de nuestro grupo, es decir subsidiarias, holding o sus subsidiarias.</p>
             </li>
             <li>
-              <p>Podríamos compartir su información con terceros seleccionados, incluyendo:</p>
+              <h3>Podríamos compartir su información con terceros seleccionados, incluyendo:</h3>
               <ul className="list-disc pl-6">
                 <li>Negocios aliados, proveedores o terceros contratados para proveer cualquier contrato que tengamos con usted o para ayudar a mejorar nuestro servicio.</li>
                 <li>Agencias de publicidad que requieran datos para seleccionar y enviar avisos relevantes a usted o terceros.</li>
@@ -126,7 +140,7 @@ const PoliticasPrivacidad = () => {
               </ul>
             </li>
             <li>
-              <p>Podríamos compartir su información personal con terceros:</p>
+              <h3>Podríamos compartir su información personal con terceros:</h3>
               <ul className="list-disc pl-6">
                 <li>
                   En caso que se venda o compra cualquier unidad del negocio o activo y sea necesario revelar su información personal a potenciales compradores o vendedores de
@@ -144,7 +158,7 @@ const PoliticasPrivacidad = () => {
               </ul>
             </li>
             <li>
-              <p>Dónde almacenamos su información personal:</p>
+              <h3>Dónde almacenamos su información personal:</h3>
               <p>
                 La información recolectada podría ser transferida y almacenada en un destino fuera del Perú. Esta podría ser también procesada por trabajadores operando fuera del
                 Perú que trabajen para nosotros o para algún proveedor. Estos trabajadores podrían estar asociados a actividades como la provisión de servicios de soporte o de
@@ -169,7 +183,7 @@ const PoliticasPrivacidad = () => {
               </p>
             </li>
             <li>
-              <p>Cookies</p>
+              <h3>Cookies</h3>
               <p>
                 Nuestra página web utiliza cookies para distinguirlo de cualquier otro usuario. Esto nos ayuda a brindarle una buena experiencia cuando navegues por nuestra página
                 web y, al mismo tiempo, nos permite mejorarla.
@@ -185,7 +199,7 @@ const PoliticasPrivacidad = () => {
               </p>
             </li>
             <li>
-              <p>Sus derechos</p>
+              <h3>Sus derechos</h3>
               <p>
                 Usted puede ejercer sus derechos de acceso, rectificación, cancelación y oposición, de impedir el suministro de sus datos personales, de oposición al tratamiento o
                 de tratamiento objetivo de los datos, en los términos recogidos en la legislación peruana vigente.
@@ -201,7 +215,7 @@ const PoliticasPrivacidad = () => {
               </p>
             </li>
           </ol>
-          <h3>Acceso a la información</h3>
+          <h2>Acceso a la información</h2>
           <p>
             Dependiendo de las leyes aplicables, usted podría tener el derecho a acceder a la información que tenemos sobre usted. Su derecho al acceso podrá ser ejecutado de
             acuerdo a la legislación de protección de información relevante. Cualquier solicitud de acceso podría estar sujeta al pago de una tarifa adicional para cubrir los
@@ -214,12 +228,12 @@ const PoliticasPrivacidad = () => {
           </p>
 
           <p>Esta Política de Privacidad, y cualquier disputa o reclamo que surjan como consecuencia de la misma se encuentra normada por la ley peruana.</p>
-          <h3>Resolución de conflictos</h3>
+          <h2>Resolución de conflictos</h2>
           <p>
             Las Partes se someten a la competencia de los jueces y tribunales de Lima, Cercado para resolver cualquier duda, diferencia o controversia que pudiera surgir entre las
             Partes respecto a los alcances de las Políticas de Privacidad de Instakash, renunciando al fuero que pudiera corresponderles en razón a su domicilio.
           </p>
-          <h3>Contacto</h3>
+          <h2>Contacto</h2>
           <p>
             Preguntas, solicitudes y comentarios asociados a esta Política de privacidad son bienvenidos y deberán ser dirigidos a{" "}
             <a href="mailto:contacto@instakash.net">contacto@instakash.net</a>
