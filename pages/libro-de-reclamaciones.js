@@ -81,10 +81,10 @@ const LibroReclamaciones = () => {
         <div className="section-wrapper container px-3 py-12">
           <div className="text-center">
             <h1 className={styles.Title}>Libro de reclamaciones</h1>
-            <h2 className={styles.Subtitle}>
+            <p className={styles.Subtitle}>
               Gestionamos tus reclamos para poder procesarlos de forma inmediata. Sabemos lo importante que es tu tiempo y tu dinero por lo que atendemos cada caso según su
               prioridad y a la breveddad. Cambiamos la forma de operar y te damos la garantía de seguridad más alta.
-            </h2>
+            </p>
           </div>
 
           <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto mt-8 lg:mt-16">

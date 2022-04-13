@@ -49,13 +49,13 @@ const Nosotros = () => {
           <h3>¡Síguenos!</h3>
           <div className="flex items-center justify-center mt-6">
             <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
-              <Image width={45} height={45} src="/images/social/instagram-green.svg" />
+              <Image width={45} height={45} alt="Instakash instagram" src="/images/social/instagram-green.svg" />
             </a>
             <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
-              <Image width={45} height={45} src="/images/social/facebook-green.svg" />
+              <Image width={45} height={45} alt="Instakash facebook" src="/images/social/facebook-green.svg" />
             </a>
             <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
-              <Image width={45} height={45} src="/images/social/linkedin-green.svg" />
+              <Image width={45} height={45} alt="Instakash linkedin" src="/images/social/linkedin-green.svg" />
             </a>
           </div>
         </div>

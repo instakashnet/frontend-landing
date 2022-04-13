@@ -7,7 +7,7 @@ const Footer = ({ pathname }) => {
     <footer className={styles.footer}>
       <div className="container grid grid-cols-1 md:grid-cols-4 md:py-8 px-8">
         <section className="col-span-1 my-2">
-          <Image src="/images/logo-white.svg" width={150} height={30} objectFit="contain" />
+          <Image src="/images/logo-white.svg" alt="Instakash casa de cambio online" width={150} height={30} objectFit="contain" />
           <p className="text-sm">Casa de cambio online. Con la mejor tasa de cambio comienza el cambio, fácil y seguro del Perú.</p>
           <div className="flex tems-center mt-5">
             <a href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer" className="relative w-6 h-6 md:w-8 md:h-8 mr-6">

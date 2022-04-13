@@ -77,7 +77,7 @@ const Home = ({ counters }) => {
             </Card>
           </div>
           <div className={styles.SuperkashWrapper}>
-            <Image src="/images/illustrations/superkash.svg" layout="fill" objectFit="contain" />
+            <Image src="/images/illustrations/superkash.svg" alt="Casa de cambio online" layout="fill" objectFit="contain" />
           </div>
         </div>
       </section>
@@ -122,7 +122,7 @@ const Home = ({ counters }) => {
           <div className={styles.UsersWrapper}>
             <div className={styles.UserInfoWrapper}>
               <div className="mr-6">
-                <Image src="/images/icons/laptop.svg" width={45} height={45} alt="" />
+                <Image src="/images/icons/laptop.svg" width={45} height={45} alt="cambios realizados" />
               </div>
               <div>
                 <span className={styles.UserInfo}>+{counters.qtySuccessfullOrders.toLocaleString("es-ES")}</span>
@@ -131,7 +131,7 @@ const Home = ({ counters }) => {
             </div>
             <div className={styles.UserInfoWrapper}>
               <div className="mr-6">
-                <Image src="/images/icons/soles.svg" width={45} height={45} alt="" />
+                <Image src="/images/icons/soles.svg" width={45} height={45} alt="cantidad de soles transferidos" />
               </div>
               <div>
                 <span className={styles.UserInfo}>+{counters.totalProcessed.substring(0, 3)} millones</span>
@@ -140,7 +140,7 @@ const Home = ({ counters }) => {
             </div>
             <div className={styles.UserInfoWrapper}>
               <div className="mr-6">
-                <Image src="/images/icons/users.svg" width={45} height={45} alt="" />
+                <Image src="/images/icons/users.svg" width={45} height={45} alt="usuarios registrados" />
               </div>
               <div>
                 <span className={styles.UserInfo}>+{counters.qtyUsers.toLocaleString("es-ES")}</span>
@@ -216,7 +216,7 @@ const Home = ({ counters }) => {
       <section className="container">
         <div className={styles.AppWrapper}>
           <div className={styles.AppImage}>
-            <Image src="/images/illustrations/app.svg" layout="fill" objectFit="contain" />
+            <Image src="/images/illustrations/app.png" alt="Descarga Instakash App" layout="fill" objectFit="contain" />
           </div>
           <div className={styles.AppInfoWrapper}>
             <h2>
@@ -236,10 +236,10 @@ const Home = ({ counters }) => {
             </ul>
             <div className="flex items-center justify-center md:justify-start mt-6">
               <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
-                <Image src="/images/illustrations/appstore.png" layout="fill" objectFit="contain" />
+                <Image src="/images/illustrations/appstore.png" alt="Descarga Instakash en app store" layout="fill" objectFit="contain" />
               </a>
               <a href="https://play.google.com/store/apps/details?id=net.instakash.app" className={styles.AppDownloadIcon}>
-                <Image src="/images/illustrations/playstore.png" layout="fill" objectFit="contain" />
+                <Image src="/images/illustrations/playstore.png" alt="Descarga Instakash en play store" layout="fill" objectFit="contain" />
               </a>
             </div>
           </div>

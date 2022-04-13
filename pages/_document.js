@@ -10,7 +10,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="es" className="notranslate" translate="no">
+      <Html lang="es_PE" className="notranslate" translate="no">
         <Head>
           <link rel="icon" href="/favicon.ico" type="image/png" />
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />

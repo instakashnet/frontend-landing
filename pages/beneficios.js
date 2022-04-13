@@ -207,7 +207,7 @@ const SuperCouponsModal = () => (
       </li>
     </ul>
     <Link className="mx-auto mt-6 block" href="/terminos-y-condiciones#cupones">
-      Conoce más sobre el uso de nuestros cupones aquí
+      <a>Conoce más sobre el uso de nuestros cupones aquí</a>
     </Link>
   </div>
 );

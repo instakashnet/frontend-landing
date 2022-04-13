@@ -112,7 +112,7 @@ const contacto = () => {
                 </div>
               </div>
               <div className={styles.contactImg}>
-                <Image src="/images/illustrations/contact.svg" alt="contacto" layout="fill" objectFit="contain" />
+                <Image src="/images/illustrations/contact.svg" alt="contáctanos y cambia tus dólares online" layout="fill" objectFit="contain" />
               </div>
             </article>
             <form onSubmit={formik.handleSubmit} className={`${styles.contactForm} mb-6 md:mb-0 order-1 md:order-2`}>
