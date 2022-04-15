@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
 import BenefitsCarousel from "../components/UI/benefits/carousel.component";
 import Card from "../components/UI/Card";
+import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../utils/fetch-data";
@@ -31,6 +33,16 @@ export async function getStaticProps() {
 }
 
 const Home = ({ counters }) => {
+  const [infoModal, setInfoModal] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setInfoModal(true);
+    }, 1200);
+  }, []);
+
+  const handleCloseModal = () => setInfoModal(false);
+
   return (
     <>
       <Head>
@@ -245,6 +257,9 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
+      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
+        <Image src="/images/banners/banner-hour.jpg" alt="Horario semana santa" layout="fill" objectFit="cover" />
+      </BaseModal>
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
