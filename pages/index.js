@@ -166,7 +166,7 @@ const Home = ({ counters }) => {
           <h2 className={styles.Title}>
             Beneficios de Instakash <br /> tu casa de cambio online
           </h2>
-          <p className={styles.Subtitle}>Disfruta de los beneficios de cambiar con nosotros..</p>
+          <p className={styles.Subtitle}>En Instakash te ayudamos a tener un mejor tipo de cambio.</p>
         </div>
         <BenefitsCarousel />
       </section>
