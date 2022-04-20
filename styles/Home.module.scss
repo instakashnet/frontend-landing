@@ -116,17 +116,22 @@
 }
 
 .BanksWrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
   left: 0;
   position: absolute;
   width: 100%;
   top: -280px;
   z-index: 1;
   padding: 0 1rem;
+  place-items: center;
 
   @include respond(tablet) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
     top: -100px;
   }
 }
@@ -135,7 +140,7 @@
   margin-bottom: 0.85rem;
   padding: 1rem 1.5rem;
   width: 100%;
-  max-width: 650px;
+  max-width: 400px;
   min-height: 130px;
   justify-self: flex-start;
 
@@ -147,6 +152,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 650px;
   }
 }
 
