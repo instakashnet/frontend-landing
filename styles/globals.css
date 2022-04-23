@@ -74,14 +74,13 @@ b {
 
 .accordion__button {
   color: var(--text-title);
-  border-bottom: 1px solid #0d8284;
   display: inline-block;
-  margin: 5px 0 7px;
+  margin: 5px 0;
 }
 
 .accordion__panel {
-  padding: 5px 0 10px;
-  border-bottom: 2px solid #0d8284;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0d8284;
   margin-bottom: 15px;
 }
 

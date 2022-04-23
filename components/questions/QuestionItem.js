@@ -1,10 +1,12 @@
-import { AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import { AccordionItem, AccordionItemButton, AccordionItemHeading, AccordionItemPanel } from "react-accessible-accordion";
 
 const QuestionItem = ({ header, children }) => {
   return (
     <AccordionItem>
       <AccordionItemHeading>
-        <AccordionItemButton>{header}</AccordionItemButton>
+        <AccordionItemButton>
+          <h2>{header}</h2>
+        </AccordionItemButton>
       </AccordionItemHeading>
       <AccordionItemPanel>{children}</AccordionItemPanel>
     </AccordionItem>
