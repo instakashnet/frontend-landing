@@ -69,7 +69,9 @@ const Promociones = () => {
                   <a href="https://www.instagram.com/p/CdDz5UnsvBx/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer" className="mr-4">
                     Participar
                   </a>
-                  <a href="#">Saber más</a>
+                  <a href="https://s3.us-east-2.amazonaws.com/instakash.net/documents/Terminos-y-condiciones-PARA-MAMA.docx.pdf" target="_blank" rel="noopener noreferrer">
+                    Saber más
+                  </a>
                 </div>
               </div>
             </Card>
