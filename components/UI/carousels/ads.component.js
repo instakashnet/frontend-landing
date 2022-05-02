@@ -28,7 +28,7 @@ const AdsCarousel = () => {
         </Link>
       </div>
       <div className="w-full">
-        <a href="#" className={styles.BannerCard}>
+        <a href="https://www.instagram.com/p/CdDz5UnsvBx/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
           <Image src="/images/banners/sorteo-mama.png" layout="fill" objectFit="contain" />
         </a>
       </div>

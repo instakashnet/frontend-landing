@@ -66,7 +66,7 @@ const Promociones = () => {
                   masajes suecos en el Marriot, totalmente GRATIS!
                 </p>
                 <div className={styles.Actions}>
-                  <a href="https://app.instakash.net/signin" className="mr-4">
+                  <a href="https://www.instagram.com/p/CdDz5UnsvBx/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer" className="mr-4">
                     Participar
                   </a>
                   <a href="#">Saber más</a>
