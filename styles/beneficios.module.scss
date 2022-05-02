@@ -56,6 +56,15 @@
       justify-items: center;
       margin: auto;
       padding-top: 1rem;
+
+      a:last-child {
+        margin-top: 1rem;
+        color: $base-green;
+        text-decoration: underline;
+        background-color: transparent;
+        font-weight: 500;
+        font-size: 1rem;
+      }
     }
   }
 
@@ -74,6 +83,7 @@
     font-weight: bold;
     font-size: $caption;
     text-align: center;
+    min-width: 10rem;
 
     &:hover,
     &:focus {

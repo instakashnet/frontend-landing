@@ -5,13 +5,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import Card from "../Card";
-import styles from "./Carousel.module.scss";
+import styles from "./Benefits.module.scss";
 
 const BenefitsCarousel = () => {
   let settings = {
     dots: true,
     infinite: true,
-    speed: 500,
     autoplay: true,
     speed: 1000,
     draggable: false,
@@ -37,13 +36,13 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/semanasanta.png" alt="Cupón para cambio online SEMANASANTA" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/mes-madre.png" alt="Cupón para cambio online GRACIASMAMA" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
                   <strong>Cupón de descuento</strong>
                 </p>
-                <p>Cupón válido para 4 usos por el mes de Abril.</p>
+                <p>Cupón válido para 4 usos por el mes de Mayo.</p>
               </div>
             </a>
           </Link>
@@ -54,13 +53,13 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/utilidades.png" alt="Cupón para cambio online MESDEUTILIDADES" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/sorteo.png" alt="Participa en nuestro sorteo el mes de la madre." layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
-                  <strong>Cupón de descuento</strong>
+                  <strong>Sorteo</strong>
                 </p>
-                <p>Cupón válido desde el 4 de abril y hasta el 15 de abril.</p>
+                <p>Disponible desde el 2 de Mayo hasta el 27 de Mayo.</p>
               </div>
             </a>
           </Link>

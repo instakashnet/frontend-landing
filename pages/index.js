@@ -4,8 +4,10 @@ import Script from "next/script";
 // import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-import BenefitsCarousel from "../components/UI/benefits/carousel.component";
+import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
+import AdsCarousel from "../components/UI/carousels/ads.component";
+import BenefitsCarousel from "../components/UI/carousels/benefits.component";
 // import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
@@ -65,6 +67,14 @@ const Home = ({ counters }) => {
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
+      <Callout type="info">
+        <p>
+          Ahora puedes cambiar tus dólares de <b>Lunes a Domingo hasta las 9PM.</b>
+        </p>
+      </Callout>
+      <div className="container">
+        <AdsCarousel />
+      </div>
       <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 mt-3">

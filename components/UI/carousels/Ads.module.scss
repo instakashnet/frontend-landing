@@ -1,0 +1,18 @@
+@import "../../../styles/breakpoints";
+
+.BannerCard {
+  min-height: 9.5rem;
+  width: 100%;
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+.BannerSlider {
+  min-height: 10rem;
+  display: none;
+
+  @include respond(desktop) {
+    display: block;
+  }
+}
