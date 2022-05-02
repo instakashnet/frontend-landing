@@ -9,9 +9,9 @@ import styles from "./Ads.module.scss";
 const AdsCarousel = () => {
   let settings = {
     infinite: true,
-    speed: 2000,
+    speed: 1500,
     autoplay: true,
-    autoplaySpeed: 7000,
+    autoplaySpeed: 4000,
     dots: false,
     arrows: false,
     slidesToShow: 1,
@@ -21,16 +21,16 @@ const AdsCarousel = () => {
   return (
     <Slider className={styles.BannerSlider} {...settings}>
       <div className="w-full">
+        <a href="https://rebrand.ly/2jmv3wh" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
+          <Image src="/images/banners/sorteo-mama.png" layout="fill" objectFit="contain" />
+        </a>
+      </div>
+      <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             <Image src="/images/banners/kash.png" layout="fill" objectFit="contain" />
           </a>
         </Link>
-      </div>
-      <div className="w-full">
-        <a href="https://www.instagram.com/p/CdDz5UnsvBx/?utm_source=ig_web_copy_link" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
-          <Image src="/images/banners/sorteo-mama.png" layout="fill" objectFit="contain" />
-        </a>
       </div>
     </Slider>
   );
