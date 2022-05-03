@@ -72,12 +72,12 @@ const Home = ({ counters }) => {
           Ahora puedes cambiar tus dólares de <b>Lunes a Domingo hasta las 9PM.</b>
         </p>
       </Callout>
-      <div className="container">
+      <div className="container pb-0">
         <AdsCarousel />
       </div>
       <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
-          <div className="grid grid-cols-1 md:grid-cols-2 mt-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 md:mt-3">
             <div className={styles.TitleWrapper}>
               <h1>
                 <em>Casa de cambio online</em>
