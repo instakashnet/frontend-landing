@@ -6,10 +6,10 @@
 .CalculatorSection {
   background-position: center 100%;
   background-repeat: no-repeat;
+  background-size: 65%;
 
   @include respond(tablet) {
-    background-image: url("/images/bg/city.svg");
-    background-size: 70%;
+    background-image: url("/images/bg/city.png");
   }
 
   @include respond(desktop) {
@@ -17,9 +17,8 @@
   }
 
   @media screen and (min-width: 1280px) and (max-height: 900px) {
-    background-image: url("/images/bg/city.svg");
-    max-height: 90vh;
-    background-size: 60%;
+    background-image: url("/images/bg/city.png");
+    max-height: 87vh;
   }
 }
 
@@ -103,7 +102,7 @@
   @include respond(desktop) {
     width: 500px;
     height: 300px;
-    top: -170px;
+    top: -130px;
   }
 }
 

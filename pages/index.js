@@ -4,7 +4,7 @@ import Script from "next/script";
 // import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-import Callout from "../components/UI/callout.component";
+// import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
@@ -67,12 +67,14 @@ const Home = ({ counters }) => {
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
-      <Callout type="info">
-        <p>
-          Ahora puedes cambiar tus dólares de <b>Lunes a Domingo hasta las 9PM.</b>
-        </p>
-      </Callout>
-      <div className="container pb-0">
+      {/* <Callout type="info">
+        <div className="container p-0 mt-4">
+          <p>
+            Ahora puedes cambiar tus dólares de <b>Lunes a Domingo hasta las 9PM.</b>
+          </p>
+        </div>
+      </Callout> */}
+      <div className="container px-0 pb-0">
         <AdsCarousel />
       </div>
       <section className={styles.CalculatorSection} id="calculator">
