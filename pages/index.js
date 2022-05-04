@@ -259,11 +259,11 @@ const Home = ({ counters }) => {
               </li>
             </ul>
             <div className="flex items-center justify-center md:justify-start mt-6">
-              <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
-                <Image src="/images/illustrations/appstore.png" alt="Descarga Instakash en app store" layout="fill" objectFit="contain" />
-              </a>
               <a href="https://play.google.com/store/apps/details?id=net.instakash.app" className={styles.AppDownloadIcon}>
-                <Image src="/images/illustrations/playstore.png" alt="Descarga Instakash en play store" layout="fill" objectFit="contain" />
+                <Image src="/images/illustrations/playstore.svg" alt="Descarga Instakash en play store" layout="fill" objectFit="contain" />
+              </a>
+              <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
+                <Image src="/images/illustrations/appstore.svg" alt="Descarga Instakash en app store" layout="fill" objectFit="contain" />
               </a>
             </div>
           </div>

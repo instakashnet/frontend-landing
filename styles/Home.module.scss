@@ -339,7 +339,8 @@
 
   @include respond(desktop) {
     flex-direction: row;
-    min-height: 75vh;
+    min-height: 70vh;
+    max-height: 1080px;
   }
 }
 
@@ -354,8 +355,8 @@
   }
 
   @include respond(desktop) {
-    width: 800px;
-    height: 800px;
+    width: 900px;
+    height: 500px;
   }
 }
 
@@ -406,5 +407,5 @@
   position: relative;
   display: block;
   z-index: 1;
-  height: 100px;
+  height: 80px;
 }
