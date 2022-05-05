@@ -240,7 +240,7 @@ const TerminosCondiciones = () => {
               </ul>
             </li>
 
-            <li id="#cupones">
+            <li id="#cupones" className="mt-2">
               <h2>5.3 CUPONES DE DESCUENTO:</h2>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
@@ -262,6 +262,37 @@ const TerminosCondiciones = () => {
               <p>
                 INSTAKASH se reserva la discreción sobre casos puntuales o extraordinarios de los beneficios que otorga con los cupones dependiendo de la situación y el caso
                 presentado a nuestro equipo de atención al usuario.
+              </p>
+              <h4>Cupón INKAEMPRESAS</h4>
+              <p>
+                El cupón INKAEMPRESAS es el cupón que ha sido creado para las empresas afiliadas a INSTAKASH. El cupón otorga puntos a favor de la tasa de cambio y debe ser
+                activado por medio de Servicio al Cliente Instakash. Para ponerse en contacto encontrará un botón de Whatsapp en la parte inferior derecha de su pantalla acá en
+                nuestro sitio web.
+              </p>
+              <h4>Plan de Empresas Afiliadas</h4>
+              <p>
+                El Plan de Empresas Afiliadas ha sido creado para para apoyar la gestión de las empresas en el Perú, nuestro objetivo es generar procesos y actividades que
+                garanticen el ahorro y la mejor experiencia de cambio de divisas . El plan incluye:{" "}
+              </p>
+              <ol>
+                <li>Atención preferencial para nuestra red empresas (tiempos más rápidos).</li>
+                <li>Cotización preferencial y en directo de la mejor tasa posible según el mercado.</li>
+                <li>Descuentos usando cupón preferencial. Es importante tener en cuenta el horario del mercado 9:30 AM a 4:00 PM.</li>
+                <li>Atención para cambios en BCP e Interbank el fin de semana.</li>
+                {/* <ol>Talonario de cambios - Aún no se dice.</ol> */}
+              </ol>
+              <p>Para ser parte de nuestro Plan de Empresas Afiliadas solo tiene que compartirnos algunos datos: </p>
+              <ul>
+                <li>Nombre completo</li>
+                <li>Nombre de la empresa</li>
+                <li>RUC</li>
+                <li>Correo electrónico de la cuenta asociada</li>
+                <li>Teléfono de contacto</li>
+                <li>Cargo</li>
+              </ul>
+              <p>
+                Para acceder a este Plan de Empresas Afiliadas, puede escribirnos a través de los canales oficiales de Instakash (Whatsapp en nuestra página web, Instagram,
+                Facebook) y nuestros asesores estarán encantandos de hacerlos parte de este grupo de empresas peruanas que hoy trabajan con Instakash.
               </p>
             </li>
           </ol>
@@ -313,10 +344,10 @@ const TerminosCondiciones = () => {
               <p>INSTAKASH trasladará al usuario cualquier comisión generada por la entidad bancaria en cualquiera de los siguientes casos:</p>
             </li>
             <ol className="pl-6 mt-2">
-              <li>1. Use cuentas bancarias de plazas distintas a Lima y esto incurra en comisiones interplaza.</li>
-              <li>2. Realice una transferencia en la agencia de su entidad bancaria y esta se encuentre en una plaza distinta a Lima.</li>
-              <li>3. Realice operaciones de transferencia bancarias desde provincias, de otros bancos distintos a: BCP (solo banca por internet), Interbank.</li>
-              <li>4. Las comisiones de transferencias interbancarias será la que el banco estipule al momento de hacer la transferencia a la cuenta destino.</li>
+              <li>Use cuentas bancarias de plazas distintas a Lima y esto incurra en comisiones interplaza.</li>
+              <li>Realice una transferencia en la agencia de su entidad bancaria y esta se encuentre en una plaza distinta a Lima.</li>
+              <li>Realice operaciones de transferencia bancarias desde provincias, de otros bancos distintos a: BCP (solo banca por internet), Interbank.</li>
+              <li>Las comisiones de transferencias interbancarias será la que el banco estipule al momento de hacer la transferencia a la cuenta destino.</li>
             </ol>
             <p>
               <b>Comisiones para transferencias interbancarias: 3.50 $ (comision fija)</b>
