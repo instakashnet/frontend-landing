@@ -179,7 +179,7 @@
   background: linear-gradient(90deg, rgba(32, 162, 165, 0.9) 0%, rgba(103, 190, 159, 0.9) 100%), url("/images/bg/texture.png") 50%;
   background-repeat: no-repeat;
   background-position: center;
-  min-height: 250px;
+  min-height: 150px;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -203,7 +203,7 @@
 }
 
 .UserInfoWrapper {
-  padding: 1.5rem 3rem;
+  padding: 1.5rem 3rem 0.5rem;
   display: flex;
   align-items: center;
   width: 100%;
