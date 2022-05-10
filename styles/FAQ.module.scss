@@ -4,11 +4,7 @@
 @import "./fontSizes";
 
 .questions {
-  background: url("/images/bg/faq.svg");
-  background-size: 350px;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  padding-bottom: 20rem;
+  min-height: 80vh;
 
   @include respond(tablet) {
     padding-bottom: 0;
@@ -21,8 +17,6 @@
   margin: 15px;
 
   h2 {
-    font-size: math.div($info-text, 1.4);
-    color: $base-green;
     margin-bottom: 10px;
   }
 
@@ -78,4 +72,10 @@
   @include respond(desktop) {
     font-size: math.div($subtitle, 1.25);
   }
+}
+
+.QuestionsBg {
+  position: relative;
+  height: 300px;
+  width: 100%;
 }
