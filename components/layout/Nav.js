@@ -84,6 +84,9 @@ const Nav = () => {
           <li>
             <Link href="/beneficios">Beneficios</Link>
           </li>
+          <li>
+              <Link href="/faq">FAQ</Link>
+            </li>
         </ul>
         <div className={styles.schedule}>
           <h3>Horario</h3>
