@@ -32,8 +32,6 @@ const Faq = () => {
     })();
   }, []);
 
-  console.log(rates);
-
   return (
     <>
       <Head>
@@ -63,10 +61,10 @@ const Faq = () => {
               <Accordion allowZeroExpanded>
                 {selectedTab === 1 && (
                   <>
-                    <QuestionItem header="¿Cuál es el tipo de cambio para hoy?">
-                      <p>El tipo de cambio para comprar es____ y para vender es ____</p>
+                    <QuestionItem header="1. ¿Cuál es el tipo de cambio para hoy?">
+                      <p>El tipo de cambio para comprar es <b>{rates.buy}</b> y para vender es <b>{rates.sell}</b></p>
                     </QuestionItem>
-                    <QuestionItem header="¿Qué es una casa de cambio online?">
+                    <QuestionItem header="2. ¿Qué es una casa de cambio online?">
                       <p>Es una plataforma que te permite la compra y venta de dólares a través de internet, sin salir de casa.</p>
                       <p>
                         En Instakash te ofrecemos una forma plataforma fácil, segura, certificada por la SBS y con el mejor tipo de cambio. Descarga nuestra app para{" "}
@@ -80,7 +78,7 @@ const Faq = () => {
                         .
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Es seguro cambiar en una casa de cambio online?">
+                    <QuestionItem header="3. ¿Es seguro cambiar en una casa de cambio online?">
                       <p>Para que tengas una experiencia positiva al cambiar dólares online asegúrate de que tu casa de cambio online esté:</p>
                       <ul className="mb-4">
                         <li>Inscrita y avalada por la SBS. Como Instakash 😉</li>
@@ -92,7 +90,7 @@ const Faq = () => {
 
                       <p>Asegurate de revisar el tipo de cambio aprobado al momento de finalizar la operación</p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo comprar o vender dólares de forma segura y con el mejor tipo de cambio?">
+                    <QuestionItem header="4. ¿Cómo comprar o vender dólares de forma segura y con el mejor tipo de cambio?">
                       <p>
                         Regístrate en Instakash o descarga nuestra app para{" "}
                         <a href="https://apps.apple.com/pe/app/instakash/id1601561803" target="_blank" rel="noopener noreferer">
@@ -110,7 +108,7 @@ const Faq = () => {
                         <li>Confirma el número de transferencia en Instakash y recibe tu dinero.</li>
                       </ol>
                     </QuestionItem>
-                    <QuestionItem header="¿Instakash tiene Cupones y beneficios para cambiar mejor?">
+                    <QuestionItem header="5. ¿Instakash tiene Cupones y beneficios para cambiar mejor?">
                       <p>
                         En Instakash hemos creado{" "}
                         <Link href="/beneficios">
@@ -120,7 +118,7 @@ const Faq = () => {
                         de cambiar. Conoce nuestros KASH.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Qué comisiones debo tener en cuenta al comprar o vender dólares?">
+                    <QuestionItem header="6. ¿Qué comisiones debo tener en cuenta al comprar o vender dólares?">
                       <p>
                         Instakash no te cobra comisiones extra por realizar el cambio. Las comisiones que debes tener en cuenta son las comisiones que te cobra tu banco para
                         desembolsar el dinero que vas a cambiar. Suelen ser unas cuando son cuentas en provincia y otras cuando son interbancarias.{" "}
@@ -130,20 +128,20 @@ const Faq = () => {
                         .
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Con qué monedas trabaja Instakash?">
+                    <QuestionItem header="7. ¿Con qué monedas trabaja Instakash?">
                       <p>Por el momento, solo trabajamos con dólares y soles.</p>
                     </QuestionItem>
                   </>
                 )}
                 {selectedTab === 2 && (
                   <>
-                    <QuestionItem header="¿Que son los KASH?">
+                    <QuestionItem header="8. ¿Que son los KASH?">
                       <p>
                         Son monedas digitales que adquieres en Instakash y que te sirven para ahorrarlos en Instakash o para retirarlos. 1 KASH equivale a $1 dólar.{" "}
                         <a href="https://app.instakash.net/signup">Regístrate</a> y comienza a ganar.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo uso mis KASH?">
+                    <QuestionItem header="9. ¿Cómo uso mis KASH?">
                       <p>
                         Usar tus kash es muy fácil y productivo. 1) Puedes canjearlos por los diferentes beneficios exclusivos para usuario. 2) Puedes ponerlos a jugar en los
                         diferentes concursos que tenemos para nuestros usuarios. 3) Puedes ahorrarlos e incluso puedes retirarlos.
@@ -153,14 +151,14 @@ const Faq = () => {
                 )}
                 {selectedTab === 3 && (
                   <>
-                    <QuestionItem header="¿Por qué debo completar mis datos del perfil?">
+                    <QuestionItem header="10. ¿Por qué debo completar mis datos del perfil?">
                       <p>
                         En Instakash debemos tener tus datos personales completos y verificar tu identidad cuando vas a realizar cambios a partir de los 1000 USD, esto para
                         garantizarte la seguridad en tus transacciones. Instakash no te solicitará claves ni accesos a tus cuentas bancarias para operar y tendrás total control de
                         la información que compartes con nosotros así como del intercambio de dinero entre Instakash y los bancos.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo edito los datos de mi perfil?">
+                    <QuestionItem header="11. ¿Cómo edito los datos de mi perfil?">
                       <p>
                         Todos tus datos personales adicionales pueden ser modificados desde tu pantalla de perfil, por ejemplo, fecha de nacimiento, contraseña, ocupación,
                         profesión y dirección. Todos los datos sensibles como: nombre y documento de identidad deberás solicitarlo con soporte a través de{" "}
@@ -168,10 +166,10 @@ const Faq = () => {
                         para realizar cualquier cambio.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo cambio mi contraseña?">
+                    <QuestionItem header="12. ¿Cómo cambio mi contraseña?">
                       <p>Puedes realizarlo al inicio en la sección “registro”, en el apartado “olvide contraseña” así como dentro de tu perfil.</p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo cambio mi dirección de correo electrónico y mi teléfono?">
+                    <QuestionItem header="13. ¿Cómo cambio mi dirección de correo electrónico y mi teléfono?">
                       <p>
                         La dirección de correo electrónico y tu teléfono puedes modificarlos ingresando a tu perfil en la sección de datos básicos. Es importante que tengas en
                         cuenta cada cuenta en Instakash tenga un único correo electrónico y teléfono. Si tienes alguna duda adicional, escríbenos a{" "}
@@ -182,7 +180,7 @@ const Faq = () => {
                 )}
                 {selectedTab === 4 && (
                   <>
-                    <QuestionItem header="¿Hay un monto máximo por operación?">
+                    <QuestionItem header="14. ¿Hay un monto máximo por operación?">
                       <p>
                         Instakash no tiene monto máximo. Sin embargo, tu banco te puede asignar un máximo de transferencia al día. En ese caso puedes realizar tu transferencia en
                         la misma agencia, por ventanilla (solo si la cuenta es de Lima). Primero deberás registrar tu operación en nuestra plataforma e ingresar el nro. de su
@@ -190,7 +188,7 @@ const Faq = () => {
                         de provincias, solo puede utilizar su banca en línea para empresas o personas.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cuál es el tipo de cambio garantizado?">
+                    <QuestionItem header="15. ¿Cuál es el tipo de cambio garantizado?">
                       <p>
                         Es el valor del cambio cotizado que te define cuánto recibirás al concluir la operación. Es decir cuando haz enviado el comprobante de la transferencia que
                         te genera tu banco. El tipo de cambio online que te estamos cotizando está garantizado por un tiempo de 15 minutos que comienzan a correr cuando inicias el
@@ -198,14 +196,14 @@ const Faq = () => {
                         se actualizará indicando un nuevo tipo de cambio. Recuerda esto es fundamental que lo tengas claro.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Puedo ver el estado de mis operaciones?">
+                    <QuestionItem header="16. ¿Puedo ver el estado de mis operaciones?">
                       <p>
                         En Instakash podrás ver en la parte superior de tu pantalla cada uno de los pasos a medida que avanzas en el proceso de cambio. Así mismo conocerás el
                         estado de tu operación a través de correos electrónicos y/o notificaciones de aplicación, siendo estos: en validación, en proceso, exitosa o cancelada.
                         Todas tus transacciones quedan registradas y ligadas a tu cuenta en la sección de “Mis cambios”.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo se que envié el pago?">
+                    <QuestionItem header="17. ¿Cómo se que envié el pago?">
                       <p>
                         Recibirás un correo electrónico de parte de tu entidad bancaria con el voucher y el número de operación del comprobante de pago. Este nûmero de operación
                         debes ingresarlo en nuestra plataforma para completar tu pedido. Si es interbancaria, la constancia será el mismo voucher que debes enviarnos a{" "}
@@ -213,7 +211,7 @@ const Faq = () => {
                         ventanilla) o virtual (enviada por mail al momento de hacer la transferencia). Recuerda que no recibimos depósitos, solo transferencias.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cuándo se procesará mi operación?">
+                    <QuestionItem header="18. ¿Cuándo se procesará mi operación?">
                       <p>
                         Tu operación será procesada cuando recibamos en nuestras cuentas el dinero y lo validemos con el voucher de la operación con tu banco. Una vez confirmado el
                         abono en nuestras cuentas recibirás una confirmación vía email o en la aplicación cuando hayamos enviado el cambio a tu cuenta. Para conocer más puede ver
@@ -224,7 +222,7 @@ const Faq = () => {
                         .
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cuál es el tiempo estimado de los bancos?">
+                    <QuestionItem header="19. ¿Cuál es el tiempo estimado de los bancos?">
                       <p>
                         El tiempo estimado que toma la transferencia está sujeto al tiempo que tardan en llegar los fondos transferidos a las cuentas de Instakash. Cuando las
                         transferencias se realizan entre cuentas del mismo banco, son inmediatas. Cuando son interbancarias pueden tomar hasta 48 horas. Instakash no tiene ningún
@@ -236,7 +234,7 @@ const Faq = () => {
                         estarán atentos a ayudarte en lo que necesites.
                       </p>
                     </QuestionItem>
-                    <QuestionItem header="¿Cómo cancelo mi operación?">
+                    <QuestionItem header="20. ¿Cómo cancelo mi operación?">
                       <p>
                         Si ya has creado una orden de compra y hay datos del destinatario que no son correctos, por favor ponte en contacto con nosotros lo antes posible para que
                         podamos ayudarte. Puedes escribirnos un email a <a href="mailto:contacto@instakash.net">contacto@instakash</a>. o a nuestros whatsapp con tus datos y te

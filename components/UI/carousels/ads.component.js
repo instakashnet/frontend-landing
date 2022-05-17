@@ -24,15 +24,6 @@ const AdsCarousel = () => {
   return (
     <Slider className={styles.BannerSlider} {...settings}>
       <div className="w-full">
-        <a href="https://rebrand.ly/2jmv3wh" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
-          {isMobile ? (
-            <Image src="/images/banners/sorteo-mama-360.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
-          ) : (
-            <Image src="/images/banners/sorteo-mama-1200.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
-          )}
-        </a>
-      </div>
-      <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
@@ -42,6 +33,15 @@ const AdsCarousel = () => {
             )}
           </a>
         </Link>
+      </div>
+      <div className="w-full">
+        <a href="https://rebrand.ly/2jmv3wh" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
+          {isMobile ? (
+            <Image src="/images/banners/sorteo-mama-360.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
+          ) : (
+            <Image src="/images/banners/sorteo-mama-1200.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
+          )}
+        </a>
       </div>
     </Slider>
   );
