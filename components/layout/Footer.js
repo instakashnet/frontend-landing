@@ -79,7 +79,11 @@ const Footer = ({ pathname }) => {
                 <a href="mailto:contacto@instakash.net">contacto@instakash.net</a>
               </li>
               <li>
-                Lunes a Domingo <br /> 9 a.m - 9 p.m
+                Lunes a Sábado <br /> 9 a.m - 8 p.m
+              </li>
+              <li>
+                Domingos y feriados <br />
+                cerrados
               </li>
             </ul>
           </div>

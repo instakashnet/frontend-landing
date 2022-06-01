@@ -30,23 +30,21 @@ const Nosotros = () => {
           <h3 className={styles.Subtitle}>La Fintech del futuro</h3>
           <hr className="mx-auto mb-8" />
           <p className="mb-6 px-4 md:w-2/3 mx-auto">
-            Somos una casa de cambio digital en el Perú, nuestra misión es trabajar para que el tipo de cambio compra y venta de tus dólares sea más fácil, segura y con la mejor
-            tasa del mercado.
+            Somos Instakash casa de cambio online del Perú. Trabajamos para darte la mejor experiencia de cambio fácil, segura y con la mejor tasa del mercado.
           </p>
+          <p className="mb-6">Busca en nuestra sección de beneficios cupones con puntos a tu favor para seguir mejorando tu tasa.</p>
+
           <p className="mb-6">
-            Cambiando con Instakash además podrás disfrutar de tu dinero con los beneficios exclusivos que tenemos para ti, los cupones para seguir mejorando tu tasa de cambio y
-            actividades para que sigas disfrutando de cambiar con Instakash.
+            Desde hace 3 años Instakash es parte del ecosistema Fintech del Perú y a la fecha más de 20.000 usuarios que han confiado en nosotros, moviendo más de 574 millones de
+            soles.
           </p>
 
           <p className="mb-6">
-            Desde hace 3 años Instakash es parte del ecosistema Fintech del Perú, a la fecha más de 19.000 personas han confiado en nosotros moviendo más de 574 millones de soles.
-            Seguimos, comprometidos con entregarte la mejor experiencia de cambio de dólares en el Perú.
+            <strong>Con la mejor tasa comienza el cambio fácil y seguro.</strong> <br /> Cambia con Instakash.
           </p>
-
-          <p className="mb-6">
-            Instakash, <strong>con la mejor tasa comienza el cambio.</strong>
-          </p>
-          <h3>¡Síguenos!</h3>
+          <h3>
+            <b>¡Síguenos!</b>
+          </h3>
           <div className="flex items-center justify-center mt-6">
             <a href="!#" target="_blank" rel="noopener noreferrer" className="mx-3">
               <Image width={45} height={45} alt="Instakash instagram" src="/images/social/instagram-green.svg" />

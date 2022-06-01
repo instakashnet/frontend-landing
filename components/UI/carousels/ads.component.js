@@ -35,11 +35,22 @@ const AdsCarousel = () => {
         </Link>
       </div>
       <div className="w-full">
-        <a href="https://rebrand.ly/2jmv3wh" target="_blank" rel="noopener noreferrer" className={styles.BannerCard}>
+        <Link href="/beneficios">
+          <a className={styles.BannerCard}>
+            {isMobile ? (
+              <Image src="/images/banners/cupon-360.png" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
+            ) : (
+              <Image src="/images/banners/cupon-1200.png" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
+            )}
+          </a>
+        </Link>
+      </div>
+      <div className="w-full">
+        <a className={styles.BannerCard} href="https://wa.link/3yt2bw" target="_blank" rel="noopener noreferrer">
           {isMobile ? (
-            <Image src="/images/banners/sorteo-mama-360.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
+            <Image src="/images/banners/empresas-360.png" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
           ) : (
-            <Image src="/images/banners/sorteo-mama-1200.png" alt="Gana un día en un SPA para MAMÁ con INSTAKASH" layout="fill" objectFit="contain" />
+            <Image src="/images/banners/empresas-1200.png" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
           )}
         </a>
       </div>

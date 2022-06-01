@@ -36,35 +36,19 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/mes-madre.png" alt="Cupón para cambio online GRACIASMAMA" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/empresas.png" alt="Cupón para cambio online para empresas" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
-                  <strong>Cupón de descuento</strong>
+                  <strong>Plan de empresas</strong>
                 </p>
-                <p>Cupón válido para 4 usos por el mes de Mayo.</p>
+                <p>Afíliate a nuestro Plan para Empresas y recibe beneficios exclusivos.</p>
               </div>
             </a>
           </Link>
         </Card>
       </div>
-      <div className={styles.Slide}>
-        <Card className={styles.BenefitsCard}>
-          <Link href="/beneficios">
-            <a className="block">
-              <div className={styles.Cover}>
-                <Image src="/images/beneficios/sorteo.png" alt="Participa en nuestro sorteo el mes de la madre." layout="fill" objectFit="cover" />
-              </div>
-              <div className={styles.BenefitsInfo}>
-                <p>
-                  <strong>Sorteo</strong>
-                </p>
-                <p>Disponible desde el 2 de Mayo hasta el 27 de Mayo.</p>
-              </div>
-            </a>
-          </Link>
-        </Card>
-      </div>
+
       <div className={styles.Slide}>
         <Card className={styles.BenefitsCard}>
           <Link href="/beneficios">

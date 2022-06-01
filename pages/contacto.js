@@ -78,7 +78,8 @@ const contacto = () => {
                 <Clock className={styles.infoIcon} />
                 <section>
                   <h2>Nuestro horario</h2>
-                  <p className="text-sm">Lunes a Domingo: 9AM a 9PM</p>
+                  <p className="text-sm">Lunes a Sábado: 9AM a 8PM</p>
+                  <p className="text-sm">Domingos y Feriados: cerrados</p>
                 </section>
               </div>
               <div className="flex items-center my-8">
