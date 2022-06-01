@@ -1,0 +1,90 @@
+@use "sass:math";
+@import "./colors";
+@import "./breakpoints";
+@import "./fontSizes";
+
+.ContactSection {
+  padding: 1rem 0;
+
+  h2 {
+    font-size: math.div($info-text, 1.25);
+    font-weight: 700;
+    color: $text-title;
+  }
+
+  @include respond(desktop) {
+    h2 {
+      font-size: $info-text;
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactImg {
+  width: 20rem;
+  height: 16rem;
+  top: 40px;
+  position: relative;
+
+  @include respond(tablet) {
+    width: 30rem;
+    top: 30px;
+  }
+}
+
+.infoIcon {
+  color: $base-green;
+  margin-right: 20px;
+  height: 60px;
+  width: 60px;
+  padding: 15px;
+  border: 1px solid $base-green;
+  border-radius: 50%;
+}
+
+.contactForm {
+  max-width: 33rem;
+  margin: 15px auto 0;
+
+  button {
+    width: 100%;
+    max-width: 20rem;
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+.Title {
+  color: $text-title;
+  font-size: math.div($title, 2);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+
+  @include respond(tablet) {
+    font-size: math.div($title, 1.5);
+  }
+
+  @include respond(desktop) {
+    font-size: math.div($title, 1.25);
+  }
+}
+
+.Subtitle {
+  font-size: math.div($subtitle, 1.8);
+  line-height: 1.5;
+  width: 18rem;
+  margin: 0 auto;
+
+  @include respond(tablet) {
+    font-size: math.div($subtitle, 1.6);
+    margin-bottom: 1rem;
+
+    width: 30rem;
+  }
+}

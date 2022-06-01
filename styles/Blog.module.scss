@@ -1,0 +1,166 @@
+@import "./colors";
+
+.recentPost {
+  position: relative;
+  color: #fff;
+  min-height: 65vh;
+  margin: 0 10px 35px 10px;
+
+  h1 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin: 25px 0 3px;
+  }
+
+  span {
+    font-size: 0.9rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-top: 15px;
+  }
+
+  img {
+    width: 100%;
+    max-height: 85vh;
+  }
+
+  @media (min-width: 996px) {
+    min-height: 65vh;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    span {
+      font-size: 1rem;
+    }
+  }
+}
+
+.postInfo {
+  padding: 0 15px;
+  position: absolute;
+  z-index: 1;
+  left: 5px;
+  top: 30%;
+  max-width: 40rem;
+  color: #fff;
+
+  a:last-of-type {
+    background-color: $button-main;
+    padding: 10px 50px;
+    border-radius: 10px;
+    margin-top: 25px;
+    display: inline-block;
+    color: #676767;
+    transition: 200ms ease-out;
+
+    &:hover,
+    &:focus {
+      background-color: darken($color: $button-main, $amount: 15);
+    }
+  }
+
+  @media screen and (min-width: 996px) {
+    left: 45px;
+    top: 45%;
+  }
+}
+
+.postOverlay {
+  background-color: rgba(1, 162, 141, 0.85);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.blogNav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 10px 0;
+
+  a {
+    width: 100%;
+    max-width: 20rem;
+    height: 18rem;
+    background: url(../public/images/steps/step-1.svg), $base-green;
+    background-size: 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: 200ms ease-in-out;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.025);
+    }
+
+    &:nth-child(2) {
+      background: url(../public/images/affiliates-2.svg), #69bea0;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-blend-mode: multiply;
+    }
+
+    &:last-child {
+      background-image: url(../public/images/contact.svg);
+    }
+  }
+
+  @media screen and (min-width: 996px) {
+    a {
+      max-width: 25rem;
+      height: 20rem;
+    }
+  }
+}
+
+.post {
+  margin: 30px 0;
+  font-size: 1.1rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: bold;
+  }
+
+  .date {
+    color: lighten($color: $text-body, $amount: 20);
+  }
+
+  .postImage {
+    position: relative;
+    height: 700px;
+    width: 100%;
+
+    img {
+      margin-top: 35px;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .postContent {
+    padding: 20px 10px;
+
+    h2 {
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+  }
+}

@@ -1,0 +1,99 @@
+@use "sass:math";
+@import "./colors";
+@import "./fontSizes";
+@import "./breakpoints";
+
+.About {
+  background-image: url("/images/bg/shapes-top.svg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: left -5%;
+
+  p {
+    font-size: $body;
+  }
+}
+
+.WhyUs {
+  background-image: url("/images/bg/affiliates-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    font-size: $subtitle;
+  }
+
+  ul {
+    padding-left: 0.5rem;
+  }
+
+  li {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    padding: 7px 0px 0px;
+    font-size: $caption;
+
+    strong {
+      color: $base-green;
+    }
+
+    svg {
+      color: $base-green;
+    }
+  }
+
+  img {
+    max-width: 18rem;
+  }
+
+  @include respond(tablet) {
+    background-image: url("/images/bg/why-us.svg");
+
+    h2 {
+      font-size: math.div($title, 1.6);
+    }
+
+    li {
+      font-size: $body;
+    }
+  }
+}
+
+.Title {
+  color: $text-title;
+  font-size: math.div($title, 2);
+  font-weight: 700;
+
+  @include respond(tablet) {
+    font-size: math.div($title, 1.5);
+  }
+
+  @include respond(desktop) {
+    font-size: math.div($title, 1.25);
+  }
+}
+
+.Subtitle {
+  font-size: math.div($subtitle, 1.8);
+  line-height: 1.5;
+  width: auto;
+  margin: 0 auto;
+
+  @include respond(tablet) {
+    font-size: math.div($subtitle, 1.6);
+    margin-bottom: 1rem;
+  }
+}
+
+.StartButton {
+  margin: 40px auto;
+  background-color: $button-main;
+  padding: 15px;
+  width: 100%;
+  max-width: 18rem;
+  border-radius: 10px;
+  display: block;
+  font-weight: bold;
+}

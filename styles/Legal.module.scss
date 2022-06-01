@@ -1,0 +1,65 @@
+@use "sass:math";
+@import "./colors";
+@import "./breakpoints";
+@import "./fontSizes";
+
+.Title {
+  color: $text-title;
+  font-size: math.div($title, 2);
+  font-weight: 700;
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+  text-align: center;
+
+  @include respond(tablet) {
+    font-size: math.div($title, 1.5);
+  }
+
+  @include respond(desktop) {
+    font-size: math.div($title, 1.25);
+  }
+}
+
+.legal {
+  h2,
+  h3,
+  h4 {
+    color: $base-green;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-size: math.div($info-text, 1.25);
+  }
+
+  p {
+    margin: 12px 0;
+  }
+
+  a {
+    color: $base-green;
+    text-decoration: underline;
+  }
+
+  ul ul,
+  ol ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+  }
+
+  ul ol,
+  ol ol {
+    list-style-type: decimal;
+    padding-left: 2rem;
+  }
+}
+
+.legalList {
+  margin: 15px 0;
+
+  h3 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 15px 0 5px;
+  }
+}

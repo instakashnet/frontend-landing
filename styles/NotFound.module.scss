@@ -1,0 +1,55 @@
+@import "./colors";
+@import "./breakpoints";
+@import "./fontSizes";
+
+.NotFoundSection {
+  background-image: url("/images/bg/not-found.svg");
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: -50px 110%;
+  min-height: 70vh;
+  margin: 2rem 0;
+
+  p {
+    font-weight: 700;
+    color: $text-title;
+  }
+
+  ul {
+    margin-top: 1rem;
+  }
+
+  li {
+    margin: 0.3rem 0;
+    font-size: $caption;
+  }
+
+  a {
+    color: $text-title;
+  }
+
+  @include respond(tablet) {
+    background-size: 80%;
+    background-position: center 100%;
+  }
+
+  @include respond(desktop) {
+    background-position: 90% 30px;
+
+    ul {
+      margin-top: 2rem;
+    }
+
+    p {
+      font-size: $info-text;
+    }
+
+    li {
+      font-size: $body;
+    }
+  }
+}
+
+.NotFoundInfo {
+  max-width: 35rem;
+}

@@ -1,0 +1,34 @@
+@import "../../styles/colors";
+
+.SwipeWrapper {
+  position: absolute;
+  right: 2rem;
+  top: 34%;
+  padding: 0.3rem;
+  border-radius: 50%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+.SwipeButton {
+  background-color: $button-main;
+  border-radius: 50%;
+  border: 6px solid $tertiary-green;
+  padding: 0.2rem;
+  transition: 300ms ease-in-out;
+  transform: rotate(0);
+
+  &:focus {
+    outline: 0;
+  }
+
+  .SwipeIcon {
+    position: relative;
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+.SwipeRotated {
+  transform: rotate(180deg);
+}

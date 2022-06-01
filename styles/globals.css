@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+@import "./variables.css";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-body);
+  background-color: var(--light-color);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.base-green {
+  color: var(--base-green);
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 1140px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+b {
+  color: var(--base-green);
+  font-weight: bold;
+}
+
+.section-wrapper hr {
+  border-color: #0d8284;
+  max-width: 50%;
+}
+
+.section-wrapper b {
+  color: var(--text-title);
+  font-weight: bold;
+}
+
+.link {
+  color: var(--text-title);
+}
+
+.sent-msg {
+  color: var(--text-title);
+  margin-top: 7px;
+  font-size: 0.9rem;
+}
+
+.error-msg {
+  color: #ff4b55;
+  font-size: 0.9rem;
+  margin-top: 7px;
+}
+
+/* ACCORDION */
+
+.accordion__button {
+  color: var(--text-title);
+  display: inline-block;
+  margin: 5px 0;
+}
+
+.accordion__panel {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0d8284;
+  margin-bottom: 15px;
+}
+
+._1bpcM {
+  position: fixed !important;
+}
+
+.custom-modal {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 20rem;
+  height: 70%;
+  max-height: 22.95rem;
+  margin: 0 auto;
+  outline: 0;
+  overflow: auto;
+  position: relative;
+  top: 15%;
+  overscroll-behavior: contain;
+}
+
+@media screen and (min-width: 768px) {
+  .custom-modal {
+    width: auto;
+    max-width: 36.2rem;
+    top: 10%;
+    max-height: 50rem;
+  }
+}
+
+.modal-content {
+  position: relative;
+  font-size: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.modal-content h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-title);
+  margin-bottom: 1.1rem;
+}
+
+.modal-content b {
+  color: var(--text-title);
+}
+
+.close-modal {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+}
+
+.close-modal svg {
+  color: #c1d6ce;
+}
+
+.modal-body {
+  padding: 2rem;
+}
+
+.modal-body h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.modal-body h4 {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.modal-body p,
+.modal-body li {
+  margin: 0.5rem 0;
+}
+
+.modal-body ol,
+.modal-body ul {
+  list-style-type: disc;
+  padding-left: 1rem;
+  margin: 0.5rem 0;
+}
+
+.modal-body a {
+  font-weight: bold;
+  color: var(--text-title);
+  text-decoration: underline;
+}
+
+.ReactModal__Overlay {
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.35) !important;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: 300ms ease-in-out;
+}
+
+.slick-active button:before {
+  color: var(--base-green) !important;
+}

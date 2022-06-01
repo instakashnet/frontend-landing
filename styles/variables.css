@@ -1,0 +1,19 @@
+:root {
+  /* BASE COLORS */
+  --base-green: #0d8284;
+  --secondary-green: #20a2a5;
+  --tertiary-green: #67be9f;
+  --light-color: #f8fafb;
+
+  /* TEXT COLORS */
+  --text-title: #0d8284;
+  --text-body: #676767;
+  --text-placeholder: #cacaca;
+  --text-extra: #ffeb4d;
+
+  /* BUTTON COLORS */
+  --button-main: #ffeb4d;
+  --button-hover: #ffe517;
+  --button-secondary: #ffffff;
+  --button-disabled: #e4e4e4;
+}
