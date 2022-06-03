@@ -14,7 +14,7 @@ const AdsCarousel = () => {
     infinite: true,
     speed: 1500,
     autoplay: true,
-    autoplaySpeed: 4000,
+    autoplaySpeed: 5000,
     dots: false,
     arrows: false,
     slidesToShow: 1,

@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
 import Script from "next/script";
-// import { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
 // import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
-// import { BaseModal } from "../components/UI/Modal";
+import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../utils/fetch-data";
@@ -35,15 +35,15 @@ export async function getStaticProps() {
 }
 
 const Home = ({ counters }) => {
-  // const [infoModal, setInfoModal] = useState(false);
+  const [infoModal, setInfoModal] = useState(false);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setInfoModal(true);
-  //   }, 1200);
-  // }, []);
+  useEffect(() => {
+    setTimeout(() => {
+      setInfoModal(true);
+    }, 1200);
+  }, []);
 
-  // const handleCloseModal = () => setInfoModal(false);
+  const handleCloseModal = () => setInfoModal(false);
 
   return (
     <>
@@ -269,9 +269,11 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
-      {/* <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/banners/banner-hour.jpg" alt="Horario fin de semana" layout="fill" objectFit="cover" />
-      </BaseModal> */}
+      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
+        <a href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
+          <Image src="/images/banners/popup.jpeg" alt="Descarga nuestro app" layout="fill" objectFit="cover" />
+        </a>
+      </BaseModal>
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
