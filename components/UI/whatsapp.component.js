@@ -20,7 +20,7 @@ const Whatsapp = () => {
   }, []);
 
   return (
-    <a href="https://wa.link/3yt2bw" className={cls(styles.WhatsappButton, hideBtn ? styles.Hide : "")} target="_blank" rel="noopener noreferrer">
+    <a href="https://wa.link/wekqza" className={cls(styles.WhatsappButton, hideBtn ? styles.Hide : "")} target="_blank" rel="noopener noreferrer">
       <div className={styles.WhatsappImage}>
         <Image src="/images/icons/whatsapp.svg" alt="Contáctanos por whatsapp" layout="fill" objectFit="contain" />
       </div>

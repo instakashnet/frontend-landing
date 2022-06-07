@@ -46,7 +46,7 @@ const Footer = ({ pathname }) => {
                 </Link>
               </li>
               <li>
-                <a href="https://wa.link/05keps" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                <a href="https://wa.link/wekqza" target="_blank" rel="noopener noreferrer" className="flex items-center">
                   <Image width={15} height={15} alt="Contactar a soporte de Instakash" src="/images/icons/whatsapp-white.svg" /> <span className="ml-2">Atención al usuario</span>
                 </a>
               </li>
