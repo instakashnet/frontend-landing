@@ -4,7 +4,7 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-// import Callout from "../components/UI/callout.component";
+import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
@@ -67,13 +67,13 @@ const Home = ({ counters }) => {
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
-      {/* <Callout type="info">
+      <Callout type="info">
         <div className="container p-0 mt-4">
           <p>
-            Ahora puedes cambiar tus dólares de <b>Lunes a Domingo hasta las 9PM.</b>
+            Cambia tus dólares de <b>Lunes a Sábado desde las 9AM hasta las 8PM a la mejor tasa del Perú.</b>
           </p>
         </div>
-      </Callout> */}
+      </Callout>
       <div className="container px-0 pb-0">
         <AdsCarousel />
       </div>
@@ -121,8 +121,8 @@ const Home = ({ counters }) => {
                 </div>
               </div>
               <div className={styles.BanksInfoImageWrapper}>
-                <Image src="/images/banks/interbank.svg" alt="Banco Interbank" width={90} height={35} />
-                <Image src="/images/banks/bcp.svg" alt="Banco BCP" width={85} height={35} />
+                <Image src="/images/banks/interbank.svg" alt="Banco Interbank" width={80} height={25} />
+                <Image src="/images/banks/bcp.svg" alt="Banco BCP" width={80} height={30} />
               </div>
             </Card>
             <Card className={styles.BankCard}>
@@ -138,8 +138,16 @@ const Home = ({ counters }) => {
                 </div>
               </div>
               <div className={styles.BanksInfoImageWrapper}>
-                <Image src="/images/banks/scotiabank.svg" alt="Banco Scotiabank" width={100} height={50} />
-                <Image src="/images/banks/bbva.svg" alt="Banco BBVA" width={80} height={35} />
+                <div className="mr-3">
+                  <Image src="/images/banks/scotiabank.svg" alt="Banco Scotiabank" width={90} height={40} />
+                </div>
+                <div className="mr-3">
+                  <Image src="/images/banks/bbva.svg" alt="Banco BBVA" width={70} height={25} />
+                </div>
+                <div className="mr-3">
+                  <Image src="/images/banks/pichincha.svg" alt="Banco Pichincha" width={70} height={25} />
+                </div>
+                <p>y otros</p>
               </div>
             </Card>
           </div>
