@@ -68,7 +68,7 @@ const Home = ({ counters }) => {
         <meta property="og:image" content="" />
       </Head>
       <Callout type="info">
-        <div className="container p-0 mt-4">
+        <div className="container p-0">
           <p>
             Cambia tus dólares de <b>Lunes a Sábado desde las 9AM hasta las 8PM a la mejor tasa del Perú.</b>
           </p>
