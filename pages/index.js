@@ -63,7 +63,7 @@ const Home = ({ counters }) => {
         <meta property="og:title" content="Casa de Cambio Online | Cambiar Dólares a Soles" />
         <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/" />
-        <meta property="og:description" content="Instakash es la casa de cambio online con la elmejor tipo de cambio de dólares a soles." />
+        <meta property="og:description" content="Instakash es la casa de cambio online con el mejor tipo de cambio de dólares a soles." />
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
