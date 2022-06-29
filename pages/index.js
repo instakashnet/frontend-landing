@@ -279,7 +279,7 @@ const Home = ({ counters }) => {
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <a href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
-          <Image src="/images/banners/popup.jpeg" alt="Descarga nuestro app" layout="fill" objectFit="cover" />
+          <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="cover" />
         </a>
       </BaseModal>
       <Script
