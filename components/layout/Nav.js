@@ -85,12 +85,13 @@ const Nav = () => {
             <Link href="/beneficios">Beneficios</Link>
           </li>
           <li>
-              <Link href="/faq">FAQ</Link>
-            </li>
+            <Link href="/faq">FAQ</Link>
+          </li>
         </ul>
         <div className={styles.schedule}>
           <h3>Horario</h3>
-          <p>Lunes a Domingo 9 am - 9 pm</p>
+          <p>Lunes a Sábado 9 am - 7 pm</p>
+          <p>Domingos y Feriados cerrados</p>
         </div>
 
         <div className={styles.navButtons}>

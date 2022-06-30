@@ -93,8 +93,8 @@ const contacto = () => {
                 <Headphones className={styles.infoIcon} />
                 <section>
                   <h2>Whatsapp</h2>
-                  <a href="https://api.whatsapp.com/send?phone=51927013800&text=Hola,%20deseo%20informaci%C3%B3n" className="link" target="_blank" rel="noopener noreferrer">
-                    +51 927 013 800
+                  <a href="https://wa.link/wekqza" className="link" target="_blank" rel="noopener noreferrer">
+                    +51 929 324 006
                   </a>
                 </section>
               </div>
