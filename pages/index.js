@@ -1,14 +1,14 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
 import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
-import { BaseModal } from "../components/UI/Modal";
+// import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../utils/fetch-data";
@@ -35,15 +35,15 @@ export async function getStaticProps() {
 }
 
 const Home = ({ counters }) => {
-  const [infoModal, setInfoModal] = useState(false);
+  // const [infoModal, setInfoModal] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setInfoModal(true);
-    }, 1200);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setInfoModal(true);
+  //   }, 1200);
+  // }, []);
 
-  const handleCloseModal = () => setInfoModal(false);
+  // const handleCloseModal = () => setInfoModal(false);
 
   return (
     <>
@@ -70,7 +70,7 @@ const Home = ({ counters }) => {
       <Callout type="info">
         <div className="container p-0">
           <p>
-            Cambia tus dólares de <b>Lunes a Sábado desde las 9AM hasta las 8PM a la mejor tasa del Perú.</b>
+            A partir del 01/07/2022 el <b>monto mínimo de cambio establecido será de 40$ USD</b> para compra y venta.
           </p>
         </div>
       </Callout>
@@ -245,6 +245,39 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
+      <section className="container md:mt-10">
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <Image src="/images/bg/kash.webp" objectFit="contain" width={600} height={500} />
+          <div className="text-left md:w-1/3 flex flex-col">
+            <h2 className={styles.Title}>¿Que es KASH?</h2>
+            <p className="mb-3">
+              El KASH es nuestra moneda digital que puedes obtener refiriendo a tus amigos. Por cada referido que complete 1 cambio obtendrás 2 KASH. con el KASH puedes ahorrar o
+              retirarlo a una de tus cuentas bancarias.{" "}
+              <Link href="/beneficios">
+                <a className="underline">
+                  <b>Conoce más aquí.</b>
+                </a>
+              </Link>
+            </p>
+            <Image src="/images/illustrations/kash-equal.svg" objectFit="contain" width={350} height={150} />
+            <a className={styles.Button}>Registrarse</a>
+          </div>
+        </div>
+        <div className="flex flex-col md:flex-row justify-center items-center mt-8">
+          <div className={styles.KashInfoBox}>
+            <Image src="/images/illustrations/refiere-gana.svg" width={110} height={70} />
+            <p className="mt-2">
+              Cuando tu referido realiza su primer cambio, tu ganas 2 KASH y tu referido una tasa especial. Copia y comparte el código que está en tu perfil de InstaKash.
+            </p>
+          </div>
+          <div className={styles.KashInfoBox}>
+            <Image src="/images/illustrations/ahorra-retira.svg" width={110} height={70} />
+            <p className="mt-2">
+              Puedes acumular tus KASH y luego retirarlos transfiriéndolos a tu cuenta en dólares en forma de dinero. Un dinero extra para tus ahorros. Hasta 15 KASH por retiro.
+            </p>
+          </div>
+        </div>
+      </section>
       <section className="container">
         <div className={styles.AppWrapper}>
           <div className={styles.AppImage}>
@@ -277,11 +310,11 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
-      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
+      {/* <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <a href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
           <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="cover" />
         </a>
-      </BaseModal>
+      </BaseModal> */}
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
