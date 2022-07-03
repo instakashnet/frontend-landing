@@ -312,9 +312,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <a href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
-          <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="cover" />
-        </a>
+        <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="cover" />
       </BaseModal>
       <Script
         strategy="afterInteractive"
