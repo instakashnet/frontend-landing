@@ -53,17 +53,17 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/cupon-mes.png" alt="Cupón para cambio online GRACIASPAPA" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/cupon-mes.png" alt="Cupón para cambio online FELICESFIESTAS" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>GRACIASPAPA</h2>
+                <h2>FELICESFIESTAS</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-06-2022">01/06</time> al <time dateTime="30-06-2022">30/06</time> del 2022
+                  <time dateTime="01-07-2022">01/07</time> al <time dateTime="31-07-2022">31/07</time> del 2022
                 </p>
                 <p>
-                  En este mes de papá, haz tus cambios usando este cupón y obtén 20 puntos a favor de tu cambio. Cupón válido desde el 1 de Mayo hasta el 31 de Mayo. Válido para 4
-                  cambios.
+                  En este mes celebra las fechas patrias haciendo tus cambios usando nuestro cupón y obtén 20 puntos a favor de tu cambio. Cupón válido desde el 1 de Julio hasta el
+                  31 de Julio. Válido para 4 cambios a partir de $100 USD.
                 </p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
