@@ -261,7 +261,9 @@ const Home = ({ counters }) => {
               </Link>
             </p>
             <Image src="/images/illustrations/kash-equal.svg" objectFit="contain" width={350} height={150} />
-            <a className={styles.Button}>Registrarse</a>
+            <a className={styles.Button} href="https://app.instakash.net/signup">
+              Registrarse
+            </a>
           </div>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8">
