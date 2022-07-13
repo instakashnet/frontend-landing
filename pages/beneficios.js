@@ -57,7 +57,7 @@ const Promociones = () => {
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>FELICESFIESTAS</h2>
+                <h2>FIESTASPATRIAS</h2>
                 <p className={styles.Date}>
                   <time dateTime="01-07-2022">01/07</time> al <time dateTime="31-07-2022">31/07</time> del 2022
                 </p>
