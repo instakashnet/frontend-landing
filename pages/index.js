@@ -314,7 +314,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="cover" />
+        <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="contain" />
       </BaseModal>
       <Script
         strategy="afterInteractive"

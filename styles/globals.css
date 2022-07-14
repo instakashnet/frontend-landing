@@ -92,10 +92,10 @@ b {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.1);
-  width: 90%;
-  max-width: 20rem;
-  height: 70%;
-  max-height: 22.95rem;
+  width: 95%;
+  max-width: 380px;
+  height: 60%;
+  max-height: 500px;
   margin: 0 auto;
   outline: 0;
   overflow: auto;
@@ -106,10 +106,14 @@ b {
 
 @media screen and (min-width: 768px) {
   .custom-modal {
-    width: auto;
-    max-width: 36.2rem;
-    top: 10%;
-    max-height: 50rem;
+    max-width: 420px;
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .custom-modal {
+    max-width: 460px;
   }
 }
 

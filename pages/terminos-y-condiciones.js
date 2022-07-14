@@ -430,9 +430,8 @@ const TerminosCondiciones = () => {
                 por el USUARIO.
               </p>
               <p>
-                El registro de la operación y transferencia de fondos por parte del USUARIO, la ejecución de proceso de cambio de divisas por parte de INSTAKASH es irreversible e
-                irreivindicable. En caso, el USUARIO realice la cancelación de una operación una vez realizado el abono, el USUARIO quedará sujeto a asumir los costos (comisiones,
-                impuestos y otros) en que incurra INSTAKASH para tales efectos.
+                Si el USUARIO llegase a realizar la cancelación de una operación una vez realizado el abono, el USUARIO quedará sujeto a asumir los costos (comisiones, impuestos y
+                otros) en que incurra INSTAKASH para tales efectos.
               </p>
               <p>
                 EL USUARIO se obliga a actuar de buena fe en relación con las operaciones de cambio que solicite y acepta que los montos que acuerde serán transferidos por
