@@ -201,9 +201,10 @@ const TerminosCondiciones = () => {
                   registra la operación y la cual se encuentra previamente registrada, hacia la cuenta bancaria indicada de INSTAKASH, en un tiempo máximo de quince (15) minutos,
                   contado a partir del momento del registro de la operación. Solo durante el período de tiempo señalado, se mantendrá el acuerdo de cambio de dólares.
                 </li>
+                <li>Para las operaciones interbancarias, INSTAKASH realizará la orden cuando los fondos lleguen a sus cuentas como saldo líquido.</li>
                 <li>
-                  Para las operaciones interbancarias, INSTAKASH realizará la orden cuando los fondos lleguen a sus cuentas como saldo líquido. Así mismo, si el tipo de cambio
-                  varia drásticamente según criterio de INSTAKASH, se podrá anular la operación o realizarla a un nuevo tipo de cambio si el usuario así lo prefiriese.
+                  Si el tipo de cambio varia drásticamente según criterio de INSTAKASH, se podrá anular la operación o realizarla a un nuevo tipo de cambio si el usuario así lo
+                  prefiriese.
                 </li>
                 <li>
                   EL USUARIO deberá asumir el costo de la transferencia inmediata cobrada por su entidad financiera y ejecutar la transferencia dentro de los horarios establecidos
@@ -336,8 +337,10 @@ const TerminosCondiciones = () => {
             </li>
             <li>
               <p>
-                Para evitar cualquier tipo de comisión bancaria interplaza, se recomienda utilizar los aplicativos móviles o páginas web de los bancos para efectuar las
-                transferencias. Operaciones desde ventanilla (BCP o Interbank) o desde cuentas Interbank que no sean de Lima, podrían acarrear comisión.
+                Las transferencias que se realicen entre cuentas bancarias cuyo origen o destino sea distinto a plaza de Lima, son consideradas transferencias interplaza. INSTAKASH
+                no realiza transferencias hacia cuentas interplaza porque los bancos suelen agregar una alta comisión por transacción. Para evitar cualquier tipo de comisión
+                bancaria interplaza, se recomienda utilizar los aplicativos móviles o páginas web de los bancos para efectuar las transferencias. Operaciones desde ventanilla (BCP
+                o Interbank) o desde cuentas Interbank que no sean de Lima, podrían acarrear comisión.
               </p>
             </li>
             <li>
@@ -366,6 +369,10 @@ const TerminosCondiciones = () => {
             </p>
             <li>
               <p>Estas comisiones son referenciales y pueden variar sin previa notificación.</p>
+              <p>
+                INSTAKASH podría exonerar comisiones de transferencias interbancarias solo si la transacción de cambio supera los 2.000,00 $ o su equivalente en soles. INSTAKASH se
+                reserva la decisión final sobre este beneficio.
+              </p>
             </li>
             <h2>8. TIEMPOS DE EJECUCIÓN:</h2>
             <li>
