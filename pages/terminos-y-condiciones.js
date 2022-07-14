@@ -427,7 +427,8 @@ const TerminosCondiciones = () => {
               <p>
                 Sin perjuicio de lo anteriormente mencionado, en caso de que INSTAKASH detecte alguna anomalía en el tipo de cambio o no pueda procesar la operación, por razones
                 ajenas a la responsabilidad del USUARIO, tendrá la posibilidad de anular la operación de cambio de moneda procediendo con la devolución inmediata del monto abonado
-                por el USUARIO.
+                por el USUARIO. Dicha devolución será procesada mendiante el envío de un correo por parte del USUARIO indicando: nro. de operación, cuenta de orígen de los fondos y
+                anexo de su voucher de transferencia. El mismo deberá ser enviado desde el correo registrado en plataforma por parte del USUARIO.
               </p>
               <p>
                 Si el USUARIO llegase a realizar la cancelación de una operación una vez realizado el abono, el USUARIO quedará sujeto a asumir los costos (comisiones, impuestos y
