@@ -114,6 +114,7 @@ b {
 @media screen and (min-width: 1280px) {
   .custom-modal {
     max-width: 460px;
+    max-height: 540px;
   }
 }
 
