@@ -2,14 +2,14 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-import Callout from "../components/UI/callout.component";
+// import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
-import { BaseModal } from "../components/UI/Modal";
+// import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../utils/fetch-data";
@@ -36,15 +36,15 @@ export async function getStaticProps() {
 }
 
 const Home = ({ counters }) => {
-  const [infoModal, setInfoModal] = useState(false);
+  // const [infoModal, setInfoModal] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setInfoModal(true);
-    }, 1200);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setInfoModal(true);
+  //   }, 1200);
+  // }, []);
 
-  const handleCloseModal = () => setInfoModal(false);
+  // const handleCloseModal = () => setInfoModal(false);
 
   return (
     <>
@@ -68,13 +68,13 @@ const Home = ({ counters }) => {
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
-      <Callout type="info">
+      {/* <Callout type="info">
         <div className="container p-0">
           <p>
             A partir del 01/07/2022 el <b>monto mínimo de cambio establecido será de 40$ USD</b> para compra y venta.
           </p>
         </div>
-      </Callout>
+      </Callout> */}
       <div className="container px-0 pb-0">
         <AdsCarousel />
       </div>
@@ -313,9 +313,9 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
-      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
+      {/* <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <Image src="/images/banners/popup.jpg" alt="noticia importante" layout="fill" objectFit="contain" />
-      </BaseModal>
+      </BaseModal> */}
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
