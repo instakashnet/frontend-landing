@@ -59,7 +59,7 @@ const Promociones = () => {
                 <h3>Participa para</h3>
                 <h2>COLDPLAY</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="29-08-2022">29/08</time> del 2022
+                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="31-08-2022">31/08</time> del 2022
                 </p>
                 <p>
                   Realiza tus cambios utilizando nuestro cupón <b>COLDPLAY</b> y estarás participando por una entrada para su 2do. concierto. Si más lo usas más oportunidades
