@@ -92,10 +92,9 @@ b {
   border-radius: 10px;
   background-color: #fff;
   box-shadow: 0px 24px 20px rgba(0, 0, 0, 0.1);
-  width: 95%;
-  max-width: 380px;
-  height: 60%;
-  max-height: 500px;
+  width: 90%;
+  max-width: 330px;
+  height: 380px;
   margin: 0 auto;
   outline: 0;
   overflow: auto;
@@ -106,15 +105,9 @@ b {
 
 @media screen and (min-width: 768px) {
   .custom-modal {
-    max-width: 420px;
+    max-width: 470px;
+    height: 540px;
     top: 20%;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .custom-modal {
-    max-width: 460px;
-    max-height: 540px;
   }
 }
 
@@ -138,8 +131,8 @@ b {
 
 .close-modal {
   position: absolute;
-  right: 0.75rem;
-  top: 0.75rem;
+  right: 1rem;
+  top: 1rem;
   z-index: 100;
 }
 
