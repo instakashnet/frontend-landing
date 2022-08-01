@@ -23,6 +23,28 @@ const AdsCarousel = () => {
   return (
     <Slider className={styles.BannerSlider} {...settings}>
       <div className="w-full">
+        <Link href="/beneficios">
+          <a className={styles.BannerCard}>
+            {isMobile ? (
+              <Image src="/images/banners/coldplay360.webp" alt="Participa por una entrada para COLDPLAY con INSTAKASH" layout="fill" objectFit="contain" />
+            ) : (
+              <Image src="/images/banners/coldplay1200.webp" alt="Participa por una entrada para COLDPLAY con INSTAKASH" layout="fill" objectFit="contain" />
+            )}
+          </a>
+        </Link>
+      </div>
+      <div className="w-full">
+        <Link href="/beneficios">
+          <a className={styles.BannerCard}>
+            {isMobile ? (
+              <Image src="/images/banners/mes360.webp" alt="Cambia tus dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="contain" />
+            ) : (
+              <Image src="/images/banners/mes1200.webp" alt="Cambia tus dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="contain" />
+            )}
+          </a>
+        </Link>
+      </div>
+      <div className="w-full">
         <a className={styles.BannerCard} href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
           {isMobile ? (
             <Image src="/images/banners/descargar-app360.webp" alt="Descarga nuestro app INSTAKASH y cambia facil" layout="fill" objectFit="contain" />
@@ -30,17 +52,6 @@ const AdsCarousel = () => {
             <Image src="/images/banners/descargar-app1200.webp" alt="Descarga nuestro app INSTAKASH y cambia facil" layout="fill" objectFit="contain" />
           )}
         </a>
-      </div>
-      <div className="w-full">
-        <Link href="/beneficios">
-          <a className={styles.BannerCard}>
-            {isMobile ? (
-              <Image src="/images/banners/cupon-mes360.webp" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
-            ) : (
-              <Image src="/images/banners/cupon-mes1200.webp" alt="Utiliza nuesrto cupón del mes y gana con INSTAKASH" layout="fill" objectFit="contain" />
-            )}
-          </a>
-        </Link>
       </div>
       <div className="w-full">
         <a className={styles.BannerCard} href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer">

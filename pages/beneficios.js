@@ -53,24 +53,49 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/cupon-mes.png" alt="Cupón para cambio online FELICESFIESTAS" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/coldplay.webp" alt="Participa por una entrada a COLDPLAY con INSTAKASH" layout="fill" objectFit="cover" />
+              </div>
+              <div className={styles.Info}>
+                <h3>Participa para</h3>
+                <h2>COLDPLAY</h2>
+                <p className={styles.Date}>
+                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="29-08-2022">29/08</time> del 2022
+                </p>
+                <p>
+                  Realiza tus cambios utilizando nuestro cupón <b>COLDPLAY</b> y estarás participando por una entrada para su 2do. concierto. Si más lo usas más oportunidades
+                  tendrás. <b>Válido en cambios a partir de $500 USD.</b>
+                </p>
+                <div className={styles.Actions}>
+                  <a href="https://app.instakash.net/signin" className="mr-4">
+                    Acceder y usar cupón
+                  </a>
+                  <button type="button" onClick={() => window.open("https://instakash-media.s3.us-east-2.amazonaws.com/terms-conditions-coldplay.pdf", "_blank")}>
+                    Términos y condiciones
+                  </button>
+                </div>
+              </div>
+            </Card>
+
+            <Card className={styles.PromotionCard}>
+              <div className={styles.Cover}>
+                <Image src="/images/beneficios/cupon-mes.webp" alt="Cambia dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>FIESTASPATRIAS</h2>
+                <h2>FOLKLORPERU</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-07-2022">01/07</time> al <time dateTime="31-07-2022">31/07</time> del 2022
+                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="31-08-2022">31/08</time> del 2022
                 </p>
                 <p>
-                  En este mes celebra las fechas patrias haciendo tus cambios usando nuestro cupón y obtén 20 puntos a favor de tu cambio. Cupón válido desde el 1 de Julio hasta el
-                  31 de Julio. Válido para 4 cambios a partir de $100 USD.
+                  Realiza tus cambios celebrando nuestro folklor este mes haciendo tus cambios con el cupón y obtén 20 puntos a favor de tu cambio. Válido desde el 1 de Agosto
+                  hasta el 31 de Agosto. Para 4 cambios a partir de $100 USD.
                 </p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
                   </a>
                   <button type="button" onClick={() => openModalHandler("coupons")}>
-                    ¿Cómo uso el cupón?
+                    ¿Cómo uso los cupones?
                   </button>
                 </div>
               </div>
