@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import React, { useEffect, useState } from "react";
 import { PulseLoader } from "react-spinners";
+import { event } from "../../utils/fbpixel";
 import Button from "../UI/Button";
 import styles from "./Calculator.module.scss";
 import Input from "./input.component";
@@ -14,7 +15,10 @@ const Calculator = () => {
 
   const formik = useFormik({
     initialValues: { type: "sell", currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 },
-    onSubmit: () => (window.location.href = "https://app.instakash.net"),
+    onSubmit: () => {
+      event("Subscribe");
+      location.href = "https://app.instakash.net/signup";
+    },
   });
   const { setFieldValue } = formik;
 

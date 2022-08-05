@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import TagManager from "react-gtm-module";
-import Layout from "../components/layout/Layout";
 import FacebookPixel from "../components/FacebookPixel";
+import Layout from "../components/layout/Layout";
 
 import "../styles/globals.css";
 

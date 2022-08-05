@@ -87,7 +87,8 @@
   align-items: center;
   flex-wrap: wrap;
 
-  a {
+  a,
+  button {
     border: 2px solid $button-main;
     padding: 0.6rem 1.2rem;
     background-color: $button-main;
@@ -96,22 +97,18 @@
     font-size: $caption;
     font-weight: 700;
 
-    &:first-of-type {
-      background-color: transparent;
-    }
-
     &:hover,
     &:focus {
       background-color: darken($color: $button-main, $amount: 15);
     }
   }
 
+  a {
+    background-color: transparent;
+  }
+
   @include respond(tablet) {
     display: flex;
-
-    // a {
-    //   font-size: $body;
-    // }
   }
 }
 

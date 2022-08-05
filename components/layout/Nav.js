@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
+import { event } from "../../utils/fbpixel";
 import styles from "./Nav.module.scss";
 
 const Nav = () => {
@@ -39,6 +40,11 @@ const Nav = () => {
     if (e.target.href) setMobileNav(false);
   };
 
+  const onRegister = () => {
+    event("Subscribe");
+    location.href = "https://app.instakash.net/signup";
+  };
+
   return (
     <>
       <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
@@ -65,7 +71,7 @@ const Nav = () => {
             <a href="https://app.instakash.net/signin" className="mr-4">
               Iniciar sesión
             </a>
-            <a href="https://app.instakash.net/signup">Registrarse</a>
+            <button onClick={onRegister}>Registrarse</button>
           </div>
 
           <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ""}`} onClick={toggleNav}>
