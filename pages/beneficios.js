@@ -113,7 +113,7 @@ const Promociones = () => {
                   para ayudarte.
                 </p>
                 <div className={styles.Actions}>
-                  <a href="https://wa.link/3yt2bw" target="_blank" rel="noopener noreferrer" className="mr-4">
+                  <a href="https://wa.link/wekqza" target="_blank" rel="noopener noreferrer" className="mr-4">
                     Afiliarme
                   </a>
                 </div>
