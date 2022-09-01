@@ -53,30 +53,30 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/coldplay.webp" alt="Participa por una entrada a COLDPLAY con INSTAKASH" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/guns.webp" alt="Participa por una entrada a GUNSNROSES con INSTAKASH" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Participa para</h3>
-                <h2>COLDPLAY</h2>
+                <h2>GUNSNROSES</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="31-08-2022">31/08</time> del 2022
+                  <time dateTime="01-09-2022">01/09</time> al <time dateTime="30-09-2022">30/09</time> del 2022
                 </p>
                 <p>
-                  Realiza tus cambios utilizando nuestro cupón <b>COLDPLAY</b> y estarás participando por una entrada para su 2do. concierto. Si más lo usas más oportunidades
-                  tendrás. <b>Válido en cambios a partir de $500 USD.</b>
+                  Realiza tus cambios utilizando nuestro cupón <b>GUNSNROSES</b> y estarás participando por una entrada para su concierto del 8 de Octúbre. Mientras más lo usas más
+                  oportunidades tendrás. <b>Válido en cambios a partir de $500 USD.</b>
                 </p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
                   </a>
-                  <button type="button" onClick={() => window.open("https://instakash-media.s3.us-east-2.amazonaws.com/terms-conditions-coldplay.pdf", "_blank")}>
+                  <button type="button" onClick={() => window.open("https://instakash-media.s3.us-east-2.amazonaws.com/terms-conditions-guns.pdf", "_blank")}>
                     Términos y condiciones
                   </button>
                 </div>
               </div>
             </Card>
 
-            <Card className={styles.PromotionCard}>
+            {/* <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
                 <Image src="/images/beneficios/cupon-mes.webp" alt="Cambia dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="cover" />
               </div>
@@ -99,7 +99,7 @@ const Promociones = () => {
                   </button>
                 </div>
               </div>
-            </Card>
+            </Card> */}
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>

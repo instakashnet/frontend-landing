@@ -26,9 +26,9 @@ const AdsCarousel = () => {
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
-              <Image src="/images/banners/coldplay360.webp" alt="Participa por una entrada para COLDPLAY con INSTAKASH" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/guns360.webp" alt="Participa por una entrada para GUNSNROSES con INSTAKASH" layout="fill" objectFit="contain" />
             ) : (
-              <Image src="/images/banners/coldplay1200.webp" alt="Participa por una entrada para COLDPLAY con INSTAKASH" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/guns1200.webp" alt="Participa por una entrada para GUNSNROSES con INSTAKASH" layout="fill" objectFit="contain" />
             )}
           </a>
         </Link>
@@ -50,15 +50,6 @@ const AdsCarousel = () => {
             <Image src="/images/banners/descargar-app360.webp" alt="Descarga nuestro app INSTAKASH y cambia facil" layout="fill" objectFit="contain" />
           ) : (
             <Image src="/images/banners/descargar-app1200.webp" alt="Descarga nuestro app INSTAKASH y cambia facil" layout="fill" objectFit="contain" />
-          )}
-        </a>
-      </div>
-      <div className="w-full">
-        <a className={styles.BannerCard} href="https://www.instagram.com/instakashnet/" target="_blank" rel="noopener noreferrer">
-          {isMobile ? (
-            <Image src="/images/banners/finantips-360.webp" alt="Miercoles de FINANTIPS para tí en nuestras redes" layout="fill" objectFit="contain" />
-          ) : (
-            <Image src="/images/banners/finantips-1200.webp" alt="Miercoles de FINANTIPS para tí en nuestras redes" layout="fill" objectFit="contain" />
           )}
         </a>
       </div>
