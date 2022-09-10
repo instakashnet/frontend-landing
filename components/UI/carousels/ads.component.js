@@ -33,7 +33,7 @@ const AdsCarousel = () => {
           </a>
         </Link>
       </div>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
@@ -43,7 +43,7 @@ const AdsCarousel = () => {
             )}
           </a>
         </Link>
-      </div>
+      </div> */}
       <div className="w-full">
         <a className={styles.BannerCard} href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
           {isMobile ? (
