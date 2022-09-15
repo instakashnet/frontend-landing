@@ -33,17 +33,17 @@ const AdsCarousel = () => {
           </a>
         </Link>
       </div>
-      {/* <div className="w-full">
+      <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
-              <Image src="/images/banners/mes360.webp" alt="Cambia tus dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/pnl360.webp" alt="Participa en el evento de PNL con Instakash" layout="fill" objectFit="contain" />
             ) : (
-              <Image src="/images/banners/mes1200.webp" alt="Cambia tus dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/pnl1200.webp" alt="Participa en el evento de PNL con Instakash" layout="fill" objectFit="contain" />
             )}
           </a>
         </Link>
-      </div> */}
+      </div>
       <div className="w-full">
         <a className={styles.BannerCard} href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
           {isMobile ? (

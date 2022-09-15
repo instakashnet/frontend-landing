@@ -314,7 +314,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/banners/guns-popup.webp" alt="participa por GUNSNROSES con Instakash" layout="fill" objectFit="contain" />
+        <Image src="/images/posters/pnl.webp" alt="Participa en el evento mas grande de PNL con Instakash" layout="fill" objectFit="contain" />
       </BaseModal>
       <Script
         strategy="afterInteractive"
