@@ -433,3 +433,14 @@
   margin: 1rem;
   max-width: 400px;
 }
+
+.ModalBody {
+  padding: 3.5rem 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $base-green;
+    font-size: 1.5rem;
+  }
+}
