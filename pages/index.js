@@ -314,15 +314,15 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        {/* <Image src="/images/posters/pnl.webp" alt="Participa en el evento mas grande de PNL con Instakash" layout="fill" objectFit="contain" /> */}
-        <div className={styles.ModalBody}>
+        <Image src="/images/posters/pnl.webp" alt="Participa en el evento mas grande de PNL con Instakash" layout="fill" objectFit="contain" />
+        {/* <div className={styles.ModalBody}>
           <h3>Lentitud con BCP</h3>
           <p>
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma de empresas de BCP está presentando problemas de lentitud</b>, por lo
             tanto las operaciones con este banco pueden tardar mas de lo estimado.
           </p>
           <p className="font-bold mt-6">Agradecemos su comprensión.</p>
-        </div>
+        </div> */}
       </BaseModal>
       <Script
         strategy="afterInteractive"
