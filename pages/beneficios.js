@@ -53,42 +53,17 @@ const Promociones = () => {
           <article className={styles.PromotionsWrapper}>
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/guns.webp" alt="Participa por una entrada a GUNSNROSES con INSTAKASH" layout="fill" objectFit="cover" />
-              </div>
-              <div className={styles.Info}>
-                <h3>Participa para</h3>
-                <h2>GUNSNROSES</h2>
-                <p className={styles.Date}>
-                  <time dateTime="01-09-2022">01/09</time> al <time dateTime="30-09-2022">30/09</time> del 2022
-                </p>
-                <p>
-                  Realiza tus cambios utilizando nuestro cupón <b>GUNSNROSES</b> y estarás participando por una entrada para su concierto del 8 de Octúbre. Mientras más lo usas más
-                  oportunidades tendrás. <b>Válido en cambios a partir de $500 USD.</b>
-                </p>
-                <div className={styles.Actions}>
-                  <a href="https://app.instakash.net/signin" className="mr-4">
-                    Acceder y usar cupón
-                  </a>
-                  <button type="button" onClick={() => window.open("https://instakash-media.s3.us-east-2.amazonaws.com/terms-conditions-guns.pdf", "_blank")}>
-                    Términos y condiciones
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            {/* <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src="/images/beneficios/cupon-mes.webp" alt="Cambia dólares en INSTAKASH con nuestro cupón del mes" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/cupon-mes.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>FOLKLORPERU</h2>
+                <h2>CANCIONCRIOLLA</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-08-2022">01/08</time> al <time dateTime="31-08-2022">31/08</time> del 2022
+                  <time dateTime="01-10-2022">01/10</time> al <time dateTime="31-08-2022">31/10</time> del 2022
                 </p>
                 <p>
-                  Realiza tus cambios celebrando nuestro folklor este mes haciendo tus cambios con el cupón y obtén 20 puntos a favor de tu cambio. Válido desde el 1 de Agosto
-                  hasta el 31 de Agosto. Para 4 cambios a partir de $100 USD.
+                  Realiza tus cambios este mes con el cupón CANCIONCRIOLLA y obtén 10 puntos a favor de tu cambio. Válido desde el 1 de Octubre hasta el 31 de OCtubre. Para 2
+                  cambios a partir de $100 USD.
                 </p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
@@ -99,7 +74,7 @@ const Promociones = () => {
                   </button>
                 </div>
               </div>
-            </Card> */}
+            </Card>
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
@@ -194,9 +169,6 @@ const SuperCouponsModal = () => (
       Cuando desees cambiar montos desde 5000 USD en adelante, te ofrecemos hasta 3 cupones para que ahorres y obtengas una de las mejores tasas del mercado y sin límite de uso.
     </p>
     <ul>
-      <li>
-        Para montos desde 5MIL USD usa nuestro cupón <b>DESDE5000</b>
-      </li>
       <li>
         Para montos desde 10MIL USD usa nuestro cupón <b>DESDE10000</b>
       </li>

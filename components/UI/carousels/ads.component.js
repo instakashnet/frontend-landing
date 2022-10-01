@@ -26,20 +26,9 @@ const AdsCarousel = () => {
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
-              <Image src="/images/banners/guns360.webp" alt="Participa por una entrada para GUNSNROSES con INSTAKASH" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/cupon360.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="contain" />
             ) : (
-              <Image src="/images/banners/guns1200.webp" alt="Participa por una entrada para GUNSNROSES con INSTAKASH" layout="fill" objectFit="contain" />
-            )}
-          </a>
-        </Link>
-      </div>
-      <div className="w-full">
-        <Link href="/beneficios">
-          <a className={styles.BannerCard}>
-            {isMobile ? (
-              <Image src="/images/banners/pnl360.webp" alt="Participa en el evento de PNL con Instakash" layout="fill" objectFit="contain" />
-            ) : (
-              <Image src="/images/banners/pnl1200.webp" alt="Participa en el evento de PNL con Instakash" layout="fill" objectFit="contain" />
+              <Image src="/images/banners/cupon1200.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="contain" />
             )}
           </a>
         </Link>
