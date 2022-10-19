@@ -170,8 +170,8 @@ const TerminosCondiciones = () => {
 
               <p>
                 Para hacer uso de este servicio, el USUARIO debe contar con una cuenta bancaria propia en una entidad financiera supervisada por la SBS, es decir, debe aceptar
-                realizar transferencias (en adelante, la “Cuenta de Cargo”) y, una cuenta bancaria propia o de un beneficiario para la recepción de fondos a través de entidades
-                financieras (en adelante, la “Cuenta de Destino”).
+                realizar transferencias (en adelante, la “Cuenta de Cargo”) y, una cuenta bancaria propia para la recepción de fondos a través de entidades financieras (en
+                adelante, la “Cuenta de Destino”).
               </p>
               <p>
                 INSTAKASH no realiza ningún cobro de comisión por el uso de este servicio. Sin embargo, el USUARIO debe considerar que en determinados escenarios podrían existir
@@ -191,6 +191,10 @@ const TerminosCondiciones = () => {
                 <li>
                   EL USUARIO indicará la cuenta bancaria de cargo y la cuenta bancaria de destino, estas cuentas podrían ser previamente registradas a través de LA PLATAFORMA o ser
                   registradas en el mismo momento que registra la operación. El tiempo referencial de ejecución de la operación dependerá del tipo de operación que registre.
+                </li>
+                <li>
+                  INSTAKASH no realiza transferencias u operaciones a terceros. Es exigencia de la normativa de la SBS que el titular de la cuenta de origen sea la misma persona
+                  natural o jurídica de la cuenta destino. De no coincidir alguna de éstas, deberá proporcionar un número de cuenta con destino al titular de origen de los fondos.
                 </li>
                 <li>
                   Cuando se hayan completado los pasos anteriores se dará por registrada la operación, estableciéndose desde ese momento un acuerdo de cambio de divisas entre el
@@ -231,12 +235,6 @@ const TerminosCondiciones = () => {
                   Una vez recibidos los fondos, el tiempo para que INSTAKASH ejecute la orden será no mayor a 3 horas, siempre y cuando no se hayan establecido tiempos diferentes
                   entre las partes o exista algún problema en el sistema del banco, INSTAKASH realizará la transferencia del monto acordado a la cuenta destino del USUARIO,
                   previamente registrada. INSTAKASH no se hace responsable del tiempo de transferencia de fondos por parte de las entidades financieras.{" "}
-                </li>
-                <li>
-                  En caso EL USUARIO realice una transferencia a favor de un tercero lo hará a su propio riesgo. EL USUARIO acepta que INSTAKASH no formará parte de la relación
-                  jurídica con dicho tercero ni estará obligado a proporcionar información, documentos, aclaraciones, anulaciones o comunicaciones con dicho tercero. EL USUARIO
-                  libera de toda responsabilidad a INSTAKASH en relación con las transferencias que EL USUARIO ordene a favor de terceros. INSTAKASH descontará la comisión por
-                  operaciones con comisión interplaza al momento de transferir el cambio a la cuenta de destino.
                 </li>
               </ul>
             </li>
