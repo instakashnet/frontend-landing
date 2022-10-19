@@ -5,7 +5,7 @@ import Script from "next/script";
 import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
-// import Callout from "../components/UI/callout.component";
+import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
@@ -68,13 +68,13 @@ const Home = ({ counters }) => {
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
-      {/* <Callout type="info">
+      <Callout type="info">
         <div className="container p-0">
           <p>
-            A partir del 01/07/2022 el <b>monto mínimo de cambio establecido será de 40$ USD</b> para compra y venta.
+            A partir del 14/10/2022 por regulaciones de la SBS <b>solo se realizarán transferencias a cuentas del mísmo titular.</b>
           </p>
         </div>
-      </Callout> */}
+      </Callout>
       <div className="container px-0 pb-0">
         <AdsCarousel />
       </div>
