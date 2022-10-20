@@ -121,7 +121,7 @@ const Promociones = () => {
               <div className={styles.Info}>
                 <h3>Refiere y</h3>
                 <h2>GÁNA KASH</h2>
-                <p>Invita a tus amigos a Instakash y con su primer cambio te ganas 1 KASH y tu referido un descuento en la tasa.</p>
+                <p>Invita a tus amigos a Instakash y con su primer cambio te ganas 2 KASH y tu referido un descuento en la tasa.</p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y referir
