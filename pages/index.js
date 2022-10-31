@@ -314,7 +314,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/posters/cupon.webp" alt="Mejora el tipo de cambio online con INSTAKASH." layout="fill" objectFit="contain" />
+        <Image src="/images/posters/closed.webp" alt="comunicado 01 de Noviembre en INSTAKASH." layout="fill" objectFit="contain" />
         {/* <div className={styles.ModalBody}>
           <h3>Lentitud con BCP</h3>
           <p>
