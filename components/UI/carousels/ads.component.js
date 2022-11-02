@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Link from "next/link";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
@@ -22,7 +21,7 @@ const AdsCarousel = () => {
 
   return (
     <Slider className={styles.BannerSlider} {...settings}>
-      <div className="w-full">
+      {/* <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
@@ -32,7 +31,7 @@ const AdsCarousel = () => {
             )}
           </a>
         </Link>
-      </div>
+      </div> */}
       <div className="w-full">
         <a className={styles.BannerCard} href="https://linktr.ee/instakashnet" target="_blank" rel="noopener noreferrer">
           {isMobile ? (

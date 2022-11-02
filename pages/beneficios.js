@@ -51,7 +51,7 @@ const Promociones = () => {
           </h3>
 
           <article className={styles.PromotionsWrapper}>
-            <Card className={styles.PromotionCard}>
+            {/* <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
                 <Image src="/images/beneficios/cupon-mes.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="cover" />
               </div>
@@ -74,7 +74,7 @@ const Promociones = () => {
                   </button>
                 </div>
               </div>
-            </Card>
+            </Card> */}
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
