@@ -51,15 +51,15 @@ const Promociones = () => {
           </h3>
 
           <article className={styles.PromotionsWrapper}>
-            {/* <Card className={styles.PromotionCard}>
+            <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
                 <Image src="/images/beneficios/cupon-mes.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>CANCIONCRIOLLA</h2>
+                <h2>NOVIEMBRE10</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-10-2022">01/10</time> al <time dateTime="31-08-2022">31/10</time> del 2022
+                  <time dateTime="01-11-2022">01/11</time> al <time dateTime="30-11-2022">30/11</time> del 2022
                 </p>
                 <p>
                   Realiza tus cambios este mes con el cupón CANCIONCRIOLLA y obtén 10 puntos a favor de tu cambio. Válido desde el 1 de Octubre hasta el 31 de OCtubre. Para 2
@@ -74,11 +74,11 @@ const Promociones = () => {
                   </button>
                 </div>
               </div>
-            </Card> */}
+            </Card>
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/empresas.png" alt="Plan de empresas Instakash" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/empresas.webp" alt="Plan de empresas Instakash" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.Info}>
                 <h3>Plan de empresas</h3>
@@ -97,7 +97,7 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/supermontos.png" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/supermontos.webp" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
                 <h3>Cupones activos</h3>
@@ -116,7 +116,7 @@ const Promociones = () => {
 
             <Card className={styles.PromotionCard}>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/kash.png" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="contain" />
+                <Image src="/images/beneficios/kash.webp" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="contain" />
               </div>
               <div className={styles.Info}>
                 <h3>Refiere y</h3>
