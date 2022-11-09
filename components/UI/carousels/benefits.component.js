@@ -36,7 +36,7 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/empresas.png" alt="Cupón para cambio online para empresas" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/empresas.webp" alt="Cupón para cambio online para empresas" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
@@ -54,7 +54,7 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/supermontos.png" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/supermontos.webp" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
@@ -71,7 +71,7 @@ const BenefitsCarousel = () => {
           <Link href="/beneficios">
             <a className="block">
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/kash.png" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="cover" />
+                <Image src="/images/beneficios/kash.webp" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="cover" />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
