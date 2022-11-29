@@ -2,14 +2,13 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../components/calculator";
 // import Callout from "../components/UI/callout.component";
 import Card from "../components/UI/Card";
 import AdsCarousel from "../components/UI/carousels/ads.component";
 import BenefitsCarousel from "../components/UI/carousels/benefits.component";
-import { BaseModal } from "../components/UI/Modal";
+// import { BaseModal } from "../components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../utils/fetch-data";
@@ -36,15 +35,9 @@ export async function getStaticProps() {
 }
 
 const Home = ({ counters }) => {
-  const [infoModal, setInfoModal] = useState(false);
+  // const [infoModal, setInfoModal] = useState(false);
 
-  useEffect(() => {
-    setTimeout(() => {
-      setInfoModal(true);
-    }, 1200);
-  }, []);
-
-  const handleCloseModal = () => setInfoModal(false);
+  // const handleCloseModal = () => setInfoModal(false);
 
   return (
     <>
@@ -313,9 +306,9 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
-      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/posters/cyberkash.webp" alt="en este cyberweek cambia soles y dolares con INSTAKASH." layout="fill" objectFit="contain" />
-        {/* <div className={styles.ModalBody}>
+      {/* <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
+        <Image src="/images/posters/cyberkash.webp" alt="en este cyberweek cambia soles y dolares con INSTAKASH." layout="fill" objectFit="contain" /> */}
+      {/* <div className={styles.ModalBody}>
           <h3>Lentitud con BCP</h3>
           <p>
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma de empresas de BCP está presentando problemas de lentitud</b>, por lo
@@ -323,7 +316,7 @@ const Home = ({ counters }) => {
           </p>
           <p className="font-bold mt-6">Agradecemos su comprensión.</p>
         </div> */}
-      </BaseModal>
+      {/* </BaseModal> */}
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
