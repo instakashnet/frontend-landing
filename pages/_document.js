@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
-const { GA_TRACKING_ID, FB_PIXEL_ID } = process.env;
+const { GA_TRACKING_ID, FB_PIXEL_ID_MAIN, FB_PIXEL_ID_WEBTILIA } = process.env;
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -37,12 +37,15 @@ class MyDocument extends Document {
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', ${FB_PIXEL_ID});
+                fbq('init', ${FB_PIXEL_ID_MAIN});
+                fbq('init', ${FB_PIXEL_ID_WEBTILIA});
+                fbq('track', 'PageView');
               `,
             }}
           />
           <noscript>
-            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID}&ev=PageView&noscript=1`} />
+            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID_MAIN}&ev=PageView&noscript=1`} />
+            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID_WEBTILIA}&ev=PageView&noscript=1`} />
           </noscript>
         </Head>
         <body>
