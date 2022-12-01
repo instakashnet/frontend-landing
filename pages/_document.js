@@ -1,7 +1,5 @@
 import Document, { Head, Html, Main, NextScript } from "next/document";
 
-const { GA_TRACKING_ID, FB_PIXEL_ID_MAIN, FB_PIXEL_ID_WEBTILIA } = process.env;
-
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);
@@ -12,15 +10,14 @@ class MyDocument extends Document {
     return (
       <Html lang="es_PE" className="notranslate" translate="no">
         <Head>
-          <link rel="icon" href="/favicon.ico" type="image/png" />
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
+          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', '${GA_TRACKING_ID}', {
+              gtag('config', '${process.env.NEXT_PUBLIC_GA_TRACKING_ID}', {
                 page_path: window.location.pathname,
               });
           `,
@@ -37,16 +34,16 @@ class MyDocument extends Document {
                 t.src=v;s=b.getElementsByTagName(e)[0];
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
-                fbq('init', ${FB_PIXEL_ID_MAIN});
-                fbq('init', ${FB_PIXEL_ID_WEBTILIA});
-                fbq('track', 'PageView');
+                fbq('init', ${process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN});
+                fbq('init', ${process.env.NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA});
               `,
             }}
           />
           <noscript>
-            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID_MAIN}&ev=PageView&noscript=1`} />
-            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${FB_PIXEL_ID_WEBTILIA}&ev=PageView&noscript=1`} />
+            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN}&ev=PageView&noscript=1`} />
+            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA}&ev=PageView&noscript=1`} />
           </noscript>
+          <link rel="icon" href="/favicon.ico" type="image/png" />
         </Head>
         <body>
           <Main />

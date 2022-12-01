@@ -11,8 +11,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
-      FB_PIXEL_ID: ${{ secrets.FB_PIXEL_ID }}
+      NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
+      NEXT_PUBLIC_FB_PIXEL_ID_MAIN: ${{ secrets.FB_PIXEL_ID_MAIN }}
+      NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA: ${{ secrets.FB_PIXEL_ID_WEBTILIA }}
       AWS_S3_BUCKET: dev.instakash.net
       AWS_REGION: us-east-2
       AWS_CF_DISTRIBUTION_ID: E3LUJGCBHH6OTX
