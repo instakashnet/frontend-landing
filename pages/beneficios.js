@@ -57,14 +57,11 @@ const Promociones = () => {
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>NOVIEMBRE10</h2>
+                <h2>FELICESFIESTAS</h2>
                 <p className={styles.Date}>
-                  <time dateTime="01-11-2022">01/11</time> al <time dateTime="30-11-2022">30/11</time> del 2022
+                  <time dateTime="01-12-2022">01/12</time> al <time dateTime="31-12-2022">31/12</time> del 2022
                 </p>
-                <p>
-                  Realiza tus cambios este mes con el cupón NOVIEMBRE10 y obtén 10 puntos a favor de tu cambio. Válido desde el 1 de Octubre hasta el 31 de OCtubre. Para 2 cambios
-                  a partir de $100 USD.
-                </p>
+                <p>Celebra las fiestas realizando tus cambios con el cupón FELICESFIESTAS y obtén 10 puntos a favor de tu cambio. Válido para 2 cambios a partir de $100 USD.</p>
                 <div className={styles.Actions}>
                   <a href="https://app.instakash.net/signin" className="mr-4">
                     Acceder y usar cupón
