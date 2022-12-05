@@ -319,7 +319,7 @@ const Home = ({ counters }) => {
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank está presentando problemas</b>, por lo tanto las
             operaciones con este banco pueden tardar mas de lo estimado.
           </p>
-          <p className="font-bold mt-6">Agradecemos su comprensión.</p>
+          <p className="font-bold mt-6">Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
         </div>
       </BaseModal>
       <Script
