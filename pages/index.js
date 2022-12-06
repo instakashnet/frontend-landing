@@ -312,7 +312,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <Image src="/images/posters/cupon.webp" alt="celebra con INSTAKASH las fiestas con nuestro cupon FELICESFIESTAS." layout="fill" objectFit="contain" />
+        <img src="/images/posters/cupon.webp" alt="celebra con INSTAKASH las fiestas con nuestro cupon FELICESFIESTAS." />
         {/* <div className={styles.ModalBody}>
           <h3>Caida de Interbank</h3>
           <p>
