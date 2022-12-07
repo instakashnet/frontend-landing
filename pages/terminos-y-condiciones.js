@@ -442,13 +442,13 @@ const TerminosCondiciones = () => {
             <li>
               <p>INSTAKASH se reserva la discreción de aprobación de la solicitud de devolución, estando siempre atentos a la inquietud y consideraciones del USUARIO.</p>
               <p>
-                La solicitud de devolución solo pasará a evaluación cuando se trate o se presuma de un error de la plataforma. El USUARIO dispone de 48 horas para informar al
-                equipo de soporte, brindando información que se le consulte sobre la materia. Transcurrido el plazo de 48 horas dentro de los días útiles de realizada la
-                transacción de AVANCE DE EFECTIVO, queda inválida cualquier solicitud de devolución.
+                La solicitud de devolución solo pasará a evaluación cuando se trate o se presuma de un error de la plataforma. Mientras no ocurra ninguna irregularidad con la
+                operación no se aceptará ninguna solicitud. El USUARIO dispone de 48 horas para informar al equipo de soporte, brindando información que se le consulte sobre la
+                materia. Transcurrido el plazo de 48 horas dentro de los días útiles de realizada la transacción de CAMBIO, queda inválida cualquier solicitud de devolución.
               </p>
               <p>
-                El USUARIO confirma en caso de devolución de una operación registrada o transferida a las cuentas de INSTAKASH en un periodo mayor a 24 horas, la plataforma podría
-                descontar del monto, el 5% de comisión como parte de los gastos administrativos y operativos de la empresa.
+                El USUARIO confirma en caso de devolución de una operación registrada o transferida a las cuentas de INSTAKASH, la plataforma podría descontar del monto, el 5% de
+                comisión como parte de los gastos administrativos y operativos de la empresa.
               </p>
               <p>INSTAKASH no se hace responsable ni ofrece devoluciones en los casos de un error en la información brindada por el USUARIO en los datos de transferencia.</p>
               <p>
