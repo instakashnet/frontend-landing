@@ -79,7 +79,7 @@ const contacto = () => {
                 <section>
                   <h2>Nuestro horario</h2>
                   <p className="text-sm">Lunes a Viernes: 9AM a 7PM</p>
-                  <p className="text-sm">Sábados: 9AM a 2:30PM</p>
+                  <p className="text-sm">Sábados: 9AM a 2:00PM</p>
                   <p className="text-sm">Domingos y Feriados: cerrados</p>
                 </section>
               </div>
