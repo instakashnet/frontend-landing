@@ -312,15 +312,15 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <img src="/images/posters/event.webp" alt="INSTAKASH te invita al evento de MASTERMIND 2023." />
-        {/* <div className={styles.ModalBody}>
+        {/* <img src="/images/posters/event.webp" alt="INSTAKASH te invita al evento de MASTERMIND 2023." /> */}
+        <div className={styles.ModalBody}>
           <h3>Caida de Interbank</h3>
           <p>
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank está presentando problemas</b>, por lo tanto las
             operaciones con este banco pueden tardar mas de lo estimado.
           </p>
           <p className="font-bold mt-6">Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
-        </div> */}
+        </div>
       </BaseModal>
       <Script
         strategy="afterInteractive"
