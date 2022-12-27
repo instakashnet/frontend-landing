@@ -312,7 +312,7 @@ const Home = ({ counters }) => {
         </div>
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <img src="/images/posters/event.webp" alt="INSTAKASH te invita al evento de MASTERMIND 2023." />
+        <img src="/images/posters/comunicado.webp" alt="INSTAKASH te desea un feliz año nuevo 2023." />
         {/* <div className={styles.ModalBody}>
           <h3>Caida de Interbank</h3>
           <p>
