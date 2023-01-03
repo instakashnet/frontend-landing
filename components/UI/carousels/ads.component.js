@@ -23,15 +23,6 @@ const AdsCarousel = () => {
   return (
     <Slider className={styles.BannerSlider} {...settings}>
       <div className="w-full">
-        <a className={styles.BannerCard} href="https://bit.ly/mastermindoficial" target="_blank" rel="noopener noreferrer">
-          {isMobile ? (
-            <Image src="/images/banners/event360.webp" alt="INSTAKASH te invita al evento de MASTERMIND" layout="fill" objectFit="contain" />
-          ) : (
-            <Image src="/images/banners/event1200.webp" alt="INSTAKASH te invita al evento de MASTERMIND" layout="fill" objectFit="contain" />
-          )}
-        </a>
-      </div>
-      <div className="w-full">
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
