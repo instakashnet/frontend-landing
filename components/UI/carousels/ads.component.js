@@ -35,9 +35,9 @@ const AdsCarousel = () => {
         <Link href="/beneficios">
           <a className={styles.BannerCard}>
             {isMobile ? (
-              <Image src="/images/banners/cupon360.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="contain" />
+              <Image src="/images/banners/cupon360.webp" alt="Cambiar dólares y soles con INSTAKASH en el verano" layout="fill" objectFit="contain" />
             ) : (
-              <Image src="/images/banners/cupon1200.webp" alt="Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes." layout="fill" objectFit="contain" />
+              <Image src="/images/banners/cupon1200.webp" alt="Cambiar dólares y soles con INSTAKASH en el verano" layout="fill" objectFit="contain" />
             )}
           </a>
         </Link>
