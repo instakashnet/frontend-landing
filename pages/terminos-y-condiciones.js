@@ -1,40 +1,40 @@
-import Head from "next/head";
-import styles from "../styles/Legal.module.scss";
+import Head from 'next/head';
+import styles from '../styles/Legal.module.scss';
 
 const TerminosCondiciones = () => {
   return (
     <>
       <Head>
         <title>Términos y Condiciones</title>
-        <meta name="title" content="Términos y Condiciones | Instakash" />
-        <meta name="description" content="Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí " />
-        <meta http-equiv="content-language" content="es_PE" />
-        <link rel="icon" href="imagenes/favicon.png" type="image/png" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://instakash.net/terminos-y-condiciones" />
-        <meta name="author" content="InstaKash" />
-        <meta name="url" content="https://instakash.net/terminos-y-condiciones" />
-        <meta property="og:title" content="Preguntas Instakash | Casa de Cambio Online" />
-        <meta property="og:site_name" content="InstaKash" />
-        <meta property="og:url" content="https://instakash.net/terminos-y-condiciones" />
-        <meta property="og:description" content="Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="" />
+        <meta name='title' content='Términos y Condiciones | Instakash' />
+        <meta name='description' content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí ' />
+        <meta http-equiv='content-language' content='es_PE' />
+        <link rel='icon' href='imagenes/favicon.png' type='image/png' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href='https://instakash.net/terminos-y-condiciones' />
+        <meta name='author' content='InstaKash' />
+        <meta name='url' content='https://instakash.net/terminos-y-condiciones' />
+        <meta property='og:title' content='Preguntas Instakash | Casa de Cambio Online' />
+        <meta property='og:site_name' content='InstaKash' />
+        <meta property='og:url' content='https://instakash.net/terminos-y-condiciones' />
+        <meta property='og:description' content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:image' content='' />
       </Head>
       <section className={styles.legal}>
-        <div className="section-wrapper container px-3 pt-12">
+        <div className='section-wrapper container px-3 pt-12'>
           <h1 className={styles.Title}>Términos y condiciones</h1>
-          <hr className="mx-auto" />
+          <hr className='mx-auto' />
 
-          <p className="mt-12">
+          <p className='mt-12'>
             El presente Acuerdo es un contrato entre usted e INSTAKASH S.A.C. (en adelante, “INSTAKASH”, o “la Empresa”) a efectos de hacer uso de los servicios brindados por
             nuestra empresa. Al registrarse, usted acepta todos los términos y condiciones establecidos en el presente contrato, lo que le permitirá utilizar los servicios de
             “INSTAKASH”. Por favor, lea este contrato detalladamente y asegúrese de entenderlo en su totalidad antes de utilizar los servicios. Tenga en cuenta que el utilizar los
             servicios prestados por INSTAKASH implica una aceptación de los términos de este Acuerdo. INSTAKASH no se hace responsable por la omisión o falta de lectura total o
             parcial de los Términos y Condiciones del uso de la plataforma.
           </p>
-          <p className="my-3">Al aceptar este contrato, aceptas que podamos comunicarnos por: teléfono, correo electrónico, whatsapp o publicando avisos en LA PLATAFORMA.</p>
-          <p className="my-3">
+          <p className='my-3'>Al aceptar este contrato, aceptas que podamos comunicarnos por: teléfono, correo electrónico, whatsapp o publicando avisos en LA PLATAFORMA.</p>
+          <p className='my-3'>
             INSTAKASH se reserva el derecho a modificar el presente Acuerdo de forma unilateral y sin previo aviso mediante la publicación de una nueva versión en el sitio web de
             la Empresa.
           </p>
@@ -65,7 +65,7 @@ const TerminosCondiciones = () => {
               </p>
               <p>
                 EL USUARIO deberá registrar sus datos personales y de contacto (como persona natural o como responsable de la empresa registrada) el momento de crear un perfil, lo
-                cual incluye adjuntar un documento de identidad (digitalizado) cuando se le solicite (obligatorio para montos mínimos de $ 5,000.00 o S/. 15,000.00).
+                cual incluye adjuntar un documento de identidad (digitalizado) cuando se le solicite.
               </p>
               <p>
                 Cada USUARIO registrado en INSTAKASH, podrá crear un perfil de persona natural y varios perfiles de personas jurídicas. Los perfiles permitirán tener un mayor orden
@@ -107,11 +107,16 @@ const TerminosCondiciones = () => {
               <p>EL USUARIO podrá registrar datos de la cuenta bancaria, tanto en soles como en moneda extranjera.</p>
               <p>
                 En INSTAKASH aceptamos cuentas de las siguientes entidades financieras:
-                <ul className="list-disc pl-6 mt-2">
+                <ul className='list-disc pl-6 mt-2'>
                   <li>BCP, generados a nivel nacional.</li>
                   <li>Interbank, generados en el departamento de Lima – Perú.</li>
                   <li>Otras entidades serán tomadas como interbancarias.</li>
                 </ul>
+              </p>
+
+              <p>
+                INSTAKASH solicitará el registro de la cuenta bancaria de origen y la cuenta bancaria destino del USUARIO con el fin de poder validar la autenticidad del titular de
+                la cuenta.
               </p>
 
               <p>INSTAKASH no será responsable del bloqueo de cuentas bancarias registradas por el USUARIO en una entidad financiera o por otra situación similar a esta.</p>
@@ -137,7 +142,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h2 className="mt-10 mb-6 text-2xl">5. REGISTROS:</h2>
+          <h2 className='mt-10 mb-6 text-2xl'>5. REGISTROS:</h2>
           <ol className={styles.legalList}>
             <li>
               <h2>5.1 MONEDA KASH:</h2>
@@ -178,7 +183,7 @@ const TerminosCondiciones = () => {
                 cobros de comisiones o del impuesto a las transacciones financieras (ITF) por parte las entidades financieras involucradas en la operación.
               </p>
               <p>Para registrar una operación, el USUARIO lo debe hacer usando su cuenta:</p>
-              <ul className="list-disc pl-6 mt-2">
+              <ul className='list-disc pl-6 mt-2'>
                 <li>El USUARIO indicará el monto a transferir y el tipo de operación (compra o venta).</li>
                 <li>
                   El USUARIO puede solicitar el canje de sus monedas KASH acumuladas al procesar un registro de VENTA de dólares. Los Kash acumulados se verán reflejados en su
@@ -234,12 +239,12 @@ const TerminosCondiciones = () => {
                 <li>
                   Una vez recibidos los fondos, el tiempo para que INSTAKASH ejecute la orden será no mayor a 3 horas, siempre y cuando no se hayan establecido tiempos diferentes
                   entre las partes o exista algún problema en el sistema del banco, INSTAKASH realizará la transferencia del monto acordado a la cuenta destino del USUARIO,
-                  previamente registrada. INSTAKASH no se hace responsable del tiempo de transferencia de fondos por parte de las entidades financieras.{" "}
+                  previamente registrada. INSTAKASH no se hace responsable del tiempo de transferencia de fondos por parte de las entidades financieras.{' '}
                 </li>
               </ul>
             </li>
 
-            <li id="#cupones" className="mt-2">
+            <li id='#cupones' className='mt-2'>
               <h2>5.3 CUPONES DE DESCUENTO:</h2>
               <p>
                 Los cupones de descuento son una iniciativa utilizada por el Equipo de Marketing para campañas específicas y pueden ser adquiridos a través de nuestro whatsapp,
@@ -271,7 +276,7 @@ const TerminosCondiciones = () => {
               <h4>Plan de Empresas Afiliadas</h4>
               <p>
                 El Plan de Empresas Afiliadas ha sido creado para para apoyar la gestión de las empresas en el Perú, nuestro objetivo es generar procesos y actividades que
-                garanticen el ahorro y la mejor experiencia de cambio de divisas . El plan incluye:{" "}
+                garanticen el ahorro y la mejor experiencia de cambio de divisas . El plan incluye:{' '}
               </p>
               <ol>
                 <li>Atención preferencial para nuestra red empresas (tiempos más rápidos).</li>
@@ -295,7 +300,7 @@ const TerminosCondiciones = () => {
               </p>
             </li>
           </ol>
-          <h2 className="mt-10 mb-6 text-2xl">6 AFILIADOS:</h2>
+          <h2 className='mt-10 mb-6 text-2xl'>6 AFILIADOS:</h2>
           <ol className={styles.legalList}>
             <li>
               <h2>6.1 PROGRAMA DE AFILIADOS:</h2>
@@ -344,7 +349,7 @@ const TerminosCondiciones = () => {
             <li>
               <p>INSTAKASH trasladará al usuario cualquier comisión generada por la entidad bancaria en cualquiera de los siguientes casos:</p>
             </li>
-            <ol className="pl-6 mt-2">
+            <ol className='pl-6 mt-2'>
               <li>Use cuentas bancarias de plazas distintas a Lima y esto incurra en comisiones interplaza.</li>
               <li>Realice una transferencia en la agencia de su entidad bancaria y esta se encuentre en una plaza distinta a Lima.</li>
               <li>Realice operaciones de transferencia bancarias desde provincias, de otros bancos distintos a: BCP (solo banca por internet), Interbank.</li>
@@ -412,7 +417,7 @@ const TerminosCondiciones = () => {
                 En el supuesto de que el USUARIO, pasado el Plazo de Recepción de Fondos, haya realizado la transferencia del monto acordado en el registro de la operación o el
                 monto acordado haya ingresado a la cuenta bancaria de INSTAKASH, el USUARIO podrá:
               </p>
-              <ul className="list-disc ml-6 mt-3">
+              <ul className='list-disc ml-6 mt-3'>
                 <li>
                   Aceptar el nuevo tipo de cambio en base a la fecha y hora en que fueron recibidos los fondos por parte de INSTAKASH. Esta fecha y hora será aquella que señale la
                   banca en línea de la entidad financiera que recibe el fondo.
@@ -447,8 +452,9 @@ const TerminosCondiciones = () => {
                 materia. Transcurrido el plazo de 48 horas dentro de los días útiles de realizada la transacción de CAMBIO, queda inválida cualquier solicitud de devolución.
               </p>
               <p>
-                El USUARIO confirma en caso de devolución de una operación registrada o transferida a las cuentas de INSTAKASH, la plataforma podría descontar del monto, el 5% de
-                comisión como parte de los gastos administrativos y operativos de la empresa.
+                INSTAKASH se reserva el derecho de cualquier acción sobre aquellas solicitudes de cambio registradas o no registradas y/o devoluciones que sean solicitadas por el
+                usuario habiendo transcurrido un lapso de tiempo. En este caso INSTAKASH podrá aplicar cargos y comisiones administrativas, tomando en consideración la cuantía, la
+                moneda y el lapso transcurrido sobre el cual se realizó la transferencia de fondos inicial.
               </p>
               <p>INSTAKASH no se hace responsable ni ofrece devoluciones en los casos de un error en la información brindada por el USUARIO en los datos de transferencia.</p>
               <p>
