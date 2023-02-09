@@ -1,34 +1,34 @@
-import cls from "classnames";
-import Image from "next/image";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
-import { event } from "../../utils/fbpixel";
-import styles from "./Nav.module.scss";
+import cls from 'classnames';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
+import { event } from '../../utils/fbpixel';
+import styles from './Nav.module.scss';
 
 const Nav = () => {
-  const [scrollDirection, setScrollDirection] = useState("default"),
+  const [scrollDirection, setScrollDirection] = useState('default'),
     [mobileNav, setMobileNav] = useState(false),
     router = useRouter();
 
   useEffect(() => {
     let lastScroll = 40,
-      direction = "default";
+      direction = 'default';
 
     const setNavbarEffect = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll <= 40) direction = "default";
-      if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
-      if (currentScroll < lastScroll && direction === "down") direction = "up";
+      if (currentScroll <= 40) direction = 'default';
+      if (lastScroll > 40 && currentScroll > lastScroll && direction !== 'down') direction = 'down';
+      if (currentScroll < lastScroll && direction === 'down') direction = 'up';
 
       setScrollDirection(direction);
       lastScroll = currentScroll;
     };
 
-    window.addEventListener("scroll", setNavbarEffect);
+    window.addEventListener('scroll', setNavbarEffect);
 
-    return () => window.removeEventListener("scroll", setNavbarEffect);
+    return () => window.removeEventListener('scroll', setNavbarEffect);
   }, []);
 
   useEffect(() => {
@@ -41,57 +41,57 @@ const Nav = () => {
   };
 
   const onRegister = () => {
-    event("Subscribe");
-    location.href = "https://app.instakash.net/signup";
+    event('Subscribe');
+    location.href = 'https://app.instakash.net/register';
   };
 
   return (
     <>
-      <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
-        <div className="container flex items-center justify-between">
-          <Link href="/">
+      <nav className={cls(styles.nav, scrollDirection === 'down' ? styles.navDown : scrollDirection === 'up' ? styles.navUp : '')}>
+        <div className='container flex items-center justify-between'>
+          <Link href='/'>
             <a className={styles.Logo}>
-              <Image layout="fill" objectFit="contain" src="/images/logo.svg" alt="Instakash" />
+              <Image layout='fill' objectFit='contain' src='/images/logo.svg' alt='Instakash' />
             </a>
           </Link>
 
-          <ul className="ml-auto mr-3">
+          <ul className='ml-auto mr-3'>
             <li>
-              <Link href="/nosotros">Nosotros</Link>
+              <Link href='/nosotros'>Nosotros</Link>
             </li>
             <li>
-              <Link href="/beneficios">Beneficios</Link>
+              <Link href='/beneficios'>Beneficios</Link>
             </li>
             <li>
-              <Link href="/faq">FAQ</Link>
+              <Link href='/faq'>FAQ</Link>
             </li>
           </ul>
 
           <div className={styles.navButtons}>
-            <a href="https://app.instakash.net/signin" className="mr-4">
+            <a href='https://app.instakash.net/login' className='mr-4'>
               Iniciar sesión
             </a>
             <button onClick={onRegister}>Registrarse</button>
           </div>
 
-          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ""}`} onClick={toggleNav}>
+          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
             <span />
             <span />
             <span />
           </button>
         </div>
       </nav>
-      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
+      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ''}`} onClick={closeNav}>
         <ul>
           <h3>Menú</h3>
           <li>
-            <Link href="/nosotros">Nosotros</Link>
+            <Link href='/nosotros'>Nosotros</Link>
           </li>
           <li>
-            <Link href="/beneficios">Beneficios</Link>
+            <Link href='/beneficios'>Beneficios</Link>
           </li>
           <li>
-            <Link href="/faq">FAQ</Link>
+            <Link href='/faq'>FAQ</Link>
           </li>
         </ul>
         <div className={styles.schedule}>
@@ -102,8 +102,8 @@ const Nav = () => {
         </div>
 
         <div className={styles.navButtons}>
-          <a href="https://app.instakash.net">Iniciar sesión</a>
-          <a href="https://app.instakash.net">Registrarse</a>
+          <a href='https://app.instakash.net'>Iniciar sesión</a>
+          <a href='https://app.instakash.net'>Registrarse</a>
         </div>
       </nav>
     </>

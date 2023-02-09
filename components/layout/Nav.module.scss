@@ -1,6 +1,6 @@
-@import "../../styles/colors";
-@import "../../styles/breakpoints";
-@import "../../styles/fontSizes";
+@import '../../styles/colors';
+@import '../../styles/breakpoints';
+@import '../../styles/fontSizes';
 
 .nav {
   width: 100%;
@@ -92,19 +92,22 @@
     border: 2px solid $button-main;
     padding: 0.6rem 1.2rem;
     background-color: $button-main;
-    border-radius: 10px;
+    color: #fff;
+    border-radius: 6px;
     transition: 200ms ease-out;
     font-size: $caption;
-    font-weight: 700;
 
     &:hover,
     &:focus {
-      background-color: darken($color: $button-main, $amount: 15);
+      background-color: $button-hover;
+      border-color: $button-hover;
+      color: #fff;
     }
   }
 
   a {
     background-color: transparent;
+    color: $text-body;
   }
 
   @include respond(tablet) {

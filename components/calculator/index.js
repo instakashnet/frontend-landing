@@ -17,7 +17,7 @@ const Calculator = () => {
     initialValues: { type: "sell", currency_sent: 2, currency_received: 1, amount_sent: 0, amount_received: 0 },
     onSubmit: () => {
       event("Subscribe");
-      location.href = "https://app.instakash.net/signup";
+      location.href = "https://app.instakash.net/register";
     },
   });
   const { setFieldValue } = formik;

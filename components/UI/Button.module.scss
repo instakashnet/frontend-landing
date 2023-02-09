@@ -1,16 +1,17 @@
-@import "../../styles/colors";
-@import "../../styles/fontSizes";
+@import '../../styles/colors';
+@import '../../styles/fontSizes';
 
 .Button {
   padding: 0.8rem 1rem;
-  border-radius: 10px;
+  border-radius: 6px;
   background-color: $button-main;
-  transition: 200ms ease-out;
+  color: #fff;
+  transition: 250ms ease-out;
   font-weight: 700;
   font-size: $body;
 
   &:hover,
   &:focus {
-    background-color: darken($color: $button-main, $amount: 15);
+    background-color: $button-hover;
   }
 }

@@ -1,10 +1,10 @@
-@use "sass:math";
-@import "./colors";
-@import "./fontSizes";
-@import "./breakpoints";
+@use 'sass:math';
+@import './colors';
+@import './fontSizes';
+@import './breakpoints';
 
 .About {
-  background-image: url("/images/bg/shapes-top.svg");
+  background-image: url('/images/bg/shapes-top.svg');
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: left -5%;
@@ -15,7 +15,7 @@
 }
 
 .WhyUs {
-  background-image: url("/images/bg/affiliates-mobile.svg");
+  background-image: url('/images/bg/affiliates-mobile.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -49,7 +49,7 @@
   }
 
   @include respond(tablet) {
-    background-image: url("/images/bg/why-us.svg");
+    background-image: url('/images/bg/why-us.svg');
 
     h2 {
       font-size: math.div($title, 1.6);
@@ -90,10 +90,17 @@
 .StartButton {
   margin: 40px auto;
   background-color: $button-main;
+  color: #fff;
   padding: 15px;
   width: 100%;
   max-width: 18rem;
   border-radius: 10px;
   display: block;
   font-weight: bold;
+  transition: 350ms ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: $button-hover;
+  }
 }

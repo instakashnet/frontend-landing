@@ -1,4 +1,4 @@
-@import "../../styles/colors";
+@import '../../styles/colors';
 
 .SwipeWrapper {
   position: absolute;
@@ -11,9 +11,9 @@
 }
 
 .SwipeButton {
-  background-color: $button-main;
+  background-color: $tertiary-green;
   border-radius: 50%;
-  border: 6px solid $tertiary-green;
+  border: 5px solid $base-green;
   padding: 0.2rem;
   transition: 300ms ease-in-out;
   transform: rotate(0);

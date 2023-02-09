@@ -1,7 +1,7 @@
-@use "sass:math";
-@import "./colors";
-@import "./breakpoints";
-@import "./fontSizes";
+@use 'sass:math';
+@import './colors';
+@import './breakpoints';
+@import './fontSizes';
 
 .PromotionsWrapper {
   display: grid;
@@ -67,8 +67,9 @@
 
   a {
     padding: 0.8rem 1rem;
-    border-radius: 10px;
+    border-radius: 8px;
     background-color: $button-main;
+    color: #fff;
     transition: 200ms ease-out;
     margin: 0 !important;
     font-weight: bold;
@@ -78,7 +79,7 @@
 
     &:hover,
     &:focus {
-      background-color: darken($color: $button-main, $amount: 15);
+      background-color: $button-hover;
     }
   }
 
