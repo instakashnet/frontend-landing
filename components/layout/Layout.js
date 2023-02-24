@@ -1,8 +1,8 @@
-import { useRouter } from "next/router";
-import WhatsappBtn from "../UI/whatsapp.component";
-import Footer from "./Footer";
-import styles from "./Layout.module.scss";
-import Nav from "./Nav";
+import { useRouter } from 'next/router';
+import WhatsappBtn from '../UI/whatsapp.component';
+import Footer from './Footer';
+import styles from './Layout.module.scss';
+import Nav from './Nav';
 
 const Layout = ({ children }) => {
   const router = useRouter();
@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Nav />
       <main>{children}</main>
       <Footer pathname={router.pathname} />
-      <WhatsappBtn />
+      {/* <WhatsappBtn /> */}
     </div>
   );
 };
