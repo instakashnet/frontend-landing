@@ -314,7 +314,7 @@ const Home = ({ counters }) => {
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         {/* <img src='/images/posters/cupon.webp' alt='cambia dólares y soles con INSTAKASH en el verano.' /> */}
         <div className={styles.ModalBody}>
-          <h3>Caida de Interbank</h3>
+          <h3>Caida de BCP</h3>
           <p>
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma BCP para empresas está presentando problemas</b>, por lo tanto las
             operaciones con este banco pueden tardar mas de lo estimado.
