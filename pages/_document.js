@@ -1,4 +1,4 @@
-import Document, { Head, Html, Main, NextScript } from "next/document";
+import Document, { Head, Html, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -8,7 +8,7 @@ class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="es_PE" className="notranslate" translate="no">
+      <Html lang='es_PE' className='notranslate' translate='no'>
         <Head>
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
           <script
@@ -35,7 +35,6 @@ class MyDocument extends Document {
                 s.parentNode.insertBefore(t,s)}(window, document,'script',
                 'https://connect.facebook.net/en_US/fbevents.js');
                 fbq('init', ${process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN});
-                fbq('init', ${process.env.NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA});
               `,
             }}
           />
@@ -58,13 +57,13 @@ class MyDocument extends Document {
             }}
           />
           <noscript>
-            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN}&ev=PageView&noscript=1`} />
-            <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA}&ev=PageView&noscript=1`} />
+            <img height='1' width='1' style={{ display: 'none' }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN}&ev=PageView&noscript=1`} />
+            {/* <img height="1" width="1" style={{ display: "none" }} src={`https://www.facebook.com/tr?id=${process.env.NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA}&ev=PageView&noscript=1`} /> */}
             <div>
-              <img src={`https://mc.yandex.ru/watch/${process.env.NEXT_PUBLIC_YANDEX_CODE}`} style={{ position: "absolute", left: -9999 }} alt="" />
+              <img src={`https://mc.yandex.ru/watch/${process.env.NEXT_PUBLIC_YANDEX_CODE}`} style={{ position: 'absolute', left: -9999 }} alt='' />
             </div>
           </noscript>
-          <link rel="icon" href="/favicon.ico" type="image/png" />
+          <link rel='icon' href='/favicon.ico' type='image/png' />
         </Head>
         <body>
           <Main />
