@@ -3,8 +3,8 @@ name: prodCI
 on:
   push:
     branches:
-      - "main"
-      - "mainteinance"
+      - 'main'
+      - 'mainteinance'
 
 jobs:
   build:
@@ -12,7 +12,6 @@ jobs:
     env:
       NEXT_PUBLIC_GA_TRACKING_ID: ${{ secrets.GA_TRACKING_ID }}
       NEXT_PUBLIC_FB_PIXEL_ID_MAIN: ${{ secrets.FB_PIXEL_ID_MAIN }}
-      NEXT_PUBLIC_FB_PIXEL_ID_WEBTILIA: ${{ secrets.FB_PIXEL_ID_WEBTILIA }}
       NEXT_PUBLIC_YANDEX_CODE: ${{ secrets.YANDEX_CODE }}
       AWS_S3_BUCKET: instakash.net
       AWS_REGION: us-east-2
@@ -39,12 +38,12 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ${{ env.AWS_REGION }}
-          SOURCE_DIR: "out"
+          SOURCE_DIR: 'out'
       - name: Create Cloudfront cache invalidation
         uses: chetan/invalidate-cloudfront-action@master
         env:
           DISTRIBUTION: ${{ env.AWS_CF_DISTRIBUTION_ID }}
-          PATHS: "/*"
+          PATHS: '/*'
           AWS_REGION: ${{ env.AWS_REGION }}
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
