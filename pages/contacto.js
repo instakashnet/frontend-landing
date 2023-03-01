@@ -93,8 +93,8 @@ const contacto = () => {
               <div className='flex items-center my-8'>
                 <Headphones className={styles.infoIcon} />
                 <section>
-                  <h2>Whatsapp</h2>
-                  <a href='https://wa.link/wekqza' className='link' target='_blank' rel='noopener noreferrer'>
+                  <h2>Llámanos</h2>
+                  <a href='tel:+51929324006' className='link' target='_blank' rel='noopener noreferrer'>
                     +51 929 324 006
                   </a>
                 </section>
