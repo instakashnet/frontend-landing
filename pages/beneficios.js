@@ -101,7 +101,7 @@ const Promociones = () => {
               <div className={styles.Info}>
                 <h3>Cupones activos</h3>
                 <h2>SUPERMONTOS</h2>
-                <p>Usa tus cupones supermontos para obtener el mejor descuento en el tipo de cambio para tus cambios desde 5000 USD.</p>
+                <p>Usa tus cupones supermontos para obtener el mejor descuento en el tipo de cambio para tus cambios desde 10000 USD.</p>
                 <div className={styles.Actions}>
                   <a href='https://app.instakash.net/login' className='mr-4'>
                     Acceder y usar cupón
