@@ -1,4 +1,4 @@
-import styles from '../../../styles/UI.module.scss';
+import styles from '../../../../styles/UI.module.scss';
 
 const Input = ({ name, value, placeholder, className, type, error, touched, ...rest }) => {
   return (

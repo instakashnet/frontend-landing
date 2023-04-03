@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
@@ -67,12 +67,12 @@ const Home = ({ counters }) => {
         <meta property='og:image' content='' />
       </Head>
       {/* <Callout type="info">
-        <div className="container p-0">
-          <p>
-            A partir del 14/10/2022 por regulaciones de la SBS <b>solo se realizarán transferencias a cuentas del mísmo titular.</b>
-          </p>
-        </div>
-      </Callout> */}
+      <div className="container p-0">
+        <p>
+          A partir del 14/10/2022 por regulaciones de la SBS <b>solo se realizarán transferencias a cuentas del mísmo titular.</b>
+        </p>
+      </div>
+    </Callout> */}
       <div className='container px-0 pb-0'>
         <AdsCarousel />
       </div>
@@ -252,10 +252,8 @@ const Home = ({ counters }) => {
             <p className='mb-3'>
               El KASH es nuestra moneda digital que puedes obtener refiriendo a tus amigos. Por cada referido que complete 1 cambio obtendrás 2 KASH. con el KASH puedes ahorrar o
               retirarlo a una de tus cuentas bancarias.{' '}
-              <Link href='/beneficios'>
-                <a className='underline'>
-                  <b>Conoce más aquí.</b>
-                </a>
+              <Link href='/beneficios' className='underline' legacyBehavior>
+                <b>Conoce más aquí.</b>
               </Link>
             </p>
             <Image src='/images/illustrations/kash-equal.svg' objectFit='contain' width={350} height={150} />
@@ -314,28 +312,28 @@ const Home = ({ counters }) => {
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <img src='/images/posters/cupon.webp' alt='cambia dólares y soles con INSTAKASH en el verano.' />
         {/* <div className={styles.ModalBody}>
-          <h3>Caida de Interbank</h3>
-          <p>
-            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank para empresas está presentando problemas</b>, por lo tanto
-            las operaciones con este banco pueden tardar mas de lo estimado.
-          </p>
-          <p className='font-bold mt-6'>Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
-        </div> */}
+        <h3>Caida de Interbank</h3>
+        <p>
+          Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank para empresas está presentando problemas</b>, por lo tanto
+          las operaciones con este banco pueden tardar mas de lo estimado.
+        </p>
+        <p className='font-bold mt-6'>Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
+      </div> */}
       </BaseModal>
       <Script
         strategy='afterInteractive'
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: `
-          {
-            "@context": "https://schema.org/", "@type": "WebSite",
-            "name": "InstaKash",
-            "url": "https://instakash.net/", "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{search_term_string}",
-            "query-input": "required name=search_term_string"
-            } }
-          `,
+        {
+          "@context": "https://schema.org/", "@type": "WebSite",
+          "name": "InstaKash",
+          "url": "https://instakash.net/", "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{search_term_string}",
+          "query-input": "required name=search_term_string"
+          } }
+        `,
         }}
       />
     </>

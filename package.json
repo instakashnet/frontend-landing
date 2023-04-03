@@ -1,12 +1,13 @@
 {
-  "name": "landing",
+  "name": "instakash-landing",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 8080",
-    "build": "next build && next export",
+    "dev": "next dev",
+    "build": "next build",
+    "build:dev": "next build && next export",
     "start": "next start",
-    "export": "next export"
+    "lint": "next lint"
   },
   "dependencies": {
     "axios": "^0.21.1",

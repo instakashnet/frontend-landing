@@ -1,7 +1,7 @@
 import emailjs from 'emailjs-com';
 import { useFormik } from 'formik';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useState } from 'react';
@@ -10,7 +10,7 @@ import Button from '../src/components/UI/Button';
 import Checkbox from '../src/components/UI/form/Checkbox';
 import Input from '../src/components/UI/form/Input';
 import Textarea from '../src/components/UI/form/Textarea';
-import { contactValidation } from '../helpers/validations';
+import { contactValidation } from '../src/helpers/validations';
 import styles from '../styles/Contacto.module.scss';
 
 const contacto = () => {
@@ -160,10 +160,8 @@ const contacto = () => {
               />
               <Checkbox name='accept' value={formik.values.accept} onChange={formik.handleChange}>
                 Al enviar tus datos aceptas recibir mensajes de promociones y marketing de parte de nosotros. Conoce más en nuestras{' '}
-                <Link href='/'>
-                  <a className='link'>
-                    <b>políticas de privacidad.</b>
-                  </a>
+                <Link href='/' className='link' legacyBehavior>
+                  <b>políticas de privacidad.</b>
                 </Link>
               </Checkbox>
               {sent && <span className='sent-msg'>Gracias por escribirnos, estaremos en contacto a la brevedad posible.</span>}
@@ -180,13 +178,13 @@ const contacto = () => {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: `
-          {
-            "@context": "http://schema.org/", "@type": "WebSite",
-            "url": "https://instakash.net/contacto", "potentialAction": {
-            "@type": "SearchAction",
-            "target": "https://instakash.net/contacto{search_term_string}", "query-input": "required name=search_term_string"
-            } }
-          `,
+        {
+          "@context": "http://schema.org/", "@type": "WebSite",
+          "url": "https://instakash.net/contacto", "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://instakash.net/contacto{search_term_string}", "query-input": "required name=search_term_string"
+          } }
+        `,
         }}
       />
     </>

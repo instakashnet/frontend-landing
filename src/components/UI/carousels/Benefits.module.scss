@@ -1,6 +1,6 @@
-@import "../../../styles/fontSizes";
-@import "../../../styles//colors";
-@import "../../../styles/breakpoints";
+@import '../../../../styles/fontSizes';
+@import '../../../../styles//colors';
+@import '../../../../styles/breakpoints';
 .Carousel {
   max-width: 100%;
   margin: 2rem 0;
@@ -14,7 +14,7 @@
       left: 15%;
 
       &::before {
-        content: "\2039";
+        content: '\2039';
         color: $base-green;
         font-size: 3.3rem;
       }
@@ -24,7 +24,7 @@
       right: 15%;
 
       &::before {
-        content: "\203A";
+        content: '\203A';
         color: $base-green;
         font-size: 3.3rem;
       }

@@ -1,4 +1,4 @@
-import styles from '../../../styles/UI.module.scss';
+import styles from '../../../../styles/UI.module.scss';
 
 const Textarea = ({ name, placeholder, error, touched, ...rest }) => {
   return (

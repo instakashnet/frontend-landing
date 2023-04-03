@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import styles from './Layout.module.scss';
 
@@ -27,22 +27,22 @@ const Footer = ({ pathname }) => {
             <ul>
               <li>
                 <Link href={pathname === '/' ? '#calculator' : '/'}>
-                  <a>Tipo de cambio para hoy</a>
+                  Tipo de cambio para hoy
                 </Link>
               </li>
               <li>
                 <Link href='/beneficios'>
-                  <a>Beneficios</a>
+                  Beneficios
                 </Link>
               </li>
               <li>
                 <Link href='/faq'>
-                  <a>Preguntas frecuentes</a>
+                  Preguntas frecuentes
                 </Link>
               </li>
               <li>
                 <Link href='/contacto'>
-                  <a>Contacto</a>
+                  Contacto
                 </Link>
               </li>
               {/* <li>
@@ -57,17 +57,17 @@ const Footer = ({ pathname }) => {
             <ul>
               <li>
                 <Link href='/terminos-y-condiciones'>
-                  <a>Términos y condiciones</a>
+                  Términos y condiciones
                 </Link>
               </li>
               <li>
                 <Link href='/politicas-de-privacidad'>
-                  <a>Políticas de privacidad</a>
+                  Políticas de privacidad
                 </Link>
               </li>
               <li>
                 <Link href='/libro-de-reclamaciones'>
-                  <a>Libro de reclamaciones</a>
+                  Libro de reclamaciones
                 </Link>
               </li>
             </ul>

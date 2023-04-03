@@ -1,5 +1,5 @@
 import cls from "classnames";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { useEffect, useState } from "react";
 import styles from "./Whatsapp.module.scss";
 

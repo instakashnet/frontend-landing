@@ -1,4 +1,4 @@
-import styles from '../../../styles/UI.module.scss';
+import styles from '../../../../styles/UI.module.scss';
 
 const Select = ({ name, placeholder, options, value, error, touched, ...rest }) => {
   return (

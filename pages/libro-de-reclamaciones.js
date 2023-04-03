@@ -6,7 +6,7 @@ import Button from '../src/components/UI/Button';
 import Input from '../src/components/UI/form/Input';
 import Select from '../src/components/UI/form/Select';
 import Textarea from '../src/components/UI/form/Textarea';
-import { reclamacionesValidation } from '../helpers/validations';
+import { reclamacionesValidation } from '../src/helpers/validations';
 import styles from '../styles/Reclamaciones.module.scss';
 
 const LibroReclamaciones = () => {

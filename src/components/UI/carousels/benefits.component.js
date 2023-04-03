@@ -1,11 +1,11 @@
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick-theme.css";
-import "slick-carousel/slick/slick.css";
-import Card from "../Card";
-import styles from "./Benefits.module.scss";
+import Image from 'next/legacy/image';
+import Link from 'next/link';
+import React from 'react';
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick-theme.css';
+import 'slick-carousel/slick/slick.css';
+import Card from '../Card';
+import styles from './Benefits.module.scss';
 
 const BenefitsCarousel = () => {
   let settings = {
@@ -17,7 +17,7 @@ const BenefitsCarousel = () => {
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding: "10px",
+    centerPadding: '10px',
     centerMode: true,
     responsive: [
       {
@@ -33,10 +33,10 @@ const BenefitsCarousel = () => {
     <Slider {...settings} className={styles.Carousel}>
       <div className={styles.Slide}>
         <Card className={styles.BenefitsCard}>
-          <Link href="/beneficios">
-            <a className="block">
+          <Link href='/beneficios' className='block' legacyBehavior>
+            <>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/empresas.webp" alt="Cupón para cambio online para empresas" layout="fill" objectFit="cover" />
+                <Image src='/images/beneficios/empresas.webp' alt='Cupón para cambio online para empresas' layout='fill' objectFit='cover' />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
@@ -44,17 +44,17 @@ const BenefitsCarousel = () => {
                 </p>
                 <p>Afíliate a nuestro Plan para Empresas y recibe beneficios exclusivos.</p>
               </div>
-            </a>
+            </>
           </Link>
         </Card>
       </div>
 
       <div className={styles.Slide}>
         <Card className={styles.BenefitsCard}>
-          <Link href="/beneficios">
-            <a className="block">
+          <Link href='/beneficios' className='block' legacyBehavior>
+            <>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/supermontos.webp" alt="Cupones para cambiar online con SUPERMONTOS" layout="fill" objectFit="cover" />
+                <Image src='/images/beneficios/supermontos.webp' alt='Cupones para cambiar online con SUPERMONTOS' layout='fill' objectFit='cover' />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
@@ -62,16 +62,16 @@ const BenefitsCarousel = () => {
                 </p>
                 <p>Cupón válido desde el 4 de abril y hasta el 15 de abril.</p>
               </div>
-            </a>
+            </>
           </Link>
         </Card>
       </div>
       <div className={styles.Slide}>
         <Card className={styles.BenefitsCard}>
-          <Link href="/beneficios">
-            <a className="block">
+          <Link href='/beneficios' className='block' legacyBehavior>
+            <>
               <div className={styles.Cover}>
-                <Image src="/images/beneficios/kash.webp" alt="Gana KASH cambiando dólares online" layout="fill" objectFit="cover" />
+                <Image src='/images/beneficios/kash.webp' alt='Gana KASH cambiando dólares online' layout='fill' objectFit='cover' />
               </div>
               <div className={styles.BenefitsInfo}>
                 <p>
@@ -79,7 +79,7 @@ const BenefitsCarousel = () => {
                 </p>
                 <p>Invita a tus amigos a Instakash y con su primer cambio gana KASH.</p>
               </div>
-            </a>
+            </>
           </Link>
         </Card>
       </div>
