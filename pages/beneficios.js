@@ -4,8 +4,8 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { useState } from 'react';
 // COMPONENTS
-import Card from '../components/UI/Card';
-import { BaseModal } from '../components/UI/Modal';
+import Card from '../src/components/UI/Card';
+import { BaseModal } from '../src/components/UI/Modal';
 import styles from '../styles/beneficios.module.scss';
 
 const Promociones = () => {

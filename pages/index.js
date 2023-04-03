@@ -4,15 +4,15 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
-import Calculator from '../components/calculator';
-// import Callout from "../components/UI/callout.component";
-import Card from '../components/UI/Card';
-import AdsCarousel from '../components/UI/carousels/ads.component';
-import BenefitsCarousel from '../components/UI/carousels/benefits.component';
-import { BaseModal } from '../components/UI/Modal';
+import Calculator from '../src/components/calculator';
+// import Callout from "../src/components/UI/callout.component";
+import Card from '../src/components/UI/Card';
+import AdsCarousel from '../src/components/UI/carousels/ads.component';
+import BenefitsCarousel from '../src/components/UI/carousels/benefits.component';
+import { BaseModal } from '../src/components/UI/Modal';
 // CLASSES
 import styles from '../styles/Home.module.scss';
-import { getCounters } from '../utils/fetch-data';
+import { getCounters } from '../src/utils/fetch-data';
 
 export async function getStaticProps() {
   let counters = {

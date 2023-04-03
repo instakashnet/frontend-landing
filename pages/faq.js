@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-accessible-accordion';
-import QuestionItem from '../components/questions/QuestionItem';
-import Tabs from '../components/questions/tabs.component';
+import QuestionItem from '../src/components/questions/QuestionItem';
+import Tabs from '../src/components/questions/tabs.component';
 import styles from '../styles/FAQ.module.scss';
 
 const Faq = () => {

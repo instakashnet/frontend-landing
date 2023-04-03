@@ -6,10 +6,10 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { useState } from 'react';
 import { Clock, Headphones, Mail, MapPin } from 'react-feather';
-import Button from '../components/UI/Button';
-import Checkbox from '../components/UI/form/Checkbox';
-import Input from '../components/UI/form/Input';
-import Textarea from '../components/UI/form/Textarea';
+import Button from '../src/components/UI/Button';
+import Checkbox from '../src/components/UI/form/Checkbox';
+import Input from '../src/components/UI/form/Input';
+import Textarea from '../src/components/UI/form/Textarea';
 import { contactValidation } from '../helpers/validations';
 import styles from '../styles/Contacto.module.scss';
 
