@@ -15,7 +15,7 @@ jobs:
       NEXT_PUBLIC_YANDEX_CODE: ${{ secrets.YANDEX_CODE }}
       AWS_S3_BUCKET: instakash.net
       AWS_REGION: us-east-2
-      AWS_CF_DISTRIBUTION_ID: E99GVH4UFV2OJ
+      AWS_CF_DISTRIBUTION_ID: E26OZWA1YFE90H
     strategy:
       matrix:
         node-version: [15.x]
