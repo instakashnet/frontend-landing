@@ -11,4 +11,4 @@ phases:
       - yarn install --frozen-lockfile
       - echo 'Build application:' 
       - yarn build
-      - ls
+      - ls out/
