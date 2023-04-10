@@ -1,0 +1,14 @@
+version: 0.2
+
+phases: 
+  build:
+    runtime-versions:
+      nodejs: 14
+    run-as: root
+    commands:
+      - cd $CODEBUILD_SRC_DIR
+      - echo 'Install dependencies:'
+      - yarn install --frozen-lockfile
+      - echo 'Build application:' 
+      - yarn build
+      - ls
