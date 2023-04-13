@@ -24,7 +24,7 @@ spec:
       restartPolicy: Always
       containers:
       - name: landing
-        image: 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing:latest
+        image: 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing:dev-$CODEBUILD_BUILD_NUMBER
         imagePullPolicy: Always
         ports:
         - containerPort: 3000
