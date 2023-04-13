@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useState } from 'react';

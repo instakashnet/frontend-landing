@@ -1,4 +1,4 @@
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import styles from './Layout.module.scss';
 
@@ -11,13 +11,13 @@ const Footer = ({ pathname }) => {
           <p className='text-sm'>Casa de cambio online. Con la mejor tasa de cambio comienza el cambio, fácil y seguro del Perú.</p>
           <div className='flex tems-center mt-5'>
             <a href='https://www.instagram.com/instakashnet/' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8 mr-6'>
-              <Image layout='fill' objectFit='contain' alt='Sígue a Instakash en Instagram' src='/images/social/instagram.svg' />
+              <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Instagram' src='/images/social/instagram.svg' />
             </a>
             <a href='https://www.facebook.com/Instakash-103956227716506' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8 mr-6'>
-              <Image layout='fill' objectFit='contain' alt='Sígue a Instakash en Facebook' src='/images/social/facebook.svg' />
+              <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Facebook' src='/images/social/facebook.svg' />
             </a>
             <a href='https://www.linkedin.com/company/71140162' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8'>
-              <Image layout='fill' objectFit='contain' alt='Sígue a Instakash en Linkedin' src='/images/social/linkedin.svg' />
+              <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Linkedin' src='/images/social/linkedin.svg' />
             </a>
           </div>
         </section>
@@ -26,24 +26,16 @@ const Footer = ({ pathname }) => {
             <h4>Menú</h4>
             <ul>
               <li>
-                <Link href={pathname === '/' ? '#calculator' : '/'}>
-                  Tipo de cambio para hoy
-                </Link>
+                <Link href={pathname === '/' ? '#calculator' : '/'}>Tipo de cambio para hoy</Link>
               </li>
               <li>
-                <Link href='/beneficios'>
-                  Beneficios
-                </Link>
+                <Link href='/beneficios'>Beneficios</Link>
               </li>
               <li>
-                <Link href='/faq'>
-                  Preguntas frecuentes
-                </Link>
+                <Link href='/faq'>Preguntas frecuentes</Link>
               </li>
               <li>
-                <Link href='/contacto'>
-                  Contacto
-                </Link>
+                <Link href='/contacto'>Contacto</Link>
               </li>
               {/* <li>
                 <a href="https://wa.link/wekqza" target="_blank" rel="noopener noreferrer" className="flex items-center">
@@ -56,19 +48,13 @@ const Footer = ({ pathname }) => {
             <h4>Legal</h4>
             <ul>
               <li>
-                <Link href='/terminos-y-condiciones'>
-                  Términos y condiciones
-                </Link>
+                <Link href='/terminos-y-condiciones'>Términos y condiciones</Link>
               </li>
               <li>
-                <Link href='/politicas-de-privacidad'>
-                  Políticas de privacidad
-                </Link>
+                <Link href='/politicas-de-privacidad'>Políticas de privacidad</Link>
               </li>
               <li>
-                <Link href='/libro-de-reclamaciones'>
-                  Libro de reclamaciones
-                </Link>
+                <Link href='/libro-de-reclamaciones'>Libro de reclamaciones</Link>
               </li>
             </ul>
           </div>

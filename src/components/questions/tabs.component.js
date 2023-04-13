@@ -16,7 +16,7 @@ const Tabs = ({ activeTab }) => {
         </div>
       </Link>
 
-      <Link href={{ pathname: '/faq', query: { tab: 2 } }} className={cls(styles.Tab, activeTab === 2 ? styles.Active : '')} legacyBehavior>
+      <Link href={{ pathname: '/faq', query: { tab: 2 } }} legacyBehavior>
         <div className={cls(styles.Tab, activeTab === 2 ? styles.Active : '')}>
           <div className={styles.TabIcon}>
             <Image width={30} height={30} objectFit='contain' src='/images/icons/kash.svg' alt='KASH' />
@@ -25,7 +25,7 @@ const Tabs = ({ activeTab }) => {
         </div>
       </Link>
 
-      <Link href={{ pathname: '/faq', query: { tab: 3 } }} className={cls(styles.Tab, activeTab === 3 ? styles.Active : '')} legacyBehavior>
+      <Link href={{ pathname: '/faq', query: { tab: 3 } }} legacyBehavior>
         <div className={cls(styles.Tab, activeTab === 3 ? styles.Active : '')}>
           <div className={styles.TabIcon}>
             <Image width={30} height={30} objectFit='contain' src='/images/icons/profile.svg' alt='Cuenta y perfil' />

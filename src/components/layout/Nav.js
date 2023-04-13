@@ -55,30 +55,32 @@ const Nav = () => {
             </div>
           </Link>
 
-          <ul className='ml-auto mr-3'>
-            <li>
-              <Link href='/nosotros'>Nosotros</Link>
-            </li>
-            <li>
-              <Link href='/beneficios'>Beneficios</Link>
-            </li>
-            <li>
-              <Link href='/faq'>FAQ</Link>
-            </li>
-          </ul>
+          <div className='flex items-center'>
+            <ul className='mr-3'>
+              <li>
+                <Link href='/nosotros'>Nosotros</Link>
+              </li>
+              <li>
+                <Link href='/beneficios'>Beneficios</Link>
+              </li>
+              <li>
+                <Link href='/faq'>FAQ</Link>
+              </li>
+            </ul>
 
-          <div className={styles.navButtons}>
-            <a href='https://app.instakash.net/login' className='mr-4'>
-              Iniciar sesión
-            </a>
-            <button onClick={onRegister}>Registrarse</button>
+            <div className={styles.navButtons}>
+              <a href='https://app.instakash.net/login' className='mr-4'>
+                Iniciar sesión
+              </a>
+              <button onClick={onRegister}>Registrarse</button>
+            </div>
+
+            <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
+              <span />
+              <span />
+              <span />
+            </button>
           </div>
-
-          <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
-            <span />
-            <span />
-            <span />
-          </button>
         </div>
       </nav>
       <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ''}`} onClick={closeNav}>
