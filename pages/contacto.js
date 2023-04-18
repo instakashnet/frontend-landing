@@ -94,8 +94,8 @@ const contacto = () => {
                 <Headphones className={styles.infoIcon} />
                 <section>
                   <h2>Llámanos</h2>
-                  <a href='tel:+51929324006' className='link' target='_blank' rel='noopener noreferrer'>
-                    +51 929 324 006
+                  <a href='tel:+51929050743' className='link' target='_blank' rel='noopener noreferrer'>
+                    +51 929 050 743
                   </a>
                 </section>
               </div>
