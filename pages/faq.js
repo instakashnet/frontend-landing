@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-accessible-accordion';
-import QuestionItem from '../components/questions/QuestionItem';
-import Tabs from '../components/questions/tabs.component';
+import QuestionItem from '../src/components/questions/QuestionItem';
+import Tabs from '../src/components/questions/tabs.component';
 import styles from '../styles/FAQ.module.scss';
 
 const Faq = () => {
@@ -112,22 +112,15 @@ const Faq = () => {
                     </QuestionItem>
                     <QuestionItem header='5. ¿Instakash tiene Cupones y beneficios para cambiar mejor?'>
                       <p>
-                        En Instakash hemos creado{' '}
-                        <Link href='/beneficios'>
-                          <a>cupones y beneficios</a>
-                        </Link>{' '}
-                        para seguir mejorando tu tipo de cambio, también tenemos sorteos mensuales por tus cambios y beneficios en plataforma para que disfrutes de las beneficios
-                        de cambiar. Conoce nuestros KASH.
+                        En Instakash hemos creado <Link href='/beneficios'>cupones y beneficios</Link> para seguir mejorando tu tipo de cambio, también tenemos sorteos mensuales
+                        por tus cambios y beneficios en plataforma para que disfrutes de las beneficios de cambiar. Conoce nuestros KASH.
                       </p>
                     </QuestionItem>
                     <QuestionItem header='6. ¿Qué comisiones debo tener en cuenta al comprar o vender dólares?'>
                       <p>
                         Instakash no te cobra comisiones extra por realizar el cambio. Las comisiones que debes tener en cuenta son las comisiones que te cobra tu banco para
                         desembolsar el dinero que vas a cambiar. Suelen ser unas cuando son cuentas en provincia y otras cuando son interbancarias.{' '}
-                        <Link href='/terminos-y-condiciones'>
-                          <a>Conoce más información aquí.</a>
-                        </Link>
-                        .
+                        <Link href='/terminos-y-condiciones'>Conoce más información aquí.</Link>
                       </p>
                     </QuestionItem>
                     <QuestionItem header='7. ¿Con qué monedas trabaja Instakash?'>
@@ -217,11 +210,7 @@ const Faq = () => {
                       <p>
                         Tu operación será procesada cuando recibamos en nuestras cuentas el dinero y lo validemos con el voucher de la operación con tu banco. Una vez confirmado el
                         abono en nuestras cuentas recibirás una confirmación vía email o en la aplicación cuando hayamos enviado el cambio a tu cuenta. Para conocer más puede ver
-                        nuestros{' '}
-                        <Link href='/terminos-y-condiciones'>
-                          <a>términos y condiciones</a>
-                        </Link>
-                        .
+                        nuestros <Link href='/terminos-y-condiciones'>términos y condiciones</Link>.
                       </p>
                     </QuestionItem>
                     <QuestionItem header='19. ¿Cuál es el tiempo estimado de los bancos?'>
@@ -251,7 +240,7 @@ const Faq = () => {
         </div>
       </section>
       <div className={styles.QuestionsBg}>
-        <Image src='/images/bg/faq.svg' layout='fill' objectFit='contain' />
+        <Image src='/images/bg/faq.svg' layout='fill' objectFit='contain' priority />
       </div>
     </>
   );

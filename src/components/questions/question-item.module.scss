@@ -1,0 +1,8 @@
+@import '../../../styles/colors';
+@import '../../../styles/fontSizes';
+
+.QuestionTitle {
+  font-size: $body;
+  color: $text-title;
+  font-weight: bold;
+}

@@ -14,27 +14,27 @@ const NotFound = () => {
           <ul>
             <li>
               <Link href="/">
-                <a>Incio</a>
+                Incio
               </Link>
             </li>
             <li>
               <Link href="/nosotros">
-                <a>Nosotros</a>
+                Nosotros
               </Link>
             </li>
             <li>
               <Link href="/contacto">
-                <a>Contacto</a>
+                Contacto
               </Link>
             </li>
             <li>
               <Link href="/faq">
-                <a>Preguntas frecuentes</a>
+                Preguntas frecuentes
               </Link>
             </li>
             <li>
               <Link href="/terminos-y-condiciones">
-                <a>Términos y condiciones</a>
+                Términos y condiciones
               </Link>
             </li>
           </ul>

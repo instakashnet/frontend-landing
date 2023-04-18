@@ -1,0 +1,24 @@
+@import '../../../styles/fontSizes';
+@import '../../../styles/colors';
+
+.Callout {
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: $caption;
+
+  &.info {
+    background-color: #e1f2ec;
+  }
+
+  .CalloutContent {
+    display: flex;
+    align-items: center;
+
+    svg {
+      color: $base-green;
+      margin-right: 1rem;
+    }
+  }
+}

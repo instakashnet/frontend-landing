@@ -1,11 +1,11 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useState } from 'react';
 // COMPONENTS
-import Card from '../components/UI/Card';
-import { BaseModal } from '../components/UI/Modal';
+import Card from '../src/components/UI/Card';
+import { BaseModal } from '../src/components/UI/Modal';
 import styles from '../styles/beneficios.module.scss';
 
 const Promociones = () => {
@@ -176,7 +176,7 @@ const SuperCouponsModal = () => (
       </li>
     </ul>
     <Link className='mx-auto mt-6 block' href='/terminos-y-condiciones#cupones'>
-      <a>Conoce más sobre el uso de nuestros cupones aquí</a>
+      Conoce más sobre el uso de nuestros cupones aquí
     </Link>
   </div>
 );

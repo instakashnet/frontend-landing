@@ -1,18 +1,18 @@
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
-import Calculator from '../components/calculator';
-// import Callout from "../components/UI/callout.component";
-import Card from '../components/UI/Card';
-import AdsCarousel from '../components/UI/carousels/ads.component';
-import BenefitsCarousel from '../components/UI/carousels/benefits.component';
-import { BaseModal } from '../components/UI/Modal';
+import Calculator from '../src/components/calculator';
+// import Callout from "../src/components/UI/callout.component";
+import Card from '../src/components/UI/Card';
+import AdsCarousel from '../src/components/UI/carousels/ads.component';
+import BenefitsCarousel from '../src/components/UI/carousels/benefits.component';
+import { BaseModal } from '../src/components/UI/Modal';
 // CLASSES
 import styles from '../styles/Home.module.scss';
-import { getCounters } from '../utils/fetch-data';
+import { getCounters } from '../src/utils/fetch-data';
 
 export async function getStaticProps() {
   let counters = {
@@ -67,12 +67,12 @@ const Home = ({ counters }) => {
         <meta property='og:image' content='' />
       </Head>
       {/* <Callout type="info">
-        <div className="container p-0">
-          <p>
-            A partir del 14/10/2022 por regulaciones de la SBS <b>solo se realizarán transferencias a cuentas del mísmo titular.</b>
-          </p>
-        </div>
-      </Callout> */}
+      <div className="container p-0">
+        <p>
+          A partir del 14/10/2022 por regulaciones de la SBS <b>solo se realizarán transferencias a cuentas del mísmo titular.</b>
+        </p>
+      </div>
+    </Callout> */}
       <div className='container px-0 pb-0'>
         <AdsCarousel />
       </div>
@@ -252,10 +252,8 @@ const Home = ({ counters }) => {
             <p className='mb-3'>
               El KASH es nuestra moneda digital que puedes obtener refiriendo a tus amigos. Por cada referido que complete 1 cambio obtendrás 2 KASH. con el KASH puedes ahorrar o
               retirarlo a una de tus cuentas bancarias.{' '}
-              <Link href='/beneficios'>
-                <a className='underline'>
-                  <b>Conoce más aquí.</b>
-                </a>
+              <Link href='/beneficios' className='underline' legacyBehavior>
+                <b>Conoce más aquí.</b>
               </Link>
             </p>
             <Image src='/images/illustrations/kash-equal.svg' objectFit='contain' width={350} height={150} />
@@ -327,15 +325,15 @@ const Home = ({ counters }) => {
         type='application/ld+json'
         dangerouslySetInnerHTML={{
           __html: `
-          {
-            "@context": "https://schema.org/", "@type": "WebSite",
-            "name": "InstaKash",
-            "url": "https://instakash.net/", "potentialAction": {
-            "@type": "SearchAction",
-            "target": "{search_term_string}",
-            "query-input": "required name=search_term_string"
-            } }
-          `,
+        {
+          "@context": "https://schema.org/", "@type": "WebSite",
+          "name": "InstaKash",
+          "url": "https://instakash.net/", "potentialAction": {
+          "@type": "SearchAction",
+          "target": "{search_term_string}",
+          "query-input": "required name=search_term_string"
+          } }
+        `,
         }}
       />
     </>

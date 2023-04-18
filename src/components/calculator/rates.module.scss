@@ -1,0 +1,27 @@
+@import '../../../styles/colors';
+@import '../../../styles/fontSizes';
+
+.RatesWrapper {
+  display: flex;
+  align-items: center;
+  color: $text-title;
+  justify-content: center;
+  margin-top: 0.5rem;
+  line-height: 1.3;
+  transition: 250ms ease-out;
+
+  .Price {
+    font-size: $caption;
+
+    span {
+      font-weight: 700;
+    }
+  }
+}
+
+.Division {
+  background-color: $base-green;
+  height: 20px;
+  width: 1.5px;
+  margin: 0 1rem 0.5rem;
+}

@@ -1,0 +1,10 @@
+@import '../../../styles/fontSizes';
+@import '../../../styles/colors';
+
+.SavingsWrapper {
+  display: flex;
+  align-items: center;
+  font-size: $caption;
+  color: $text-title;
+  margin-bottom: 1rem;
+}
