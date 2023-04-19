@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: instakash-landing
-  namespace: instakash-dev
+  namespace: instakash-production
   labels:
     app: instakash-landing
 spec:
