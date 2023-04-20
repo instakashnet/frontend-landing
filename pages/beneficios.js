@@ -101,7 +101,7 @@ const Promociones = () => {
               <div className={styles.Info}>
                 <h3>Cupones activos</h3>
                 <h2>SUPERMONTOS</h2>
-                <p>Usa tus cupones supermontos para obtener el mejor descuento en el tipo de cambio para tus cambios desde 10000 USD.</p>
+                <p>Usa tus cupones supermontos para obtener el mejor descuento en el tipo de cambio para tus cambios desde 5000 USD.</p>
                 <div className={styles.Actions}>
                   <a href='https://app.instakash.net/login' className='mr-4'>
                     Acceder y usar cupón
@@ -163,11 +163,14 @@ const Promociones = () => {
 
 const SuperCouponsModal = () => (
   <div className='modal-body'>
-    <h3>Ahorra con nuestros Super montos</h3>
-    <p>
+    <h3 className='modal-title'>Supermontos INSTAKASH</h3>
+    <p className='mb-2'>
       Cuando desees cambiar montos desde 5000 USD en adelante, te ofrecemos hasta 3 cupones para que ahorres y obtengas una de las mejores tasas del mercado y sin límite de uso.
     </p>
     <ul>
+      <li>
+        Para montos desde 5MIL USD usa nuestro cupón <b>DESDE5000</b>
+      </li>
       <li>
         Para montos desde 10MIL USD usa nuestro cupón <b>DESDE10000</b>
       </li>
@@ -176,7 +179,7 @@ const SuperCouponsModal = () => (
       </li>
     </ul>
     <Link className='mx-auto mt-6 block' href='/terminos-y-condiciones#cupones'>
-      Conoce más sobre el uso de nuestros cupones aquí
+      <b>Conoce más sobre el uso de nuestros cupones aquí</b>
     </Link>
   </div>
 );

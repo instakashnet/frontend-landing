@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
-@import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import './variables.css';
 
 html {
   scroll-behavior: smooth;
@@ -11,7 +11,7 @@ html {
 
 body {
   font-size: 16px;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   color: var(--text-body);
   background-color: var(--light-color);
 }
@@ -99,4 +99,19 @@ b {
 
 .slick-active button:before {
   color: var(--base-green) !important;
+}
+
+.modal-body {
+  padding: 1.4rem;
+}
+
+.modal-body a {
+  text-decoration: underline;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  color: var(--base-green);
+  margin-bottom: 1rem;
+  font-weight: bold;
 }
