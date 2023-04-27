@@ -74,6 +74,7 @@ const Footer = ({ pathname }) => {
                 Domingos y feriados <br />
                 cerrados
               </li>
+              <li>Martin de murúa 150, San Miguel, Lima.</li>
             </ul>
           </div>
         </section>
