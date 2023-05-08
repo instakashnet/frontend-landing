@@ -477,9 +477,8 @@ const TerminosCondiciones = () => {
             <h2>12. HORARIO DE ATENCIÓN:</h2>
             <li>
               <p>
-                El horario de atención de INSTAKASH es de lunes a viernes de 9 am a 7 pm y sábados de 9 am a 2:30 pm, siempre y cuando sean días hábiles, es decir excluyendo
-                feriados locales e internacionales. Por lo tanto, las operaciones y transferencias a ser solicitadas por parte del USUARIO deberán realizarse de acuerdo a lo antes
-                señalado.
+                El horario de atención de INSTAKASH es de lunes a viernes de 9 am a 7 pm y sábados de 9 am a 2 pm, siempre y cuando sean días hábiles, es decir excluyendo feriados
+                locales e internacionales. Por lo tanto, las operaciones y transferencias a ser solicitadas por parte del USUARIO deberán realizarse de acuerdo a lo antes señalado.
               </p>
               <p>
                 Si el USUARIO realiza una transferencia a las cuentas de INSTAKASH fuera del horario de atención, la operación podrá no ser aceptada. Caso contrario, la misma será
