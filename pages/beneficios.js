@@ -57,13 +57,11 @@ const Promociones = () => {
               </div>
               <div className={styles.Info}>
                 <h3>Cupón del mes</h3>
-                <h2>INSTAVERANO23</h2>
+                <h2>INSTACUPON23</h2>
                 <p className={styles.Date}>
-                  <time dateTime='01-01-2023'>01/01</time> al <time dateTime='30-04-2023'>30/04</time> del 2023
+                  <time dateTime='01-05-2023'>01/05</time> al <time dateTime='31-08-2023'>31/08</time> del 2023
                 </p>
-                <p>
-                  Celebra todo el verano 2023 realizando tus cambios con el cupón INSTAVERANO23 y obtén 10 puntos a favor de tu cambio. Válido para 2 cambios a partir de $100 USD.
-                </p>
+                <p>Tenemos para tí todo este otonó 2023 nuestro cupón INSTACUPON23, y obtén 10 puntos a favor de tu cambio. Válido para 2 cambios a partir de $100 USD.</p>
                 <div className={styles.Actions}>
                   <a href='https://app.instakash.net/login' className='mr-4'>
                     Acceder y usar cupón
