@@ -39,7 +39,7 @@ const Home = ({ counters }) => {
   const [infoModal, setInfoModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setInfoModal(true), 3000);
+    setTimeout(() => setInfoModal(true), 700);
   }, []);
 
   const handleCloseModal = () => setInfoModal(false);
