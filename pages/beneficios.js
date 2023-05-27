@@ -39,8 +39,6 @@ export default function Promociones({ benefits = [] }) {
   // //   setIsModalOpen(false);
   // // };
 
-  console.log(benefits);
-
   return (
     <>
       <Head>
