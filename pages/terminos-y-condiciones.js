@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import styles from '../styles/Legal.module.scss';
+import Layout from '../src/components/layout/Layout';
 
 const TerminosCondiciones = () => {
   return (
@@ -489,8 +490,8 @@ const TerminosCondiciones = () => {
             <li>
               <p>
                 Proteger su privacidad es muy importante para INSTAKASH. El acceso a los servicios se realiza a través de una contraseña que EL USUARIO ha asignado en el momento
-                del registro a través de LA PLATAFORMA de INSTAKASH. Por lo tanto, EL USUARIO es el único que conoce esta información. EL USUARIO no deberá revelar dicha
-                información a terceros, habiendo sido creada la cuenta para uso exclusivo de EL USUARIO.
+                del registro a través de LA PLimport Layout from '../src/components/layout/Layout'; ATAFORMA de INSTAKASH. Por lo tanto, EL USUARIO es el único que conoce esta
+                información. EL USUARIO no deberá revelar dicha información a terceros, habiendo sido creada la cuenta para uso exclusivo de EL USUARIO.
               </p>
               <p>
                 INSTAKASH no revela los datos de su cuenta, direcciones postales, correo electrónico, operaciones ni datos personales en general; excepto ante un mandato emitido
@@ -564,6 +565,10 @@ const TerminosCondiciones = () => {
       </section>
     </>
   );
+};
+
+TerminosCondiciones.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default TerminosCondiciones;

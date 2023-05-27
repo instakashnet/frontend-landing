@@ -1,8 +1,9 @@
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Script from 'next/script';
 import { FaCheckCircle } from 'react-icons/fa';
 import styles from '../styles/Nosotros.module.scss';
+import Layout from '../src/components/layout/Layout';
 
 const Nosotros = () => {
   return (
@@ -82,6 +83,7 @@ const Nosotros = () => {
                   <FaCheckCircle size={30} className='mr-3' />
                   <span>Porque nos importa que mejores tus finanzas, por eso desarrollamos diversos servicios accesibles y de calidad.</span>
                 </li>
+                import Layout from '../src/components/layout/Layout';
                 <li>
                   <FaCheckCircle size={35} className='mr-3' />
                   <span>
@@ -123,6 +125,10 @@ const Nosotros = () => {
       />
     </>
   );
+};
+
+Nosotros.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Nosotros;

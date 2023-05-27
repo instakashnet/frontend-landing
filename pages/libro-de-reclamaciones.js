@@ -8,6 +8,7 @@ import Select from '../src/components/UI/form/Select';
 import Textarea from '../src/components/UI/form/Textarea';
 import { reclamacionesValidation } from '../src/helpers/validations';
 import styles from '../styles/Reclamaciones.module.scss';
+import Layout from '../src/components/layout/Layout';
 
 const LibroReclamaciones = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -222,6 +223,10 @@ const LibroReclamaciones = () => {
       </section>
     </>
   );
+};
+
+LibroReclamaciones.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default LibroReclamaciones;
