@@ -1,8 +1,9 @@
 import { useEffect } from 'react';
 import TagManager from 'react-gtm-module';
 import FacebookPixel from '../src/components/FacebookPixel';
-import Layout from '../src/components/layout/Layout';
+// import Layout from '../src/components/layout/Layout';
 
+import '../styles/tailwind.css';
 import '../styles/globals.css';
 
 function MyApp({ Component, pageProps }) {
@@ -10,11 +11,11 @@ function MyApp({ Component, pageProps }) {
     TagManager.initialize({ gtmId: 'GTM-MVR37S9' });
   }, []);
 
-  return (
+  const getLayout = Component.getLayout || ((page) => page);
+
+  return getLayout(
     <FacebookPixel>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <Component {...pageProps} />
     </FacebookPixel>
   );
 }

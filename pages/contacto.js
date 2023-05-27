@@ -12,8 +12,9 @@ import Input from '../src/components/UI/form/Input';
 import Textarea from '../src/components/UI/form/Textarea';
 import { contactValidation } from '../src/helpers/validations';
 import styles from '../styles/Contacto.module.scss';
+import Layout from "../src/components/layout/Layout"
 
-const contacto = () => {
+const Contacto = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [sent, setSent] = useState(false);
   const [error, setError] = useState(false);
@@ -191,4 +192,8 @@ const contacto = () => {
   );
 };
 
-export default contacto;
+Contacto.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
+};
+
+export default Contacto;

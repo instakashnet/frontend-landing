@@ -5,14 +5,15 @@ import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Calculator from '../src/components/calculator';
-// import Callout from "../src/components/UI/callout.component";
+// import Callout from "../src/components/UI/Callout";
 import Card from '../src/components/UI/Card';
-import AdsCarousel from '../src/components/UI/carousels/ads.component';
-import BenefitsCarousel from '../src/components/UI/carousels/benefits.component';
+import AdsCarousel from '../src/components/UI/carousels/Ads';
+import BenefitsCarousel from '../src/components/UI/carousels/Benefits';
 import { BaseModal } from '../src/components/UI/Modal';
 // CLASSES
 import styles from '../styles/Home.module.scss';
 import { getCounters } from '../src/utils/fetch-data';
+import Layout from '../src/components/layout/Layout';
 
 export async function getStaticProps() {
   let counters = {
@@ -338,6 +339,10 @@ const Home = ({ counters }) => {
       />
     </>
   );
+};
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;

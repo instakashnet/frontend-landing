@@ -5,8 +5,9 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { Accordion } from 'react-accessible-accordion';
 import QuestionItem from '../src/components/questions/QuestionItem';
-import Tabs from '../src/components/questions/tabs.component';
+import Tabs from '../src/components/questions/Tabs';
 import styles from '../styles/FAQ.module.scss';
+import Layout from '../src/components/layout/Layout';
 
 const Faq = () => {
   const [rates, setRates] = useState({ buy: 0, sell: 0 }),
@@ -244,6 +245,10 @@ const Faq = () => {
       </div>
     </>
   );
+};
+
+Faq.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Faq;

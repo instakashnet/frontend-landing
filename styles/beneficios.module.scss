@@ -7,96 +7,9 @@
   display: grid;
   align-content: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-
-  @include respond(tablet) {
-    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
-  }
-}
-
-.PromotionCard {
-  width: 330px;
-  min-height: 560px;
-  padding: 0;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  border-radius: 10px;
-  margin: 1.3rem;
-
-  .Cover {
-    height: 180px;
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-  }
-
-  .Info {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-
-    p {
-      font-size: $body;
-    }
-
-    h2 {
-      font-size: math.div($subtitle, 1.2);
-      color: $text-title;
-      font-weight: 700;
-    }
-
-    .Actions {
-      display: grid;
-      justify-items: center;
-      margin: auto;
-      padding-top: 1rem;
-    }
-  }
-
-  .Date {
-    margin: 0 0 0.3rem;
-    color: $base-green !important;
-    font-size: 0.95rem !important;
-  }
-
-  a {
-    padding: 0.8rem 1rem;
-    border-radius: 8px;
-    background-color: $button-main;
-    color: #fff;
-    transition: 200ms ease-out;
-    margin: 0 !important;
-    font-weight: bold;
-    font-size: $caption;
-    text-align: center;
-    min-width: 10rem;
-
-    &:hover,
-    &:focus {
-      background-color: $button-hover;
-    }
-  }
-
-  button {
-    margin-top: 1rem;
-    color: $base-green;
-    text-decoration: underline;
-  }
-
-  @include respond(tablet) {
-    width: 400px;
-    min-height: 600px;
-
-    .Cover {
-      height: 210px;
-    }
-  }
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: 30px;
+  margin-top: 2rem;
 }
 
 .Title {
