@@ -1,31 +1,32 @@
-import Head from "next/head";
-import styles from "../styles/Legal.module.scss";
+import Head from 'next/head';
+import styles from '../styles/Legal.module.scss';
+import Layout from '../src/components/layout/Layout';
 
 const PoliticasPrivacidad = () => {
   return (
     <>
       <Head>
         <title>Políticas de Privacidad</title>
-        <meta name="title" content="Políticas de Privacidad | Instakash" />
-        <meta name="description" content="Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí " />
-        <meta http-equiv="content-language" content="es_PE" />
-        <link rel="icon" href="imagenes/favicon.png" type="image/png" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://instakash.net/politicas-de-privacidad" />
-        <meta name="author" content="InstaKash" />
-        <meta name="url" content="https://instakash.net/politicas-de-privacidad" />
-        <meta property="og:title" content="Políticas de Privacidad | Instakash" />
-        <meta property="og:site_name" content="InstaKash" />
-        <meta property="og:url" content="https://instakash.net/politicas-de-privacidad" />{" "}
-        <meta property="og:description" content="Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí." />
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="" />
+        <meta name='title' content='Políticas de Privacidad | Instakash' />
+        <meta name='description' content='Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí ' />
+        <meta http-equiv='content-language' content='es_PE' />
+        <link rel='icon' href='imagenes/favicon.png' type='image/png' />
+        <meta name='robots' content='index, follow' />
+        <link rel='canonical' href='https://instakash.net/politicas-de-privacidad' />
+        <meta name='author' content='InstaKash' />
+        <meta name='url' content='https://instakash.net/politicas-de-privacidad' />
+        <meta property='og:title' content='Políticas de Privacidad | Instakash' />
+        <meta property='og:site_name' content='InstaKash' />
+        <meta property='og:url' content='https://instakash.net/politicas-de-privacidad' />{' '}
+        <meta property='og:description' content='Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH. Leelo aquí.' />
+        <meta property='og:type' content='website' />
+        <meta property='og:image' content='' />
       </Head>
       <section className={styles.legal}>
-        <div className="section-wrapper container px-3 py-12">
+        <div className='section-wrapper container px-3 py-12'>
           <h1 className={styles.Title}>Políticas de privacidad</h1>
-          <hr className="mx-auto" />
-          <p className="mt-12">Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH S.A.C, (“La Empresa” o “nosotros”).</p>
+          <hr className='mx-auto' />
+          <p className='mt-12'>Proteger su información, privacidad y datos financieros es muy importante para INSTAKASH S.A.C, (“La Empresa” o “nosotros”).</p>
           <p>
             Esta Política (en conjunto con los Términos y Condiciones de uso y cualquier documento referido en éstos), define las bases sobre las cuales cualquier información suya
             recolectada será procesada por nosotros.
@@ -46,7 +47,7 @@ const PoliticasPrivacidad = () => {
           <p>Esta Política de Privacidad abarca cómo recolectamos, utilizamos y los casos en los que compartimos su información personal.</p>
           <h2>Información que podríamos obtener sobre usted:</h2>
           <p>Podríamos recolectar y procesar los siguientes datos sobre usted:</p>
-          <ol className="list-decimal pl-6">
+          <ol className='list-decimal pl-6'>
             <li>
               Información proporcionada por usted al llenar los formatos en nuestra página web, y aplicativo, y/o al interactuar con nosotros por vía telefónica, correo electrónico
               o de otra forma. Esto incluye, pero no se limita a información proporcionada al registrarse como usuario para utilizar la página web, realizar operaciones utilizando
@@ -59,7 +60,7 @@ const PoliticasPrivacidad = () => {
           </ol>
           <h2>Información que recolectamos sobre usted:</h2>
           <p>Con respecto a cada visita que realiza a nuestra página web, podríamos recolectar automáticamente la siguiente información:</p>
-          <ol className="list-decimal pl-6">
+          <ol className='list-decimal pl-6'>
             <li>Detalles de las transferencias de dinero y pagos realizados a través de la página web, incluyendo la ubicación geográfica desde la cual se genera.</li>
             <li>
               Ubicación técnica, incluyendo la dirección IP utilizada para conectarse desde su computadora a internet, la información de ingreso a su cuenta de usuario, tipo de
@@ -82,10 +83,10 @@ const PoliticasPrivacidad = () => {
             La recolección y tratamiento de los Datos Personales, así como los eventuales encargos, transferencias y flujos transfronterizos que se realicen sobre estos a empresas
             vinculadas o proveedores de Instakash, tiene las siguientes finalidades:
           </p>
-          <ol className="list-decimal pl-6">
+          <ol className='list-decimal pl-6'>
             <li>
               <h3>Información proporcionada por usted:</h3>
-              <ul className="list-disc pl-6">
+              <ul className='list-disc pl-6'>
                 <li>
                   Para cumplir con nuestras obligaciones adquiridas en el marco de cualquier contrato entre usted y nosotros (incluyendo, pero sin limitarse a los Términos y
                   Condiciones) y para proveerle de información, productos y servicios que requiera.
@@ -105,7 +106,7 @@ const PoliticasPrivacidad = () => {
             </li>
             <li>
               <h3>Información que recolectamos sobre usted:</h3>
-              <ul className="list-disc pl-6">
+              <ul className='list-disc pl-6'>
                 <li>
                   Para administrar nuestra página web y para operaciones internas como solución de problemas operativos, análisis de datos, pruebas, así como fines estadísticos y
                   de investigación.
@@ -132,7 +133,7 @@ const PoliticasPrivacidad = () => {
             </li>
             <li>
               <h3>Podríamos compartir su información con terceros seleccionados, incluyendo:</h3>
-              <ul className="list-disc pl-6">
+              <ul className='list-disc pl-6'>
                 <li>Negocios aliados, proveedores o terceros contratados para proveer cualquier contrato que tengamos con usted o para ayudar a mejorar nuestro servicio.</li>
                 <li>Agencias de publicidad que requieran datos para seleccionar y enviar avisos relevantes a usted o terceros.</li>
                 <li>Proveedores de análisis de datos y de buscadores que nos asistan en la mejora y optimización de nuestros servicios.</li>
@@ -141,7 +142,7 @@ const PoliticasPrivacidad = () => {
             </li>
             <li>
               <h3>Podríamos compartir su información personal con terceros:</h3>
-              <ul className="list-disc pl-6">
+              <ul className='list-disc pl-6'>
                 <li>
                   En caso que se venda o compra cualquier unidad del negocio o activo y sea necesario revelar su información personal a potenciales compradores o vendedores de
                   dichas unidades de negocio o activos.
@@ -235,13 +236,17 @@ const PoliticasPrivacidad = () => {
           </p>
           <h2>Contacto</h2>
           <p>
-            Preguntas, solicitudes y comentarios asociados a esta Política de privacidad son bienvenidos y deberán ser dirigidos a{" "}
-            <a href="mailto:contacto@instakash.net">contacto@instakash.net</a>
+            Preguntas, solicitudes y comentarios asociados a esta Política de privacidad son bienvenidos y deberán ser dirigidos a{' '}
+            <a href='mailto:contacto@instakash.net'>contacto@instakash.net</a>
           </p>
         </div>
       </section>
     </>
   );
+};
+
+PoliticasPrivacidad.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default PoliticasPrivacidad;

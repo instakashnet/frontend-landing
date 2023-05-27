@@ -4,10 +4,10 @@ import { PulseLoader } from 'react-spinners';
 import { event } from '../../utils/fbpixel';
 import Button from '../UI/Button';
 import styles from './Calculator.module.scss';
-import Input from './input.component';
-import Rates from './rates.component';
-import Savings from './savings.component';
-import Swipe from './swipe.component';
+import Input from './Input';
+import Rates from './Rates';
+import Savings from './Savings';
+import Swipe from './Swipe';
 
 const Calculator = () => {
   const [rates, setRates] = useState({ buy: 0, sell: 0 }),

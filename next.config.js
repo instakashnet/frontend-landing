@@ -5,6 +5,14 @@ module.exports = {
   reactStrictMode: true,
   swcMinify: true,
   output: 'standalone',
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io',
+      },
+    ],
+  },
   // Causes next.js to add trailing slashes to end of URLs.
   // trailingSlash: true,
 };

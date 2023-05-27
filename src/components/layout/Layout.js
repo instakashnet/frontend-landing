@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import WhatsappBtn from '../UI/whatsapp.component';
+import WhatsappBtn from '../UI/Wahtsapp';
 import Footer from './Footer';
 import styles from './Layout.module.scss';
 import Nav from './Nav';

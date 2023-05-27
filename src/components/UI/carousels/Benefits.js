@@ -60,7 +60,7 @@ const BenefitsCarousel = () => {
                 <p>
                   <strong>Cupónes supermontos</strong>
                 </p>
-                <p>Cupón válido desde el 4 de abril y hasta el 15 de abril.</p>
+                <p>Obten el mejor descuento para tus cambios desde 5000 USD</p>
               </div>
             </>
           </Link>

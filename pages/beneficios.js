@@ -1,27 +1,45 @@
 import Head from 'next/head';
-import Image from 'next/legacy/image';
-import Link from 'next/link';
+// import Link from 'next/link';
 import Script from 'next/script';
-import { useState } from 'react';
 // COMPONENTS
-import Card from '../src/components/UI/Card';
-import { BaseModal } from '../src/components/UI/Modal';
+// import { BaseModal } from '../src/components/UI/Modal';
 import styles from '../styles/beneficios.module.scss';
+import { getBenefits } from '../sanity/utils';
+import Layout from '../src/components/layout/Layout';
+import BenefitItem from '../src/components/benefits/BenefitItem';
 
-const Promociones = () => {
-  const [modalType, setModalType] = useState(''),
-    [isModalOpen, setIsModalOpen] = useState(false);
+export const getStaticProps = async () => {
+  let benefits = [];
 
-  // HANDLERS
-  const openModalHandler = (type) => {
-    setModalType(type);
-    setIsModalOpen(true);
-  };
+  try {
+    const benefitsResults = await getBenefits();
 
-  const closeModalHandler = () => {
-    setModalType('');
-    setIsModalOpen(false);
-  };
+    if (benefitsResults?.length > 0) {
+      benefits = benefitsResults;
+    }
+  } catch (error) {
+    console.error(error);
+  }
+
+  return { props: { benefits } };
+};
+
+export default function Promociones({ benefits = [] }) {
+  // const [modalType, setModalType] = useState(''),
+  //   [isModalOpen, setIsModalOpen] = useState(false);
+
+  // // HANDLERS
+  // // const openModalHandler = (type) => {
+  // //   setModalType(type);
+  // //   setIsModalOpen(true);
+  // // };
+
+  // // const closeModalHandler = () => {
+  // //   setModalType('');
+  // //   setIsModalOpen(false);
+  // // };
+
+  console.log(benefits);
 
   return (
     <>
@@ -51,90 +69,11 @@ const Promociones = () => {
           </h3>
 
           <article className={styles.PromotionsWrapper}>
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src='/images/beneficios/cupon-mes.webp' alt='Mejora el tipo de cambio con INSTAKASH usando nuestro cupón del mes.' layout='fill' objectFit='cover' />
-              </div>
-              <div className={styles.Info}>
-                <h3>Cupón del mes</h3>
-                <h2>INSTAVERANO23</h2>
-                <p className={styles.Date}>
-                  <time dateTime='01-01-2023'>01/01</time> al <time dateTime='30-04-2023'>30/04</time> del 2023
-                </p>
-                <p>
-                  Celebra todo el verano 2023 realizando tus cambios con el cupón INSTAVERANO23 y obtén 10 puntos a favor de tu cambio. Válido para 2 cambios a partir de $100 USD.
-                </p>
-                <div className={styles.Actions}>
-                  <a href='https://app.instakash.net/login' className='mr-4'>
-                    Acceder y usar cupón
-                  </a>
-                  <button type='button' onClick={() => openModalHandler('coupons')}>
-                    ¿Cómo uso los cupones?
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src='/images/beneficios/empresas.webp' alt='Plan de empresas Instakash' layout='fill' objectFit='cover' />
-              </div>
-              <div className={styles.Info}>
-                <h3>Plan de empresas</h3>
-                <h2>AFÍLIATE</h2>
-                <p>
-                  Afíliate a nuestro Plan para Empresas Afiliadas y recibe beneficios exclusivos. Haz click en nuestro botón de WhatsApp, nuestro equipo de servicio al cliente está
-                  para ayudarte.
-                </p>
-                <div className={styles.Actions}>
-                  <a href='https://wa.link/wekqza' target='_blank' rel='noopener noreferrer' className='mr-4'>
-                    Afiliarme
-                  </a>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src='/images/beneficios/supermontos.webp' alt='Cupones para cambiar online con SUPERMONTOS' layout='fill' objectFit='contain' />
-              </div>
-              <div className={styles.Info}>
-                <h3>Cupones activos</h3>
-                <h2>SUPERMONTOS</h2>
-                <p>Usa tus cupones supermontos para obtener el mejor descuento en el tipo de cambio para tus cambios desde 10000 USD.</p>
-                <div className={styles.Actions}>
-                  <a href='https://app.instakash.net/login' className='mr-4'>
-                    Acceder y usar cupón
-                  </a>
-                  <button type='button' onClick={() => openModalHandler('supercoupons')}>
-                    ¿Cuales son los cupones?
-                  </button>
-                </div>
-              </div>
-            </Card>
-
-            <Card className={styles.PromotionCard}>
-              <div className={styles.Cover}>
-                <Image src='/images/beneficios/kash.webp' alt='Gana KASH cambiando dólares online' layout='fill' objectFit='contain' />
-              </div>
-              <div className={styles.Info}>
-                <h3>Refiere y</h3>
-                <h2>GÁNA KASH</h2>
-                <p>Invita a tus amigos a Instakash y con su primer cambio te ganas 2 KASH y tu referido un descuento en la tasa.</p>
-                <div className={styles.Actions}>
-                  <a href='https://app.instakash.net/login' className='mr-4'>
-                    Acceder y referir
-                  </a>
-                  <button type='button' onClick={() => openModalHandler('usercode')}>
-                    ¿Como usar tu código?
-                  </button>
-                </div>
-              </div>
-            </Card>
+            {benefits.length > 0 ? benefits.map((benefit) => <BenefitItem key={benefit._id} benefit={benefit} />) : <p>No hay beneficios activos en este momento</p>}
           </article>
         </div>
       </section>
-      <BaseModal isOpen={isModalOpen} onClose={closeModalHandler}>
+      {/* <BaseModal isOpen={isModalOpen} onClose={closeModalHandler}>
         {modalType === 'supercoupons' ? (
           <SuperCouponsModal />
         ) : (
@@ -142,7 +81,7 @@ const Promociones = () => {
             <source src={modalType === 'usercode' ? '/videos/refer_a_friend.mp4' : '/videos/coupon_usage.mp4'} />
           </video>
         )}
-      </BaseModal>
+      </BaseModal> */}
       <Script
         strategy='afterInteractive'
         type='application/ld+json'
@@ -159,26 +98,31 @@ const Promociones = () => {
       />
     </>
   );
+}
+
+Promociones.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
-const SuperCouponsModal = () => (
-  <div className='modal-body'>
-    <h3>Ahorra con nuestros Super montos</h3>
-    <p>
-      Cuando desees cambiar montos desde 5000 USD en adelante, te ofrecemos hasta 3 cupones para que ahorres y obtengas una de las mejores tasas del mercado y sin límite de uso.
-    </p>
-    <ul>
-      <li>
-        Para montos desde 10MIL USD usa nuestro cupón <b>DESDE10000</b>
-      </li>
-      <li>
-        Para montos desde 20MIL USD usa nuestro cupón <b>DESDE20000</b>
-      </li>
-    </ul>
-    <Link className='mx-auto mt-6 block' href='/terminos-y-condiciones#cupones'>
-      Conoce más sobre el uso de nuestros cupones aquí
-    </Link>
-  </div>
-);
-
-export default Promociones;
+// const SuperCouponsModal = () => (
+//   <div className='modal-body'>
+//     <h3 className='modal-title'>Supermontos INSTAKASH</h3>
+//     <p className='mb-2'>
+//       Cuando desees cambiar montos desde 5000 USD en adelante, te ofrecemos hasta 3 cupones para que ahorres y obtengas una de las mejores tasas del mercado y sin límite de uso.
+//     </p>
+//     <ul>
+//       <li>
+//         Para montos desde 5MIL USD usa nuestro cupón <b>DESDE5000</b>
+//       </li>
+//       <li>
+//         Para montos desde 10MIL USD usa nuestro cupón <b>DESDE10000</b>
+//       </li>
+//       <li>
+//         Para montos desde 20MIL USD usa nuestro cupón <b>DESDE20000</b>
+//       </li>
+//     </ul>
+//     <Link className='mx-auto mt-6 block' href='/terminos-y-condiciones#cupones'>
+//       <b>Conoce más sobre el uso de nuestros cupones aquí</b>
+//     </Link>
+//   </div>
+// );

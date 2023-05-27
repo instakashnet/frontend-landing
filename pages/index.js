@@ -5,14 +5,15 @@ import Script from 'next/script';
 import { useEffect, useState } from 'react';
 import { FaCheckCircle } from 'react-icons/fa';
 import Calculator from '../src/components/calculator';
-// import Callout from "../src/components/UI/callout.component";
+// import Callout from "../src/components/UI/Callout";
 import Card from '../src/components/UI/Card';
-import AdsCarousel from '../src/components/UI/carousels/ads.component';
-import BenefitsCarousel from '../src/components/UI/carousels/benefits.component';
+import AdsCarousel from '../src/components/UI/carousels/Ads';
+import BenefitsCarousel from '../src/components/UI/carousels/Benefits';
 import { BaseModal } from '../src/components/UI/Modal';
 // CLASSES
 import styles from '../styles/Home.module.scss';
 import { getCounters } from '../src/utils/fetch-data';
+import Layout from '../src/components/layout/Layout';
 
 export async function getStaticProps() {
   let counters = {
@@ -39,7 +40,7 @@ const Home = ({ counters }) => {
   const [infoModal, setInfoModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setInfoModal(true), 3000);
+    setTimeout(() => setInfoModal(true), 700);
   }, []);
 
   const handleCloseModal = () => setInfoModal(false);
@@ -312,10 +313,10 @@ const Home = ({ counters }) => {
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <img src='/images/posters/cupon.webp' alt='cambia dólares y soles con INSTAKASH en el verano.' />
         {/* <div className={styles.ModalBody}>
-          <h3>Caida de BCP</h3>
+          <h3>Caida de Interbank</h3>
           <p>
-            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma BCP para empresas está presentando problemas</b>, por lo tanto las
-            operaciones con este banco pueden tardar mas de lo estimado.
+            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank para empresas está presentando problemas</b>, por lo tanto
+            las operaciones con este banco pueden tardar mas de lo estimado.
           </p>
           <p className='font-bold mt-6'>Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
         </div> */}
@@ -338,6 +339,10 @@ const Home = ({ counters }) => {
       />
     </>
   );
+};
+
+Home.getLayout = function getLayout(page) {
+  return <Layout>{page}</Layout>;
 };
 
 export default Home;
