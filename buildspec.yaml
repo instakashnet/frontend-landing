@@ -24,7 +24,9 @@ phases:
         -t 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing:$ENVIRONMENT-latest
         --build-arg NEXT_PUBLIC_FB_PIXEL_ID_MAIN=$NEXT_PUBLIC_FB_PIXEL_ID_MAIN
         --build-arg NEXT_PUBLIC_GA_TRACKING_ID=$NEXT_PUBLIC_GA_TRACKING_ID
-        --build-arg NEXT_PUBLIC_YANDEX_CODE=$NEXT_PUBLIC_YANDEX_CODE .
+        --build-arg NEXT_PUBLIC_YANDEX_CODE=$NEXT_PUBLIC_YANDEX_CODE
+        --build-arg NEXT_PUBLIC_SANITY_PROJECT_ID=$NEXT_PUBLIC_SANITY_PROJECT_ID
+        --build-arg NEXT_PUBLIC_SANITY_DATASET=$NEXT_PUBLIC_SANITY_DATASET .
       - echo 'Pushing image into ECR...'
       - docker push 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing --all-tags
   post_build:
@@ -34,5 +36,5 @@ phases:
       - envsubst < deployment.template > deployment.yaml
       - cat deployment.yaml
       - rm deployment.template
-      - aws eks update-kubeconfig --region us-east-1 --name instakash-core 
+      - aws eks update-kubeconfig --region us-east-1 --name instakash-core
       - kubectl apply -f . -n $K8S_NAMESPACE
