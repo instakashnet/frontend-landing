@@ -14,16 +14,15 @@ import { BaseModal } from '../src/components/UI/Modal';
 import styles from '../styles/Home.module.scss';
 import { getCounters } from '../src/utils/fetch-data';
 import Layout from '../src/components/layout/Layout';
+import { getBenefits } from '../sanity/utils';
 
 export async function getStaticProps() {
-  let counters = {
-    qtyUsers: 0,
-    qtySuccessfullOrders: 0,
-    totalProcessed: 0,
-  };
+  let counters = {},
+    benefits = [];
 
   try {
     counters = await getCounters();
+    benefits = await getBenefits();
   } catch (error) {
     console.log(error);
   }
@@ -31,19 +30,22 @@ export async function getStaticProps() {
   return {
     props: {
       counters,
+      benefits,
     },
     revalidate: 10,
   };
 }
 
-const Home = ({ counters }) => {
+const Home = ({ counters = {}, benefits = [] }) => {
   const [infoModal, setInfoModal] = useState(false);
 
   useEffect(() => {
-    setTimeout(() => setInfoModal(true), 700);
+    setTimeout(() => setInfoModal(true), 500);
   }, []);
 
   const handleCloseModal = () => setInfoModal(false);
+
+  console.log(benefits);
 
   return (
     <>
@@ -182,14 +184,14 @@ const Home = ({ counters }) => {
           </div>
         </div>
       </section>
-      <section className='container my-6 md:my-12 lg:my-20'>
+      <section className='container !my-24'>
         <div className='text-center'>
           <h2 className={styles.Title}>
             Beneficios de Instakash <br /> tu casa de cambio online
           </h2>
           <p className={styles.Subtitle}>En Instakash te ayudamos a tener un mejor tipo de cambio de forma simple.</p>
         </div>
-        <BenefitsCarousel />
+        <BenefitsCarousel benefits={benefits} />
       </section>
       <section className={styles.StepsSection}>
         <div className='container'>
