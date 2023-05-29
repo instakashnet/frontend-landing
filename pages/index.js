@@ -17,7 +17,8 @@ import Layout from '../src/components/layout/Layout';
 import { getBenefits } from '../sanity/utils';
 
 export async function getStaticProps() {
-  let counters, benefits;
+  let counters = {},
+    benefits = [];
 
   try {
     counters = await getCounters();
