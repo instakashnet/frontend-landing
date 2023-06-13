@@ -45,8 +45,6 @@ const Home = ({ counters = {}, benefits = [] }) => {
 
   const handleCloseModal = () => setInfoModal(false);
 
-  console.log(benefits);
-
   return (
     <>
       <Head>
@@ -315,12 +313,12 @@ const Home = ({ counters = {}, benefits = [] }) => {
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <img src='/images/posters/cupon.webp' alt='cambia dólares y soles con INSTAKASH en el verano.' />
         {/* <div className={styles.ModalBody}>
-          <h3>Caida de Interbank</h3>
+          <h3>Mantenimiento de plataforma</h3>
           <p>
-            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos <b>la plataforma Interbank para empresas está presentando problemas</b>, por lo tanto
-            las operaciones con este banco pueden tardar mas de lo estimado.
+            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos nuestro servidores se encuentran realizando <b>un proceso de mantenimiento</b>{' '}
+            programado hasta las 4PM. Debido a ello, las operaciones ingresadas desde las <p>2PM hasta las 4PM</p> no podrán ser procesadas hasta luego de este horario.
           </p>
-          <p className='font-bold mt-6'>Agradecemos su comprensión y esperamos operar con normalidad una ve solucionado.</p>
+          <p className='font-bold mt-6'>Agradecemos su comprensión y esperamos operar con normalidad una vez solucionado.</p>
         </div> */}
       </BaseModal>
       <Script

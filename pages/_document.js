@@ -10,7 +10,6 @@ class MyDocument extends Document {
     return (
       <Html lang='es_PE' className='notranslate' translate='no'>
         <Head>
-          <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`} />
           <script
             dangerouslySetInnerHTML={{
               __html: `
@@ -52,6 +51,13 @@ class MyDocument extends Document {
                    trackLinks:true,
                    accurateTrackBounce:true,
                    webvisor:true
+              });
+
+              ym(93938209, "init", {
+                clickmap:true,
+                trackLinks:true,
+                accurateTrackBounce:true,
+                webvisor:true
               });
               `,
             }}
