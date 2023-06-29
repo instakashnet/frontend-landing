@@ -482,10 +482,11 @@ const Home = ({ counters = {}, benefits = [] }) => {
       </section>
       <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
         <img
-          src="/images/posters/cupon.webp"
-          alt="cambia dólares y soles con INSTAKASH en el verano."
+          src="/images/posters/comunicado.webp"
+          alt="Disfruta del feriado en INSTAKASH"
         />
         {/* <div className={styles.ModalBody}>
+        cambia dólares y soles con INSTAKASH en el verano.
           <h3>Mantenimiento de plataforma</h3>
           <p>
             Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos nuestro servidores se encuentran realizando <b>un proceso de mantenimiento</b>{' '}
