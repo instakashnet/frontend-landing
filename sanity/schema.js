@@ -1,5 +1,7 @@
-import benefits from './schemas/benefits';
+import banners from "./schemas/banners";
+import benefits from "./schemas/benefits";
+import popup from "./schemas/popup";
 
 export const schema = {
-  types: [benefits],
+  types: [benefits, popup, banners],
 };

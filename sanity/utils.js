@@ -1,13 +1,7 @@
-import { createClient, groq } from 'next-sanity';
-import { apiVersion, dataset, projectId } from './env';
+import { groq } from "next-sanity";
+import { client } from "./lib/client";
 
 export async function getBenefits() {
-  const client = createClient({
-    apiVersion,
-    projectId,
-    dataset,
-  });
-
   return client.fetch(
     groq`
         *[_type == "benefits"]{
@@ -27,6 +21,19 @@ export async function getBenefits() {
         }
       `
   );
+}
 
-  //
+export async function getPopup() {
+  return client.fetch(
+    groq`
+    *[_type == "popup"][0] {
+      title,
+      "image": image.asset->url,
+      "show": show == true,
+      "isNotif": is_notif == true,
+      "notifTitle":  notif_title,
+        "description": notif_desc
+    }
+      `
+  );
 }

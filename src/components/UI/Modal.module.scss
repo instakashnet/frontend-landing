@@ -1,4 +1,4 @@
-@import '../../../styles/colors';
+@import "../../../styles/colors";
 
 .customModal {
   border-radius: 10px;
@@ -48,4 +48,15 @@
 
 .closeModal svg {
   color: #c5e3d7;
+}
+
+.modalBody {
+  padding: 2rem;
+
+  h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: $base-green;
+    font-size: 1.5rem;
+  }
 }

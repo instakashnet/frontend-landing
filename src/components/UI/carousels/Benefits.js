@@ -1,11 +1,11 @@
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick-theme.css';
-import 'slick-carousel/slick/slick.css';
-import Card from '../Card';
-import styles from './Benefits.module.scss';
+import Image from "next/legacy/image";
+import Link from "next/link";
+import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import Card from "../Card";
+import styles from "./Benefits.module.scss";
 
 const BenefitsCarousel = ({ benefits = [] }) => {
   let settings = {
@@ -17,7 +17,7 @@ const BenefitsCarousel = ({ benefits = [] }) => {
     autoplaySpeed: 3000,
     slidesToShow: 3,
     slidesToScroll: 1,
-    centerPadding: '10px',
+    centerPadding: "10px",
     centerMode: true,
     responsive: [
       {
@@ -32,15 +32,20 @@ const BenefitsCarousel = ({ benefits = [] }) => {
   return (
     <Slider {...settings} className={styles.Carousel}>
       {benefits.map((benefit) => (
-        <div className={styles.Slide} key={benefit.id}>
+        <div className={styles.Slide} key={benefit._id}>
           <Card className={styles.BenefitsCard}>
-            <Link href='/beneficios' className='block' legacyBehavior>
+            <Link href="/beneficios" className="block" legacyBehavior>
               <>
                 <div className={styles.Cover}>
-                  <Image src={benefit.image?.url} alt={benefit.image?.alt} layout='fill' objectFit='cover' />
+                  <Image
+                    src={benefit.image?.url}
+                    alt={benefit.image?.alt}
+                    layout="fill"
+                    objectFit="cover"
+                  />
                 </div>
                 <div className={styles.BenefitsInfo}>
-                  <h4 className='uppercase'>
+                  <h4 className="uppercase">
                     <strong>{benefit.title}</strong>
                   </h4>
                   <p>{benefit.subtitle}</p>

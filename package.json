@@ -5,11 +5,14 @@
   "scripts": {
     "dev": "next dev -p 8000",
     "build": "next build",
+    "server": "sanity dev",
     "build:dev": "next build && next export",
     "start": "next start",
     "serve": "serve out"
   },
   "dependencies": {
+    "@portabletext/react": "^3.0.4",
+    "@sanity/client": "^6.1.5",
     "@sanity/image-url": "1",
     "@sanity/vision": "3",
     "axios": "^0.21.1",

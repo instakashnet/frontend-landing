@@ -2,7 +2,6 @@ import Head from "next/head";
 import Image from "next/legacy/image";
 import Link from "next/link";
 import Script from "next/script";
-import { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../src/components/calculator";
 // import Callout from "../src/components/UI/Callout";
@@ -14,17 +13,17 @@ import { BaseModal } from "../src/components/UI/Modal";
 import styles from "../styles/Home.module.scss";
 import { getCounters } from "../src/utils/fetch-data";
 import Layout from "../src/components/layout/Layout";
-import { getBenefits } from "../sanity/utils";
+import { getBenefits, getPopup } from "../sanity/utils";
 
 export async function getStaticProps() {
   let counters = {},
-    benefits = [];
+    benefits = [],
+    popup = null;
 
   try {
     counters = await getCounters();
     benefits = await getBenefits();
-
-    console.log({ counters });
+    popup = await getPopup();
   } catch (error) {
     console.log("Hay un error", error);
   }
@@ -33,20 +32,13 @@ export async function getStaticProps() {
     props: {
       counters,
       benefits,
+      popup,
     },
-    revalidate: 10,
+    revalidate: 1,
   };
 }
 
-const Home = ({ counters = {}, benefits = [] }) => {
-  const [infoModal, setInfoModal] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => setInfoModal(true), 500);
-  }, []);
-
-  const handleCloseModal = () => setInfoModal(false);
-
+const Home = ({ counters = {}, benefits = [], popup = null }) => {
   return (
     <>
       <Head>
@@ -480,21 +472,8 @@ const Home = ({ counters = {}, benefits = [] }) => {
           </div>
         </div>
       </section>
-      <BaseModal isOpen={infoModal} onClose={handleCloseModal}>
-        <img
-          src="/images/posters/comunicado.webp"
-          alt="Disfruta del feriado en INSTAKASH"
-        />
-        {/* <div className={styles.ModalBody}>
-        cambia dólares y soles con INSTAKASH en el verano.
-          <h3>Mantenimiento de plataforma</h3>
-          <p>
-            Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos nuestro servidores se encuentran realizando <b>un proceso de mantenimiento</b>{' '}
-            programado hasta las 4PM. Debido a ello, las operaciones ingresadas desde las <p>2PM hasta las 4PM</p> no podrán ser procesadas hasta luego de este horario.
-          </p>
-          <p className='font-bold mt-6'>Agradecemos su comprensión.</p>
-        </div> */}
-      </BaseModal>
+      <BaseModal popup={popup} />
+
       <Script
         strategy="afterInteractive"
         type="application/ld+json"
