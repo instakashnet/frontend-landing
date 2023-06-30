@@ -37,3 +37,17 @@ export async function getPopup() {
       `
   );
 }
+
+export async function getBanners() {
+  return client.fetch(
+    groq`
+    *[_type == "banners"] {
+      title,
+      description,
+      "desktop": imageDesktop.asset->url,
+        "mobile": imageMobile.asset->url,
+        link
+    }
+    `
+  );
+}

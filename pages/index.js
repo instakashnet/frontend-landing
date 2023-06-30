@@ -11,18 +11,18 @@ import BenefitsCarousel from "../src/components/UI/carousels/Benefits";
 import { BaseModal } from "../src/components/UI/Modal";
 // CLASSES
 import styles from "../styles/Home.module.scss";
-import { getCounters } from "../src/utils/fetch-data";
 import Layout from "../src/components/layout/Layout";
-import { getBenefits, getPopup } from "../sanity/utils";
+import { getBanners, getBenefits, getPopup } from "../sanity/utils";
+import Counters from "../src/components/home/Counters";
 
 export async function getStaticProps() {
-  let counters = {},
-    benefits = [],
+  let benefits = [],
+    banners = [],
     popup = null;
 
   try {
-    counters = await getCounters();
     benefits = await getBenefits();
+    banners = await getBanners();
     popup = await getPopup();
   } catch (error) {
     console.log("Hay un error", error);
@@ -30,15 +30,15 @@ export async function getStaticProps() {
 
   return {
     props: {
-      counters,
       benefits,
       popup,
+      banners,
     },
     revalidate: 1,
   };
 }
 
-const Home = ({ counters = {}, benefits = [], popup = null }) => {
+const Home = ({ benefits = [], popup = null, banners = [] }) => {
   return (
     <>
       <Head>
@@ -80,7 +80,7 @@ const Home = ({ counters = {}, benefits = [], popup = null }) => {
       </div>
     </Callout> */}
       <div className="container px-0 pb-0">
-        <AdsCarousel />
+        <AdsCarousel banners={banners} />
       </div>
       <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
@@ -199,56 +199,7 @@ const Home = ({ counters = {}, benefits = [], popup = null }) => {
               </div>
             </Card>
           </div>
-          <div className={styles.UsersWrapper}>
-            <div className={styles.UserInfoWrapper}>
-              <div className="mr-6">
-                <Image
-                  src="/images/icons/laptop.svg"
-                  width={45}
-                  height={45}
-                  alt="cambios realizados"
-                />
-              </div>
-              <div>
-                <span className={styles.UserInfo}>
-                  +{counters.qtySuccessfullOrders.toLocaleString("es-ES")}
-                </span>
-                <p>cambios realizados</p>
-              </div>
-            </div>
-            <div className={styles.UserInfoWrapper}>
-              <div className="mr-6">
-                <Image
-                  src="/images/icons/soles.svg"
-                  width={45}
-                  height={45}
-                  alt="cantidad de soles transferidos"
-                />
-              </div>
-              <div>
-                <span className={styles.UserInfo}>
-                  +{counters.totalProcessed.substring(0, 2)} mil millones
-                </span>
-                <p>de soles transferidos</p>
-              </div>
-            </div>
-            <div className={styles.UserInfoWrapper}>
-              <div className="mr-6">
-                <Image
-                  src="/images/icons/users.svg"
-                  width={45}
-                  height={45}
-                  alt="usuarios registrados"
-                />
-              </div>
-              <div>
-                <span className={styles.UserInfo}>
-                  +{counters.qtyUsers.toLocaleString("es-ES")}
-                </span>
-                <p>usuarios registrados</p>
-              </div>
-            </div>
-          </div>
+          <Counters />
         </div>
       </section>
       <section className="container !my-24">

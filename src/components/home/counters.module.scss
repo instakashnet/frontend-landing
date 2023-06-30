@@ -1,0 +1,26 @@
+@use "sass:math";
+@import "../../../styles/fontSizes";
+@import "../../../styles/breakpoints";
+
+.countersWrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.infoWrapper {
+  padding: 1.5rem 3rem 0.5rem;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.counter {
+  font-weight: 700;
+  font-size: $info-text;
+
+  @include respond(desktop) {
+    font-size: math.div($subtitle, 1.1);
+  }
+}
