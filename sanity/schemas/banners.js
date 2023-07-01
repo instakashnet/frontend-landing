@@ -6,11 +6,34 @@ export default defineType({
   title: "Banners",
   fields: [
     defineField({
-      name: "banner_image",
-      type: "array",
-      title: "Lista de banners",
-      description: "Lista de banners para la página de inicio",
-      of: [{ type: "image" }],
+      name: "title",
+      type: "string",
+      title: "Titulo del banner",
+      validation: (Rule) => Rule.required().max(30),
+    }),
+    defineField({
+      name: "imageDesktop",
+      type: "image",
+      title: "Imagen del banner (desktop)",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "imageMobile",
+      type: "image",
+      title: "Imagen del banner (mobile)",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: "description",
+      type: "string",
+      title: "Descripción corta",
+      validation: (Rule) => Rule.required().max(60),
+    }),
+    defineField({
+      name: "link",
+      type: "url",
+      title: "URL para acceder al banner",
+      validation: (Rule) => Rule.optional(),
     }),
   ],
 });

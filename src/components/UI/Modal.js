@@ -10,8 +10,6 @@ Modal.setAppElement("div");
 export const BaseModal = ({ popup }) => {
   const [modal, setModal] = useState(false);
 
-  console.log(popup);
-
   useEffect(() => {
     if (popup) setTimeout(() => setModal(true), 300);
   }, [popup]);
