@@ -1,5 +1,5 @@
 # Production image, copy all the files and run next
-FROM node:16-alpine AS runner
+FROM 160743850946.dkr.ecr.us-east-1.amazonaws.com/docker-library:node16-alpine AS runner
 
 ARG NEXT_PUBLIC_FB_PIXEL_ID_MAIN
 ARG NEXT_PUBLIC_GA_TRACKING_ID
