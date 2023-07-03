@@ -30,11 +30,6 @@ export const BaseModal = ({ popup }) => {
           <div className={styles.modalBody}>
             <h3>{popup.notifTitle}</h3>
             <PortableText value={popup.description} />
-            {/* <p>
-              Estimado Cliente, agradecemos por su confianza. Notificamos que en estos momentos nuestro servidores se encuentran realizando <b>un proceso de mantenimiento</b>{' '}
-              programado hasta las 4PM. Debido a ello, las operaciones ingresadas desde las <p>2PM hasta las 4PM</p> no podrán ser procesadas hasta luego de este horario.
-            </p>
-            <p className='font-bold mt-6'>Agradecemos su comprensión.</p> */}
           </div>
         ) : (
           <img src={popup.image} alt={popup.title} />
