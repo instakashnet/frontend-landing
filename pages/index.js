@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Image from "next/legacy/image";
-import Link from "next/link";
 import Script from "next/script";
 import { FaCheckCircle } from "react-icons/fa";
 import Calculator from "../src/components/calculator";
@@ -14,41 +13,15 @@ import styles from "../styles/Home.module.scss";
 import Layout from "../src/components/layout/Layout";
 import { getBanners, getBenefits, getPopup } from "../sanity/utils";
 import Counters from "../src/components/home/Counters";
-
-export async function getStaticProps() {
-  let benefits = [],
-    banners = [],
-    popup = null;
-
-  try {
-    benefits = await getBenefits();
-    banners = await getBanners();
-    popup = await getPopup();
-  } catch (error) {
-    console.log("Hay un error", error);
-  }
-
-  return {
-    props: {
-      benefits,
-      popup,
-      banners,
-    },
-    revalidate: 1,
-  };
-}
+import Steps from "../src/components/home/Steps";
+import KashSection from "../src/components/home/KashSection";
 
 const Home = ({ benefits = [], popup = null, banners = [] }) => {
   return (
     <>
       <Head>
-        <title>
-          Casa de Cambio Online | Cambiar Dólares a Soles | Instakash
-        </title>
-        <meta
-          name="title"
-          content="Instakash Casa de Cambio Online | Cambia Dólares a Soles"
-        />
+        <title>Casa de Cambio Online | Cambiar Dólares a Soles | Instakash</title>
+        <meta name="title" content="Instakash Casa de Cambio Online | Cambia Dólares a Soles" />
         <meta
           name="description"
           content="Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. Instakash es regulada por la SBS Cambia Seguro, Cambia aquí."
@@ -59,16 +32,10 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
         <meta name="author" content="InstaKash" />
         <meta name="url" content="https://instakash.net/" />
 
-        <meta
-          property="og:title"
-          content="Casa de Cambio Online | Cambiar Dólares a Soles"
-        />
+        <meta property="og:title" content="Casa de Cambio Online | Cambiar Dólares a Soles" />
         <meta property="og:site_name" content="Instakash" />
         <meta property="og:url" content="https://instakash.net/" />
-        <meta
-          property="og:description"
-          content="Instakash es la casa de cambio online con el mejor tipo de cambio de dólares a soles."
-        />
+        <meta property="og:description" content="Instakash es la casa de cambio online con el mejor tipo de cambio de dólares a soles." />
         <meta property="og:type" content="https://instakash.net/" />
         <meta property="og:image" content="" />
       </Head>
@@ -79,9 +46,8 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
         </p>
       </div>
     </Callout> */}
-      <div className="container px-0 pb-0">
-        <AdsCarousel banners={banners} />
-      </div>
+
+      <AdsCarousel banners={banners} />
       <section className={styles.CalculatorSection} id="calculator">
         <div className="container">
           <div className="grid grid-cols-1 md:grid-cols-2 md:mt-3">
@@ -93,8 +59,7 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
                 Con la mejor tasa, <br /> comienza el cambio.
               </h2>
               <p className="flex">
-                <FaCheckCircle size={25} className="mr-2 lg:mt-1" /> Entidad
-                registrada en la SBS.
+                <FaCheckCircle size={25} className="mr-2 lg:mt-1" /> Entidad registrada en la SBS.
               </p>
             </div>
             <Card className={styles.CalculatorWrapper}>
@@ -107,12 +72,7 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
             </Card>
           </div>
           <div className={styles.SuperkashWrapper}>
-            <Image
-              src="/images/illustrations/superkash.svg"
-              alt="Casa de cambio online"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src="/images/illustrations/superkash.svg" alt="Casa de cambio online" layout="fill" objectFit="contain" />
           </div>
         </div>
       </section>
@@ -138,18 +98,8 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
                 </div>
               </div>
               <div className={styles.BanksInfoImageWrapper}>
-                <Image
-                  src="/images/banks/interbank.svg"
-                  alt="Banco Interbank"
-                  width={80}
-                  height={25}
-                />
-                <Image
-                  src="/images/banks/bcp.svg"
-                  alt="Banco BCP"
-                  width={80}
-                  height={30}
-                />
+                <Image src="/images/banks/interbank.svg" alt="Banco Interbank" width={80} height={25} />
+                <Image src="/images/banks/bcp.svg" alt="Banco BCP" width={80} height={30} />
               </div>
             </Card>
             <Card className={styles.BankCard}>
@@ -172,28 +122,13 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
               </div>
               <div className={styles.BanksInfoImageWrapper}>
                 <div className="mr-3">
-                  <Image
-                    src="/images/banks/scotiabank.svg"
-                    alt="Banco Scotiabank"
-                    width={90}
-                    height={40}
-                  />
+                  <Image src="/images/banks/scotiabank.svg" alt="Banco Scotiabank" width={90} height={40} />
                 </div>
                 <div className="mr-3">
-                  <Image
-                    src="/images/banks/bbva.svg"
-                    alt="Banco BBVA"
-                    width={70}
-                    height={25}
-                  />
+                  <Image src="/images/banks/bbva.svg" alt="Banco BBVA" width={70} height={25} />
                 </div>
                 <div className="mr-3">
-                  <Image
-                    src="/images/banks/pichincha.svg"
-                    alt="Banco Pichincha"
-                    width={70}
-                    height={25}
-                  />
+                  <Image src="/images/banks/pichincha.svg" alt="Banco Pichincha" width={70} height={25} />
                 </div>
                 <p>y otros</p>
               </div>
@@ -207,217 +142,39 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
           <h2 className={styles.Title}>
             Beneficios de Instakash <br /> tu casa de cambio online
           </h2>
-          <p className={styles.Subtitle}>
-            En Instakash te ayudamos a tener un mejor tipo de cambio de forma
-            simple.
-          </p>
+          <p className={styles.Subtitle}>En Instakash te ayudamos a tener un mejor tipo de cambio de forma simple.</p>
         </div>
         <BenefitsCarousel benefits={benefits} />
       </section>
-      <section className={styles.StepsSection}>
-        <div className="container">
-          <div className="text-center mt-5">
-            <h2 className={styles.Title}>Cambia dólares online</h2>
-            <p className={styles.Subtitle}>
-              Ingresa a nuestra casa de cambio online, sigue estos 4 pasos y
-              obtén el mejor tipo de cambio.
-            </p>
-          </div>
-          <div className={styles.StepsWrapper}>
-            <Card className={styles.StepCard}>
-              <span className={styles.Step}>Paso 1</span>
-              <div className={styles.StepImage}>
-                <Image
-                  src="/images/steps/step-1.svg"
-                  alt="Cotiza tu cambio de dólares"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className={styles.StepInfo}>
-                <span>Paso 1</span>
-                <h3>Cotiza tu cambio</h3>
-                <p>
-                  Ingresa el monto que vas a enviar y calcula cuánto vas a
-                  recibir. Comienza tu operación.
-                </p>
-              </div>
-            </Card>
-            <Card className={styles.StepCard}>
-              <span className={styles.Step}>Paso 2</span>
-              <div className={styles.StepImage}>
-                <Image
-                  src="/images/steps/step-2.svg"
-                  alt="Cotiza tu cambio de dólares"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className={styles.StepInfo}>
-                <span>Paso 2</span>
-                <h3>Selecciona tus cuentas</h3>
-                <p>
-                  Selecciona el banco desde donde envías y la cuenta donde
-                  recibirás tu cambio.
-                </p>
-              </div>
-            </Card>
-            <Card className={styles.StepCard}>
-              <span className={styles.Step}>Paso 3</span>
-              <div className={styles.StepImage}>
-                <Image
-                  src="/images/steps/step-3.svg"
-                  alt="Cotiza tu cambio de dólares"
-                  layout="fill"
-                  la
-                  objectFit="contain"
-                />
-              </div>
-              <div className={styles.StepInfo}>
-                <span>Paso 3</span>
-                <h3>Transfiere</h3>
-                <p>
-                  Transfiere a Instakash desde la app de tu banco e ingresa el
-                  número de transferencia en nuestra app.
-                </p>
-              </div>
-            </Card>
-            <Card className={styles.StepCard}>
-              <span className={styles.Step}>Paso 4</span>
-              <div className={styles.StepImage}>
-                <Image
-                  src="/images/steps/step-4.svg"
-                  alt="Cotiza tu cambio de dólares"
-                  layout="fill"
-                  objectFit="contain"
-                />
-              </div>
-              <div className={styles.StepInfo}>
-                <span>Paso 4</span>
-                <h3>Recibe</h3>
-                <p>
-                  Recibe tu cambio en la cuenta que seleccionaste en el paso 2.
-                  Y sigue cambiando con Instakash.
-                </p>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
-      <section className="container md:mt-10">
-        <div className="flex flex-col md:flex-row items-center justify-center">
-          <Image
-            src="/images/bg/kash.webp"
-            objectFit="contain"
-            width={600}
-            height={500}
-          />
-          <div className="text-left md:w-1/3 flex flex-col">
-            <h2 className={styles.Title}>¿Que es KASH?</h2>
-            <p className="mb-3">
-              El KASH es nuestra moneda digital que puedes obtener refiriendo a
-              tus amigos. Por cada referido que complete 1 cambio obtendrás 2
-              KASH. con el KASH puedes ahorrar o retirarlo a una de tus cuentas
-              bancarias.{" "}
-              <Link href="/beneficios" className="underline" legacyBehavior>
-                <b>Conoce más aquí.</b>
-              </Link>
-            </p>
-            <Image
-              src="/images/illustrations/kash-equal.svg"
-              objectFit="contain"
-              width={350}
-              height={150}
-            />
-            <a
-              className={styles.Button}
-              href="https://app.instakash.net/register"
-            >
-              Registrarse
-            </a>
-          </div>
-        </div>
-        <div className="flex flex-col md:flex-row justify-center items-center mt-8">
-          <div className={styles.KashInfoBox}>
-            <Image
-              src="/images/illustrations/refiere-gana.svg"
-              width={110}
-              height={70}
-            />
-            <p className="mt-2">
-              Cuando tu referido realiza su primer cambio, tu ganas 2 KASH y tu
-              referido una tasa especial. Copia y comparte el código que está en
-              tu perfil de InstaKash.
-            </p>
-          </div>
-          <div className={styles.KashInfoBox}>
-            <Image
-              src="/images/illustrations/ahorra-retira.svg"
-              width={110}
-              height={70}
-            />
-            <p className="mt-2">
-              Puedes acumular tus KASH y luego retirarlos transfiriéndolos a tu
-              cuenta en dólares en forma de dinero. Un dinero extra para tus
-              ahorros. Hasta 15 KASH por retiro.
-            </p>
-          </div>
-        </div>
-      </section>
+      <Steps />
+      <KashSection />
       <section className="container">
         <div className={styles.AppWrapper}>
           <div className={styles.AppImage}>
-            <Image
-              src="/images/illustrations/app.png"
-              alt="Descarga Instakash App"
-              layout="fill"
-              objectFit="contain"
-            />
+            <Image src="/images/illustrations/app.png" alt="Descarga Instakash App" layout="fill" objectFit="contain" />
           </div>
           <div className={styles.AppInfoWrapper}>
             <h2>
               Descarga Instakash App <br /> casa de cambio online
             </h2>
-            <p>
-              Con el mejor tipo de cambio comienza el cambio, fácil y seguro del
-              Perú. Disponible para android y IOS.
-            </p>
+            <p>Con el mejor tipo de cambio comienza el cambio, fácil y seguro del Perú. Disponible para android y IOS.</p>
             <ul>
               <li>
-                <FaCheckCircle size={20} className="mr-2" /> Notificaciones en
-                el mejor momento para cambiar.
+                <FaCheckCircle size={20} className="mr-2" /> Notificaciones en el mejor momento para cambiar.
               </li>
               <li>
-                <FaCheckCircle size={20} className="mr-2" /> Beneficios
-                exclusivos para nuestros usuarios.
+                <FaCheckCircle size={20} className="mr-2" /> Beneficios exclusivos para nuestros usuarios.
               </li>
               <li>
-                <FaCheckCircle size={20} className="mr-2" /> Servicio al cliente
-                personalizado cuando lo necesites.
+                <FaCheckCircle size={20} className="mr-2" /> Servicio al cliente personalizado cuando lo necesites.
               </li>
             </ul>
             <div className="flex items-center justify-center md:justify-start mt-6">
-              <a
-                href="https://play.google.com/store/apps/details?id=net.instakash.app"
-                className={styles.AppDownloadIcon}
-              >
-                <Image
-                  src="/images/illustrations/playstore.svg"
-                  alt="Descarga Instakash en play store"
-                  layout="fill"
-                  objectFit="contain"
-                />
+              <a href="https://play.google.com/store/apps/details?id=net.instakash.app" className={styles.AppDownloadIcon}>
+                <Image src="/images/illustrations/playstore.svg" alt="Descarga Instakash en play store" layout="fill" objectFit="contain" />
               </a>
-              <a
-                href="https://apps.apple.com/pe/app/instakash/id1601561803"
-                className={styles.AppDownloadIcon}
-              >
-                <Image
-                  src="/images/illustrations/appstore.svg"
-                  alt="Descarga Instakash en app store"
-                  layout="fill"
-                  objectFit="contain"
-                />
+              <a href="https://apps.apple.com/pe/app/instakash/id1601561803" className={styles.AppDownloadIcon}>
+                <Image src="/images/illustrations/appstore.svg" alt="Descarga Instakash en app store" layout="fill" objectFit="contain" />
               </a>
             </div>
           </div>
@@ -444,6 +201,28 @@ const Home = ({ benefits = [], popup = null, banners = [] }) => {
     </>
   );
 };
+
+export async function getServerSideProps() {
+  let benefits = [],
+    banners = [],
+    popup = null;
+
+  try {
+    benefits = await getBenefits();
+    banners = await getBanners();
+    popup = await getPopup();
+  } catch (error) {
+    console.log("Hay un error", error);
+  }
+
+  return {
+    props: {
+      benefits,
+      popup,
+      banners,
+    },
+  };
+}
 
 Home.getLayout = function getLayout(page) {
   return <Layout>{page}</Layout>;

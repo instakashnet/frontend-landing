@@ -20,36 +20,23 @@ const AdsCarousel = ({ banners = [] }) => {
   };
 
   return (
-    <Slider className={styles.BannerSlider} {...settings}>
-      {banners.map((banner) => (
-        <div className="w-full">
-          <a
-            className={styles.BannerCard}
-            href={banner.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div className={styles.BannerCard}>
-              {isMobile ? (
-                <Image
-                  src={banner.mobile}
-                  alt={banner.description}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              ) : (
-                <Image
-                  src={banner.desktop}
-                  alt={banner.description}
-                  layout="fill"
-                  objectFit="contain"
-                />
-              )}
-            </div>
-          </a>
-        </div>
-      ))}
-    </Slider>
+    <div className="container px-0 pb-0">
+      <Slider className={styles.BannerSlider} {...settings}>
+        {banners.map((banner) => (
+          <div className="w-full" key={banner.title}>
+            <a className={styles.BannerCard} href={banner.link} target="_blank" rel="noopener noreferrer">
+              <div className={styles.BannerCard}>
+                {isMobile ? (
+                  <Image src={banner.mobile} alt={banner.description} layout="fill" objectFit="contain" />
+                ) : (
+                  <Image src={banner.desktop} alt={banner.description} layout="fill" objectFit="contain" />
+                )}
+              </div>
+            </a>
+          </div>
+        ))}
+      </Slider>
+    </div>
   );
 };
 

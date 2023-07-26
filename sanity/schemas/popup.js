@@ -6,9 +6,10 @@ export default defineType({
   title: "Popup",
   fields: [
     defineField({
-      name: "show",
+      name: "active",
       type: "boolean",
       title: "Mostrar promoción",
+      initialValue: true,
     }),
     defineField({
       name: "title",
@@ -19,11 +20,6 @@ export default defineType({
       name: "image",
       type: "image",
       title: "Imagen de promoción",
-    }),
-    defineField({
-      name: "is_notif",
-      type: "boolean",
-      title: "¿Es un aviso?",
     }),
     defineField({
       name: "notif_title",
@@ -38,7 +34,6 @@ export default defineType({
       of: [
         {
           type: "block",
-          validation: (Rule) => Rule.optional().min(50),
         },
       ],
     }),
