@@ -11,22 +11,18 @@ export const BaseModal = ({ popup }) => {
   const [modal, setModal] = useState(false);
 
   useEffect(() => {
-    if (popup) setTimeout(() => setModal(true), 300);
+    if (popup && popup.active) setTimeout(() => setModal(true), 300);
   }, [popup]);
 
   const onClose = () => setModal(false);
 
-  return popup ? (
-    <Modal
-      isOpen={modal}
-      onRequestClose={onClose}
-      className={styles.customModal}
-    >
+  return (
+    <Modal isOpen={modal} onRequestClose={onClose} className={styles.customModal}>
       <div className={styles.modalContent}>
         <button onClick={onClose} className={styles.closeModal}>
           <XCircle size={33} />
         </button>
-        {popup.isNotif ? (
+        {popup.notifTitle ? (
           <div className={styles.modalBody}>
             <h3>{popup.notifTitle}</h3>
             <PortableText value={popup.description} />
@@ -36,5 +32,5 @@ export const BaseModal = ({ popup }) => {
         )}
       </div>
     </Modal>
-  ) : null;
+  );
 };

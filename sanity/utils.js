@@ -29,10 +29,9 @@ export async function getPopup() {
     *[_type == "popup"][0] {
       title,
       "image": image.asset->url,
-      "show": show == true,
-      "isNotif": is_notif == true,
+      "active": active == true,
       "notifTitle":  notif_title,
-        "description": notif_desc
+      "description": notif_desc
     }
       `
   );
