@@ -35,7 +35,7 @@ const UserSystemLevel = () => {
             />
           </div>
           <div className='w-full flex items-center justify-center lg:justify-end relative mt-6'>
-            <div className='hidden lg:block absolute bottom-[18rem] z-0'>
+            <div className='hidden lg:block absolute bottom-[16rem] z-0'>
               <Image src='/images/people/woman-level.webp' width={400} height={340} objectFit='contain' />
             </div>
             <LevelCard
