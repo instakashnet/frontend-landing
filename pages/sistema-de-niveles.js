@@ -69,10 +69,12 @@ const UserSystemLevel = () => {
             <h2 className='title'>Con Instakash, obten más con cada transacción</h2>
             <p className='mt-2'>Somos la casa de cambio que te ofrece la mejor tasa de Perú, los mejores beneficios y la mejor atención.</p>
             <div className='flex items-center justify-center gap-3 mt-4'>
-              <a className='button button-secondary' href=''>
+              <a className='button button-secondary' href='https://app.instakash.net'>
                 Registrate
               </a>
-              <a className='button button-primary'>Cambia ahora</a>
+              <a className='button button-primary' href='https://app.instakash.net'>
+                Cambia ahora
+              </a>
             </div>
           </div>
         </section>
