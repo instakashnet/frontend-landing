@@ -1,0 +1,15 @@
+@import "../../../../styles/colors";
+
+.levelLabel {
+  padding: 1rem;
+  width: 6rem;
+  height: 6rem;
+  background-color: $light-color;
+  border-radius: 100%;
+  border: 2px solid $base-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  color: $base-green;
+}

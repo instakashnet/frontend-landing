@@ -1,6 +1,6 @@
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import styles from './Layout.module.scss';
+import Image from "next/legacy/image";
+import Link from "next/link";
+import styles from "./Layout.module.scss";
 
 const Footer = ({ pathname }) => {
   return (
@@ -10,26 +10,44 @@ const Footer = ({ pathname }) => {
           <Image src='/images/logo-white.svg' alt='Instakash casa de cambio online' width={150} height={30} objectFit='contain' />
           <p className='text-sm'>Casa de cambio online. Con la mejor tasa de cambio comienza el cambio, fácil y seguro del Perú.</p>
           <div className='flex tems-center mt-5'>
-            <a href='https://www.instagram.com/instakashnet/' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8 mr-6'>
+            <a
+              href='https://www.instagram.com/instakashnet/'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='relative w-6 h-6 md:w-8 md:h-8 mr-6'
+            >
               <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Instagram' src='/images/social/instagram.svg' />
             </a>
-            <a href='https://www.facebook.com/Instakash-103956227716506' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8 mr-6'>
+            <a
+              href='https://www.facebook.com/Instakash-103956227716506'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='relative w-6 h-6 md:w-8 md:h-8 mr-6'
+            >
               <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Facebook' src='/images/social/facebook.svg' />
             </a>
-            <a href='https://www.linkedin.com/company/71140162' target='_blank' rel='noopener noreferrer' className='relative w-6 h-6 md:w-8 md:h-8'>
+            <a
+              href='https://www.linkedin.com/company/71140162'
+              target='_blank'
+              rel='noopener noreferrer'
+              className='relative w-6 h-6 md:w-8 md:h-8'
+            >
               <Image width={50} height={50} objectFit='contain' alt='Sígue a Instakash en Linkedin' src='/images/social/linkedin.svg' />
             </a>
           </div>
         </section>
         <section className='col-span-3 md:ml-20 flex flex-col md:flex-row items-start justify-between'>
           <div className={styles.footerMenu}>
-            <h4>Menú</h4>
+            <h4>Acceso rápido</h4>
             <ul>
               <li>
-                <Link href={pathname === '/' ? '#calculator' : '/'}>Tipo de cambio para hoy</Link>
+                <Link href={pathname === "/" ? "#calculator" : "/"}>Tipo de cambio para hoy</Link>
               </li>
               <li>
                 <Link href='/beneficios'>Beneficios</Link>
+              </li>
+              <li>
+                <Link href='/sistema-de-niveles'>Sistema de niveles</Link>
               </li>
               <li>
                 <Link href='/faq'>Preguntas frecuentes</Link>

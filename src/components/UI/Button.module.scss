@@ -1,17 +1,25 @@
-@import '../../../styles/colors';
-@import '../../../styles/fontSizes';
+@import "../../../styles/colors";
+@import "../../../styles/fontSizes";
 
-.Button {
+.button {
   padding: 0.8rem 1rem;
   border-radius: 6px;
-  background-color: $button-main;
-  color: #fff;
   transition: 250ms ease-out;
-  font-weight: 700;
+  font-weight: 500;
   font-size: $body;
 
   &:hover,
   &:focus {
     background-color: $button-hover;
   }
+}
+
+.primary {
+  background-color: $button-main;
+  color: #fff;
+}
+
+.secondary {
+  background-color: $button-secondary;
+  color: $text-body;
 }

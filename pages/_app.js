@@ -1,14 +1,14 @@
-import { useEffect } from 'react';
-import TagManager from 'react-gtm-module';
-import FacebookPixel from '../src/components/FacebookPixel';
+import { useEffect } from "react";
+import TagManager from "react-gtm-module";
+import FacebookPixel from "../src/components/FacebookPixel";
 // import Layout from '../src/components/layout/Layout';
 
-import '../styles/tailwind.css';
-import '../styles/globals.css';
+import "../styles/tailwind.css";
+import "../styles/globals.scss";
 
 function MyApp({ Component, pageProps }) {
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-MVR37S9' });
+    TagManager.initialize({ gtmId: "GTM-MVR37S9" });
   }, []);
 
   const getLayout = Component.getLayout || ((page) => page);
