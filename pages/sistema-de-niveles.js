@@ -1,7 +1,7 @@
 import Layout from "@components/layout/Layout";
 import LevelCard from "@components/user/level-card/LevelCard";
-
 import styles from "@styles/UserLevels.module.scss";
+import Head from "next/head";
 import Image from "next/legacy/image";
 import Link from "next/link";
 
