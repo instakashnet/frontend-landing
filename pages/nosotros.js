@@ -1,9 +1,9 @@
-import Head from 'next/head';
-import Image from 'next/legacy/image';
-import Script from 'next/script';
-import { FaCheckCircle } from 'react-icons/fa';
-import styles from '../styles/Nosotros.module.scss';
-import Layout from '../src/components/layout/Layout';
+import Head from "next/head";
+import Image from "next/legacy/image";
+import Script from "next/script";
+import { FaCheckCircle } from "react-icons/fa";
+import styles from "../styles/Nosotros.module.scss";
+import Layout from "../src/components/layout/Layout";
 
 const Nosotros = () => {
   return (
@@ -21,7 +21,10 @@ const Nosotros = () => {
         <meta property='og:title' content='Conoce Instakash | Casa de Cambio Online' />
         <meta property='og:site_name' content='Instakash' />
         <meta property='og:url' content='https://instakash.net/nosotros' />
-        <meta property='og:description' content='Conoce la razones de por qué escoger a Instakash para realizar tus cambio de dólares a soles' />
+        <meta
+          property='og:description'
+          content='Conoce la razones de por qué escoger a Instakash para realizar tus cambio de dólares a soles'
+        />
         <meta property='og:type' content='website' />
         <meta property='og:image' content='' />
       </Head>
@@ -31,13 +34,14 @@ const Nosotros = () => {
           <h3 className={styles.Subtitle}>La Fintech del futuro</h3>
           <hr className='mx-auto mb-8' />
           <p className='mb-6 px-4 md:w-2/3 mx-auto'>
-            Somos Instakash casa de cambio online del Perú. Trabajamos para darte la mejor experiencia de cambio fácil, segura y con la mejor tasa del mercado.
+            Somos Instakash casa de cambio online del Perú. Trabajamos para darte la mejor experiencia de cambio fácil, segura y con la
+            mejor tasa del mercado.
           </p>
           <p className='mb-6'>Busca en nuestra sección de beneficios cupones con puntos a tu favor para seguir mejorando tu tasa.</p>
 
           <p className='mb-6'>
-            Desde hace 3 años Instakash es parte del ecosistema Fintech del Perú y a la fecha más de 20.000 usuarios que han confiado en nosotros, moviendo más de 574 millones de
-            soles.
+            Desde hace 3 años Instakash es parte del ecosistema Fintech del Perú y a la fecha más de 20.000 usuarios que han confiado en
+            nosotros, moviendo más de 574 millones de soles.
           </p>
 
           <p className='mb-6'>
@@ -76,23 +80,32 @@ const Nosotros = () => {
                 <li>
                   <FaCheckCircle size={35} className='mr-3' />
                   <span>
-                    Porque estamos conscientes de que mereces lo mejor, por eso nuestra plataforma es <b>100% amigable, sencilla y de confianza.</b>
+                    Porque estamos conscientes de que mereces lo mejor, por eso nuestra plataforma es{" "}
+                    <b>100% amigable, sencilla y de confianza.</b>
                   </span>
                 </li>
                 <li>
                   <FaCheckCircle size={30} className='mr-3' />
-                  <span>Porque nos importa que mejores tus finanzas, por eso desarrollamos diversos servicios accesibles y de calidad.</span>
+                  <span>
+                    Porque nos importa que mejores tus finanzas, por eso desarrollamos diversos servicios accesibles y de calidad.
+                  </span>
                 </li>
-                import Layout from '../src/components/layout/Layout';
                 <li>
                   <FaCheckCircle size={35} className='mr-3' />
                   <span>
-                    Porque queremos que te sientas apoyado financieramente, por eso brindamos <strong>soluciones financieras innovadoras y revolucionaras.</strong>
+                    Porque queremos que te sientas apoyado financieramente, por eso brindamos{" "}
+                    <strong>soluciones financieras innovadoras y revolucionaras.</strong>
                   </span>
                 </li>
               </ul>
             </article>
-            <Image className='self-center place-self-center' src='/images/illustrations/why-us.svg' width={300} height={300} alt='Casa de cambio del Perú' />
+            <Image
+              className='self-center place-self-center'
+              src='/images/illustrations/why-us.svg'
+              width={300}
+              height={300}
+              alt='Casa de cambio del Perú'
+            />
           </div>
         </div>
       </section>
@@ -101,9 +114,9 @@ const Nosotros = () => {
         <h3 className={styles.Subtitle}>Sómos la Fintech del futuro</h3>
         <hr className='mx-auto' />
         <p className='my-6 px-4 md:w-2/3 mx-auto'>
-          Tenemos muchas cosas que ofrecerte. Con seguridad y transparencia te brindamos beneficios diseñados para tu tranquilidad financiera.{' '}
-          <b>¡Regístrate en nuestra plataforma y comienza a realizar tus operaciones, si ya estas registrado genial!</b>, podrás compartir tu código de afiliado con amigos y
-          empezar a ganar.
+          Tenemos muchas cosas que ofrecerte. Con seguridad y transparencia te brindamos beneficios diseñados para tu tranquilidad
+          financiera. <b>¡Regístrate en nuestra plataforma y comienza a realizar tus operaciones, si ya estas registrado genial!</b>, podrás
+          compartir tu código de afiliado con amigos y empezar a ganar.
         </p>
         <a href='https://app.instakash.net' className={styles.StartButton}>
           Ingresar
@@ -120,7 +133,7 @@ const Nosotros = () => {
             "@type": "SearchAction",
             "target": "https://instakash.net/nosotros{search_term_string}", "query-input": "required name=search_term_string"
             } }
-          `,
+          `
         }}
       />
     </>

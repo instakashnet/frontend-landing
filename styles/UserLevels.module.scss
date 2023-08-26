@@ -1,0 +1,65 @@
+@import "./breakpoints";
+@import "./colors";
+
+.dashboardWrapper {
+  max-width: 1400px;
+  margin: 3rem auto 0;
+  width: 100%;
+  height: auto;
+  background: url("/images/shapes/levels-shape1.svg") no-repeat center center;
+  background-size: 100%;
+
+  @include respond(desktop) {
+    min-height: 70vh;
+  }
+}
+
+.imgWrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 26vh;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  margin: auto;
+
+  @include respond(tablet) {
+    width: 90%;
+  }
+
+  @include respond(desktop) {
+    min-height: 60vh;
+  }
+}
+
+.levelsWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background: url("/images/shapes/bg-levels-shapes.svg") no-repeat center center;
+  background-size: 100%;
+
+  @include respond(desktop) {
+    gap: 0;
+  }
+}
+
+.startNowImage {
+  position: relative;
+  width: 100%;
+  min-height: 18rem;
+
+  @include respond(tablet) {
+    min-height: 23rem;
+  }
+
+  @include respond(desktop) {
+    min-height: 24rem;
+    order: 2;
+  }
+}

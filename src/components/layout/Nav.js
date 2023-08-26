@@ -1,34 +1,34 @@
-import cls from 'classnames';
-import Image from 'next/legacy/image';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
-import { event } from '../../utils/fbpixel';
-import styles from './Nav.module.scss';
+import cls from "classnames";
+import Image from "next/legacy/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
+import { event } from "../../utils/fbpixel";
+import styles from "./Nav.module.scss";
 
 const Nav = () => {
-  const [scrollDirection, setScrollDirection] = useState('default'),
+  const [scrollDirection, setScrollDirection] = useState("default"),
     [mobileNav, setMobileNav] = useState(false),
     router = useRouter();
 
   useEffect(() => {
     let lastScroll = 40,
-      direction = 'default';
+      direction = "default";
 
     const setNavbarEffect = () => {
       const currentScroll = window.scrollY;
 
-      if (currentScroll <= 40) direction = 'default';
-      if (lastScroll > 40 && currentScroll > lastScroll && direction !== 'down') direction = 'down';
-      if (currentScroll < lastScroll && direction === 'down') direction = 'up';
+      if (currentScroll <= 40) direction = "default";
+      if (lastScroll > 40 && currentScroll > lastScroll && direction !== "down") direction = "down";
+      if (currentScroll < lastScroll && direction === "down") direction = "up";
 
       setScrollDirection(direction);
       lastScroll = currentScroll;
     };
 
-    window.addEventListener('scroll', setNavbarEffect);
+    window.addEventListener("scroll", setNavbarEffect);
 
-    return () => window.removeEventListener('scroll', setNavbarEffect);
+    return () => window.removeEventListener("scroll", setNavbarEffect);
   }, []);
 
   useEffect(() => {
@@ -41,13 +41,13 @@ const Nav = () => {
   };
 
   const onRegister = () => {
-    event('Subscribe');
-    location.href = 'https://app.instakash.net/register';
+    event("Subscribe");
+    location.href = "https://app.instakash.net/register";
   };
 
   return (
     <>
-      <nav className={cls(styles.nav, scrollDirection === 'down' ? styles.navDown : scrollDirection === 'up' ? styles.navUp : '')}>
+      <nav className={cls(styles.nav, scrollDirection === "down" ? styles.navDown : scrollDirection === "up" ? styles.navUp : "")}>
         <div className='container flex items-center justify-between'>
           <Link href='/' legacyBehavior>
             <div className={styles.Logo}>
@@ -64,18 +64,23 @@ const Nav = () => {
                 <Link href='/beneficios'>Beneficios</Link>
               </li>
               <li>
+                <Link href='/sistema-de-niveles'>Niveles</Link>
+              </li>
+              <li>
                 <Link href='/faq'>FAQ</Link>
               </li>
             </ul>
 
             <div className={styles.navButtons}>
-              <a href='https://app.instakash.net/login' className='mr-4'>
+              <a href='https://app.instakash.net/login' className={styles.secondary}>
                 Iniciar sesión
               </a>
-              <button onClick={onRegister}>Registrarse</button>
+              <button onClick={onRegister} className={styles.primary}>
+                Registrarse
+              </button>
             </div>
 
-            <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ''}`} onClick={toggleNav}>
+            <button className={`${styles.mobileNavButton} ${mobileNav ? styles.openedNavButton : ""}`} onClick={toggleNav}>
               <span />
               <span />
               <span />
@@ -83,7 +88,7 @@ const Nav = () => {
           </div>
         </div>
       </nav>
-      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ''}`} onClick={closeNav}>
+      <nav className={`${styles.mobileNav} ${mobileNav ? styles.openedNav : ""}`} onClick={closeNav}>
         <ul>
           <h3>Menú</h3>
           <li>
@@ -93,19 +98,32 @@ const Nav = () => {
             <Link href='/beneficios'>Beneficios</Link>
           </li>
           <li>
+            <Link href='/sistema-de-niveles'>Niveles</Link>
+          </li>
+          <li>
             <Link href='/faq'>FAQ</Link>
           </li>
         </ul>
         <div className={styles.schedule}>
           <h3>Horario</h3>
-          <p>Lunes a Viernes 9 am - 7 pm</p>
-          <p>Sábados 9 am - 2 pm</p>
-          <p>Domingos y Feriados cerrados</p>
+          <p>
+            Lunes a Viernes <b>9 am - 7 pm</b>
+          </p>
+          <p>
+            Sábados <b>9 am - 2 pm</b>
+          </p>
+          <p>
+            Domingos y Feriados <b>cerrados</b>
+          </p>
         </div>
 
         <div className={styles.navButtons}>
-          <a href='https://app.instakash.net'>Iniciar sesión</a>
-          <a href='https://app.instakash.net'>Registrarse</a>
+          <a href='https://app.instakash.net/login' className={styles.secondary}>
+            Iniciar sesión
+          </a>
+          <a href='https://app.instakash.net/login' className={styles.primary}>
+            Registrarse
+          </a>
         </div>
       </nav>
     </>
