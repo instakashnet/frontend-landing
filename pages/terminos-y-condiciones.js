@@ -10,7 +10,7 @@ const TerminosCondiciones = () => {
         <meta name='title' content='Términos y Condiciones | Instakash' />
         <meta
           name='description'
-          content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí '
+          content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambio Online Instakash. Leelo aquí '
         />
         <meta http-equiv='content-language' content='es_PE' />
         <link rel='icon' href='imagenes/favicon.png' type='image/png' />
@@ -18,12 +18,12 @@ const TerminosCondiciones = () => {
         <link rel='canonical' href='https://instakash.net/terminos-y-condiciones' />
         <meta name='author' content='InstaKash' />
         <meta name='url' content='https://instakash.net/terminos-y-condiciones' />
-        <meta property='og:title' content='Preguntas Instakash | Casa de Cambio Online' />
+        <meta property='og:title' content='Términos y Condiciones | Casa de Cambio Online' />
         <meta property='og:site_name' content='InstaKash' />
         <meta property='og:url' content='https://instakash.net/terminos-y-condiciones' />
         <meta
           property='og:description'
-          content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambion Online Instakask. Leelo aquí.'
+          content='Enterate de los Términos y Condiciones al usar la plataforma de Casa de Cambio Online Instakash. Leelo aquí.'
         />
         <meta property='og:type' content='website' />
         <meta property='og:image' content='' />
