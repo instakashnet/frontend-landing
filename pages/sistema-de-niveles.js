@@ -1,5 +1,4 @@
 import Layout from "@components/layout/Layout";
-import Button from "@components/UI/Button";
 import LevelCard from "@components/user/level-card/LevelCard";
 
 import styles from "@styles/UserLevels.module.scss";
@@ -14,9 +13,9 @@ const UserSystemLevel = () => {
         <h1 className='subtitle !text-lg !text-black mb-4'>Sistema de niveles</h1>
         <h2 className='title'>Mientras más cambias más beneficios recibes</h2>
         <p className='mt-3'>En Instakash queremos seguir premiándote por ello venimos con mejores tasas y mayores beneficios</p>
-        <Button variant='primary' className='mt-4'>
+        <a className='button button-primary mt-4' href='https://app.instakash.net'>
           Empieza a cambiar
-        </Button>
+        </a>
       </div>
       <div className={styles.dashboardWrapper}>
         <div className={styles.imgWrapper}>
