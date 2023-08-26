@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@portabletext/react": "^3.0.4",
+    "@ramonak/react-progress-bar": "^5.0.3",
     "@sanity/client": "^6.1.5",
     "@sanity/image-url": "1",
     "@sanity/vision": "3",

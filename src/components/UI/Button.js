@@ -1,9 +1,9 @@
 import cls from "classnames";
 import styles from "./Button.module.scss";
 
-const Button = ({ type, className, children, ...rest }) => {
+const Button = ({ type, className = "", children, variant = "primary", ...rest }) => {
   return (
-    <button type={type} className={cls(styles.Button, className || "")} {...rest}>
+    <button type={type} className={cls(styles.button, styles[variant], className)} {...rest}>
       {children}
     </button>
   );
