@@ -16,21 +16,33 @@ export const BaseModal = ({ popup }) => {
 
   const onClose = () => setModal(false);
 
+  const ModalContent = () => (
+    <>
+      <button onClick={onClose} className={styles.closeModal}>
+        <XCircle size={33} />
+      </button>
+      {popup.notifTitle ? (
+        <div className={styles.modalBody}>
+          <h3>{popup.notifTitle}</h3>
+          <PortableText value={popup.description} />
+        </div>
+      ) : (
+        <img src={popup.image} alt={popup.title} />
+      )}
+    </>
+  );
+
   return (
     <Modal isOpen={modal} onRequestClose={onClose} className={styles.customModal}>
-      <div className={styles.modalContent}>
-        <button onClick={onClose} className={styles.closeModal}>
-          <XCircle size={33} />
-        </button>
-        {popup.notifTitle ? (
-          <div className={styles.modalBody}>
-            <h3>{popup.notifTitle}</h3>
-            <PortableText value={popup.description} />
-          </div>
-        ) : (
-          <img src={popup.image} alt={popup.title} />
-        )}
-      </div>
+      {popup?.link ? (
+        <a href={popup.link} target='_blank' rel='noopener noreferrer' className={styles.modalContent}>
+          <ModalContent />
+        </a>
+      ) : (
+        <div className={styles.modalContent}>
+          <ModalContent />
+        </div>
+      )}
     </Modal>
   );
 };

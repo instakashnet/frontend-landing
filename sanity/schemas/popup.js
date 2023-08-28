@@ -9,23 +9,29 @@ export default defineType({
       name: "active",
       type: "boolean",
       title: "Mostrar promoción",
-      initialValue: true,
+      initialValue: true
     }),
     defineField({
       name: "title",
       type: "string",
-      title: "Titlo de la promoción",
+      title: "Titlo de la promoción"
     }),
     defineField({
       name: "image",
       type: "image",
-      title: "Imagen de promoción",
+      title: "Imagen de promoción"
+    }),
+    defineField({
+      name: "link",
+      type: "url",
+      title: "Link de la promoción (opcional)",
+      description: "Acceso a la dirección de la promoción, si aplicara."
     }),
     defineField({
       name: "notif_title",
       type: "string",
       title: "Titlo del aviso",
-      validation: (Rule) => Rule.optional().max(50),
+      validation: (Rule) => Rule.optional().max(50)
     }),
     defineField({
       name: "notif_desc",
@@ -33,9 +39,9 @@ export default defineType({
       title: "Contenido del aviso",
       of: [
         {
-          type: "block",
-        },
-      ],
-    }),
-  ],
+          type: "block"
+        }
+      ]
+    })
+  ]
 });
