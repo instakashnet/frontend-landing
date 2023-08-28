@@ -28,10 +28,11 @@ export async function getPopup() {
     groq`
     *[_type == "popup"][0] {
       title,
+      link,
       "image": image.asset->url,
       "active": active == true,
       "notifTitle":  notif_title,
-      "description": notif_desc
+      "description": notif_desc,
     }
       `
   );
