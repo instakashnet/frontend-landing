@@ -1,0 +1,7 @@
+.AboutUsBg {
+  background: linear-gradient(to right, hsla(181, 83%, 23%, 0.85), hsla(181, 83%, 23%, 0.85)), url("../../../assets/bgs/about2-bg.webp");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}

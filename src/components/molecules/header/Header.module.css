@@ -1,0 +1,8 @@
+.Header {
+  max-height: 6rem;
+  transition: max-height 500ms ease-out;
+}
+
+.OpenMenu {
+  max-height: 20rem;
+}

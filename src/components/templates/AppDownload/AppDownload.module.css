@@ -1,0 +1,23 @@
+.BenefitsList {
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  .Benefit {
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+
+  .Benefit::before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.75rem;
+    background-image: url("../../../assets/icons/check.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

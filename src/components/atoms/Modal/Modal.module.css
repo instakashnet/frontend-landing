@@ -1,0 +1,38 @@
+.Overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(5px);
+  animation-name: animateModal;
+  animation-duration: 0.4s;
+  animation-timing-function: ease-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.Modal {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  width: auto; /* Ajusta el ancho al contenido */
+  height: auto;
+  max-width: 90%;
+  outline: none;
+}
+
+@keyframes animateModal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,7 @@
+.TabItem[data-state="active"] {
+  background: transparent;
+
+  > div {
+    border-color: hsl(181 83% 23%);
+  }
+}

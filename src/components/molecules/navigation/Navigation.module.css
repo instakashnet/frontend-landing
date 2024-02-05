@@ -1,0 +1,6 @@
+@media (width > 768px) {
+  .NavigationList {
+    position: relative;
+    transform: translateX(0);
+  }
+}

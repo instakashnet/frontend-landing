@@ -1,0 +1,5 @@
+.NotFoundBg {
+  background: url(../assets/bgs/not-found-bg.svg) no-repeat;
+  background-size: 60%;
+  background-position: 80% center;
+}

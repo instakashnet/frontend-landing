@@ -1,0 +1,40 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - nohup /usr/local/bin/dockerd --host=unix:///var/run/docker.sock --host=tcp://127.0.0.1:2375 --storage-driver=overlay2&
+      - timeout 15 sh -c "until docker info; do echo .; sleep 1; done"
+  pre_build:
+    run-as: root
+    commands:
+      - echo "Agent is ready"
+      - aws --version
+      - export KUBECONFIG=$HOME/.kube/config
+      - echo Logging in to Amazon ECR...
+      - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 160743850946.dkr.ecr.us-east-1.amazonaws.com
+  build:
+    run-as: root
+    commands:
+      - cd $CODEBUILD_SRC_DIR
+      - echo 'Building image...'
+      - >
+        docker build
+        -t 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing:$ENVIRONMENT-$CODEBUILD_BUILD_NUMBER
+        -t 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing:$ENVIRONMENT-latest
+        --build-arg NEXT_PUBLIC_FB_PIXEL_ID_MAIN=$NEXT_PUBLIC_FB_PIXEL_ID_MAIN
+        --build-arg NEXT_PUBLIC_GA_TRACKING_ID=$NEXT_PUBLIC_GA_TRACKING_ID
+        --build-arg NEXT_PUBLIC_YANDEX_CODE=$NEXT_PUBLIC_YANDEX_CODE
+        --build-arg NEXT_PUBLIC_SANITY_PROJECT_ID=$NEXT_PUBLIC_SANITY_PROJECT_ID
+        --build-arg NEXT_PUBLIC_SANITY_DATASET=$NEXT_PUBLIC_SANITY_DATASET .
+      - echo 'Pushing image into ECR...'
+      - docker push 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing --all-tags
+  post_build:
+    commands:
+      - bash -c "if [ /"$CODEBUILD_BUILD_SUCCEEDING/" == /"0/" ]; then exit 1; fi"
+      - cd $CODEBUILD_SRC_DIR/kubernetes/$K8S_CLUSTER
+      - envsubst < deployment.template > deployment.yaml
+      - cat deployment.yaml
+      - rm deployment.template
+      - aws eks update-kubeconfig --region us-east-1 --name instakash-core
+      - kubectl apply -f . -n $K8S_NAMESPACE

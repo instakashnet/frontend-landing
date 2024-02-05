@@ -1,0 +1,5 @@
+export const enum BENEFTIS_TYPES {
+  PERSONAL = "PERSONAL",
+  EMPRESARIAL = "EMPRESARIAL",
+  TODOS = "TODOS"
+}

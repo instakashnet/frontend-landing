@@ -1,0 +1,24 @@
+.Step::after {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  width: 104px;
+  height: 15px;
+  z-index: 1;
+  top: 20%;
+  transform: translateX(130%);
+}
+
+.StepFirst::after {
+  background-image: url(../../../assets/illustrations/arrow-1.png);
+}
+
+.StepSecond::after {
+  background-image: url(../../../assets/illustrations/arrow-2.png);
+}
+
+@media (max-width: 768px) {
+  .Step::after {
+    display: none;
+  }
+}

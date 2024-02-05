@@ -1,0 +1,7 @@
+.CompanyValuesBg {
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.5)),
+    url("../../../assets/illustrations/kash-plant.svg");
+  background-repeat: no-repeat;
+  background-size: 300px;
+  background-position: 90% 100%;
+}
