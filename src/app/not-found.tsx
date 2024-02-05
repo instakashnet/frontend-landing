@@ -18,7 +18,7 @@ function NotFoundPage() {
                 <Link href={NAVIGATION.NOSOTROS}>Acerca de nosotros</Link>
               </li>
               <li>
-                <Link href={NAVIGATION.BENEFICIOS}>Beneficios</Link>
+                <Link href={NAVIGATION.BENEFICIOS}>Nuestros beneficios</Link>
               </li>
               <li>
                 <Link href={NAVIGATION.TERMINOS_Y_CONDICIONES}>Términos y condiciones</Link>
