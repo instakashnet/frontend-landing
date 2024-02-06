@@ -38,7 +38,7 @@ function MobileNavigation({ show = false, onToggle }: { show?: boolean; onToggle
     if (isShown) {
       onToggle();
     }
-    // disable eslint warning
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
   return (

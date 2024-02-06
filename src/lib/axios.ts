@@ -3,7 +3,7 @@ import axios from "axios";
 console.log({ env: process.env.NODE_ENV });
 
 const instance = axios.create({
-  baseURL: process.env.NODE_ENV === "development" ? process.env.NEXT_PUBLIC_DEV_API_URL : process.env.NEXT_PUBLIC_PROD_API_URL,
+  baseURL: process.env.NEXT_PUBLIC_APP_ENV === "development" ? process.env.NEXT_PUBLIC_DEV_API_URL : process.env.NEXT_PUBLIC_PROD_API_URL,
   timeout: 10000
 });
 

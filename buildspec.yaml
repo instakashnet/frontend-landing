@@ -31,7 +31,7 @@ phases:
         --build-arg NEXT_PUBLIC_EMAILJS_SERVICE_ID=$NEXT_PUBLIC_EMAILJS_SERVICE_ID
         --build-arg NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=$NEXT_PUBLIC_EMAILJS_TEMPLATE_ID
         --build-arg NEXT_PUBLIC_EMAILJS_P_KEY=$NEXT_PUBLIC_EMAILJS_P_KEY 
-        --build-arg NODE_ENV=$NODE_ENV .
+        --build-arg NEXT_PUBLIC_APP_ENV=$NEXT_PUBLIC_APP_ENV .
       - echo 'Pushing image into ECR...'
       - docker push 160743850946.dkr.ecr.us-east-1.amazonaws.com/instakash-landing --all-tags
   post_build:
