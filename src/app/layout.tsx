@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Casa de Cambio Online"
   },
   description:
-    "Cambia dólares a Soles en la casa de cambio online que tiene el mejor tipo de cambio. Instakash es regulada por la SBS Cambia Seguro, Cambia aquí.",
+    "Cambia dólares y soles en la casa de cambio online que tiene el mejor tipo de cambio. Instakash es regulada por la SBS Cambia Seguro, Cambia aquí.",
   authors: [{ name: "Instakash" }],
   keywords: ["casa de cambio", "dólares a soles", "mejor tipo de cambio", "cambio seguro", "casa de cambio online", "instakash"]
 };
