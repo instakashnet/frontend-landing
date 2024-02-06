@@ -6,6 +6,10 @@ import Header from "@/components/molecules/header/Header";
 import Footer from "@/components/molecules/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleTagManager } from "@next/third-parties/google";
+import FacebookPixelEvents from "@/components/utils/FacebookPixelEvents";
+
+const GAT_MANAGER_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID ?? "";
+const FACEBOOK_PIXEL_ID = process.env.NEXT_PUBLIC_FB_PIXEL_ID_MAIN ?? "";
 
 export const metadata: Metadata = {
   title: {
@@ -27,7 +31,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Toaster />
       </body>
-      <GoogleTagManager gtmId='GTM-MVR37S9' />
+      <GoogleTagManager gtmId={GAT_MANAGER_ID} />
+      <FacebookPixelEvents pixelId={FACEBOOK_PIXEL_ID} />
     </html>
   );
 }
