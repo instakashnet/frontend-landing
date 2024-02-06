@@ -6,9 +6,6 @@ import Header from "@/components/molecules/header/Header";
 import Footer from "@/components/molecules/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Suspense } from "react";
-
-const GAT_MANAGER_ID = process.env.NEXT_PUBLIC_TAG_MANAGER_ID ?? "";
 
 export const metadata: Metadata = {
   title: {
@@ -26,11 +23,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang='es_PE'>
       <body className={cn("min-h-screen font-body antialiased", `${poppins.variable} ${openSans.variable}`)}>
         <Header />
-        <Suspense fallback={<p>Cargando...</p>}>{children}</Suspense>
+        {children}
         <Footer />
         <Toaster />
       </body>
-      <GoogleTagManager gtmId={GAT_MANAGER_ID} />
+      <GoogleTagManager gtmId={"GTM-MVR37S9"} />
     </html>
   );
 }
