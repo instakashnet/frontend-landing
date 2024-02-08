@@ -53,8 +53,6 @@ export default async function Home() {
   const banners = await getBanners();
   const popup: Popup = await getPopup();
 
-  console.log(popup);
-
   return (
     <main className='h-full'>
       <CalculatorBanner />
