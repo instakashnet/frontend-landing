@@ -129,6 +129,7 @@ function ExchangeForm({ rates, simulateCoupon, clearCoupon, loading, appliedCoup
           <p className='text-primary font-semibold'>{appliedCoupon.couponName}</p>
           <Button
             variant='ghost'
+            type='button'
             size='icon'
             onClick={() => {
               clearCoupon();

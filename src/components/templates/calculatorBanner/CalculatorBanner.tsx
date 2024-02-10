@@ -11,7 +11,10 @@ import { formatNumberToString } from "@/utils/formatters";
 async function getRates() {
   try {
     const rates = await requests.get("/exchange-service/api/v1/client/rates");
-    return rates;
+    return {
+      buy: +rates[0].buy as number,
+      sell: +rates[0].sell as number
+    };
   } catch (error) {
     const message = getErrorMessage(error);
     console.log(message);
@@ -29,7 +32,7 @@ async function getCounters() {
 }
 
 async function CalculatorBanner() {
-  const rates = await getRates();
+  const rates: { buy: number; sell: number } = (await getRates()) || { buy: 0, sell: 0 };
   const counters = await getCounters();
 
   return (
@@ -70,7 +73,7 @@ async function CalculatorBanner() {
           </div>
         </div>
         <div className='w-full grid place-items-center'>
-          <Calculator rates={rates ? rates[0] : { buy: 0, sell: 0 }} />
+          <Calculator rates={rates} />
         </div>
       </div>
       <Image src={SuperKashImg} alt='Instakash con mejor tipo de cambio' className='w-80 lg:w-[26rem] relative bottom-0 left-10' />

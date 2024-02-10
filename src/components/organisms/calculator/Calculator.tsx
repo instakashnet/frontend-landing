@@ -7,18 +7,19 @@ import { Card } from "@/components/ui/card/Card";
 import { simulateCoupon } from "@/services/actions/exchange";
 import { useState, useTransition } from "react";
 import { CouponData } from "./Calculator.interfaces";
+import { AxiosError } from "axios";
+import { useToast } from "@/components/ui/use-toast";
+import { RatesContract } from "@/types/rates";
 
 export interface CalculatorProps {
-  rates: {
-    buy: number;
-    sell: number;
-  };
+  rates: RatesContract;
 }
 
 function Calculator({ rates = { buy: 3.5, sell: 3.8 } }: CalculatorProps) {
-  const [currentRates, setCurrentRates] = useState({ buy: Number(rates.buy), sell: Number(rates.sell) });
+  const [couponRates, setCouponRates] = useState<RatesContract | null>(null);
   const [appliedCoupon, setAppliedCoupon] = useState<CouponData | null>(null);
   const [pending, startTransition] = useTransition();
+  const { toast } = useToast();
 
   const handleSimulateCoupon = (coupon: string) => {
     if (!coupon || pending) return;
@@ -27,26 +28,35 @@ function Calculator({ rates = { buy: 3.5, sell: 3.8 } }: CalculatorProps) {
       try {
         const couponData = await simulateCoupon(coupon);
 
-        if (!couponData) return;
+        if (couponData?.error) {
+          toast({
+            variant: "destructive",
+            title: "Error con el cupón",
+            description: couponData.error.message
+          });
+          return;
+        }
 
         setAppliedCoupon({
           ...couponData,
           couponName: coupon
         });
 
-        setCurrentRates((prevRates) => ({
-          buy: prevRates.buy + couponData.discount,
-          sell: prevRates.sell - couponData.discount
-        }));
+        setCouponRates({
+          buy: Number(rates.buy) + couponData.discount,
+          sell: Number(rates.sell) - couponData.discount
+        });
       } catch (error) {
-        console.log(error);
+        const err = error as AxiosError;
+
+        console.log(err);
       }
     });
   };
 
   const onClearCoupon = () => {
     setAppliedCoupon(null);
-    setCurrentRates(rates);
+    setCouponRates(null);
   };
 
   return (
@@ -54,9 +64,9 @@ function Calculator({ rates = { buy: 3.5, sell: 3.8 } }: CalculatorProps) {
       <h2 className='text-center text-xl font-bold font-body text-primary mb-3'>
         Tipo de cambio hoy <br /> en Instakash
       </h2>
-      <Rates currentRates={currentRates} rates={rates} hasCoupon={Boolean(appliedCoupon)} />
+      <Rates rates={rates} coupon={appliedCoupon} />
       <ExchangeForm
-        rates={currentRates}
+        rates={couponRates ? couponRates : rates}
         simulateCoupon={handleSimulateCoupon}
         clearCoupon={onClearCoupon}
         appliedCoupon={appliedCoupon}
