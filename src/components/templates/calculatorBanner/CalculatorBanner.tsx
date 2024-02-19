@@ -1,12 +1,11 @@
 import { cn } from "@/lib/utils";
 import styles from "./CalculatorBanner.module.css";
-import Image from "next/image";
-import SuperKashImg from "@/assets/illustrations/super-kash.svg";
 import Calculator from "@/components/organisms/calculator/Calculator";
 import { BadgeCheck, CoinsIcon, ArrowRightLeft, UsersIcon } from "lucide-react";
 import requests from "@/lib/axios";
 import { getErrorMessage } from "@/utils/getErrorMessage";
 import { formatNumberToString } from "@/utils/formatters";
+import SuperKash from "@/components/atoms/SuperKash/SuperKash";
 
 async function getRates() {
   try {
@@ -76,7 +75,7 @@ async function CalculatorBanner() {
           <Calculator rates={rates} />
         </div>
       </div>
-      <Image src={SuperKashImg} alt='Instakash con mejor tipo de cambio' className='w-80 lg:w-[26rem] relative bottom-0 left-10' />
+      <SuperKash />
     </section>
   );
 }

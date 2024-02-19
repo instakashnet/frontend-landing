@@ -7,8 +7,9 @@
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.8;
+  opacity: 0;
   z-index: -1;
+  animation: fadeIn 0.7s ease-in-out 0.7s forwards;
 }
 
 @media (width < 768px) {
@@ -20,4 +21,13 @@
 .superKashImg {
   width: 500px;
   height: 500px;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.8;
+  }
 }

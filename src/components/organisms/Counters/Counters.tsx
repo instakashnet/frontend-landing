@@ -17,25 +17,23 @@ async function getCounters() {
 async function Counters() {
   const counters = await getCounters();
 
-  console.log(counters);
-
   return (
     <section>
-      <div className='container py-20 flex flex-col lg:flex-row items-center justify-center gap-20'>
+      <div className='container py-20 pb-0 flex flex-col lg:flex-row items-center justify-center gap-20'>
         <CounterItem
-          Icon={CoinsIcon}
+          Icon={<CoinsIcon size={50} className='text-white' />}
           description={`Más de ${
             counters ? formatNumberToString(Number(counters?.totalProcessed), "mill") : "2mill"
           } de soles cambiados con usuarios`}
         />
         <CounterItem
-          Icon={ArrowRightLeft}
+          Icon={<ArrowRightLeft size={50} className='text-white' />}
           description={`Más de ${
             counters ? formatNumberToString(Number(counters?.qtySuccessfullOrders), "mil") : "200mil"
           } operaciones realizadas`}
         />
         <CounterItem
-          Icon={UsersIcon}
+          Icon={<UsersIcon size={50} className='text-white' />}
           description={`Más de ${
             counters ? formatNumberToString(Number(counters?.qtyUsers), "mil") : "40mil"
           } usuarios y 5mil empresas confían en nosotros`}

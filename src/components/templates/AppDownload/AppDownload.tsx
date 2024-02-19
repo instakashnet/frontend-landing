@@ -1,7 +1,6 @@
 import AppMockup from "@/components/atoms/AppMockup/AppMockup";
 import styles from "./AppDownload.module.css";
 import Image from "next/image";
-
 import PlaystoreBadge from "@/assets/illustrations/playstore.svg";
 import AppstoreBadge from "@/assets/illustrations/appstore.svg";
 
