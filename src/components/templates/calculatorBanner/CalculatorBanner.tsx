@@ -15,6 +15,7 @@ async function getRates() {
       sell: +rates[0].sell as number
     };
   } catch (error) {
+    console.log(error);
     const message = getErrorMessage(error);
     console.log(message);
   }
@@ -56,14 +57,14 @@ async function CalculatorBanner() {
                 <strong>+{counters ? formatNumberToString(Number(counters?.totalProcessed), "mill") : "2mill"}</strong> de soles cambiados
               </p>
             </div>
-            <div className='flex items-center gap-2 mt-6'>
+            <div className='lg:flex items-center gap-2 mt-6 hidden '>
               <ArrowRightLeft size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
                 <strong>+{counters ? formatNumberToString(Number(counters?.qtySuccessfullOrders), "mil") : "200mil"}</strong> operaciones
                 exitosas
               </p>
             </div>
-            <div className='flex items-center gap-2 mt-6'>
+            <div className='lg:flex items-center gap-2 mt-6 hidden'>
               <UsersIcon size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
                 <strong>+{counters ? formatNumberToString(Number(counters?.qtyUsers), "mil") : "40mil"}</strong> usuarios registrados
