@@ -2,39 +2,12 @@ import { cn } from "@/lib/utils";
 import styles from "./CalculatorBanner.module.css";
 import Calculator from "@/components/organisms/calculator/Calculator";
 import { BadgeCheck, CoinsIcon, ArrowRightLeft, UsersIcon } from "lucide-react";
-import requests from "@/lib/axios";
-import { getErrorMessage } from "@/utils/getErrorMessage";
 import { formatNumberToString } from "@/utils/formatters";
 import SuperKash from "@/components/atoms/SuperKash/SuperKash";
+import { RatesContract } from "@/types/rates";
+import { CountersContract } from "@/types/counters";
 
-async function getRates() {
-  try {
-    const rates = await requests.get("/exchange-service/api/v1/client/rates");
-    return {
-      buy: +rates.buy as number,
-      sell: +rates.sell as number
-    };
-  } catch (error) {
-    console.log(error);
-    const message = getErrorMessage(error);
-    console.log(message);
-  }
-}
-
-async function getCounters() {
-  try {
-    const counters = await requests.get("/exchange-service/api/v1/client/analytics/general");
-    return counters;
-  } catch (error) {
-    const message = getErrorMessage(error);
-    console.log(message);
-  }
-}
-
-async function CalculatorBanner() {
-  const rates: { buy: number; sell: number } = (await getRates()) || { buy: 0, sell: 0 };
-  const counters = await getCounters();
-
+async function CalculatorBanner({ rates, counters }: { rates: RatesContract; counters: CountersContract }) {
   return (
     <section className={cn("min-h-[70vh] w-full relative", styles.bannerBg)}>
       <div className='container px-5 lg:px-10 grid lg:grid-cols-2 gap-10 lg:gap-20 py-16 '>

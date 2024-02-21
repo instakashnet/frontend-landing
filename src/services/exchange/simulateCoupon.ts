@@ -1,6 +1,7 @@
 "use server";
 
 import requests from "@/lib/axios";
+import { getErrorMessage } from "@/utils/getErrorMessage";
 import { AxiosError } from "axios";
 
 export async function simulateCoupon(coupon: string) {
@@ -8,9 +9,10 @@ export async function simulateCoupon(coupon: string) {
     const response = await requests.get(`/exchange-service/api/v1/client/coupons/data/${coupon}/natural`);
     return response;
   } catch (error) {
-    const err = error as AxiosError;
-    console.log(err.response);
+    const message = getErrorMessage(error);
+    console.log(message);
 
+    const err = error as AxiosError;
     if (err.response?.data) {
       return err.response?.data;
     } else {
