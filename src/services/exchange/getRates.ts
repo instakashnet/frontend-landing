@@ -1,13 +1,13 @@
-import requests from "@/lib/axios";
+"use server";
+
+import { API_URL } from "@/constants/API_URL";
 import { RatesContract } from "@/types/rates";
 import { getErrorMessage } from "@/utils/getErrorMessage";
-import { cache } from "react";
 
-export const revalidate = 0;
-
-export const getRates = cache(async () => {
+export const getRates = async () => {
   try {
-    const rates = await requests.get("/exchange-service/api/v1/client/rates");
+    const response = await fetch(`${API_URL}/exchange-service/api/v1/client/rates`, { next: { revalidate: 0 } });
+    const rates = await response.json();
     return {
       buy: +rates.buy,
       sell: +rates.sell
@@ -21,4 +21,4 @@ export const getRates = cache(async () => {
       sell: 0
     };
   }
-});
+};
