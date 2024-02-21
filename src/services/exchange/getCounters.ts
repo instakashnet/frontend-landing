@@ -7,6 +7,7 @@ export const revalidate = 60 * 60 * 24 * 4;
 export const getCounters = cache(async () => {
   try {
     const counters = await requests.get("/exchange-service/api/v1/client/analytics/general");
+    console.log("getting counters done");
     return counters;
   } catch (error) {
     const message = getErrorMessage(error);
