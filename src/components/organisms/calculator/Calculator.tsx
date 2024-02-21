@@ -2,9 +2,8 @@
 
 import ExchangeForm from "../exchangeForm/ExchangeForm";
 import Rates from "@/components/molecules/rates/Rates";
-import { Button } from "@/components/ui/button/Button";
 import { Card } from "@/components/ui/card/Card";
-import { simulateCoupon } from "@/services/actions/exchange";
+import { simulateCoupon } from "@/services/exchange/simulateCoupon";
 import { useState, useTransition } from "react";
 import { CouponData } from "./Calculator.interfaces";
 import { AxiosError } from "axios";
