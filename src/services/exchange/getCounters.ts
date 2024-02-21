@@ -2,7 +2,7 @@ import requests from "@/lib/axios";
 import { getErrorMessage } from "@/utils/getErrorMessage";
 import { cache } from "react";
 
-export const revalidate = 60 * 60 * 72;
+export const revalidate = 60 * 60 * 24 * 4;
 
 export const getCounters = cache(async () => {
   try {
