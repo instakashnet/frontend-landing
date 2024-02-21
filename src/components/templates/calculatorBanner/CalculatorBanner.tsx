@@ -11,8 +11,8 @@ async function getRates() {
   try {
     const rates = await requests.get("/exchange-service/api/v1/client/rates");
     return {
-      buy: +rates[0].buy as number,
-      sell: +rates[0].sell as number
+      buy: +rates.buy as number,
+      sell: +rates.sell as number
     };
   } catch (error) {
     console.log(error);
