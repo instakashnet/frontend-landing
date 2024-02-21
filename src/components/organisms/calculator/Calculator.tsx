@@ -72,9 +72,12 @@ function Calculator({ rates = { buy: 3.5, sell: 3.8 } }: CalculatorProps) {
         appliedCoupon={appliedCoupon}
         loading={pending}
       />
-      <Button size='lg' className='w-full max-w-sm mx-auto mt-6'>
+      <a
+        href='https://app.instakash.net/login'
+        className='bg-primary text-white inline-block w-full py-3 rounded-sm mt-6 text-center font-semibold cursor-pointer hover:bg-primary/90 transition-all'
+      >
         Inicia tu operación
-      </Button>
+      </a>
     </Card>
   );
 }
