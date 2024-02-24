@@ -2,7 +2,6 @@ import { cn } from "@/lib/utils";
 import styles from "./CalculatorBanner.module.css";
 import Calculator from "@/components/organisms/calculator/Calculator";
 import { BadgeCheck, CoinsIcon, ArrowRightLeft, UsersIcon } from "lucide-react";
-import { formatNumberToString } from "@/utils/formatters";
 import SuperKash from "@/components/atoms/SuperKash/SuperKash";
 import { RatesContract } from "@/types/rates";
 import { CountersContract } from "@/types/counters";
