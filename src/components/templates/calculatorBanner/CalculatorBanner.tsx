@@ -18,12 +18,6 @@ async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: Co
           </p>
           <div className='grid mt-2 lg:grid-cols-2 w-full lg:gap-y-4'>
             <div className='flex items-center gap-2 mt-6'>
-              <BadgeCheck size={28} className='text-primary' />
-              <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                Registrados en la <strong>SBS</strong>
-              </p>
-            </div>
-            <div className='flex items-center gap-2 mt-6'>
               <CoinsIcon size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
                 <strong>+3mill</strong> de soles cambiados
@@ -35,7 +29,7 @@ async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: Co
                 <strong>+200mil</strong> operaciones exitosas
               </p>
             </div>
-            <div className='lg:flex items-center gap-2 mt-6 hidden'>
+            <div className='flex items-center gap-2 mt-6'>
               <UsersIcon size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
                 <strong>+40mil</strong> usuarios registrados
