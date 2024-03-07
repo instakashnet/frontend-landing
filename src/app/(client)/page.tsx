@@ -25,6 +25,8 @@ export const metadata: Metadata = {
   }
 };
 
+export const revalidate = 0;
+
 export default async function Home() {
   const bannersResponse = getBanners();
   const popupResponse = getPopup();
