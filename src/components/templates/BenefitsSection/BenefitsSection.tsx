@@ -5,11 +5,15 @@ import { getErrorMessage } from "@/utils/getErrorMessage";
 import { getBenefitsQuery } from "../../../../sanity/utils/getBenefits";
 import { PortableTextBlock } from "sanity";
 
+export const revalidate = 0;
 interface Benefit {
   title: string;
   cover: string;
   description: PortableTextBlock[];
   type: BENEFTIS_TYPES;
+  hasDate: boolean;
+  fromDate: string;
+  toDate: string;
 }
 
 async function getBenefits() {
@@ -48,25 +52,53 @@ async function BenefitsSection() {
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
               {benefits &&
                 benefits.map((benefit) => (
-                  <BenefitItem key={benefit.title} title={benefit.title} coverUrl={benefit.cover} description={benefit.description} />
+                  <BenefitItem
+                    key={benefit.title}
+                    title={benefit.title}
+                    coverUrl={benefit.cover}
+                    description={benefit.description}
+                    hasDate={benefit.hasDate}
+                    fromDate={benefit.fromDate}
+                    toDate={benefit.toDate}
+                  />
                 ))}
             </div>
           </TabsContent>
           <TabsContent value={BENEFTIS_TYPES.PERSONAL}>
-            {benefits &&
-              benefits
-                .filter((benefit) => benefit.type === BENEFTIS_TYPES.PERSONAL)
-                .map((benefit) => (
-                  <BenefitItem key={benefit.title} title={benefit.title} coverUrl={benefit.cover} description={benefit.description} />
-                ))}
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-12'>
+              {benefits &&
+                benefits
+                  .filter((benefit) => benefit.type !== BENEFTIS_TYPES.EMPRESARIAL)
+                  .map((benefit) => (
+                    <BenefitItem
+                      key={benefit.title}
+                      title={benefit.title}
+                      coverUrl={benefit.cover}
+                      description={benefit.description}
+                      hasDate={benefit.hasDate}
+                      fromDate={benefit.fromDate}
+                      toDate={benefit.toDate}
+                    />
+                  ))}
+            </div>
           </TabsContent>
           <TabsContent value={BENEFTIS_TYPES.EMPRESARIAL}>
-            {benefits &&
-              benefits
-                .filter((benefit) => benefit.type === BENEFTIS_TYPES.EMPRESARIAL)
-                .map((benefit) => (
-                  <BenefitItem key={benefit.title} title={benefit.title} coverUrl={benefit.cover} description={benefit.description} />
-                ))}
+            <div className='grid grid-cols-1 lg:grid-cols-3 gap-12 content-center'>
+              {benefits &&
+                benefits
+                  .filter((benefit) => benefit.type === BENEFTIS_TYPES.EMPRESARIAL)
+                  .map((benefit) => (
+                    <BenefitItem
+                      key={benefit.title}
+                      title={benefit.title}
+                      coverUrl={benefit.cover}
+                      description={benefit.description}
+                      hasDate={benefit.hasDate}
+                      fromDate={benefit.fromDate}
+                      toDate={benefit.toDate}
+                    />
+                  ))}
+            </div>
           </TabsContent>
         </Tabs>
       </div>

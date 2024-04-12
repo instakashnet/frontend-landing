@@ -28,9 +28,14 @@ function PreguntasFrecuentesPage() {
         <header className='mx-auto max-w-2xl'>
           <h2 className='text-xl font-bold text-secondary'>Déjanos ayudarte</h2>
           <h3 className='text-3xl lg:text-5xl font-bold lg:leading-[4rem] text-primary'>¿No encontraste lo que buscabas?</h3>
-          <Button size='lg' className='mt-6'>
+          <a
+            className='inline-block py-3 px-12 mt-4 rounded-md bg-primary text-white font-semibold cursor-pointer'
+            href='https://wa.link/rodrvx'
+            target='_blank'
+            rel='noreferrer'
+          >
             Contáctanos
-          </Button>
+          </a>
         </header>
       </section>
     </main>
