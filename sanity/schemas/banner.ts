@@ -20,10 +20,8 @@ export const banner = defineType({
       name: "link",
       title: "Link",
       type: "url",
-      validation(rule) {
-        return rule.optional().uri();
-      },
-      description: "Link to the ad"
+      description: "Link to the ad",
+      initialValue: "#!"
     })
   ]
 });
