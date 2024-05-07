@@ -1,4 +1,4 @@
-// import AdsBanner from "@/components/atoms/AdsBanner/AdsBanner";
+import AdsBanner from "@/components/atoms/AdsBanner/AdsBanner";
 import WorkingBanks from "@/components/molecules/workingBanks/WorkingBanks";
 import AppDownload from "@/components/templates/AppDownload/AppDownload";
 import Benefits from "@/components/templates/Benefits/Benefits";
@@ -39,9 +39,9 @@ export default async function Home() {
     <main className='h-full'>
       <CalculatorBanner rates={rates} />
       <WorkingBanks />
-      {/* <section className='mt-8 max-w-[100rem] mx-auto'>
+      <section className='mt-8 max-w-[100rem] mx-auto'>
         <AdsBanner banners={banners} />
-      </section> */}
+      </section>
       <StepsSection />
       <Benefits />
       <KashSection />

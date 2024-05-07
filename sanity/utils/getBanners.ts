@@ -4,7 +4,8 @@ export function getBannersQuery() {
   const query = `
   *[_type == "banner"] {
     "imageUrl": image.asset->url, 
-    title
+    title,
+    link
   }
   `;
 
