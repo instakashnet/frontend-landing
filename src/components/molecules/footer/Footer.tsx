@@ -13,7 +13,7 @@ function Footer() {
         <div className='flex flex-col gap-4'>
           <h3 className='text-white font-bold text-lg'>Instakash</h3>
           <p className='text-white text-sm leading-6'>
-            Instakash es una empresa que se dedica a la compra y venta de dólares en efectivo, de forma rápida, segura y al mejor precio del
+            Instakash es una empresa que se dedica a la compra y venta de dólares vía online, de forma rápida, segura y al mejor precio del
             mercado.
           </p>
           <div className='flex items-center gap-6 mt-4'>
@@ -62,7 +62,7 @@ function Footer() {
         </div>
         <div className='flex flex-col gap-4'>
           <h3 className='text-white font-bold text-lg'>Contáctanos</h3>
-          <p className='text-white text-sm'>Av. Rafael Escardó 673, San Miguel - Lima, Perú</p>
+          <p className='text-white text-sm'>De la Roca Vergallo 493, Magdalena del Mar - Lima, Perú</p>
           <a className='text-white text-sm font-bold' href='https://wa.link/rodrvx' target='_blank' rel='noreferrer'>
             +51 929 050 743
           </a>
