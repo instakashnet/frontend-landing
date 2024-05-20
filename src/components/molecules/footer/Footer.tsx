@@ -63,8 +63,8 @@ function Footer() {
         <div className='flex flex-col gap-4'>
           <h3 className='text-white font-bold text-lg'>Contáctanos</h3>
           <p className='text-white text-sm'>Av. Rafael Escardó 673, San Miguel - Lima, Perú</p>
-          <a className='text-white text-sm font-bold' href='tel:+51987654321'>
-            +51 987 654 321
+          <a className='text-white text-sm font-bold' href='https://wa.link/rodrvx' target='_blank' rel='noreferrer'>
+            +51 929 050 743
           </a>
           <a className='text-white text-sm font-bold' href='mailto:contacto@instakash.net'>
             contacto@instakash.net

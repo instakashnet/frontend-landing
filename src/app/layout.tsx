@@ -6,6 +6,7 @@ import Header from "@/components/molecules/header/Header";
 import Footer from "@/components/molecules/footer/Footer";
 import { Toaster } from "@/components/ui/toaster";
 import { GoogleTagManager } from "@next/third-parties/google";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -27,6 +28,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
         <Toaster />
       </body>
+      <Script
+        id='respondio__widget'
+        src='https://cdn.respond.io/webchat/widget/widget.js?cId=91468e0a7ac078cb31aca9f170c31687e3c4f1fe4b6b27ab1cfd30e7ef2eda19'
+      />
       <GoogleTagManager gtmId={"GTM-MVR37S9"} />
     </html>
   );

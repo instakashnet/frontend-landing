@@ -14,25 +14,25 @@ function Benefits() {
         </p>
       </header>
       <div className='w-full flex flex-col lg:flex-row items-center justify-center gap-6 relative lg:absolute left-0 bottom-[6rem] lg:-bottom-[16rem]'>
-        <Card className='flex items-center justify-center flex-col w-[90%] lg:max-w-[18rem] text-center p-8'>
+        <Card className='flex items-center justify-center flex-col w-[90%] min-h-[20rem] lg:max-w-[18rem] text-center p-8'>
           <div className='p-3 rounded-full flex items-center justify-center border border-primary w-16 h-16 bg-secondary/20 mb-3 mx-auto'>
             <Users size={30} className='text-primary' />
           </div>
           <h4 className='font-semibold text-primary text-2xl'>Con rapidez</h4>
           <p className='mt-3 font-semibold'>
-            Por cada persona que se registre con tu código de referido y realice un cambio de dólares, recibirás 2 KASH.
+            Valoramos su tiempo. Realiza tus cambios de manera eficiente y sigue en tus actividades. Rápido, simple y al instante.
           </p>
         </Card>
-        <Card className='flex items-center justify-center flex-col w-[90%] lg:max-w-[18rem] text-center p-8'>
+        <Card className='flex items-center justify-center flex-col w-[90%] min-h-[20rem] lg:max-w-[18rem] text-center p-8'>
           <div className='p-3 rounded-full flex items-center justify-center border border-primary w-16 h-16 bg-secondary/20 mb-3 mx-auto'>
             <Users size={30} className='text-primary' />
           </div>
           <h4 className='font-semibold text-primary text-2xl'>Con seguridad</h4>
           <p className='mt-3 font-semibold'>
-            Por cada persona que se registre con tu código de referido y realice un cambio de dólares, recibirás 2 KASH.
+            Más dinero en tu bolsillo. Obtén las mejores tasas de cambio y ahorra con cada transacción. ¡Cambia y gana!
           </p>
         </Card>
-        <Card className='flex items-center justify-center flex-col w-[90%] lg:max-w-[18rem] text-center p-8'>
+        <Card className='flex items-center justify-center flex-col w-[90%] min-h-[20rem] lg:max-w-[18rem] text-center p-8'>
           <div className='p-3 rounded-full flex items-center justify-center border border-primary w-16 h-16 bg-secondary/20 mb-3 mx-auto'>
             <Users size={30} className='text-primary' />
           </div>
@@ -41,13 +41,13 @@ function Benefits() {
             Por cada persona que se registre con tu código de referido y realice un cambio de dólares, recibirás 2 KASH.
           </p>
         </Card>
-        <Card className='flex items-center justify-center flex-col w-[90%] lg:max-w-[18rem] text-center p-8'>
+        <Card className='flex items-center justify-center flex-col w-[90%] min-h-[20rem] lg:max-w-[18rem] text-center p-8'>
           <div className='p-3 rounded-full flex items-center justify-center border border-primary w-16 h-16 bg-secondary/20 mb-3 mx-auto'>
             <Users size={30} className='text-primary' />
           </div>
           <h4 className='font-semibold text-primary text-2xl'>En todo el país</h4>
           <p className='mt-3 font-semibold'>
-            Por cada persona que se registre con tu código de referido y realice un cambio de dólares, recibirás 2 KASH.
+            Dondequiera que estés, llegamos a ti. La red de cambio digital más amplia de Perú a tu servicio.
           </p>
         </Card>
       </div>

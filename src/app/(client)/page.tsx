@@ -1,4 +1,4 @@
-// import AdsBanner from "@/components/atoms/AdsBanner/AdsBanner";
+import AdsBanner from "@/components/atoms/AdsBanner/AdsBanner";
 import WorkingBanks from "@/components/molecules/workingBanks/WorkingBanks";
 import AppDownload from "@/components/templates/AppDownload/AppDownload";
 import Benefits from "@/components/templates/Benefits/Benefits";
@@ -9,7 +9,7 @@ import { Metadata } from "next";
 import AdsModal from "@/components/organisms/AdsModal/AdsModal";
 import { getBanners, getPopup } from "@/services/ads";
 import { getRates } from "@/services/exchange/getRates";
-import { getCounters } from "@/services/exchange/getCounters";
+// import { getCounters } from "@/services/exchange/getCounters";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://instakash.net"),
@@ -25,21 +25,23 @@ export const metadata: Metadata = {
   }
 };
 
+export const revalidate = 0;
+
 export default async function Home() {
   const bannersResponse = getBanners();
   const popupResponse = getPopup();
   const ratesResponse = getRates();
-  const countersResponse = getCounters();
+  // const countersResponse = getCounters();
 
-  const [banners, popup, rates, counters] = await Promise.all([bannersResponse, popupResponse, ratesResponse, countersResponse]);
+  const [banners, popup, rates] = await Promise.all([bannersResponse, popupResponse, ratesResponse]);
 
   return (
     <main className='h-full'>
-      <CalculatorBanner rates={rates} counters={counters} />
+      <CalculatorBanner rates={rates} />
       <WorkingBanks />
-      {/* <section className='mt-8 max-w-[100rem] mx-auto'>
+      <section className='mt-8 max-w-[100rem] mx-auto'>
         <AdsBanner banners={banners} />
-      </section> */}
+      </section>
       <StepsSection />
       <Benefits />
       <KashSection />

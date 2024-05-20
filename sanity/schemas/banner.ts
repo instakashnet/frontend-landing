@@ -15,6 +15,13 @@ export const banner = defineType({
       title: "Ad image",
       type: "image",
       description: "Image for the ad"
+    }),
+    defineField({
+      name: "link",
+      title: "Link",
+      type: "url",
+      description: "Link to the ad",
+      initialValue: "#!"
     })
   ]
 });

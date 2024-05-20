@@ -1,0 +1,32 @@
+.SectionBg {
+  background-image: url("../../../assets/shapes/rectangle.svg"), url("../../../assets/shapes/right-circle.svg");
+  background-size: 100%, 70%;
+  background-position:
+    right bottom,
+    150% 20%;
+  background-repeat: no-repeat;
+}
+
+.TestimonialsBg {
+  background-image: url("../../../assets/shapes/testimonials-bg.svg");
+  background-size: 100% 105%;
+  background-position: center, top;
+  background-repeat: no-repeat;
+}
+
+@media (768px <= width <= 1440px) {
+  .SectionBg {
+    background-position:
+      right center,
+      150% -20%;
+  }
+}
+
+@media (1440px <= width) {
+  .SectionBg {
+    background-size: 100%, 35%;
+    background-position:
+      right center,
+      100% -20%;
+  }
+}

@@ -2,12 +2,11 @@ import { cn } from "@/lib/utils";
 import styles from "./CalculatorBanner.module.css";
 import Calculator from "@/components/organisms/calculator/Calculator";
 import { BadgeCheck, CoinsIcon, ArrowRightLeft, UsersIcon } from "lucide-react";
-import { formatNumberToString } from "@/utils/formatters";
 import SuperKash from "@/components/atoms/SuperKash/SuperKash";
 import { RatesContract } from "@/types/rates";
 import { CountersContract } from "@/types/counters";
 
-async function CalculatorBanner({ rates, counters }: { rates: RatesContract; counters: CountersContract }) {
+async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: CountersContract }) {
   return (
     <section className={cn("min-h-[70vh] w-full relative", styles.bannerBg)}>
       <div className='container px-5 lg:px-10 grid lg:grid-cols-2 gap-10 lg:gap-20 py-16 '>
@@ -19,28 +18,21 @@ async function CalculatorBanner({ rates, counters }: { rates: RatesContract; cou
           </p>
           <div className='grid mt-2 lg:grid-cols-2 w-full lg:gap-y-4'>
             <div className='flex items-center gap-2 mt-6'>
-              <BadgeCheck size={28} className='text-primary' />
-              <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                Registrados en la <strong>SBS</strong>
-              </p>
-            </div>
-            <div className='flex items-center gap-2 mt-6'>
               <CoinsIcon size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                <strong>+{counters ? formatNumberToString(Number(counters?.totalProcessed), "mill") : "2mill"}</strong> de soles cambiados
+                <strong>+3mill</strong> de soles cambiados
               </p>
             </div>
             <div className='lg:flex items-center gap-2 mt-6 hidden '>
               <ArrowRightLeft size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                <strong>+{counters ? formatNumberToString(Number(counters?.qtySuccessfullOrders), "mil") : "200mil"}</strong> operaciones
-                exitosas
+                <strong>+200mil</strong> operaciones exitosas
               </p>
             </div>
-            <div className='lg:flex items-center gap-2 mt-6 hidden'>
+            <div className='flex items-center gap-2 mt-6'>
               <UsersIcon size={28} className='text-primary' />
               <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                <strong>+{counters ? formatNumberToString(Number(counters?.qtyUsers), "mil") : "40mil"}</strong> usuarios registrados
+                <strong>+40mil</strong> usuarios registrados
               </p>
             </div>
           </div>

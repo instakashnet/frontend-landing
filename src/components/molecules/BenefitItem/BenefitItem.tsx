@@ -2,7 +2,7 @@ import { Card } from "@/components/ui/card/Card";
 import { BenefitItemProps } from "./BenefitItem.interface";
 import { PortableText } from "@portabletext/react";
 
-function BenefitItem({ title, coverUrl, description }: BenefitItemProps) {
+function BenefitItem({ title, coverUrl, description, hasDate, fromDate, toDate }: BenefitItemProps) {
   return (
     <Card className='rounded-2xl shadow-md px-0 pt-0 flex flex-col items-center w-full max-w-[25rem]'>
       <div
@@ -11,7 +11,11 @@ function BenefitItem({ title, coverUrl, description }: BenefitItemProps) {
       />
       <div className='p-8 pb-0 max-h-[14rem] overflow-y-auto no-scrollbar'>
         <h4 className='text-2xl font-bold text-primary'>{title}</h4>
-        <p className='font-semibold  text-gray-600'>18/01/2024 - 24/02/2024</p>
+        {hasDate && (
+          <p className='font-semibold  text-gray-600'>
+            {fromDate} - {toDate}
+          </p>
+        )}
         <div className='text-sm text-gray-500 mt-4'>
           <PortableText value={description} />
         </div>
