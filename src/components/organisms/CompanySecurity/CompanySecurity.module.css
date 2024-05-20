@@ -1,0 +1,6 @@
+.SectionBg {
+  background-image: url("/bg-texture.webp");
+  background-color: hsl(var(--primary));
+  background-size: cover;
+  background-repeat: no-repeat;
+}

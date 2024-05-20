@@ -9,5 +9,5 @@ export function getPopupQuery() {
     }[0]
   `;
 
-  return client.fetch(query, { useCdn: false });
+  return client.fetch(query);
 }

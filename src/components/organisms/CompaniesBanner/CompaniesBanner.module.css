@@ -1,0 +1,54 @@
+.BannerBg {
+  background-image: url("/bg-texture.webp"), url("/rocket-coins.webp");
+  background-color: hsl(var(--primary)); /* Any background color */
+  background-size: cover, 35%;
+  background-blend-mode: normal; /* Adjust the blend mode as needed */
+  background-position:
+    center top,
+    20% bottom; /* Adjust the positioning as needed */
+  background-repeat: no-repeat, no-repeat;
+  animation: slideBackground 2s infinite alternate;
+}
+
+@media (width <= 1440px) {
+  .BannerBg {
+    background-size: cover, 60%;
+    background-position:
+      center top,
+      left bottom; /* Adjust the positioning as needed */
+    animation: slideBackgroundSmall 2s infinite alternate;
+  }
+}
+
+@media (width <= 768px) {
+  .BannerBg {
+    background-size: cover, 100%;
+    animation: none;
+  }
+}
+
+@keyframes slideBackground {
+  0% {
+    background-position:
+      center top,
+      19% 110%;
+  }
+  100% {
+    background-position:
+      center top,
+      20% bottom;
+  }
+}
+
+@keyframes slideBackgroundSmall {
+  0% {
+    background-position:
+      center top,
+      left 115%;
+  }
+  100% {
+    background-position:
+      center top,
+      left bottom;
+  }
+}
