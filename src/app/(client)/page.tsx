@@ -40,7 +40,7 @@ export default async function Home() {
   return (
     <main className='h-full'>
       <Callout>
-        <p className='w-full'>
+        <p className='hidden lg:block'>
           <a
             href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
             target='_blank'
@@ -48,9 +48,10 @@ export default async function Home() {
             className='cursor-pointer block w-full'
           >
             <span className='mr-2'>¿Eres una empresa?</span>
-            <strong>Únete a nuestro canal de whatsapp.</strong>
+            <span className='font-semibold'>Únete a nuestro canal de whatsapp y conoce nuestras promociones en tiempo real.</span>
           </a>
         </p>
+        <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
       </Callout>
       <CalculatorBanner rates={rates} />
       <WorkingBanks />
