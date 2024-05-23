@@ -16,7 +16,7 @@ function Header() {
   const toggleShow = () => setShow((prev) => !prev);
 
   return (
-    <motion.header className={cn("border-b bg-white", styles.Header, show ? styles.OpenMenu : "")}>
+    <motion.header className={cn("border-b bg-white z-10 relative", styles.Header, show ? styles.OpenMenu : "")}>
       <div className='w-full xl:container mx-auto flex flex-col lg:flex-row items-center justify-between py-7 px-6 overflow-hidden lg:overflow-visible'>
         <div className='flex flex-row justify-between items-center w-full lg:w-auto'>
           <Link href='/'>

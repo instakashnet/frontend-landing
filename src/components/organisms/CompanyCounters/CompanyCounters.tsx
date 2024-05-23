@@ -12,13 +12,21 @@ function CompanyCounters() {
               Somos la principal opción en Perú y nuestras cifras lo reespaldan
             </h2>
             <p className='text-lg'>Con Instakash, estás en manos expertas. Te ofrecemos mejor servicio y la mejor atención. </p>
+            <a
+              href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
+              target='_blank'
+              rel='norefferer'
+              className='mt-8 inline-block py-2 px-10 bg-primary text-white font-semibold rounded-md'
+            >
+              Únete a nuestro canal de empresas
+            </a>
           </div>
           <div className='flex flex-col gap-y-8 lg:gap-10'>
             <Card variant='outline' className='flex items-center gap-3'>
               <ArrowLeftRightIcon className='w-10 h-10 text-primary' />
               <div>
                 <h3 className='text-2xl font-semibold'>+20 mil</h3>
-                <p>Operaciones realizada</p>
+                <p>Operaciones realizadas a empresas</p>
               </div>
             </Card>
             <Card variant='outline' className='flex items-center gap-3'>
