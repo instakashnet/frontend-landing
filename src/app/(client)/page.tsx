@@ -9,7 +9,9 @@ import { Metadata } from "next";
 import AdsModal from "@/components/organisms/AdsModal/AdsModal";
 import { getBanners, getPopup } from "@/services/ads";
 import { getRates } from "@/services/exchange/getRates";
-// import { getCounters } from "@/services/exchange/getCounters";
+import { Alert } from "@/components/ui/alert";
+import { AnimatePresence, motion } from "framer-motion";
+import Callout from "@/components/atoms/Callout/Callout";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://instakash.net"),
@@ -37,6 +39,20 @@ export default async function Home() {
 
   return (
     <main className='h-full'>
+      <Callout>
+        <p className='hidden lg:block'>
+          <a
+            href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
+            target='_blank'
+            rel='norefferer'
+            className='cursor-pointer block w-full'
+          >
+            <span className='mr-2'>¿Eres una empresa?</span>
+            <span className='font-semibold'>Únete a nuestro canal de whatsapp y conoce nuestras promociones en tiempo real.</span>
+          </a>
+        </p>
+        <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
+      </Callout>
       <CalculatorBanner rates={rates} />
       <WorkingBanks />
       <section className='mt-8 max-w-[100rem] mx-auto'>
@@ -46,7 +62,7 @@ export default async function Home() {
       <Benefits />
       <KashSection />
       <AppDownload />
-      {popup && <AdsModal image={popup.image} show={popup.show} />}
+      {popup && <AdsModal image={popup.image} show={popup.show} delay={1200} />}
     </main>
   );
 }

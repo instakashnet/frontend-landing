@@ -8,8 +8,6 @@ interface AdsBannerProps {
 }
 
 function AdsBanner({ banners = [] }: AdsBannerProps) {
-  console.log(banners);
-
   return (
     <Slide autoplay arrows={false}>
       {banners.map((banner) => (

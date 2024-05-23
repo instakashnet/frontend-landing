@@ -5,8 +5,8 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { AdsModalProps } from "./AdsModal.interfaces";
 
-function AdsModal({ image, show = false }: AdsModalProps) {
-  const [isModalOpen, setIsModalOpen] = useState(show);
+function AdsModal({ image, show = false, delay = 100 }: AdsModalProps) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -14,9 +14,15 @@ function AdsModal({ image, show = false }: AdsModalProps) {
 
   useEffect(() => {
     if (show) {
-      setIsModalOpen(true);
+      const timeout = setTimeout(() => {
+        setIsModalOpen(true);
+      }, delay);
+
+      return () => {
+        clearTimeout(timeout);
+      };
     }
-  }, [show]);
+  }, [show, delay]);
 
   return (
     <Modal isOpen={isModalOpen} onClose={closeModal}>

@@ -7,9 +7,16 @@ function ContactUs() {
           <p className='mt-2 text-pretty lg:text-lg font-[500]'>
             Nuestra atención especializada, asesoría personalizada, mejor tipo de cambio y la seguridad garantizada en todas tus operaciones
           </p>
-          <a href='!#' className='mt-8 block py-2 px-10 bg-primary text-white font-semibold max-w-sm mx-auto rounded-md'>
-            Contáctanos
-          </a>
+          <div className='flex flex-col lg:flex-row items-center gap-20'>
+            <a
+              href='https://wa.link/0014mj'
+              target='_blank'
+              rel='norefferer'
+              className='mt-8 block py-2 px-10 bg-primary text-white font-semibold max-w-sm mx-auto rounded-md'
+            >
+              Contáctanos
+            </a>
+          </div>
         </div>
       </div>
     </section>
