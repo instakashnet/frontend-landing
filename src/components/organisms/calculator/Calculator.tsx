@@ -59,7 +59,7 @@ function Calculator({ rates = { buy: 3.5, sell: 3.8 } }: CalculatorProps) {
   };
 
   return (
-    <Card className='w-full flex flex-col'>
+    <Card className='w-full max-w-md flex flex-col lg:order-2'>
       <h2 className='text-center text-xl font-bold font-body text-primary mb-3'>
         Tipo de cambio hoy <br /> en Instakash
       </h2>

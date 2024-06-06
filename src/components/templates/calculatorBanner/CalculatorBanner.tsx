@@ -10,10 +10,10 @@ import RateCard from "@/components/organisms/RateCard/RateCard";
 async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: CountersContract }) {
   return (
     <section className={cn("min-h-[70vh] w-full relative", styles.bannerBg)}>
-      <div className='container px-5 lg:px-10 grid lg:grid-cols-2 gap-2 py-16'>
-        <div className='flex flex-col justify-center text-center lg:text-left mx-auto lg:mx-0 '>
+      <div className='container px-5 py-16 lg:px-10 lg:grid lg:grid-cols-8 lg:gap-2'>
+        <div className='flex flex-col justify-center text-center lg:text-left lg:col-span-3'>
           <h1 className='font-bold text-secondary font-body'>Casa de cambio online</h1>
-          <p className='font-bold font-heading text-primary text-4xl lg:text-5xl lg:leading-[4rem] mt-2'>
+          <p className='font-bold font-heading text-primary text-4xl xl:text-5xl mt-2 break-none'>
             Con la mejor tasa <br />
             comienza el cambio.
           </p>
@@ -38,12 +38,12 @@ async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: Co
                 </p>
               </div>
             </div>
-            <RateCard className='hidden lg:block' />
+            {/* <RateCard className='hidden lg:block' /> */}
           </div>
         </div>
-        <div className='w-full max-w-md mx-auto lg:ml-auto grid place-items-center'>
+        <div className='mt-4 lg:mt-0 flex flex-col items-center justify-end gap-4 lg:flex-row lg:items-end lg:col-span-5'>
+          <RateCard className='order-2 lg:order-1' />
           <Calculator rates={rates} />
-          <RateCard className='lg:hidden' />
         </div>
       </div>
       <SuperKash />

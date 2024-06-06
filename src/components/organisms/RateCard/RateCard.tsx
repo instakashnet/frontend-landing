@@ -11,7 +11,7 @@ function RateCard({ className }: { className?: string }) {
   };
 
   return (
-    <Card className={cn("mt-4 w-full max-w-md border border-primary/30", className)}>
+    <Card className={cn("mt-4 w-full max-w-md lg:max-w-xs border border-primary/30", className)}>
       <div className='flex items-center gap-1 text-primary'>
         <p className='font-semibold text-lg'>¡Mejora tu tipo de cambio!</p>
         <BadgeDollarSignIcon size={24} />
