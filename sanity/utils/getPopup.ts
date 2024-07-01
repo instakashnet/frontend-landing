@@ -5,7 +5,9 @@ export function getPopupQuery() {
     *[_type == "popup"] {
       title,
       show,
-      "image": image.asset->url
+      "image": image.asset->url,
+      notice,
+      hasNotice
     }[0]
   `;
 

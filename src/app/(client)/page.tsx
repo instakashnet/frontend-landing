@@ -62,7 +62,7 @@ export default async function Home() {
       <Benefits />
       <KashSection />
       <AppDownload />
-      {popup && <AdsModal image={popup.image} show={popup.show} delay={1200} />}
+      {popup && <AdsModal image={popup.image} notice={popup.hasNotice ? popup.notice : undefined} show={popup.show} delay={1200} />}
     </main>
   );
 }
