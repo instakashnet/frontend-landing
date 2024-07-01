@@ -22,6 +22,26 @@ export const popuop = defineType({
       title: "Popup image",
       type: "image",
       description: "Imagen para el popup inicial"
+    },
+    {
+      name: "hasNotice",
+      title: "Notificación Activada",
+      type: "boolean",
+      description: "Activar notificación",
+      initialValue: false
+    },
+    {
+      name: "notice",
+      title: "Notificación",
+      type: "array",
+      of: [
+        {
+          type: "block",
+          validation(rule) {
+            return rule.optional();
+          }
+        }
+      ]
     }
   ]
 });

@@ -25,6 +25,7 @@
   width: auto; /* Ajusta el ancho al contenido */
   height: auto;
   max-width: 90%;
+  max-height: 500px;
   outline: none;
 }
 

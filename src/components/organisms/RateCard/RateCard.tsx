@@ -7,7 +7,7 @@ import { BadgeDollarSignIcon } from "lucide-react";
 
 function RateCard({ className }: { className?: string }) {
   const openLink = () => {
-    window.open("https://wa.link/9l4sps", "_blank");
+    window.open("https://wa.link/5k5ww6", "_blank");
   };
 
   return (
