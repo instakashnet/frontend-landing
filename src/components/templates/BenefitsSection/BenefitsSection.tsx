@@ -4,8 +4,6 @@ import { BENEFTIS_TYPES } from "@/enums/benefitsTypes";
 import { getErrorMessage } from "@/utils/getErrorMessage";
 import { getBenefitsQuery } from "../../../../sanity/utils/getBenefits";
 import { PortableTextBlock } from "sanity";
-
-export const revalidate = 0;
 interface Benefit {
   title: string;
   cover: string;
@@ -16,19 +14,7 @@ interface Benefit {
   toDate: string;
 }
 
-async function getBenefits() {
-  try {
-    const benefits = await getBenefitsQuery();
-    return benefits;
-  } catch (error) {
-    const message = getErrorMessage(error);
-    console.log(message);
-  }
-}
-
-async function BenefitsSection() {
-  const benefits: Benefit[] | undefined = await getBenefits();
-
+async function BenefitsSection({ benefits }: { benefits: Benefit[] }) {
   return (
     <section className='min-h-[70vh] w-full pb-20'>
       <div className='container'>

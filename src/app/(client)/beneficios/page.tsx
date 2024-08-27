@@ -1,6 +1,7 @@
 import BenefitsSection from "@/components/templates/BenefitsSection/BenefitsSection";
 import InternalHeader from "@/components/molecules/InternalHeader/Internalheader";
 import { Metadata } from "next";
+import { getBenefits } from "@/services/ads";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://instakash.net/beneficios"),
@@ -18,13 +19,15 @@ export const metadata: Metadata = {
   }
 };
 
-function BeneficiosPage() {
+export const revalidate = 0;
+
+export default async function BeneficiosPage() {
+  const benefits = await getBenefits();
+
   return (
     <main className='h-full'>
       <InternalHeader title='Nuestros beneficios' />
-      <BenefitsSection />
+      <BenefitsSection benefits={benefits} />
     </main>
   );
 }
-
-export default BeneficiosPage;

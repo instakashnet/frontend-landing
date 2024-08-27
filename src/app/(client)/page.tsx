@@ -9,8 +9,6 @@ import { Metadata } from "next";
 import AdsModal from "@/components/organisms/AdsModal/AdsModal";
 import { getBanners, getPopup } from "@/services/ads";
 import { getRates } from "@/services/exchange/getRates";
-import { Alert } from "@/components/ui/alert";
-import { AnimatePresence, motion } from "framer-motion";
 import Callout from "@/components/atoms/Callout/Callout";
 
 export const metadata: Metadata = {
@@ -33,7 +31,6 @@ export default async function Home() {
   const bannersResponse = getBanners();
   const popupResponse = getPopup();
   const ratesResponse = getRates();
-  // const countersResponse = getCounters();
 
   const [banners, popup, rates] = await Promise.all([bannersResponse, popupResponse, ratesResponse]);
 

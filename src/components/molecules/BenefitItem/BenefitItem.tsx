@@ -9,7 +9,7 @@ function BenefitItem({ title, coverUrl, description, hasDate, fromDate, toDate }
         className='w-full bg-cover bg-center bg-no-repeat py-3 h-48 flex flex-col items-center justify-center gap-6 rounded-b-none  rounded-2xl'
         style={{ backgroundImage: `url(${coverUrl})` }}
       />
-      <div className='p-8 pb-0 max-h-[14rem] overflow-y-auto no-scrollbar'>
+      <div className='p-8 pb-0 max-h-[14rem] overflow-y-auto scrollbar'>
         <h4 className='text-2xl font-bold text-primary'>{title}</h4>
         {hasDate && (
           <p className='font-semibold  text-gray-600'>

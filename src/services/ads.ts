@@ -4,6 +4,7 @@ import { getErrorMessage } from "@/utils/getErrorMessage";
 import { getBannersQuery } from "../../sanity/utils/getBanners";
 import { getPopupQuery } from "../../sanity/utils/getPopup";
 import { Popup } from "@/models/Popup.model";
+import { getBenefitsQuery } from "../../sanity/utils/getBenefits";
 
 export async function getBanners() {
   try {
@@ -22,5 +23,15 @@ export async function getPopup() {
   } catch (error) {
     const message = getErrorMessage(error);
     console.error(message);
+  }
+}
+
+export async function getBenefits() {
+  try {
+    const benefits = await getBenefitsQuery();
+    return benefits;
+  } catch (error) {
+    const message = getErrorMessage(error);
+    console.log(message);
   }
 }
