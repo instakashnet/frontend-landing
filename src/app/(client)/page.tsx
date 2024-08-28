@@ -37,18 +37,18 @@ export default async function Home() {
   return (
     <main className='h-full'>
       <Callout>
-        <p className='hidden lg:block'>
-          <a
-            href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
-            target='_blank'
-            rel='norefferer'
-            className='cursor-pointer block w-full'
-          >
+        <a
+          href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
+          target='_blank'
+          rel='norefferer'
+          className='cursor-pointer block w-full'
+        >
+          <p className='hidden lg:block'>
             <span className='mr-2'>¿Eres una empresa?</span>
             <span className='font-semibold'>Únete a nuestro canal de whatsapp y conoce nuestras promociones en tiempo real.</span>
-          </a>
-        </p>
-        <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
+          </p>
+          <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
+        </a>
       </Callout>
       <CalculatorBanner rates={rates} />
       <WorkingBanks />
