@@ -63,9 +63,20 @@ function Footer() {
         <div className='flex flex-col gap-4'>
           <h3 className='text-white font-bold text-lg'>Contáctanos</h3>
           <p className='text-white text-sm'>De la Roca Vergallo 493, Magdalena del Mar - Lima, Perú</p>
-          <a className='text-white text-sm font-bold' href='https://wa.link/rodrvx' target='_blank' rel='noreferrer'>
-            +51 929 050 743
-          </a>
+          <ul className='flex flex-col gap-2 text-white'>
+            <li className='flex flex-col'>
+              Personas:
+              <a className=' text-sm font-bold' href='https://wa.link/rodrvx' target='_blank' rel='noreferrer'>
+                +51 929 050 743
+              </a>
+            </li>
+            <li className='flex flex-col'>
+              Empresas:
+              <a className=' text-sm font-bold' href='https://wa.link/rdrepo' target='_blank' rel='noreferrer'>
+                +51 934 413 237
+              </a>
+            </li>
+          </ul>
           <a className='text-white text-sm font-bold' href='mailto:contacto@instakash.net'>
             contacto@instakash.net
           </a>

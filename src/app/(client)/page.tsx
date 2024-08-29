@@ -9,8 +9,6 @@ import { Metadata } from "next";
 import AdsModal from "@/components/organisms/AdsModal/AdsModal";
 import { getBanners, getPopup } from "@/services/ads";
 import { getRates } from "@/services/exchange/getRates";
-import { Alert } from "@/components/ui/alert";
-import { AnimatePresence, motion } from "framer-motion";
 import Callout from "@/components/atoms/Callout/Callout";
 
 export const metadata: Metadata = {
@@ -33,25 +31,24 @@ export default async function Home() {
   const bannersResponse = getBanners();
   const popupResponse = getPopup();
   const ratesResponse = getRates();
-  // const countersResponse = getCounters();
 
   const [banners, popup, rates] = await Promise.all([bannersResponse, popupResponse, ratesResponse]);
 
   return (
     <main className='h-full'>
       <Callout>
-        <p className='hidden lg:block'>
-          <a
-            href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
-            target='_blank'
-            rel='norefferer'
-            className='cursor-pointer block w-full'
-          >
+        <a
+          href='https://whatsapp.com/channel/0029VaaTM6472WTwVLuGFm3V'
+          target='_blank'
+          rel='norefferer'
+          className='cursor-pointer block w-full'
+        >
+          <p className='hidden lg:block'>
             <span className='mr-2'>¿Eres una empresa?</span>
             <span className='font-semibold'>Únete a nuestro canal de whatsapp y conoce nuestras promociones en tiempo real.</span>
-          </a>
-        </p>
-        <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
+          </p>
+          <p className='block lg:hidden font-semibold'>¡Únete a nuestro canal de whatsapp para empresas y benefíciate!</p>
+        </a>
       </Callout>
       <CalculatorBanner rates={rates} />
       <WorkingBanks />
