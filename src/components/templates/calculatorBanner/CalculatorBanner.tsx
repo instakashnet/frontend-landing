@@ -22,19 +22,19 @@ async function CalculatorBanner({ rates }: { rates: RatesContract; counters?: Co
               <div className='flex items-center gap-2 mt-6'>
                 <CoinsIcon size={28} className='text-primary' />
                 <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                  <strong>+3mill</strong> de soles cambiados
+                  <strong>+30mill</strong> de soles cambiados
                 </p>
               </div>
               <div className='lg:flex items-center gap-2 mt-6 hidden '>
                 <ArrowRightLeft size={28} className='text-primary' />
                 <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                  <strong>+200mil</strong> operaciones exitosas
+                  <strong>+1mill</strong> operaciones exitosas
                 </p>
               </div>
               <div className='flex items-center gap-2 mt-6'>
                 <UsersIcon size={28} className='text-primary' />
                 <p className='text-lg font-medium border-b-2 border-primary pb-1'>
-                  <strong>+40mil</strong> usuarios registrados
+                  <strong>+60mil</strong> usuarios registrados
                 </p>
               </div>
             </div>
