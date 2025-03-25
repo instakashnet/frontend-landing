@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button/Button";
 import { Input } from "@/components/ui/inputs/input/Input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select/Select";
 import { Textarea } from "@/components/ui/textarea/Textarea";
-import { SubmitHandler, useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
 import { ReclamacionesFormValues } from "../../enums/reclamacionesValues";
 import { IReclamacionesFormInput } from "./ReclamacionesForm.interface";
 import emailjs from "@emailjs/browser";
